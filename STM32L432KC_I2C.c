@@ -84,7 +84,7 @@ return data;
 
 
 
-I2C1->CR2 
+//I2C1->CR2 
 // set ADD10 to 7-bit
 // set 
 
