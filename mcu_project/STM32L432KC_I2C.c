@@ -46,7 +46,7 @@ I2C1->TIMINGR = I2C1_TIMINGR_VALUE;
 I2C1->CR1 |= I2C_CR1_PE; // enable i2c
 }
 
-
+/*
 uint8_t i2c1_read(uint8_t slaveaddr, uint8_t wordAddr){
 
 uint8_t slaveaddrWr = (slaveaddr<<1) | 0;
@@ -76,6 +76,8 @@ I2C1->CR1 |= I2C_CR1_STOP;
 return data;
 
 }
+
+
 
 // want it to be Controller receiver
 // switches automatically to controller mode upon generating a START condition
@@ -121,3 +123,52 @@ I2C1->CR1 |= I2C_CR1_STOP;
 return data;
 
 }
+*/
+
+void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+    // Wait if busy
+    while (I2C1->ISR & I2C_ISR_BUSY);
+
+    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
+                (nbytes << 16)        |  // NBYTES
+                I2C_CR2_AUTOEND;         // Auto STOP after last byte
+
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
+
+    // Send bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while (!(I2C1->ISR & I2C_ISR_TXIS));   // Wait for TX ready
+        I2C1->TXDR = data[i];
+    }
+
+    // Wait for STOP flag (transfer complete)
+    while (!(I2C1->ISR & I2C_ISR_STOPF));
+    I2C1->ICR |= I2C_ICR_STOPCF;  // Clear STOP flag
+}
+
+void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+    // Wait if busy
+    while (I2C1->ISR & I2C_ISR_BUSY);
+
+    // Configure transfer: RD_WRN=1 (read), NBYTES, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |
+                (1 << 10) |            // RD_WRN = 1 (read)
+                (nbytes << 16) |
+                I2C_CR2_AUTOEND;
+
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
+
+    // Receive bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while (!(I2C1->ISR & I2C_ISR_RXNE));  // Wait for received byte
+        data[i] = I2C1->RXDR;
+    }
+
+    // Wait for STOP flag
+    while (!(I2C1->ISR & I2C_ISR_STOPF));
+    I2C1->ICR |= I2C_ICR_STOPCF;  // Clear STOP flag
+}
+

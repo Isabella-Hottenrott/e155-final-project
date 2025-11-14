@@ -84,14 +84,18 @@
           <folder Name="inc">
             <file file_name="vl53l0x_i2c_platform.h" />
             <file file_name="vl53l0x_platform.h" />
-            <file file_name="vl53l0x_platform_log.h" />
+            <file file_name="vl53l0x_platform_log.h">
+              <configuration Name="Debug" build_exclude_from_build="Yes" />
+            </file>
             <file file_name="vl53l0x_types.h" />
           </folder>
           <folder Name="src">
             <file file_name="vl53l0x_i2c_platform.c" />
             <file file_name="vl53l0x_i2c_win_serial_comms.c" />
             <file file_name="vl53l0x_platform.c" />
-            <file file_name="vl53l0x_platform_log.c" />
+            <file file_name="vl53l0x_platform_log.c">
+              <configuration Name="Debug" build_exclude_from_build="Yes" />
+            </file>
           </folder>
         </folder>
         <folder Name="serial_comms_includes">

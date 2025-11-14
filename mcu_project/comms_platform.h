@@ -27,6 +27,7 @@ typedef DWORD (*P_COMMS_WRITE_AND_READ)         (DWORD dwAddress, DWORD dwIndexH
                                                   DWORD dwIndexLo, BYTE* pcWriteValues, 
                                                   BYTE* pcReadValues, DWORD dwBufferSize);
 
+
 typedef struct tagEVENT_PARAMS
 {
     DWORD   dwParam1;
@@ -71,5 +72,6 @@ typedef struct tagCOMMS_VERSION_INFO
 } COMMS_VERSION_INFO, *PCOMMS_VERSION_INFO;
 
 #define CP_SUCCESS(x) (x == CP_STATUS_OK)
+
 
 #endif // COMMS_PLATFORM_H

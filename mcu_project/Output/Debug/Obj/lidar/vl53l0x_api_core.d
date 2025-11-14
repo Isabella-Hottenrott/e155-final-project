@@ -1,5 +1,5 @@
-Output/Debug/Obj/lidar/vl53l0x_api_strings.o: \
-  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api_strings.c \
+Output/Debug/Obj/lidar/vl53l0x_api_core.o: \
+  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api_core.c \
   C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api.h \
   C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api_strings.h \
   C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_def.h \
@@ -18,4 +18,5 @@ Output/Debug/Obj/lidar/vl53l0x_api_strings.o: \
   C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_i2c_platform.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.18\include\stdarg.h \
   C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api_core.h \
+  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\vl53l0x_api_calibration.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.18\include\stdlib.h

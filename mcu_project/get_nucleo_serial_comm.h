@@ -16,6 +16,7 @@
 #include <stdio.h>
 //#include <tchar.h>
 #include "SERIAL_COMMS.h"
+#include "vl53l0x_types.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -25,7 +26,7 @@ extern "C"
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
 
-DWORD GetNucleoSerialComm(TCHAR *pSerialCommStr); //TODO: replaced TCHAR w/ PCHAR. is this correct?
+DWORD GetNucleoSerialComm(TCHAR *pSerialCommStr); 
 
 #ifdef __cplusplus
 }

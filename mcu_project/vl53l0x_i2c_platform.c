@@ -29,7 +29,7 @@
 #include "vl53l0x_i2c_platform.h"
 #include "vl53l0x_def.h"
 
-#include "ranging_sensor_comms.h"
+//#include "ranging_sensor_comms.h"
 #include "comms_platform.h"
 
 #include "vl53l0x_platform_log.h"
