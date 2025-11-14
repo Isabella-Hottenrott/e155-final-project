@@ -8,7 +8,8 @@
 #ifndef I2C_H_
 #define I2C_H_
 
-#include "stm32f1xx.h"
+
+#include <stm32l432xx.h>  // CMSIS device library include
 
 // set this to 1 to remap the SDA/SCL pins from PB6/7 to PB8/9
 #define I2C1_REMAP 0
@@ -24,8 +25,7 @@
 #define I2C_TIMEOUT_GENERAL		(1<<6)
 // timeout in ms to prevent getting stuck in case of error
 #define I2C_TIMEOUT 10
-// error flag checking
-uint8_t i2c1_check_error();
+
 // initialization of I2C1
 void init_i2c1();
 // read N bytes

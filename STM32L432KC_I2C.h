@@ -14,6 +14,5 @@
 
 void init_i2c1();
 
-uint8_t i2c1_read(uint8_t slaveaddr, uint8_t wordAddr);
 
 #endif

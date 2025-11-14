@@ -7,7 +7,7 @@
 
 // Defines /////////////////////////////////////////////////////////////////////
 #include "i2c.h"
-#include "init.h"
+
 // Record the current time to check an upcoming timeout against
 //#define startTimeout() (timeout_start_ms = millis())
 
@@ -29,6 +29,20 @@
 #define calcMacroPeriod(vcsel_period_pclks) ((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000)
 
 
+volatile uint32_t sysTick_Time_vl53l0x = 0;
+
+// SysTick interrupt handler for counting the ticks
+void SysTick_Handler_vl53l0x(void) {
+	sysTick_Time_vl53l0x++;
+}
+
+// delay (i.e. wait) for a certain time
+// the unit of the delays (e.g. ms or µs) is defined by the core function "SysTick_Config"
+void delay(uint32_t delayTime){
+	uint32_t startTime =  sysTick_Time_vl53l0x;
+	while ( (sysTick_Time_vl53l0x - startTime) < delayTime );
+}
+
 
 void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr)
 {
@@ -44,6 +58,12 @@ void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr)
 // enough unless a cover glass is added.
 // If io_2v8 (optional) is true or not given, the sensor is configured for 2V8
 // mode.
+
+
+void SysTick_Handler(void) {
+	sysTick_Time_vl53l0x++;
+}
+
 bool VL53L0X_init(struct VL53L0X* dev)
 {
   // VL53L0X_DataInit() begin
@@ -975,9 +995,9 @@ bool VL53L0X_performSingleRefCalibration(struct VL53L0X* dev, uint8_t vhv_init_b
 
 
 void VL53L0X_startTimeout(struct VL53L0X* dev){
-	dev->timeout_start_ms = sysTick_Time;
+	dev->timeout_start_ms = sysTick_Time_vl53l0x;
 }
 
 bool VL53L0X_checkTimeoutExpired(struct VL53L0X* dev){
-	return (dev->io_timeout > 0 && (sysTick_Time - dev->timeout_start_ms) > dev->io_timeout);
+	return (dev->io_timeout > 0 && (sysTick_Time_vl53l0x - dev->timeout_start_ms) > dev->io_timeout);
 }

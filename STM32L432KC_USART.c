@@ -24,6 +24,7 @@ USART_TypeDef * id2Port(int USART_ID) {
     return USART;
 }
 
+
 USART_TypeDef * initUSART(int USART_ID, int baud_rate) {
     gpioEnable(GPIO_PORT_A);  // Enable clock for GPIOA
     RCC->CR |= RCC_CR_HSION;  // Turn on HSI 16 MHz clock

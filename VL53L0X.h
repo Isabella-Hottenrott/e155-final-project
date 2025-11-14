@@ -2,7 +2,7 @@
 #define VL53L0X_H_
 
 #include <stdbool.h>
-#include "stm32f1xx.h"
+#include <stm32l432xx.h>  // CMSIS device library include
 
 
     // register addresses from API vl53l0x_device.h (ordered as listed there)
