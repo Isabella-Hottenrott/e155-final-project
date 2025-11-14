@@ -47,77 +47,50 @@ I2C1->CR1 |= I2C_CR1_PE; // enable i2c
 }
 
 
-uint8_t i2c1_read(uint8_t slaveaddr, uint8_t wordAddr){
+void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+    // Wait if busy
+    while (I2C1->ISR & I2C_ISR_BUSY);
 
-uint8_t slaveaddrWr = (slaveaddr<<1) | 0;
-uint8_t slaveaddrR = (slaveaddr << 1) | 1;
+    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
+                (nbytes << 16)        |  // NBYTES
+                I2C_CR2_AUTOEND;         // Auto STOP after last byte
 
-I2C1->CR1 |= I2C_CR2_START | I2C_CR1_ACK;       // create a start condition and make HW acknowledge every byte received
-while (!(I2C1->SR1 & I2C_SR1_SB));              // wait to see if condition has been generated yet
-I2C1->DR = slaveaddrWR;                        // send addr of slave device <WORD ADDR>
-while (!(I2C1->SR1 & I2C_SR1_ADDR));            // monitor to addr has been received
-uint16_t reg = I2C2->SR1 | I2C2->SR2;           // now clear ic2reg
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
 
-while (!(I2C1->SR1 & I2C_SR1_TXE));             // check that the data register is empty
-I2C1->DR = wordAddr;                             // now set the register pointer for addr we want to read from
-while (!(I2C1->SR1 & I2C_SR1_BTF));             // wait for data to finish being transmitted
+    // Send bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while (!(I2C1->ISR & I2C_ISR_TXIS));   // Wait for TX ready
+        I2C1->TXDR = data[i];
+    }
 
-I2C1->CR1 |= I2C_CR1_START;                     // 
-while (!(I2C1->SR1 & I2C_SR1_SB));
-I2C1->DR = slaveaddrR;                          // send the Slave Address (reading)
-while (!(I2C1->SR1 & I2C_SR1_ADDR));
-reg = I2C1->SR1 | I2C1->SR2;                    // slave
-
-while (!(I2C1->SR1 & I2C_SR1_RXNE));
-uint8_t data = I2C1->DR;
-I2C1->CR1 &= ~I2C_CR1_ACK;
-I2C1->CR1 |= I2C_CR1_STOP;
-
-return data;
-
+    // Wait for STOP flag (transfer complete)
+    while (!(I2C1->ISR & I2C_ISR_STOPF));
+    I2C1->ICR |= I2C_ICR_STOPCF;  // Clear STOP flag
 }
 
-// want it to be Controller receiver
-// switches automatically to controller mode upon generating a START condition
+void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+    // Wait if busy
+    while (I2C1->ISR & I2C_ISR_BUSY);
 
+    // Configure transfer: RD_WRN=1 (read), NBYTES, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |
+                (1 << 10) |            // RD_WRN = 1 (read)
+                (nbytes << 16) |
+                I2C_CR2_AUTOEND;
 
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
 
+    // Receive bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while (!(I2C1->ISR & I2C_ISR_RXNE));  // Wait for received byte
+        data[i] = I2C1->RXDR;
+    }
 
-
-//I2C1->CR2 
-// set ADD10 to 7-bit
-// set 
-
-uint8_t i2c1_read(uint8_t slaveaddr, uint8_t wordAddr){
-
-
-I2C1->CR2 |= _VAL2FLD(I2C_CR2_ADD10, 0); 
-I2C1->CR2 |= _VAL2FLD(I2C_CR2_SADD, slaveaddr); 
-I2C1->CR2 |= _VAL2FLD(I2C_CR2_RD_WRN, 1);     // Requesting read transfer
-I2C1->CR2 |= _VAL2FLD(I2C_CR2_HEAD10R, 1);     // Requesting read
-I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, 1);     // Will only be receiving one byte
-
-
-I2C1->CR1 |= I2C_CR2_START;                     // create a start condition and make HW acknowledge every by
-while (!(I2C1->SR1 & I2C_SR1_SB));              // wait to see if condition has been generated yet
-while (!(I2C1->SR1 & I2C_SR1_ADDR));            // monitor to addr has been received
-uint16_t reg = I2C2->SR1 | I2C2->SR2;           // now clear ic2reg
-
-while (!(I2C1->SR1 & I2C_SR1_TXE));             // check that the data register is empty
-I2C1->DR = wordAddr;                             // now set the register pointer for addr we want to read from
-while (!(I2C1->SR1 & I2C_SR1_BTF));             // wait for data to finish being transmitted
-
-I2C1->CR1 |= I2C_CR1_START;                     // 
-while (!(I2C1->SR1 & I2C_SR1_SB));
-I2C1->DR = slaveaddrR;                          // send the Slave Address (reading)
-while (!(I2C1->SR1 & I2C_SR1_ADDR));
-reg = I2C1->SR1 | I2C1->SR2;                    // slave
-
-while (!(I2C1->SR1 & I2C_SR1_RXNE));
-uint8_t data = I2C1->DR;
-I2C1->CR1 &= ~I2C_CR1_ACK;
-I2C1->CR1 |= I2C_CR1_STOP;
-
-return data;
-
+    // Wait for STOP flag
+    while (!(I2C1->ISR & I2C_ISR_STOPF));
+    I2C1->ICR |= I2C_ICR_STOPCF;  // Clear STOP flag
 }
+

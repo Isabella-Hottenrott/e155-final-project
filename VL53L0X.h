@@ -1,0 +1,20 @@
+// Wava Chan + Bella Hottentrot 
+// Nov 2025
+// Interfacing between VL53L0X sensor 7 STM32L432KC through I2C
+
+#ifndef STM32L4_VL53L0X_H
+#define STM32L4_VL53L0X_H
+
+#include "STM32L432KC_I2C.h"
+
+// DEFINE ANY MACROS?
+
+void vl53l0x_write16(uint16_t reg, uint16_t val);
+void vl53l0x_write8(uint16_t reg, uint8_t val);
+
+uint16_t vl53l0x_read16(uint16_t reg);
+uint8_t vl53l0x_read8(uint16_t reg);
+
+void vl53l0x_init();
+
+#endif
