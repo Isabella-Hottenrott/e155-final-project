@@ -16,5 +16,6 @@ uint16_t vl53l0x_read16(uint16_t reg);
 uint8_t vl53l0x_read8(uint16_t reg);
 
 void vl53l0x_init();
+void vl53l0x_setaddress(uint16_t newAddr);
 
 #endif
