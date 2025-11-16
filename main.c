@@ -292,7 +292,15 @@ int main(int argc, char **argv)
 #include "STM32L432KC_I2C.h"
 #include "VL53L0X.h"
 
-void main(){
+int main(){
+
+    //general initializations
+    //TODO: need to set up anything else??
+    configurePLL();
+    configureFlash();
+    configureClock();
+    gpioEnable(GPIO_PORT_A);
+
     float dist;
 
     init_i2c1();

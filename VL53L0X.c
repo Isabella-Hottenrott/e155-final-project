@@ -4,8 +4,8 @@
 
 #include "VL53L0X.h"
 
-// WRITE is to 0x52
-// READ is to 0x53
+#define WRITE 0x52
+#define READ 0x53
 
 void vl53l0x_write16(uint16_t reg, uint16_t val, uint8_t addr){
     uint8_t buf[4];
@@ -39,7 +39,7 @@ uint8_t vl53l0x_read8(uint16_t reg, uint8_t addr){
 }
 
 void vl53l0x_init(void){
-    uint8_t addr = 0x29; //TODO: change this
+    uint8_t addr = WRITE; //TODO: change this. Maybe 0x29?
     // optional: check model ID
     uint8_t id = vl53l0x_read8(0x0000, addr);
     if (id != 0xEE) {
@@ -54,12 +54,15 @@ void vl53l0x_init(void){
 }
 
 void vl53l0x_setaddress(uint16_t newAddr){
-    
+    //0x008a
+
+    vl53l0x_write8(deviceHandle, 0x008a, newAddre/2);
+    //TODO:  trying to emulate code SetDeviceAddress from API. perhaps not correct...
 }
 
 uint16_t vl53l0x_read_distance_mm(void) {
 
-    uint8_t addr = 0x29; //TODO: change this
+    uint8_t addr = READ; //TODO: change this
 
     // Start one measurement
     vl53l0x_write8(0x0100, 0x01, addr);
