@@ -20,10 +20,17 @@
 /* initialize the I2C1 peripheral in fast mode with f_SCL=360kHz assuming an APB1/PCLK1 clock of 36MHz
    note: 400kHz can only be achieved when PCLK1 is a multiple of 10MHz */
 void init_i2c1(){
-	// enable alternate function and port B I/O peripheral clock
+  // page 1159
+	// enable alternate function and port A I/O peripheral clock
 	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 	// enable the peripheral clock for the I2C1 module
+        RCC->CCIPR &= ~(RCC_CCIPR_I2C1SEL_Msk);
+        RCC->CCIPR |=  (1U << RCC_CCIPR_I2C1SEL_Pos);
+
+
 	RCC->APB1ENR1 |= RCC_APB1ENR1_I2C1EN;
+        
+        // configure and enable its clock through the RCC, and initialize its control registers
 
         pinMode(ToF_sclk, GPIO_ALT);                             // PA9 = SCLK want AF4
         GPIOA->AFR[1] |= _VAL2FLD(GPIO_AFRH_AFSEL9, 4);     //AF4
@@ -33,10 +40,14 @@ void init_i2c1(){
         //disable i2c
         I2C1->CR1 &= ~I2C_CR1_PE;
 	// set the APB1 clock value so the I2C peripheral can derive the correct timings
-	// APB1 clock is 36MHz since SysCoreClock==72E6 and RCC_CFGR_PPRE1_DIV2==1
+	// APB1 clock is 36MHz since 
+        
+        I2C1->CR1 &= ~(I2C_CR1_ANFOFF);
+        I2C1->CR1 &= ~(I2C_CR1_DNF_Msk);
 
-	I2C1->TIMINGR = 0x00A08CCD;
-        //but cuz of this change N = 8 R = 2 to get 
+        I2C1->CR1 &= ~I2C_CR1_NOSTRETCH;
+	I2C1->TIMINGR = 0x0040113A;
+        // from cubemx in fast mode to create 400 kHz
 
 	//enable the I2C1 peripheral
 	I2C1->CR1 |= I2C_CR1_PE;
@@ -83,7 +94,7 @@ uint8_t i2c_read( uint8_t slave_address, uint8_t* data, uint8_t N ){
 	returns an error code > 0 if an error occured	*/
 uint8_t i2c_write( uint8_t slave_address, uint8_t* data, uint8_t N ){
     
-    while (I2C1->ISR & I2C_ISR_BUSY) {};
+  //  while (I2C1->ISR & I2C_ISR_BUSY) {};
     I2C1->CR1 &= ~I2C_CR1_PE;
     I2C1->CR2 &= ~(1<<10);                        // w/r = 0
     I2C1->CR1 |= I2C_CR1_PE;
@@ -105,11 +116,11 @@ uint8_t i2c_write( uint8_t slave_address, uint8_t* data, uint8_t N ){
     // Send bytes
     uint32_t i;
     for (i= 0; i < N; i++) {
-        while (!(I2C1->ISR & I2C_ISR_TXIS)) {};   // Wait for TX ready
+        while (I2C1->ISR & I2C_ISR_TXIS) {};   // Wait for TX ready
         I2C1->TXDR = data[i];
         }
 
-    while (!(I2C1->ISR & I2C_ISR_STOPF)){};
+    while ((I2C1->ISR & I2C_ISR_STOPF)){};
     //pg 1167
     I2C1->ISR |= I2C_ISR_TXE;
     I2C1->ISR |= I2C_ISR_TXIS;

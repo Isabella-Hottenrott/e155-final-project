@@ -57,6 +57,12 @@ int main(void){
 	delay(1000);
 	digitalWrite(PB5, PIO_HIGH);
 	delay(2000);
+        
+        uint8_t data[2] = {3,4};
+        while(1){
+        i2c_write(0x55, data, 2);
+        }
+
         printf("%d addr \n",&myTOFsensor);
 	//if( VL53L0X_init(&myTOFsensor) ){
         if( VL53L0X_init(&myTOFsensor) ){

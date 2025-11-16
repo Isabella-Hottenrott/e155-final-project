@@ -7,6 +7,8 @@
 
 // Defines /////////////////////////////////////////////////////////////////////
 #include "i2c.h"
+#include <stdio.h>
+#include <stdbool.h>
 
 // Record the current time to check an upcoming timeout against
 //#define startTimeout() (timeout_start_ms = millis())
@@ -69,9 +71,12 @@ bool VL53L0X_init(struct VL53L0X* dev)
   // VL53L0X_DataInit() begin
 
   // sensor uses 1V8 mode for I/O by default; switch to 2V8 mode if necessary
+  bool ans = dev->io_2v8;
+  printf("%d bool\n", ans);
   if (dev->io_2v8)
-  {
-    VL53L0X_writeReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV, VL53L0X_readReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV) | 0x01 ); // set bit 0
+  { 
+    uint8_t val =  VL53L0X_readReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV) | 0x01;
+    VL53L0X_writeReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV, val); // set bit 0
   }
 
   // "Set I2C standard mode"
@@ -1001,3 +1006,4 @@ void VL53L0X_startTimeout(struct VL53L0X* dev){
 bool VL53L0X_checkTimeoutExpired(struct VL53L0X* dev){
 	return (dev->io_timeout > 0 && (sysTick_Time_vl53l0x - dev->timeout_start_ms) > dev->io_timeout);
 }
+
