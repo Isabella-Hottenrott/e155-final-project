@@ -1,6 +1,6 @@
 Output/Debug/Obj/lidar/STM32L432KC_RCC.o: \
-  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\STM32L432KC_RCC.c \
-  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\mcu_project\STM32L432KC_RCC.h \
+  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\STM32L432KC_RCC.c \
+  C:\Users\squis\Downloads\HMC\ FINAL\ SEMESTER\E155\e155-final-project\STM32L432KC_RCC.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.18\include\stdint.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.18\include\__SEGGER_RTL.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.18\include\__SEGGER_RTL_ConfDefaults.h \

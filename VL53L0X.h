@@ -9,13 +9,14 @@
 
 // DEFINE ANY MACROS?
 
-void vl53l0x_write16(uint16_t reg, uint16_t val);
-void vl53l0x_write8(uint16_t reg, uint8_t val);
+void vl53l0x_write16(uint16_t reg, uint16_t val, uint8_t addr);
+void vl53l0x_write8(uint16_t reg, uint8_t val, uint8_t addr);
 
-uint16_t vl53l0x_read16(uint16_t reg);
-uint8_t vl53l0x_read8(uint16_t reg);
+uint16_t vl53l0x_read16(uint16_t reg, uint8_t addr);
+uint8_t vl53l0x_read8(uint16_t reg, uint8_t addr);
 
-void vl53l0x_init();
+void vl53l0x_init(void);
 void vl53l0x_setaddress(uint16_t newAddr);
+uint16_t vl53l0x_read_distance_mm(void);
 
 #endif

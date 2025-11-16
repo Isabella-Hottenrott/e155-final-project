@@ -1,3 +1,5 @@
+/*
+
 #include "vl53l0x_api.h"
 #include "vl53l0x_platform.h"
 #include "required_version.h"
@@ -15,9 +17,9 @@ void print_range_status(VL53L0X_RangingMeasurementData_t* pRangingMeasurementDat
     char buf[VL53L0X_MAX_STRING_LENGTH];
     uint8_t RangeStatus;
 
-    /*
-     * New Range Status: data is valid when pRangingMeasurementData->RangeStatus = 0
-     */
+    //
+     / New Range Status: data is valid when pRangingMeasurementData->RangeStatus = 0
+     //
 
     RangeStatus = pRangingMeasurementData->RangeStatus;
 
@@ -93,9 +95,9 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
     }
 
 
-    /*
-     *  Step  4 : Test ranging mode
-     */
+    //
+     /  Step  4 : Test ranging mode
+     //
 
     if(Status == VL53L0X_ERROR_NONE)
     {
@@ -191,17 +193,17 @@ int main(int argc, char **argv)
     } else
         printf ("Init Comms\n");
 
-    /*
-     * Disable VL53L0X API logging if you want to run at full speed
-     */
+    //
+     / Disable VL53L0X API logging if you want to run at full speed
+     //
 #ifdef VL53L0X_LOG_ENABLE
     VL53L0X_trace_config("test.log", TRACE_MODULE_ALL, TRACE_LEVEL_ALL, TRACE_FUNCTION_ALL);
 #endif
 
 
-    /*
-     *  Get the version of the VL53L0X API running in the firmware
-     */
+    //
+     /  Get the version of the VL53L0X API running in the firmware
+     //
 
     if(Status == VL53L0X_ERROR_NONE)
     {
@@ -210,9 +212,9 @@ int main(int argc, char **argv)
             Status = VL53L0X_ERROR_CONTROL_INTERFACE;
     }
 
-    /*
-     *  Verify the version of the VL53L0X API running in the firmware
-     */
+    //
+     /  Verify the version of the VL53L0X API running in the firmware
+     //
 
     if(Status == VL53L0X_ERROR_NONE)
     {
@@ -264,9 +266,9 @@ int main(int argc, char **argv)
     
     // Implementation specific
 
-    /*
-     *  Disconnect comms - part of VL53L0X_platform.c
-     */
+    //
+     /  Disconnect comms - part of VL53L0X_platform.c
+     //
 
     if(init_done == 0)
     {
@@ -278,6 +280,29 @@ int main(int argc, char **argv)
 
     print_pal_error(Status);
     return (0);
+}
+
+*/
+
+// Wava Chan + Bella Hottentrot
+// Nov. 2025
+// main.c function for reading measurements from VL53L0X sensor 
+
+#include "STM32L432KC.h"
+#include "STM32L432KC_I2C.h"
+#include "VL53L0X.h"
+
+void main(){
+    float dist;
+
+    init_i2c1();
+    vl53l0x_init();
+
+    while (1) {
+        dist = vl53l0x_read_distance_mm();
+        printf("%f", dist);
+        for (volatile uint32_t i = 0; i < 100000; i++); // small delay
+    }
 }
 
 
