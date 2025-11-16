@@ -52,13 +52,14 @@ int main(void){
 	// GPIO pin PB5 connected to XSHUT pin of sensor
         gpioEnable(GPIO_PORT_B);
         // PB5 FOR VL53L0X
-        pinMode(PA8, GPIO_ALT);   //TIM1_CH1
+        pinMode(PB5, GPIO_OUTPUT);   //TIM1_CH1
 	digitalWrite(PB5, PIO_LOW);
-	delay(1);
+	delay(1000);
 	digitalWrite(PB5, PIO_HIGH);
-	delay(2);
-
-	if( VL53L0X_init(&myTOFsensor) ){
+	delay(2000);
+        printf("%d addr \n",&myTOFsensor);
+	//if( VL53L0X_init(&myTOFsensor) ){
+        if( VL53L0X_init(&myTOFsensor) ){
 		sendString(USART, successchar);
 	}else{
 		sendString(USART, errorchar);
