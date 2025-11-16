@@ -61,7 +61,7 @@ void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
 
     // Send bytes
     for (uint8_t i = 0; i < nbytes; i++) {
-        while (!(I2C1->ISR & I2C_ISR_TXIS));   // Wait for TX ready
+        //while (!(I2C1->ISR & I2C_ISR_TXIS));   // Wait for TX ready
         I2C1->TXDR = data[i];
     }
 

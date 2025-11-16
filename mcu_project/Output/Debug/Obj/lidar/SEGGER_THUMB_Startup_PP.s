@@ -1,10 +1,10 @@
-# 0 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 0 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
 # 0 "<built-in>"
 # 0 "<command-line>"
-# 1 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
-# 62 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 1 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 62 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
         .syntax unified
-# 88 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 88 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
 .macro MARK_FUNC Name
         .global \Name
         .thumb_func
@@ -50,7 +50,7 @@
 
 
         .extern main
-# 162 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 162 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
 START_FUNC _start
 
 
@@ -67,7 +67,7 @@ START_FUNC _start
 
 MARK_FUNC __SEGGER_init_done
 MARK_FUNC __startup_complete
-# 187 "C:\\Users\\squis\\Downloads\\HMC FINAL SEMESTER\\E155\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
+# 187 "C:\\Users\\wchan\\Documents\\GitHub\\e155-final-project\\mcu_project\\SEGGER_THUMB_Startup.s"
         bl main
 
 END_FUNC _start

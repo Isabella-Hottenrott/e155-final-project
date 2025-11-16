@@ -301,15 +301,32 @@ int main(){
     configureClock();
     gpioEnable(GPIO_PORT_A);
 
+    initTIM(TIM15);
+
     float dist;
-
+    
     init_i2c1();
-    vl53l0x_init();
+    
+    while(0){ //testing wirh vl53l0x
+      vl53l0x_init();
 
-    while (1) {
-        dist = vl53l0x_read_distance_mm();
-        printf("%f", dist);
-        for (volatile uint32_t i = 0; i < 100000; i++); // small delay
+      while (1) {
+          dist = vl53l0x_read_distance_mm();
+          printf("%f", dist);
+          for (volatile uint32_t i = 0; i < 100000; i++); // small delay
+      }
+    }
+
+    while(1){ //I2C testing
+      uint16_t reg = 0x000C; //dummy variable for now
+      uint8_t val = 0x01;
+      uint8_t addr = 0x52;
+      uint8_t test_data[] = {0x11, 0xAA, 0x69, 0x67} ;
+      for(int i = 0; i < 4; i = i+1){
+        i2c1_write(addr, &test_data[i], 1);
+        //delay_millis(TIM15, 10); //short delay
+      }
+      
     }
 }
 

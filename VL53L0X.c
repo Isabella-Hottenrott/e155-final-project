@@ -56,7 +56,7 @@ void vl53l0x_init(void){
 void vl53l0x_setaddress(uint16_t newAddr){
     //0x008a
 
-    vl53l0x_write8(deviceHandle, 0x008a, newAddre/2);
+    //vl53l0x_write8(deviceHandle, 0x008a, newAddre/2);
     //TODO:  trying to emulate code SetDeviceAddress from API. perhaps not correct...
 }
 
