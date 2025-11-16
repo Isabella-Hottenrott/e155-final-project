@@ -102,29 +102,29 @@ uint16_t VL53L0X_ReadSingleMeasurement(void) {
 // Private I2C communication functions
 static bool VL53L0X_WriteByte(uint8_t reg, uint8_t data) {
     uint8_t buffer[2] = {reg, data};
-    return I2C_Write(VL53L0X_DEFAULT_ADDRESS, buffer, 2);
+    return i2c1_write(VL53L0X_DEFAULT_ADDRESS, buffer, 2);
 }
 
 static bool VL53L0X_WriteWord(uint8_t reg, uint16_t data) {
     uint8_t buffer[3] = {reg, (uint8_t)(data >> 8), (uint8_t)(data & 0xFF)};
-    return I2C_Write(VL53L0X_DEFAULT_ADDRESS, buffer, 3);
+    return i2c1_write(VL53L0X_DEFAULT_ADDRESS, buffer, 3);
 }
 
 static bool VL53L0X_ReadByte(uint8_t reg, uint8_t* data) {
-    if (!I2C_Write(VL53L0X_DEFAULT_ADDRESS, &reg, 1)) {
+    if (!i2c1_write(VL53L0X_DEFAULT_ADDRESS, &reg, 1)) {
         return false;
     }
-    return I2C_Read(VL53L0X_DEFAULT_ADDRESS, data, 1);
+    return i2c1_read(VL53L0X_DEFAULT_ADDRESS, data, 1);
 }
 
 static bool VL53L0X_ReadWord(uint8_t reg, uint16_t* data) {
     uint8_t buffer[2];
    
-    if (!I2C_Write(VL53L0X_DEFAULT_ADDRESS, &reg, 1)) {
+    if (!i2c1_write(VL53L0X_DEFAULT_ADDRESS, &reg, 1)) {
         return false;
     }
    
-    if (!I2C_Read(VL53L0X_DEFAULT_ADDRESS, buffer, 2)) {
+    if (!i2c1_read(VL53L0X_DEFAULT_ADDRESS, buffer, 2)) {
         return false;
     }
    
