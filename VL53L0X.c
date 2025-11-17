@@ -62,38 +62,36 @@ void writeReg16Bit(uint8_t reg, uint16_t value){
 
 // Write a 32-bit register
 void writeReg32Bit(uint8_t reg, uint32_t value){
-  i2c_start( g_i2cAddr | I2C_WRITE );
+  //i2c_start( g_i2cAddr | I2C_WRITE );
   i2c_write(reg);
   i2c_write((value >>24) & 0xFF);
   i2c_write((value >>16) & 0xFF);
   i2c_write((value >> 8) & 0xFF);
   i2c_write((value     ) & 0xFF);
-  i2c_stop();
+  //i2c_stop();
 }
 
 // Read an 8-bit register
 uint8_t readReg(uint8_t reg) {
-  uint8_t value;
-  i2c_start( g_i2cAddr | I2C_WRITE );
-  i2c_write( reg );
-  i2c_rep_start( g_i2cAddr | I2C_READ );
-  value = i2c_readNak();
-  i2c_stop();
-  return value;
+    uint8_t addr = g_i2cAddr; //TODO: confirm
+    uint8_t regbuf[2] = { reg >> 8, reg & 0xFF };
+    uint8_t value;
+    i2c1_write(addr, regbuf, 2);   // set register pointer
+    i2c1_read(addr, &value, 1);
+    return value;
 }
 
 // Read a 16-bit register
 uint16_t readReg16Bit(uint8_t reg) {
-  uint16_t value;
-  i2c_start( g_i2cAddr | I2C_WRITE );
-  i2c_write( reg );
-  i2c_rep_start( g_i2cAddr | I2C_READ );
-  value  = i2c_readAck() << 8;
-  value |= i2c_readNak();
-  i2c_stop();
-  return value;
+    uint8_t addr = g_i2cAddr;
+    uint8_t regbuf[2] = { reg >> 8, reg & 0xFF };
+    uint8_t data[2];
+    i2c1_write(addr, regbuf, 2);
+    i2c1_read(addr, data, 2);
+    return (data[0] << 8) | data[1];
 }
 
+/* Not necessary for now
 // Read a 32-bit register
 uint32_t readReg32Bit(uint8_t reg) {
   uint32_t value;
@@ -107,33 +105,33 @@ uint32_t readReg32Bit(uint8_t reg) {
   i2c_stop();
   return value;
 }
+*/
 
 // Write an arbitrary number of bytes from the given array to the sensor,
 // starting at the given register
 void writeMulti(uint8_t reg, uint8_t const *src, uint8_t count){
-  i2c_start( g_i2cAddr | I2C_WRITE );
-  i2c_write( reg );
+  //i2c_start( g_i2cAddr | I2C_WRITE );
+  uint8_t addr = g_i2cAddr;
+  i2c1_write(addr, &reg, 1);
   while ( count-- > 0 ) {
-    i2c_write( *src++ );
+    i2c1_write(addr, src++, 1);
   }
-  i2c_stop();
 }
 
 // Read an arbitrary number of bytes from the sensor, starting at the given
 // register, into the given array
 void readMulti(uint8_t reg, uint8_t * dst, uint8_t count) {
-  i2c_start( g_i2cAddr | I2C_WRITE );
-  i2c_write( reg );
-  i2c_rep_start( g_i2cAddr | I2C_READ );
+  uint8_t addr = g_i2cAddr;
+  i2c1_write(addr, &reg, 1);
+  i2c1_read(addr, dst, count);
   while ( count > 0 ) {
     if ( count > 1 ){
-      *dst++ = i2c_readAck();
+      *dst++ = i2c_readAck(); //TODO: replace or write i2c_readAck function
     } else {
       *dst++ = i2c_readNak();
     }
     count--;
   }
-  i2c_stop();
 }
 
 
