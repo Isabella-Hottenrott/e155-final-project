@@ -45,7 +45,7 @@ void writeReg(uint8_t reg, uint8_t value) {
   uint8_t buf[3];
   buf[0] = (reg >> 8) & 0xFF;   // high byte
   buf[1] = reg & 0xFF;          // low byte
-  buf[2] = val;
+  buf[2] = value;
   i2c1_write(addr, buf, 3);
 }
 
@@ -55,20 +55,23 @@ void writeReg16Bit(uint8_t reg, uint16_t value){
   uint8_t buf[4];
   buf[0] = (reg >> 8) & 0xFF;
   buf[1] = reg & 0xFF;
-  buf[2] = (val >> 8) & 0xFF;
-  buf[3] = val & 0xFF;
-  i2c1_write(addr, buf, 4);
+  buf[2] = (value >> 8) & 0xFF;
+  buf[3] = value & 0xFF;
+  i2c1_write(addr, buf, 4); 
 }
 
 // Write a 32-bit register
 void writeReg32Bit(uint8_t reg, uint32_t value){
+  uint8_t addr = g_i2cAddr;
   //i2c_start( g_i2cAddr | I2C_WRITE );
-  i2c_write(reg);
-  i2c_write((value >>24) & 0xFF);
-  i2c_write((value >>16) & 0xFF);
-  i2c_write((value >> 8) & 0xFF);
-  i2c_write((value     ) & 0xFF);
-  //i2c_stop();
+  i2c1_write(addr, reg, 1);
+
+  uint8_t buf[4];
+  buf[0] = (value >> 24) & 0xFF;
+  buf[1] = (value >> 16) & 0xFF;
+  buf[2] = (value >> 8) & 0xFF;
+  buf[3] = value & 0xFF;
+  i2c1_write(addr, buf, 4);
 }
 
 // Read an 8-bit register
@@ -126,9 +129,9 @@ void readMulti(uint8_t reg, uint8_t * dst, uint8_t count) {
   i2c1_read(addr, dst, count);
   while ( count > 0 ) {
     if ( count > 1 ){
-      *dst++ = i2c_readAck(); //TODO: replace or write i2c_readAck function
+      *dst++ = i2c1_ack(); //TODO: replace or write i2c_readAck function
     } else {
-      *dst++ = i2c_readNak();
+      *dst++ = i2c1_nack();
     }
     count--;
   }

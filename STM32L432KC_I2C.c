@@ -94,3 +94,10 @@ void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
     I2C1->ICR |= I2C_ICR_STOPCF;  // Clear STOP flag
 }
 
+unsigned char i2c1_ack(void){
+    return (I2C1->ISR & I2C_ISR_NACKF) == 0;
+}
+
+unsigned char i2c1_nack(void){
+    return (I2C1->ISR & I2C_ISR_NACKF) != 0;
+}

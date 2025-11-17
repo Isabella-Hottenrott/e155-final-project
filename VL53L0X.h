@@ -1,6 +1,7 @@
 #ifndef VL53L0X_h
 #define VL53L0X_h
 
+#include <stdint.h>
 
 //------------------------------------------------------------
 // For quick and dirty C++ compatibility
@@ -8,6 +9,12 @@
 #define bool  uint8_t
 #define true  1
 #define false 0
+
+/** defines the data direction (reading from I2C device) in i2c_start(),i2c_rep_start() */
+#define I2C_READ    1
+
+/** defines the data direction (writing to I2C device) in i2c_start(),i2c_rep_start() */
+#define I2C_WRITE   0
 
 //------------------------------------------------------------
 // Defines
