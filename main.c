@@ -315,26 +315,16 @@ int main(){
     pinMode(PB3, GPIO_OUTPUT);
     init_i2c1();
     initTIM(TIM15);
-
+    VL53L0X_init(&myTOFsensor);
     float dist;
 
+    //TODO: set up other code structure
 
-    while(0){
-      //VL53L0X_init(&myTOFsensor);
-      VL53L0X_writeReg(&myTOFsensor, 0x88, 0x00);
-      VL53L0X_writeReg(&myTOFsensor, 0x80, 0x01);
-      //VL53L0X_writeReg(&myTOFsensor, 0xFF, 0x01);
-      //VL53L0X_writeReg(&myTOFsensor, 0x00, 0x00);
-    }
-
-    if(1){
-      VL53L0X_init(&myTOFsensor);
-    }
-    //for(int i = 0; i < 1000000000; i++){
-    //  togglePin(PB3);
-    //  delay_millis(TIM15, 100);
-    //}
-    while(0){togglePin(PB3);}
+    // initialize all 5 sensors 
+    // toggle between them
+      // via XSHUT or multiplexing 
+    // interpret results
+    // communicate with FPGA
 
     
 
