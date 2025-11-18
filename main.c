@@ -311,14 +311,29 @@ int main(){
     configureFlash();
     configureHSIasClk();
     gpioEnable(GPIO_PORT_A);
+    gpioEnable(GPIO_PORT_B);
+    pinMode(PB3, GPIO_OUTPUT);
     init_i2c1();
     initTIM(TIM15);
 
     float dist;
 
 
+    while(0){
+      //VL53L0X_init(&myTOFsensor);
+      VL53L0X_writeReg(&myTOFsensor, 0x88, 0x00);
+      VL53L0X_writeReg(&myTOFsensor, 0x80, 0x01);
+      //VL53L0X_writeReg(&myTOFsensor, 0xFF, 0x01);
+      //VL53L0X_writeReg(&myTOFsensor, 0x00, 0x00);
+    }
 
-    VL53L0X_init(&myTOFsensor);
+    while(1){
+      VL53L0X_init(&myTOFsensor);
+    }
+    while(1){
+      togglePin(PB3);
+    }
+
     
 
  

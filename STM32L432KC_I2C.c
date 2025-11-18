@@ -67,10 +67,16 @@ void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
 
     // Configure transfer: 7-bit addr (SADD contains addr<<1), NBYTES, AUTOEND
     // Do NOT set HEAD10R here (we're using 7-bit addressing)
-    I2C1->CR2 = ((addr & 0x7F) << 1) | ((uint32_t)nbytes << 16) | I2C_CR2_AUTOEND;
+    I2C1->CR2 = ((addr & 0x7F) << 1) | // SADD
+                ((uint32_t)nbytes << 16) | // NBYTES
+                I2C_CR2_AUTOEND;
 
     // Generate START
     I2C1->CR2 |= I2C_CR2_START;
+
+    //CODE FROM COPILOT
+
+    /*
 
     // Send bytes, handle NACK
     for (uint8_t i = 0; i < nbytes; i++) {
@@ -91,6 +97,32 @@ void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
     // Wait for STOP (transfer complete) and clear it
     while (!(I2C1->ISR & I2C_ISR_STOPF)) { }
     I2C1->ICR = I2C_ICR_STOPCF;
+    */
+    
+
+    //CODE FROM BELLAAAA
+    
+    // Send bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while ((!(I2C1->ISR & I2C_ISR_TXIS))&((!(I2C1->ISR & I2C_ISR_NACKF))));   // Wait for TX ready
+       
+        if (I2C1->ISR & I2C_ISR_TXIS){
+        I2C1->TXDR = data[i];
+        }
+        if (I2C1->ISR & I2C_ISR_NACKF)
+        { 
+        printf("nackf \n");
+        return; 
+        }
+    }
+
+    // Wait for STOP flag (transfer complete)
+    if (I2C1->ISR & I2C_ISR_TC){
+    printf("error2\n");
+    //TODO: figure out what we need to put here (pg 1176)
+    }
+    
+
 }
 
 void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
