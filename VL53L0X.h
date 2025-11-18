@@ -1,11 +1,17 @@
-#ifndef VL53L0X_H_
-#define VL53L0X_H_
+// Wava Chan + Bella Hottentrot 
+// Nov 2025
+// Interfacing between VL53L0X sensor 7 STM32L432KC through I2C
 
+#ifndef STM32L4_VL53L0X_H
+#define STM32L4_VL53L0X_H
+
+#include "STM32L432KC_I2C.h"
 #include <stdbool.h>
-#include <stm32l432xx.h>  // CMSIS device library include
 
 
-    // register addresses from API vl53l0x_device.h (ordered as listed there)
+//////////HERE BREAK/////////////////////
+
+   // register addresses from API vl53l0x_device.h (ordered as listed there)
     enum VL53L0X_regAddr
     {
       SYSRANGE_START                              = 0x00,
@@ -119,7 +125,8 @@
 		uint32_t msrc_dss_tcc_us,    pre_range_us,    final_range_us;
 	};
 
-	void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr);
+
+    void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr);
     bool VL53L0X_init();
 
     void VL53L0X_writeReg(struct VL53L0X* dev, uint8_t reg, uint8_t value);
@@ -160,10 +167,9 @@
     uint32_t VL53L0X_timeoutMclksToMicroseconds(uint16_t timeout_period_mclks, uint8_t vcsel_period_pclks);
     uint32_t VL53L0X_timeoutMicrosecondsToMclks(uint32_t timeout_period_us, uint8_t vcsel_period_pclks);
 
-	void VL53L0X_startTimeout(struct VL53L0X* dev);
-	bool VL53L0X_checkTimeoutExpired(struct VL53L0X* dev);
+
+
+
+
 
 #endif
-
-
-

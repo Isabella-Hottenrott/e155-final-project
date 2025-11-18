@@ -3,6 +3,7 @@
 #include "STM32L432KC_I2C.h"
 #include "STM32L432KC_RCC.h"
 #include "STM32L432KC_GPIO.h"
+#include <stdio.h>
 
 
 
@@ -10,7 +11,8 @@
 #define ToF_sda      10 // SDA = PA10
 #define ToF_addr
 #define ToF_read
-#define I2C1_TIMINGR_VALUE 0x00B07CB4
+#define I2C1_TIMINGR_VALUE 0x00403D59
+// try above with HSI on
 //#define slaveaddr 0x52
 
 //during a write sequence, the second byte received provides a 8-bit index whihc points to one of the 8bit internal registerms
@@ -18,7 +20,10 @@
 
 void init_i2c1(){
 
-RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;              
+RCC->CCIPR |= _VAL2FLD(RCC_CCIPR_I2C1SEL, 0b10);  // HSI
+RCC->APB1ENR1 |= RCC_APB1ENR1_I2C1EN; 
+
 
 pinMode(ToF_sclk, GPIO_ALT);                             // PA9 = SCLK want AF4
 GPIOA->AFR[1] |= _VAL2FLD(GPIO_AFRH_AFSEL9, 4);     //AF4
@@ -33,20 +38,88 @@ GPIOA->OTYPER |= _VAL2FLD(GPIO_OTYPER_OT10, 1); // instead we must use external 
 
 GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD9_Msk | GPIO_PUPDR_PUPD10_Msk); //no pull (external)
 
-RCC->CR |= RCC_CR_HSION;
-while ((RCC->CR & RCC_CR_HSIRDY) == 0) { /* wait */ }
-
-RCC->CCIPR &= ~(RCC_CCIPR_I2C1SEL_Msk);
-RCC->CCIPR |=  (2U << RCC_CCIPR_I2C1SEL_Pos);
-RCC->APB1ENR1 |= RCC_APB1ENR1_I2C1EN;
-
 I2C1->CR1 &= ~I2C_CR1_PE; // disable
+I2C1->CR1 &= ~I2C_CR1_ANFOFF; 
+I2C1->CR1 |= I2C_CR1_RXIE;    
+I2C1->CR1 |= I2C_CR1_TXIE;   
+I2C1->CR1 |= I2C_CR1_TCIE;     
 I2C1->CR1 &= ~I2C_CR1_NOSTRETCH;
-I2C1->TIMINGR = I2C1_TIMINGR_VALUE;
+I2C1->TIMINGR &= ~0b11111111111111111111111111111111;
+I2C1->TIMINGR = 0x30420F13;  // from datasheet
+
+
 I2C1->CR1 |= I2C_CR1_PE; // enable i2c
+I2C1->CR1 &= ~I2C_CR1_PE; // toggle just in case
+I2C1->CR1 |= I2C_CR1_PE; // 
 }
 
 
-// want it to be Controller receiver
-// switches automatically to controller mode upon generating a START condition
+
+
+
+void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+    // Wait if busy
+//    while (I2C1->ISR & I2C_ISR_BUSY);
+
+    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
+                (nbytes << 16)        |  // NBYTES
+                I2C_CR2_HEAD10R       | //only 7 bits sent
+                I2C_CR2_AUTOEND;         // Auto STOP after last byte
+
+
+
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
+
+    // Send bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while ((!(I2C1->ISR & I2C_ISR_TXIS))&((!(I2C1->ISR & I2C_ISR_NACKF))));   // Wait for TX ready
+       
+        if (I2C1->ISR & I2C_ISR_TXIS){
+        I2C1->TXDR = data[i];
+        }
+        if (I2C1->ISR & I2C_ISR_NACKF)
+        { 
+        printf("nackf \n");
+        return; 
+        }
+    }
+
+    // Wait for STOP flag (transfer complete)
+    if (I2C1->ISR & I2C_ISR_TC){
+    printf("error2\n");
+    //TODO: figure out what we need to put here (pg 1176)
+    }
+
+}
+
+void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
+// look at page 1180 in user manual
+    // Wait if busy
+ //   while (I2C1->ISR & I2C_ISR_BUSY);
+
+    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
+    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
+                (nbytes << 16)        |  // NBYTES
+                I2C_CR2_HEAD10R       | //only 7 bits sent
+                (nbytes << 16)         |
+                I2C_CR2_AUTOEND;         // Auto STOP after last byte
+
+    // Generate START
+    I2C1->CR2 |= I2C_CR2_START;
+
+
+    // Receive bytes
+    for (uint8_t i = 0; i < nbytes; i++) {
+        while (!(I2C1->ISR & I2C_ISR_RXNE));  // Wait for received byte
+        data[i] = I2C1->RXDR;
+    }
+
+    // Wait for STOP flag (transfer complete)
+    if (I2C1->ISR & I2C_ISR_TC){
+    printf("error2\n");
+    //TODO: figure out what we need to put here (pg 1180)
+    }
+}
 

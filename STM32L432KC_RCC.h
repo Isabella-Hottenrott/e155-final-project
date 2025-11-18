@@ -15,5 +15,7 @@
 
 void configurePLL();
 void configureClock();
+void configureHSIasClk();
 
 #endif
+

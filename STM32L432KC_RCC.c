@@ -17,9 +17,9 @@ void configurePLL() {
 
    // Load configuration
    RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLSRC, RCC_PLLCFGR_PLLSRC_MSI);
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLM, 0b000); // M = 1
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 72);    // N = 72
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLR, 0b11);  // R = 8
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLM, 0b001); // M = 2
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 80);    // N = 80
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLR, 0b00);  // R = 2
    RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;                // Enable PLLCLK output
 
    // Enable PLL and wait until it's locked
@@ -37,3 +37,9 @@ void configureClock(){
 
   SystemCoreClockUpdate();
 }
+
+void configureHSIasClk(){
+  RCC->CR |= RCC_CR_HSION;
+
+ // SystemCoreClockUpdate();
+  }

@@ -1,14 +1,18 @@
-// Most of the functionality of this library is based on the VL53L0X API
-// provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
-// or paraphrased from the API source code, API user manual (UM2039), and the
-// VL53L0X datasheet.
+// Wava Chan + Bella Hottentrot 
+// Nov 2025
+// Interfacing between VL53L0X sensor 7 STM32L432KC through I2C
 
 #include "VL53L0X.h"
-
-// Defines /////////////////////////////////////////////////////////////////////
-#include "i2c.h"
 #include <stdio.h>
-#include <stdbool.h>
+
+#define WRITE 0x52
+#define READ 0x53
+
+
+
+///////////////ENDING HERE ENDING HERE ENDING HERE ENDING HERE ENDING HERE////////////////////////
+
+
 
 // Record the current time to check an upcoming timeout against
 //#define startTimeout() (timeout_start_ms = millis())
@@ -31,20 +35,6 @@
 #define calcMacroPeriod(vcsel_period_pclks) ((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000)
 
 
-volatile uint32_t sysTick_Time_vl53l0x = 0;
-
-// SysTick interrupt handler for counting the ticks
-void SysTick_Handler_vl53l0x(void) {
-	sysTick_Time_vl53l0x++;
-}
-
-// delay (i.e. wait) for a certain time
-// the unit of the delays (e.g. ms or µs) is defined by the core function "SysTick_Config"
-void delay(uint32_t delayTime){
-	uint32_t startTime =  sysTick_Time_vl53l0x;
-	while ( (sysTick_Time_vl53l0x - startTime) < delayTime );
-}
-
 
 void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr)
 {
@@ -60,31 +50,19 @@ void VL53L0X_setAddress(struct VL53L0X* dev, uint8_t new_addr)
 // enough unless a cover glass is added.
 // If io_2v8 (optional) is true or not given, the sensor is configured for 2V8
 // mode.
-
-
-void SysTick_Handler(void) {
-	sysTick_Time_vl53l0x++;
-}
-
 bool VL53L0X_init(struct VL53L0X* dev)
 {
   // VL53L0X_DataInit() begin
 
   // sensor uses 1V8 mode for I/O by default; switch to 2V8 mode if necessary
-  bool ans = dev->io_2v8;
-  printf("%d bool\n", ans);
-  if (dev->io_2v8)
-  { 
-    uint8_t val =  VL53L0X_readReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV) | 0x01;
-    VL53L0X_writeReg(dev, VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV, val); // set bit 0
-  }
 
   // "Set I2C standard mode"
+while(1){
   VL53L0X_writeReg(dev, 0x88, 0x00);
-
   VL53L0X_writeReg(dev, 0x80, 0x01);
   VL53L0X_writeReg(dev, 0xFF, 0x01);
   VL53L0X_writeReg(dev, 0x00, 0x00);
+  }
   dev->stop_variable = VL53L0X_readReg(dev, 0x91);
   VL53L0X_writeReg(dev, 0x00, 0x01);
   VL53L0X_writeReg(dev, 0xFF, 0x00);
@@ -295,7 +273,7 @@ void VL53L0X_writeReg(struct VL53L0X* dev, uint8_t reg, uint8_t value)
 	uint8_t buf[2];
 	buf[0] = reg;
 	buf[1] = value;
-	dev->last_status = i2c_write(dev->address, buf, 2);
+	i2c1_write(dev->address, buf, 2);
 }
 
 // Write a 16-bit register
@@ -305,7 +283,7 @@ void VL53L0X_writeReg16Bit(struct VL53L0X* dev, uint8_t reg, uint16_t value)
 	buf[0] = reg;
 	buf[1] = (uint8_t) (value >> 8);
 	buf[2] = (uint8_t) (value & 0xFF);
-	dev->last_status = i2c_write(dev->address, buf, 3);
+	i2c1_write(dev->address, buf, 3);
 }
 
 // Write a 32-bit register
@@ -317,15 +295,18 @@ void VL53L0X_writeReg32Bit(struct VL53L0X* dev, uint8_t reg, uint32_t value)
 	buf[2] = (uint8_t) (value >> 16);
 	buf[3] = (uint8_t) (value >> 8);
 	buf[4] = (uint8_t) (value & 0xFF);
-	dev->last_status = i2c_write(dev->address, buf, 5);
+
+	i2c1_write(dev->address, buf, 5);
 }
 
 // Read an 8-bit register
 uint8_t VL53L0X_readReg(struct VL53L0X* dev, uint8_t reg)
 {
+
   uint8_t value;
-  i2c_write(dev->address, &reg, 1);
-  dev->last_status = i2c_read(dev->address, &value, 1);
+
+  i2c1_write(dev->address, &reg, 1);
+  i2c1_read(dev->address, &value, 1);
   return value;
 }
 
@@ -334,8 +315,8 @@ uint16_t VL53L0X_readReg16Bit(struct VL53L0X* dev, uint8_t reg)
 {
   uint16_t value;
   uint8_t buf[2];
-  i2c_write(dev->address, &reg, 1);
-  dev->last_status = i2c_read(dev->address, buf, 2);
+  i2c1_write(dev->address, &reg, 1);
+  i2c1_read(dev->address, buf, 2);
   value = (uint16_t) ( buf[0] << 8 );
   value |= (uint16_t) buf[1];
   return value;
@@ -346,8 +327,8 @@ uint32_t VL53L0X_readReg32Bit(struct VL53L0X* dev, uint8_t reg)
 {
   uint32_t value;
   uint8_t buf[4];
-  i2c_write(dev->address, &reg, 1);
-  dev->last_status = i2c_read(dev->address, buf, 4);
+  i2c1_write(dev->address, &reg, 1);
+  i2c1_read(dev->address, buf, 4);
   value = (uint32_t) ( buf[0] << 24 );
   value |= (uint32_t) ( buf[1] << 16 );
   value |= (uint32_t) ( buf[2] << 8 );
@@ -359,16 +340,16 @@ uint32_t VL53L0X_readReg32Bit(struct VL53L0X* dev, uint8_t reg)
 // starting at the given register
 void VL53L0X_writeMulti(struct VL53L0X* dev, uint8_t reg, uint8_t* src, uint8_t count)
 {
-	i2c_write(dev->address, &reg, 1);
-	dev->last_status = i2c_write(dev->address, src, count);
+	i2c1_write(dev->address, &reg, 1);
+	i2c1_write(dev->address, src, count);
 }
 
 // Read an arbitrary number of bytes from the sensor, starting at the given
 // register, into the given array
 void VL53L0X_readMulti(struct VL53L0X* dev, uint8_t reg, uint8_t * dst, uint8_t count)
 {
-	i2c_write(dev->address, &reg, 1);
-	dev->last_status = i2c_read(dev->address, dst, count);
+	i2c1_write(dev->address, &reg, 1);
+	i2c1_read(dev->address, dst, count);
 }
 
 // Set the return signal rate limit check value in units of MCPS (mega counts
@@ -785,14 +766,8 @@ void VL53L0X_stopContinuous(struct VL53L0X* dev)
 // single-shot range measurement)
 uint16_t VL53L0X_readRangeContinuousMillimeters(struct VL53L0X* dev)
 {
-  VL53L0X_startTimeout(dev);
   while ((VL53L0X_readReg(dev,  RESULT_INTERRUPT_STATUS) & 0x07) == 0)
   {
-    if (VL53L0X_checkTimeoutExpired(dev))
-    {
-      dev->did_timeout = true;
-      return 65535;
-    }
   }
 
   // assumptions: Linearity Corrective Gain is 1000 (default);
@@ -819,15 +794,8 @@ uint16_t VL53L0X_readRangeSingleMillimeters(struct VL53L0X* dev)
 
   VL53L0X_writeReg(dev, SYSRANGE_START, 0x01);
 
-  // "Wait until start bit has been cleared"
-  VL53L0X_startTimeout(dev);
   while (VL53L0X_readReg(dev,  SYSRANGE_START) & 0x01)
   {
-    if (VL53L0X_checkTimeoutExpired(dev))
-    {
-      dev->did_timeout = true;
-      return 65535;
-    }
   }
 
   return VL53L0X_readRangeContinuousMillimeters(dev);
@@ -862,10 +830,9 @@ bool VL53L0X_getSpadInfo(struct VL53L0X* dev, uint8_t * count, bool * type_is_ap
 
   VL53L0X_writeReg(dev, 0x94, 0x6b);
   VL53L0X_writeReg(dev, 0x83, 0x00);
-  VL53L0X_startTimeout(dev);
+
   while (VL53L0X_readReg(dev,  0x83) == 0x00)
   {
-    if (VL53L0X_checkTimeoutExpired(dev)) { return false; }
   }
   VL53L0X_writeReg(dev, 0x83, 0x01);
   tmp = VL53L0X_readReg(dev,  0x92);
@@ -985,10 +952,9 @@ bool VL53L0X_performSingleRefCalibration(struct VL53L0X* dev, uint8_t vhv_init_b
 {
   VL53L0X_writeReg(dev, SYSRANGE_START, 0x01 | vhv_init_byte); // VL53L0X_REG_SYSRANGE_MODE_START_STOP
 
-  VL53L0X_startTimeout(dev);
+
   while ((VL53L0X_readReg(dev,  RESULT_INTERRUPT_STATUS) & 0x07) == 0)
   {
-    if (VL53L0X_checkTimeoutExpired(dev)) { return false; }
   }
 
   VL53L0X_writeReg(dev, SYSTEM_INTERRUPT_CLEAR, 0x01);
@@ -997,13 +963,3 @@ bool VL53L0X_performSingleRefCalibration(struct VL53L0X* dev, uint8_t vhv_init_b
 
   return true;
 }
-
-
-void VL53L0X_startTimeout(struct VL53L0X* dev){
-	dev->timeout_start_ms = sysTick_Time_vl53l0x;
-}
-
-bool VL53L0X_checkTimeoutExpired(struct VL53L0X* dev){
-	return (dev->io_timeout > 0 && (sysTick_Time_vl53l0x - dev->timeout_start_ms) > dev->io_timeout);
-}
-
