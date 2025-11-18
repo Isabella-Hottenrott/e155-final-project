@@ -327,12 +327,14 @@ int main(){
       //VL53L0X_writeReg(&myTOFsensor, 0x00, 0x00);
     }
 
-    while(1){
+    if(1){
       VL53L0X_init(&myTOFsensor);
     }
-    while(1){
-      togglePin(PB3);
-    }
+    //for(int i = 0; i < 1000000000; i++){
+    //  togglePin(PB3);
+    //  delay_millis(TIM15, 100);
+    //}
+    while(0){togglePin(PB3);}
 
     
 
@@ -340,8 +342,9 @@ int main(){
 
       while (1) {
           dist = VL53L0X_readRangeSingleMillimeters(&myTOFsensor);
-          printf("%f", dist);
-          for (volatile uint32_t i = 0; i < 100000; i++); // small delay
+          togglePin(PB3);
+          printf("%f \n", dist);
+          //for (volatile uint32_t i = 0; i < 100000; i++); // small delay
     }
 
 }

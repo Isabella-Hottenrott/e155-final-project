@@ -74,34 +74,6 @@ void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
     // Generate START
     I2C1->CR2 |= I2C_CR2_START;
 
-    //CODE FROM COPILOT
-
-    /*
-
-    // Send bytes, handle NACK
-    for (uint8_t i = 0; i < nbytes; i++) {
-        // Wait for TX ready or NACK
-        while (!(I2C1->ISR & (I2C_ISR_TXIS | I2C_ISR_NACKF))) { }
-
-        if (I2C1->ISR & I2C_ISR_NACKF) {
-            // clear NACK and abort
-            I2C1->ICR = I2C_ICR_NACKCF;
-            printf("i2c1_write: NACK received\n");
-            return;
-        }
-
-        // write byte
-        I2C1->TXDR = data[i];
-    }
-
-    // Wait for STOP (transfer complete) and clear it
-    while (!(I2C1->ISR & I2C_ISR_STOPF)) { }
-    I2C1->ICR = I2C_ICR_STOPCF;
-    */
-    
-
-    //CODE FROM BELLAAAA
-    
     // Send bytes
     for (uint8_t i = 0; i < nbytes; i++) {
         while ((!(I2C1->ISR & I2C_ISR_TXIS))&((!(I2C1->ISR & I2C_ISR_NACKF))));   // Wait for TX ready
