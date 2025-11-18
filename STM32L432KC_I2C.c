@@ -97,7 +97,7 @@ void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
 void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
 // look at page 1180 in user manual
     // Wait if busy
- //   while (I2C1->ISR & I2C_ISR_BUSY);
+    while (I2C1->ISR & I2C_ISR_BUSY);
 
     // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
     I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD

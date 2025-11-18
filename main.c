@@ -300,12 +300,13 @@ int main(){
     //
 
     struct VL53L0X myTOFsensor;
-    myTOFsensor.io_2v8 = false;
+    myTOFsensor.io_2v8 = true;
     myTOFsensor.address = 0b0101001;
     myTOFsensor.io_timeout = 500;
     myTOFsensor.did_timeout = false;
 
-    uint8_t test_data[] = {0x11} ;
+    uint8_t test_data[] = {0x11, 0x29, 0x85, 0x97, 0x81};
+    //i2c1_write(0x29, test_data, 5);
 
 
     configureFlash();
@@ -315,10 +316,19 @@ int main(){
     initTIM(TIM15);
 
     float dist;
+    while(1){
+  VL53L0X_writeReg(&myTOFsensor, 0x88, 0x00);
+  VL53L0X_writeReg(&myTOFsensor, 0x80, 0x01);
+  VL53L0X_writeReg(&myTOFsensor, 0xFF, 0x01);
+  VL53L0X_writeReg(&myTOFsensor, 0x00, 0x00);
 
 
+
+    }
 
     VL53L0X_init(&myTOFsensor);
+
+
     
 
  

@@ -57,12 +57,12 @@ bool VL53L0X_init(struct VL53L0X* dev)
   // sensor uses 1V8 mode for I/O by default; switch to 2V8 mode if necessary
 
   // "Set I2C standard mode"
-while(1){
-  VL53L0X_writeReg(dev, 0x88, 0x00);
-  VL53L0X_writeReg(dev, 0x80, 0x01);
-  VL53L0X_writeReg(dev, 0xFF, 0x01);
-  VL53L0X_writeReg(dev, 0x00, 0x00);
-  }
+
+  VL53L0X_writeReg(dev, 0x88, 0x00);  // writing 0x00 to 
+  VL53L0X_writeReg(dev, 0x80, 0x01);  // writing 0x01 to POWER_MANAGEMENT_GO1_POWER_FORCE
+  VL53L0X_writeReg(dev, 0xFF, 0x01); // writing 0x01 to 
+  VL53L0X_writeReg(dev, 0x00, 0x00);  // writing 0x00 to SYSRANGE_START
+
   dev->stop_variable = VL53L0X_readReg(dev, 0x91);
   VL53L0X_writeReg(dev, 0x00, 0x01);
   VL53L0X_writeReg(dev, 0xFF, 0x00);
