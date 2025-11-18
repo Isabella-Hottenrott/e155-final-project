@@ -307,7 +307,7 @@ int main(){
 
     uint8_t test_data[] = {0x11} ;
 
-
+    configurePLL();
     configureFlash();
     configureHSIasClk();
     gpioEnable(GPIO_PORT_A);
@@ -323,7 +323,7 @@ int main(){
 
  
 
-      while (0) {
+      while (1) {
           dist = VL53L0X_readRangeSingleMillimeters(&myTOFsensor);
           printf("%f", dist);
           for (volatile uint32_t i = 0; i < 100000; i++); // small delay

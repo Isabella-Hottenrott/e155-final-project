@@ -58,68 +58,71 @@ I2C1->CR1 |= I2C_CR1_PE; //
 
 
 void i2c1_write(uint8_t addr, uint8_t *data, uint8_t nbytes) {
-    // Wait if busy
-//    while (I2C1->ISR & I2C_ISR_BUSY);
+    // Blocking master write (7-bit addressing)
+    // Wait until bus not busy
+    while (I2C1->ISR & I2C_ISR_BUSY) { }
 
-    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
-    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
-                (nbytes << 16)        |  // NBYTES
-                I2C_CR2_HEAD10R       | //only 7 bits sent
-                I2C_CR2_AUTOEND;         // Auto STOP after last byte
+    // Clear previous flags (NACK, STOP)
+    I2C1->ICR = I2C_ICR_NACKCF | I2C_ICR_STOPCF;
 
-
+    // Configure transfer: 7-bit addr (SADD contains addr<<1), NBYTES, AUTOEND
+    // Do NOT set HEAD10R here (we're using 7-bit addressing)
+    I2C1->CR2 = ((addr & 0x7F) << 1) | ((uint32_t)nbytes << 16) | I2C_CR2_AUTOEND;
 
     // Generate START
     I2C1->CR2 |= I2C_CR2_START;
 
-    // Send bytes
+    // Send bytes, handle NACK
     for (uint8_t i = 0; i < nbytes; i++) {
-        while ((!(I2C1->ISR & I2C_ISR_TXIS))&((!(I2C1->ISR & I2C_ISR_NACKF))));   // Wait for TX ready
-       
-        if (I2C1->ISR & I2C_ISR_TXIS){
+        // Wait for TX ready or NACK
+        while (!(I2C1->ISR & (I2C_ISR_TXIS | I2C_ISR_NACKF))) { }
+
+        if (I2C1->ISR & I2C_ISR_NACKF) {
+            // clear NACK and abort
+            I2C1->ICR = I2C_ICR_NACKCF;
+            printf("i2c1_write: NACK received\n");
+            return;
+        }
+
+        // write byte
         I2C1->TXDR = data[i];
-        }
-        if (I2C1->ISR & I2C_ISR_NACKF)
-        { 
-        printf("nackf \n");
-        return; 
-        }
     }
 
-    // Wait for STOP flag (transfer complete)
-    if (I2C1->ISR & I2C_ISR_TC){
-    printf("error2\n");
-    //TODO: figure out what we need to put here (pg 1176)
-    }
-
+    // Wait for STOP (transfer complete) and clear it
+    while (!(I2C1->ISR & I2C_ISR_STOPF)) { }
+    I2C1->ICR = I2C_ICR_STOPCF;
 }
 
 void i2c1_read(uint8_t addr, uint8_t *data, uint8_t nbytes) {
-// look at page 1180 in user manual
-    // Wait if busy
- //   while (I2C1->ISR & I2C_ISR_BUSY);
+    // Blocking master read (7-bit addressing)
+    // Wait until bus not busy
+    while (I2C1->ISR & I2C_ISR_BUSY) { }
 
-    // Set slave address, write mode (RD_WRN=0), number of bytes, AUTOEND=1
-    I2C1->CR2 = ((addr & 0x7F) << 1) |  // SADD
-                (nbytes << 16)        |  // NBYTES
-                I2C_CR2_HEAD10R       | //only 7 bits sent
-                (nbytes << 16)         |
-                I2C_CR2_AUTOEND;         // Auto STOP after last byte
+    // Clear previous flags
+    I2C1->ICR = I2C_ICR_NACKCF | I2C_ICR_STOPCF;
+
+    // Configure transfer: 7-bit addr, NBYTES, AUTOEND, set read direction (RD_WRN)
+    I2C1->CR2 = ((addr & 0x7F) << 1) | ((uint32_t)nbytes << 16) | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN;
 
     // Generate START
     I2C1->CR2 |= I2C_CR2_START;
 
-
     // Receive bytes
     for (uint8_t i = 0; i < nbytes; i++) {
-        while (!(I2C1->ISR & I2C_ISR_RXNE));  // Wait for received byte
+        // Wait for RXNE or NACK
+        while (!(I2C1->ISR & (I2C_ISR_RXNE | I2C_ISR_NACKF))) { }
+
+        if (I2C1->ISR & I2C_ISR_NACKF) {
+            I2C1->ICR = I2C_ICR_NACKCF;
+            printf("i2c1_read: NACK received\n");
+            return;
+        }
+
         data[i] = I2C1->RXDR;
     }
 
-    // Wait for STOP flag (transfer complete)
-    if (I2C1->ISR & I2C_ISR_TC){
-    printf("error2\n");
-    //TODO: figure out what we need to put here (pg 1180)
-    }
+    // Wait for STOP flag and clear it
+    while (!(I2C1->ISR & I2C_ISR_STOPF)) { }
+    I2C1->ICR = I2C_ICR_STOPCF;
 }
 

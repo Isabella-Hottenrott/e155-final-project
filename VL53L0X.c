@@ -57,12 +57,10 @@ bool VL53L0X_init(struct VL53L0X* dev)
   // sensor uses 1V8 mode for I/O by default; switch to 2V8 mode if necessary
 
   // "Set I2C standard mode"
-while(1){
   VL53L0X_writeReg(dev, 0x88, 0x00);
   VL53L0X_writeReg(dev, 0x80, 0x01);
   VL53L0X_writeReg(dev, 0xFF, 0x01);
   VL53L0X_writeReg(dev, 0x00, 0x00);
-  }
   dev->stop_variable = VL53L0X_readReg(dev, 0x91);
   VL53L0X_writeReg(dev, 0x00, 0x01);
   VL53L0X_writeReg(dev, 0xFF, 0x00);
@@ -82,7 +80,17 @@ while(1){
 
   uint8_t spad_count;
   bool spad_type_is_aperture;
-  if (!VL53L0X_getSpadInfo(dev, &spad_count, &spad_type_is_aperture)) { return false; }
+  if (!VL53L0X_getSpadInfo(dev, &spad_count, &spad_type_is_aperture)) {
+    // Cleanup/reset sequence to leave device in a consistent state
+    VL53L0X_writeReg(dev, 0x81, 0x00);
+    VL53L0X_writeReg(dev, 0xFF, 0x06);
+    VL53L0X_writeReg(dev, 0x83, VL53L0X_readReg(dev,  0x83)  & ~0x04);
+    VL53L0X_writeReg(dev, 0xFF, 0x01);
+    VL53L0X_writeReg(dev, 0x00, 0x01);
+    VL53L0X_writeReg(dev, 0xFF, 0x00);
+    VL53L0X_writeReg(dev, 0x80, 0x00);
+    return false;
+  }
 
   // The SPAD map (RefGoodSpadMap) is read by VL53L0X_get_info_from_device() in
   // the API, but the same data seems to be more easily readable from
