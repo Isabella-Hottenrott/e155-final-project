@@ -7,11 +7,11 @@
 
 
 
+
 #define ToF_sclk      9 // SCLK = PA9
 #define ToF_sda      10 // SDA = PA10
-#define ToF_addr
-#define ToF_read
-#define I2C1_TIMINGR_VALUE 0x00403D59
+
+#define I2C1_TIMINGR_VALUE 0x30420F13
 // try above with HSI on
 //#define slaveaddr 0x52
 
@@ -45,7 +45,7 @@ I2C1->CR1 |= I2C_CR1_TXIE;
 I2C1->CR1 |= I2C_CR1_TCIE;     
 I2C1->CR1 &= ~I2C_CR1_NOSTRETCH;
 I2C1->TIMINGR &= ~0b11111111111111111111111111111111;
-I2C1->TIMINGR = 0x30420F13;  // from datasheet
+I2C1->TIMINGR = I2C1_TIMINGR_VALUE;  // from datasheet
 
 
 I2C1->CR1 |= I2C_CR1_PE; // enable i2c

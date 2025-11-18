@@ -292,6 +292,14 @@ int main(int argc, char **argv)
 #include "STM32L432KC_I2C.h"
 #include "VL53L0X.h"
 
+#define Lidar1 PA11
+#define Lidar2 PA12
+#define Lidar3 PA7
+#define Lidar4 PA2
+#define Lidar5 PA1
+
+
+
 int main(){
 
     //general initializations
