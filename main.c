@@ -307,7 +307,31 @@ int main(){
     //struct VL53L0X myTOFsensor = {.io_2v8 = false, .address = 0b0101001, .io_timeout = 500, .did_timeout = false};
     //
 
-    struct VL53L0X myTOFsensor;
+    struct VL53L0X myTOFsensor1;
+    myTOFsensor.io_2v8 = false;
+    myTOFsensor.address = 0b0101001;
+    myTOFsensor.io_timeout = 500;
+    myTOFsensor.did_timeout = false;
+
+    struct VL53L0X myTOFsensor2;
+    myTOFsensor.io_2v8 = false;
+    myTOFsensor.address = 0b0101001;
+    myTOFsensor.io_timeout = 500;
+    myTOFsensor.did_timeout = false;
+
+    struct VL53L0X myTOFsensor3;
+    myTOFsensor.io_2v8 = false;
+    myTOFsensor.address = 0b0101001;
+    myTOFsensor.io_timeout = 500;
+    myTOFsensor.did_timeout = false;
+
+    struct VL53L0X myTOFsensor4;
+    myTOFsensor.io_2v8 = false;
+    myTOFsensor.address = 0b0101001;
+    myTOFsensor.io_timeout = 500;
+    myTOFsensor.did_timeout = false;
+
+    struct VL53L0X myTOFsensor5;
     myTOFsensor.io_2v8 = false;
     myTOFsensor.address = 0b0101001;
     myTOFsensor.io_timeout = 500;
@@ -323,8 +347,65 @@ int main(){
     pinMode(PB3, GPIO_OUTPUT);
     init_i2c1();
     initTIM(TIM15);
-    VL53L0X_init(&myTOFsensor);
     float dist;
+
+    digitalWrite(Lidar1, PIO_LOW);
+    digitalWrite(Lidar2, PIO_LOW);
+    digitalWrite(Lidar3, PIO_LOW);
+    digitalWrite(Lidar4, PIO_LOW);
+    digitalWrite(Lidar5, PIO_LOW);
+
+    digitalWrite(Lidar1, PIO_HIGH);
+    VL53L0X_init(&myTOFsensor1);
+    VL53L0X_setAddress(&myTOFsensor1, 0b0000001);
+    myTOFsensor1.address = 0b0000001;
+    digitalWrite(Lidar1, PIO_LOW);
+
+    digitalWrite(Lidar2, PIO_HIGH);
+    VL53L0X_init(&myTOFsensor2);
+    VL53L0X_setAddress(&myTOFsensor2, 0b0000010);
+    myTOFsensor2.address = 0b0000010;
+    digitalWrite(Lidar2, PIO_LOW);
+
+    digitalWrite(Lidar3, PIO_HIGH);
+    VL53L0X_init(&myTOFsensor3);
+    VL53L0X_setAddress(&myTOFsensor3, 0b0000011);
+    myTOFsensor3.address = 0b0000011;
+    digitalWrite(Lidar3, PIO_LOW);
+
+    digitalWrite(Lidar4, PIO_HIGH);
+    VL53L0X_init(&myTOFsensor4);
+    VL53L0X_setAddress(&myTOFsensor4, 0b0000100);
+    myTOFsensor4.address = 0b0000100;
+    digitalWrite(Lidar4, PIO_LOW);
+
+    digitalWrite(Lidar5, PIO_HIGH);
+    VL53L0X_init(&myTOFsensor5);
+    VL53L0X_setAddress(&myTOFsensor5, 0b0000101);
+    myTOFsensor5.address = 0b0000101;
+    digitalWrite(Lidar5, PIO_LOW);
+
+
+
+    digitalWrite(Lidar1, PIO_HIGH);
+    dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+    digitalWrite(Lidar1, PIO_LOW);
+
+    digitalWrite(Lidar2, PIO_HIGH);
+    dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
+    digitalWrite(Lidar2, PIO_LOW);
+
+    digitalWrite(Lidar3, PIO_HIGH);
+    dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+    digitalWrite(Lidar3, PIO_LOW);
+
+    digitalWrite(Lidar4, PIO_HIGH);
+    dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
+    digitalWrite(Lidar4, PIO_LOW);
+
+    digitalWrite(Lidar5, PIO_HIGH);
+    dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
+    digitalWrite(Lidar5, PIO_LOW);
 
     //TODO: set up other code structure
 
@@ -334,17 +415,18 @@ int main(){
     // interpret results
     // communicate with FPGA
 
+    printf("%f \n", dist1);
+    printf("%f \n", dist2);
+    printf("%f \n", dist3);
+    printf("%f \n", dist4);
+    printf("%f \n", dist5);
+
+    while(1);
     
 
  
 
-      while (1) {
-          dist = VL53L0X_readRangeSingleMillimeters(&myTOFsensor);
-          togglePin(PB3);
-          printf("%f \n", dist);
-          //for (volatile uint32_t i = 0; i < 100000; i++); // small delay
-    }
-
+    
 }
 
 
