@@ -493,5 +493,30 @@ void setAddresses(void){
     VL53L0X_setAddress(&myTOFsensor5, 0b0000101);
     myTOFsensor5.address = 0b0000101;
     printf("secondTOF5addr = %d\n", myTOFsensor5.address);
+    
+
+
+    float dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+    float dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
+    float dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+    float dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
+    float dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
+
+ 
+    printf("dist1 = %f \n", dist1);
+    printf("dist2 = %f \n", dist2);
+    printf("dist3 = %f \n", dist3);
+    printf("dist4 = %f \n", dist4);
+    printf("dist5 = %f \n", dist5);
+    printf("done!");
+
+      while (1) {
+      float dist2cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
+      printf("dist 2 cont = %f\n", dist2cont);
+      float dist3cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+      printf("dist 3 cont = %f\n", dist3cont);
+
+
+    }
 
 }
