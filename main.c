@@ -406,7 +406,7 @@ int main(){
     float dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
     float dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
 
- 
+    
     printf("dist1 = %f \n", dist1);
     printf("dist2 = %f \n", dist2);
     printf("dist3 = %f \n", dist3);
@@ -414,12 +414,65 @@ int main(){
     printf("dist5 = %f \n", dist5);
     printf("done!");
 
-      while (1) {
-      float dist2cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
-      printf("dist 2 cont = %f\n", dist2cont);
-      float dist3cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
-      printf("dist 3 cont = %f\n", dist3cont);
+    float dist2cont, dist3cont;
 
+    while (0) {
+      dist2cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
+      delay_millis(TIM15, 2);
+      printf("dist 2 cont = %f\n", dist2cont);
+      dist3cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+      delay_millis(TIM15, 2);
+      printf("dist 3 cont = %f\n", dist3cont);
+    }
+
+    while(0){ //attempting to figure out calibration stuff
+      //dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+      //printf("dist1 = %f \n", dist1);
+      //printf("dist2 = %f \n", dist2);
+      //printf("dist3 = %f \n", dist3);
+      //printf("dist4 = %f \n", dist4);
+      //printf("dist5 = %f \n", dist5);
+      uint8_t photonCount;
+      bool type;
+      if(VL53L0X_getSpadInfo(&myTOFsensor2, &photonCount, &type)){
+        printf("photon count: %d \n", photonCount);
+      }
+    }
+
+    int count = 0;
+
+    while(1){ // prototype gesture recognition
+      count = 0;
+      delay_millis(TIM15, 2);
+      dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+      delay_millis(TIM15, 2);
+      dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+      delay_millis(TIM15, 2);
+      dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5); 
+      delay_millis(TIM15, 2);
+
+      if(dist2 < 500){
+        count++;
+      }
+      if(dist3 < 500){
+        count++;
+      }
+      if(dist3 < 500){
+        count++;
+      }
+
+      if(count == 0){
+        printf("rock!\n");
+      }
+      if(count == 1){
+        printf("scissors!\n");
+      }
+      if(count == 2){
+        printf("scissors!\n");
+      }
+      if(count == 3){
+        printf("paper!\n");
+      }
 
     }
 
