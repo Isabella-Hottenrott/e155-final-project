@@ -51,4 +51,6 @@ void SPIGPIO();
  *    -- return: the character received over SPI */
 uint8_t spiSendReceive(uint8_t send);
 
+uint8_t spiSend(uint8_t send);
+
 #endif

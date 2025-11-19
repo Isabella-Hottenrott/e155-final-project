@@ -36,22 +36,21 @@ module RPStoLED(input logic clk,
                 input logic done,
                 output logic LED[2:0]);
 
-    logic [3:0] RPS;
+    logic [2:0] RPS;
 
 
     always_comb begin
-        RPS[3] = SIG[7];
-        RPS[2] = SIG[6];
-        RPS[1] = SIG[5];
-        RPS[0] = &SIG[7:5];
+        RPS[2] = SIG[7];
+        RPS[1] = SIG[6];
+        RPS[0] = SIG[5];
     end
 
 
     always_ff @(posedge clk)
         if (done) begin
-            LED[2] = RPS[3];
-            LED[1] = RPS[2];
-            LED[0] = RPS[1];
+            LED[2] = RPS[2];
+            LED[1] = RPS[1];
+            LED[0] = RPS[0];
         end
 
 endmodule

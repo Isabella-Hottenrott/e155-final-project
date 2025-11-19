@@ -20,9 +20,9 @@ RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
 //disable SPI for the configurations
 SPI1->CR1 |= _VAL2FLD(SPI_CR1_SPE, 0);                          
 
-SPI1->CR1 |= _VAL2FLD(SPI_CR1_BR, 0b011);            // set the Baud rate (will want 3)
-SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPOL, 0);              // set CPOL 0 when idle
-SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPHA, 1);              // set CPHA 1 to match DS1722
+SPI1->CR1 |= _VAL2FLD(SPI_CR1_BR, br);            // set the Baud rate (will want 3)
+SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPOL, cpol);              // set CPOL 0 when idle
+SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPHA, cpha);              // set CPHA 1 to match DS1722
 SPI1->CR1 |= _VAL2FLD(SPI_CR1_BIDIMODE, 0);          // two line unidirectional data mode
 SPI1->CR1 |= _VAL2FLD(SPI_CR1_LSBFIRST, 0);          // msb transmitted first
 
@@ -56,5 +56,11 @@ uint8_t spiSendReceive(uint8_t send){
     while (!(SPI1->SR & SPI_SR_RXNE));              // wait until RX FIFO is empty
     uint8_t r = *(volatile uint8_t *)&SPI1->DR;     // return whats in the buffer
     return r;
+}
+
+uint8_t spiSend(uint8_t send){
+    while (!(SPI1->SR & SPI_SR_TXE));               // wait until TX FIFO is empty
+    *(volatile uint8_t *) (&SPI1->DR) = send;       // Send a byte
+    while (!(SPI1->SR & SPI_SR_RXNE));              // wait until RX FIFO is empty
 }
 
