@@ -1,14 +1,7 @@
-// Wava Chan + Bella Hottentrot 
-// Nov. 2025
-// E155 Final Project
-// SPI Interface Module
-
-//We will have 8 bit transactions
-
-module spi(input  logic sck, 
+module spi(input  logic sck,
             input  logic sdi,
             input  logic cs,
-            output logic SIG[7:0],
+            output logic [7:0] SIG,
             output logic done); //TODO change
 
                
@@ -20,37 +13,9 @@ module spi(input  logic sck,
     // edge is a rising edge (clock going from low in the idle state to high).
 
     always_ff @(posedge sck)
-        if (cs)  {SIG} = {SIG[6:0], sdi};
-        else           {SIG} = {SIG}; 
+        if (cs)  {SIG[7:0]} = {SIG[6:0], sdi};
+        else           {SIG} = {SIG};
 
     assign done = ~cs;
-
-endmodule
-
-
-
-
-
-module RPStoLED(input logic clk,
-                input logic SIG[7:0],
-                input logic done,
-                output logic LED[2:0]);
-
-    logic [2:0] RPS;
-
-
-    always_comb begin
-        RPS[2] = SIG[7];
-        RPS[1] = SIG[6];
-        RPS[0] = SIG[5];
-    end
-
-
-    always_ff @(posedge clk)
-        if (done) begin
-            LED[2] = RPS[2];
-            LED[1] = RPS[1];
-            LED[0] = RPS[0];
-        end
 
 endmodule

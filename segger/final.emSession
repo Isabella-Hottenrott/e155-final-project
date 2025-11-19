@@ -1,7 +1,9 @@
 <!DOCTYPE CrossStudio_Session_File>
 <session>
  <Bookmarks/>
- <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
+ </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBuffer/>
  <Memory1/>
@@ -36,8 +38,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="309" useTextEdit="1" path="../main.c" left="0" selected="1" top="295" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../VL53L0X.c" left="0" top="85" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="388" useTextEdit="1" path="../main.c" left="0" selected="1" top="366" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="313" useTextEdit="1" path="../VL53L0X.c" left="0" top="297" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="121" useTextEdit="1" path="../VL53L0X.h" left="0" top="70" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../STM32L432KC_SPI.c" left="0" top="56" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="final" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/squis/Downloads/HMC FINAL SEMESTER/E155/e155-final-project" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

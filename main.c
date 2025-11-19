@@ -354,8 +354,8 @@ int main(){
     if(dist3 < 500){
         count++;
     }
-    //changed this from dist3 to dist4
-    if(dist4 < 500){
+    
+    if(dist3 < 500){
         count++;
     }
 

@@ -40,8 +40,7 @@ pinMode(PB4, GPIO_ALT);                             // PB4 = MISO want AF5
 GPIOB->AFR[0] |= _VAL2FLD(GPIO_AFRL_AFSEL4, 5);   //AF5
 pinMode(PB5, GPIO_ALT);                             // PB5 = MOSI want AF5
 GPIOB->AFR[0] |= _VAL2FLD(GPIO_AFRL_AFSEL5, 5);   //AF5
-pinMode(PB0, GPIO_OUTPUT);                          // PB0 = Chip Select
-digitalWrite(PB0, PIO_LOW);
+
 
 GPIOB->OSPEEDR |= _VAL2FLD(GPIO_OSPEEDR_OSPEED3, 1); 
 
@@ -64,3 +63,10 @@ uint8_t spiSend(uint8_t send){
     while (!(SPI1->SR & SPI_SR_RXNE));              // wait until RX FIFO is empty
 }
 
+
+
+// on FPGA:
+// PB3 -> Pin 21 (sck)
+// PB4 -> Pin x (MISO) (so sdo non existent on fpga dont need)
+// PB5 -> Pin 19 (MOSI) (so sdo non existent on fpga dont need)
+// PB6 -> Pin 20 (CS) 
