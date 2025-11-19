@@ -291,130 +291,42 @@ int main(int argc, char **argv)
 #include "STM32L432KC.h"
 #include "STM32L432KC_I2C.h"
 #include "VL53L0X.h"
-#include <stdio.h>
 
 #define Lidar1 PA11
 #define Lidar2 PA12
 #define Lidar3 PA3
 #define Lidar4 PA2
 #define Lidar5 PA1
-#define CS PB6
-#define MCK_FREQ 100000
-
-// PB3, PB4, PB5, PB0 taken by SPI
-
-
-
-// Function Prototypes
-
-void initializeSys(void);
-void setAddresses(void);
-
-struct VL53L0X myTOFsensor1;
-struct VL53L0X myTOFsensor2;
-struct VL53L0X myTOFsensor3;
-struct VL53L0X myTOFsensor4;
-struct VL53L0X myTOFsensor5;
-
-
-
+#define CS     PB7
 
 int main(){
 
-
-    void initializeSys();
-    void setAddresses();
-
-    float dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
-    float dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
-    float dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
-    float dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
-    float dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
-
-    printf("dist1 = %f \n", dist1);
-    printf("dist2 = %f \n", dist2);
-    printf("dist3 = %f \n", dist3);
-    printf("dist4 = %f \n", dist4);
-    printf("dist5 = %f \n", dist5);
-    printf("done!");
-
-    int count = 0;
-
-    delay_millis(TIM15, 2);
-    dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
-    delay_millis(TIM15, 2);
-    dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
-    delay_millis(TIM15, 2);
-    dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5); 
-    delay_millis(TIM15, 2);
-
-    if(dist2 < 500){
-        count++;
-    }
-    if(dist3 < 500){
-        count++;
-    }
-    
-    if(dist3 < 500){
-        count++;
-    }
-
-
-    uint8_t RPS = 0;
-    // For Now:
-    // RPS = 8'b00000000
-    // RPS = {rock, paper, scissors, 5'b00000}
-    if(count == 0){
-        RPS = 128;      // 8'b10000000
-        printf("rock!\n");
-    }
-    if(count == 1){
-        RPS = 64;      // 8'b01000000
-        printf("scissors!\n");
-    }
-    if(count == 2){
-        RPS = 64;      // 8'b01000000
-        printf("scissors!\n");
-    }
-    if(count == 3){
-        RPS = 64;      // 8'b01000000
-        printf("paper!\n");
-    }
-
-
-    digitalWrite(CS, PIO_HIGH);
-    spiSend(RPS);
-    digitalWrite(CS, PIO_LOW);
-
-    while(1);
-
-}
-
-
-
-
-void initializeSys(void){
-
+    struct VL53L0X myTOFsensor1;
     myTOFsensor1.io_2v8 = false;
     myTOFsensor1.address = 0b0101001;
     myTOFsensor1.io_timeout = 500;
     myTOFsensor1.did_timeout = false;
 
+    struct VL53L0X myTOFsensor2;
     myTOFsensor2.io_2v8 = false;
     myTOFsensor2.address = 0b0101001;
     myTOFsensor2.io_timeout = 500;
     myTOFsensor2.did_timeout = false;
 
+
+    struct VL53L0X myTOFsensor3;
     myTOFsensor3.io_2v8 = false;
     myTOFsensor3.address = 0b0101001;
     myTOFsensor3.io_timeout = 500;
     myTOFsensor3.did_timeout = false;
 
+    struct VL53L0X myTOFsensor4;
     myTOFsensor4.io_2v8 = false;
     myTOFsensor4.address = 0b0101001;
     myTOFsensor4.io_timeout = 500;
     myTOFsensor4.did_timeout = false;
 
+    struct VL53L0X myTOFsensor5;
     myTOFsensor5.io_2v8 = false;
     myTOFsensor5.address = 0b0101001;
     myTOFsensor5.io_timeout = 500;
@@ -431,29 +343,25 @@ void initializeSys(void){
     initTIM(TIM15);
     initSPI(1, 0, 0);
 
-    // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
-    pinMode(CS, GPIO_OUTPUT);
-    digitalWrite(CS, PIO_LOW);
-
 
     pinMode(Lidar1, GPIO_OUTPUT);
     pinMode(Lidar2, GPIO_OUTPUT);
     pinMode(Lidar3, GPIO_OUTPUT);
     pinMode(Lidar4, GPIO_OUTPUT);
     pinMode(Lidar5, GPIO_OUTPUT);
+    pinMode(CS, GPIO_OUTPUT);
 
     digitalWrite(Lidar1, PIO_LOW);
     digitalWrite(Lidar2, PIO_LOW);
     digitalWrite(Lidar3, PIO_LOW);
     digitalWrite(Lidar4, PIO_LOW);
     digitalWrite(Lidar5, PIO_LOW);
+    digitalWrite(CS, PIO_LOW);
 
-}
+    
+    
 
-
-
-void setAddresses(void){
-
+    
     digitalWrite(Lidar1, PIO_HIGH);
     delay_millis(TIM15, 1);
     printf("initTOF1addr = %d\n", myTOFsensor1.address);
@@ -494,7 +402,7 @@ void setAddresses(void){
     myTOFsensor5.address = 0b0000101;
     printf("secondTOF5addr = %d\n", myTOFsensor5.address);
     
-
+    delay_millis(TIM15, 100);
 
     float dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
     float dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
@@ -502,7 +410,7 @@ void setAddresses(void){
     float dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
     float dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
 
- 
+    
     printf("dist1 = %f \n", dist1);
     printf("dist2 = %f \n", dist2);
     printf("dist3 = %f \n", dist3);
@@ -510,13 +418,57 @@ void setAddresses(void){
     printf("dist5 = %f \n", dist5);
     printf("done!");
 
-      while (1) {
-      float dist2cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
-      printf("dist 2 cont = %f\n", dist2cont);
-      float dist3cont = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
-      printf("dist 3 cont = %f\n", dist3cont);
+    float dist2cont, dist3cont;
 
 
-    }
+    int count = 0;
+    uint8_t RPS = 0;
+
+
+      count = 0;
+      delay_millis(TIM15, 2);
+      dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+      delay_millis(TIM15, 2);
+      dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
+      delay_millis(TIM15, 2);
+      dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5); 
+      delay_millis(TIM15, 2);
+
+      if(dist2 < 500){
+        count++;
+      }
+      if(dist3 < 500){
+        count++;
+      }
+      if(dist4 < 500){
+        count++;
+      }
+
+      if(count == 0){
+        RPS = 128;      // 8'b10000000
+        printf("rock!\n");
+      }
+      if(count == 1){
+        RPS = 32;      // 8'b00100000
+        printf("scissors!\n");
+      }
+      if(count == 2){
+        RPS = 32;      // 8'b00100000
+        printf("scissors!\n");
+      }
+      if(count == 3){
+        RPS = 64;      // 8'b01000000
+        printf("paper!\n");
+      }
+
+      digitalWrite(CS, PIO_HIGH);
+      spiSend(RPS);
+      digitalWrite(CS, PIO_LOW);
+
+
+
+      while(1);
+
+
 
 }
