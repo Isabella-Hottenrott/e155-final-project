@@ -3,17 +3,14 @@
 // E155 Final Project
 // SPI Interface Module
 
+//We will have 8 bit transactions
 
-//starting with starter code from lab 7
 module spi(input  logic sck, 
-               input  logic sdi,
-               output logic sdo,
-               input  logic done,
-               output logic [127:0] key, plaintext, //TODO change
-               input  logic [127:0] cyphertext); //TODO change
+            input  logic sdi,
+            input  logic cs,
+            output logic SIG[7:0],
+            output logic done); //TODO change
 
-    logic         sdodelayed, wasdone;
-    logic [127:0] cyphertextcaptured;
                
     // assert load
     // apply 256 sclks to shift in key and plaintext, starting with plaintext[127]
@@ -21,16 +18,40 @@ module spi(input  logic sck,
     // then apply 128 sclks to shift out cyphertext, starting with cyphertext[127]
     // SPI mode is equivalent to cpol = 0, cpha = 0 since data is sampled on first edge and the first
     // edge is a rising edge (clock going from low in the idle state to high).
+
     always_ff @(posedge sck)
-        if (!wasdone)  {cyphertextcaptured, plaintext, key} = {cyphertext, plaintext[126:0], key, sdi};
-        else           {cyphertextcaptured, plaintext, key} = {cyphertextcaptured[126:0], plaintext, key, sdi}; 
-    
-    // sdo should change on the negative edge of sck
-    always_ff @(negedge sck) begin
-        wasdone = done;
-        sdodelayed = cyphertextcaptured[126];
+        if (cs)  {SIG} = {SIG[6:0], sdi};
+        else           {SIG} = {SIG}; 
+
+    assign done = ~cs;
+
+endmodule
+
+
+
+
+
+module RPStoLED(input logic clk,
+                input logic SIG[7:0],
+                input logic done,
+                output logic LED[2:0]);
+
+    logic [3:0] RPS;
+
+
+    always_comb begin
+        RPS[3] = SIG[7];
+        RPS[2] = SIG[6];
+        RPS[1] = SIG[5];
+        RPS[0] = &SIG[7:5];
     end
-    
-    // when done is first asserted, shift out msb before clock edge
-    assign sdo = (done & !wasdone) ? cyphertext[127] : sdodelayed;
+
+
+    always_ff @(posedge clk)
+        if (done) begin
+            LED[2] = RPS[3];
+            LED[1] = RPS[2];
+            LED[0] = RPS[1];
+        end
+
 endmodule
