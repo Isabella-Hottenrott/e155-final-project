@@ -2,7 +2,6 @@
 #include "STM32L432KC_I2C.h"
 #include "VL53L0X.h"
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 
@@ -12,6 +11,10 @@
 #define Lidar4 PA2
 #define Lidar5 PA1
 #define CS     PB7
+
+
+//Fn Prototype
+uint8_t winlosedraw(uint8_t userRPS, uint8_t computerRPS);
 
 int main(){
 
@@ -139,10 +142,9 @@ int main(){
 
 
     int count = 0;
-    uint8_t RPS = 0;
+    uint8_t userRPS = 0;
 
 
-      count = 0;
       delay_millis(TIM15, 2);
       dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
       delay_millis(TIM15, 2);
@@ -162,26 +164,31 @@ int main(){
       }
 
       if(count == 0){
-        RPS = 128;      // 8'b10000000
-        printf("rock!\n");
+        userRPS = 0;      // rock
+        printf("you chose rock!\n");
       }
       if(count == 1){
-        RPS = 32;      // 8'b00100000
-        printf("scissors!\n");
+        userRPS = 2;      // scissors
+        printf("you chose scissors!\n");
       }
       if(count == 2){
-        RPS = 32;      // 8'b00100000
-        printf("scissors!\n");
+        userRPS = 2;      // scissors
+        printf("you chose scissors!\n");
       }
       if(count == 3){
-        RPS = 64;      // 8'b01000000
-        printf("paper!\n");
+        userRPS = 1;      // paper
+        printf("you chose paper!\n");
       }
+
+
+    int computerRPSint = rand() % 3; // 0, 1, or 2
+    uint8_t computerRPS = (uint8_t) computerRPSint;
+    uint8_t WLD = winlosedraw(userRPS, computerRPS);
 
 
 
       digitalWrite(CS, PIO_HIGH);
-      spiSend(RPS);
+      spiSend(WLD);
       digitalWrite(CS, PIO_LOW);
 
 
@@ -191,3 +198,64 @@ int main(){
 
 
 }
+
+uint8_t winlosedraw(uint8_t userRPS, uint8_t computerRPS) {
+
+    // 0 = rock
+    // 1 = paper
+    // 2 = scissors
+    uint8_t WLD;
+
+    switch(computerRPS){
+        case 0: // computer choses rock
+            printf("computer chooses rock\n");
+            if (userRPS == 0){
+                WLD = 64;      // 8'b01000000 draw
+                printf("Draw\n");
+                break;
+            } else if (userRPS == 1){
+                WLD = 32;      // 8'b00100000 win -> computer loses to user. Rock loses to paper.
+                printf("You win!\n");
+                break;
+            } else if (userRPS == 2){
+                WLD = 128;      // 8'b10000000 lose -> computer wins to user. Rock wins to scissors.
+                printf("You lose!\n");
+                break;
+            }
+
+        case 1: // computer chooses paper
+            printf("computer chooses paper\n");
+            if (userRPS == 0){
+                WLD = 128;      // 8'b10000000 lose -> computer wins to user. paper wins to rock.
+                printf("You lose!\n");
+                break;
+            } else if (userRPS == 1){
+                WLD = 64;      // 8'b01000000 draw
+                printf("Draw");
+                break;
+            } else if (userRPS == 2){
+                WLD = 32;      // 8'b00100000 win -> computer loses to user. paper loses to scissors.
+                printf("You win!\n");
+                break;
+            }
+
+        case 2: // computer chooses scissors
+            printf("computer chooses scissors\n");
+            if (userRPS == 0){
+                WLD = 32;      // 8'b00100000 win -> computer loses to user. scissors loses to rock.
+                printf("You win!\n");
+                break;
+            } else if (userRPS == 1){
+                WLD = 128;      // 8'b10000000 lose -> computer wins to user. scissors wins to paper.
+                printf("You lose!\n");
+                break;
+            } else if (userRPS == 2){
+                WLD = 64;      // 8'b01000000 draw
+                printf("Draw");
+                break;
+            }
+    }
+
+    return WLD;
+}
+
