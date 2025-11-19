@@ -9,16 +9,15 @@ module finalproj(input logic sck,
 input logic reset,
                 output logic [2:0] LED);
 
-logic done;
+logic start, done;
 logic [7:0] SIG;
 
 
 
-        spi spi(.sck(sck), .sdi(sdi), .cs(cs), .SIG(SIG), .done(done));
-RPStoLED RPStoLED(.sck(sck), .reset(reset), .SIG(SIG), .done(done), .LED(LED));
+        spi spi(.sck(sck), .sdi(sdi), .cs(cs), .SIG(SIG), .done(done), .start(start));
+RPStoLED RPStoLED(.sck(sck), .reset(reset), .SIG(SIG), .done(done), .start(start), .LED(LED));
 
 
 
 
 endmodule
-

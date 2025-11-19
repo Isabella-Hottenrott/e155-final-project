@@ -1,29 +1,23 @@
-// Isabella Hottenrott
-// tb_scancounter.sv
-// ihottenrott@g.hmc.edu
-// 13/9/2025
-// Testbench for finalproj
-
 module finalprojtb();
-	logic clk, reset;
+    logic clk, reset;
     logic sck, sdi, cs;
     logic [2:0] LED, LEDexp;
-	logic [4:0] errors, vectornum;
+    logic [4:0] errors, vectornum;
 
-	finalproj dut(.sck(sck), .sdi(sdi), .cs(cs), .reset(reset), .LED(LED));
-
-
-	always
-		begin
-			clk=1; #5;
-			clk=0; #5;
-		end
+    finalproj dut(.sck(sck), .sdi(sdi), .cs(cs), .reset(reset), .LED(LED));
 
 
-		
-	initial begin
-			errors=0; vectornum=5'd0; #10; reset=1'b0; #10;
-			vectornum=5'd1; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;   //rock
+    always
+        begin
+            clk=1; #5;
+            clk=0; #5;
+        end
+
+
+       
+    initial begin
+            errors=0; vectornum=5'd0; #10; reset=1'b0; #10;
+            vectornum=5'd1; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;   //rock
             vectornum=5'd2; sck=1'b0; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;
             vectornum=5'd3; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd4; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
@@ -48,7 +42,7 @@ module finalprojtb();
             vectornum=5'd22; sck=1'b0; cs=1'b0; sdi=1'b0; LEDexp=3'b100; #10;
             #10;
             #10;
-            vectornum=5'd23; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;   
+            vectornum=5'd23; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;  
             vectornum=5'd24; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd25; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10; //paper
             vectornum=5'd26; sck=1'b0; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;
@@ -75,7 +69,7 @@ module finalprojtb();
             #10;
             #10;
 
-            vectornum=5'd45; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;   
+            vectornum=5'd45; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;  
             vectornum=5'd46; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd47; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd48; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
@@ -100,17 +94,17 @@ module finalprojtb();
             vectornum=5'd66; sck=1'b0; cs=1'b0; sdi=1'b0; LEDexp=3'b001; #10;
 
 
-			$display("completed with %d errors", errors);
-			$stop;
-		end
-		
+            $display("completed with %d errors", errors);
+            $stop;
+        end
+       
 
-	always @(negedge clk)
-		if (reset) begin
-			if ((LED !== LEDexp)) begin
-				$display("Error: on test = %d ", vectornum);
-				errors = errors + 1;
-			end
+    always @(negedge clk)
+        if (reset) begin
+            if ((LED !== LEDexp)) begin
+                $display("Error: on test = %d ", vectornum);
+                errors = errors + 1;
+            end
 
-end 
+end
 endmodule

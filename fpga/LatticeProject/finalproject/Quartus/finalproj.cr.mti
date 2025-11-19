@@ -1,0 +1,15 @@
+C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module finalprojtb
+
+Top level modules:
+	finalprojtb
+
+} {} {}} C:/Users/ihottenrott/finalproject/source/top/finalproj.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/finalproject/source/top/finalproj.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module finalproj
+
+Top level modules:
+	finalproj
+
+} {} {}}

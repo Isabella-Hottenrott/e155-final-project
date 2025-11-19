@@ -1,0 +1,31 @@
+---------------------------------------------------
+Report for cell finalproj
+   Instance path: finalproj
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                  LUT4	         11        100.0
+                               LUTGATE	         11        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	          7        100.0
+                                PFUREG	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              RPStoLED	          1         9.1
+                                   spi	          1         0.0
+---------------------------------------------------
+Report for cell RPStoLED
+   Instance path: finalproj/RPStoLED
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         9.1
+                               LUTGATE	          1         9.1
+                                PFUREG	          3        30.0
+---------------------------------------------------
+Report for cell spi
+   Instance path: finalproj/spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                 IOREG	          1        100.0
+                                PFUREG	          7        70.0

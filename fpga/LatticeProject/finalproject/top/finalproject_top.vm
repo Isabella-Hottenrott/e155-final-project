@@ -1,0 +1,174 @@
+// Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.2.0.3.0
+// Netlist written on Wed Nov 19 12:53:32 2025
+// Source file index table: 
+// Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
+// file 0 "c:/users/ihottenrott/finalproject/source/top/rpstoled.sv"
+// file 1 "c:/users/ihottenrott/finalproject/source/top/finalproj.sv"
+// file 2 "c:/users/ihottenrott/finalproject/source/top/spi.sv"
+// file 3 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v"
+// file 4 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd"
+// file 5 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 6 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 7 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 8 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 9 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 10 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 11 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 12 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ib.v"
+// file 13 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 14 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 15 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 16 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ob.v"
+// file 17 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 18 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 19 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 20 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 21 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 22 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 23 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 24 "c:/lscc/radiant/2024.2/ip/common/adder/rtl/lscc_adder.v"
+// file 25 "c:/lscc/radiant/2024.2/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 26 "c:/lscc/radiant/2024.2/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 27 "c:/lscc/radiant/2024.2/ip/common/counter/rtl/lscc_cntr.v"
+// file 28 "c:/lscc/radiant/2024.2/ip/common/fifo/rtl/lscc_fifo.v"
+// file 29 "c:/lscc/radiant/2024.2/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 30 "c:/lscc/radiant/2024.2/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 31 "c:/lscc/radiant/2024.2/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 32 "c:/lscc/radiant/2024.2/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 33 "c:/lscc/radiant/2024.2/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 34 "c:/lscc/radiant/2024.2/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 35 "c:/lscc/radiant/2024.2/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 36 "c:/lscc/radiant/2024.2/ip/common/rom/rtl/lscc_rom.v"
+// file 37 "c:/lscc/radiant/2024.2/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 38 "c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v"
+// file 39 "c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v"
+// file 40 "c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v"
+// file 41 "c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v"
+// file 42 "c:/lscc/radiant/2024.2/ip/pmi/pmi_dsp.v"
+// file 43 "c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v"
+// file 44 "c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v"
+// file 45 "c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v"
+// file 46 "c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v"
+// file 47 "c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v"
+// file 48 "c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v"
+// file 49 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v"
+// file 50 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v"
+// file 51 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v"
+// file 52 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v"
+// file 53 "c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v"
+// file 54 "c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v"
+
+//
+// Verilog Description of module finalproj
+//
+
+module finalproj (input sck, input sdi, input cs, input reset, output [2:0]LED);
+    
+    (* is_clock=1, lineinfo="@1(6[30],6[33])" *) wire sck_c;
+    wire sdi_c;
+    wire cs_c;
+    wire reset_c;
+    wire LED_c_2;
+    wire LED_c_1;
+    wire LED_c_0;
+    (* is_clock=1, lineinfo="@1(12[15],12[19])" *) wire done;
+    wire [7:0]SIG;
+    
+    wire VCC_net, GND_net;
+    
+    VHI i14 (.Z(VCC_net));
+    (* lineinfo="@1(8[29],8[31])" *) IB cs_pad (.I(cs), .O(cs_c));
+    (* lineinfo="@1(6[30],6[33])" *) IB sck_pad (.I(sck), .O(sck_c));
+    (* lineinfo="@1(10[36],10[39])" *) OB \LED_pad[0]  (.I(LED_c_0), .O(LED[0]));
+    (* lineinfo="@1(10[36],10[39])" *) OB \LED_pad[1]  (.I(LED_c_1), .O(LED[1]));
+    (* lineinfo="@1(10[36],10[39])" *) OB \LED_pad[2]  (.I(LED_c_2), .O(LED[2]));
+    (* lineinfo="@1(7[29],7[32])" *) IB sdi_pad (.I(sdi), .O(sdi_c));
+    (* lineinfo="@1(9[17],9[22])" *) IB reset_pad (.I(reset), .O(reset_c));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=12, LSE_RCOL=96, LSE_LLINE=18, LSE_RLINE=18, lineinfo="@1(18[12],18[96])" *) RPStoLED RPStoLED (SIG[7], 
+            LED_c_2, done, reset_c, SIG[5], LED_c_0, SIG[6], LED_c_1);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@1(17[13],17[86])" *) spi spi (cs_c, 
+            done, sck_c, SIG[5], SIG[6], SIG[7], sdi_c);
+    VLO i19 (.Z(GND_net));
+    
+endmodule
+
+//
+// Verilog Description of module RPStoLED
+//
+
+module RPStoLED (input \SIG[7] , output LED_c_2, input done, input reset_c, 
+            input \SIG[5] , output LED_c_0, input \SIG[6] , output LED_c_1);
+    
+    (* is_clock=1, lineinfo="@1(12[15],12[19])" *) wire done;
+    
+    wire VCC_net, LED_c_0_N_14;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=12, LSE_RCOL=96, LSE_LLINE=18, LSE_RLINE=18, lineinfo="@0(19[3],25[12])" *) FD1P3XZ LED_i0_i1 (.D(\SIG[5] ), 
+            .SP(VCC_net), .CK(done), .SR(LED_c_0_N_14), .Q(LED_c_0));
+    defparam LED_i0_i1.REGSET = "RESET";
+    defparam LED_i0_i1.SRMODE = "ASYNC";
+    (* lut_function="(!(A))", lineinfo="@0(19[7],19[13])" *) LUT4 i6_1_lut (.A(reset_c), 
+            .Z(LED_c_0_N_14));
+    defparam i6_1_lut.INIT = "0x5555";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=12, LSE_RCOL=96, LSE_LLINE=18, LSE_RLINE=18, lineinfo="@0(19[3],25[12])" *) FD1P3XZ LED_i0_i2 (.D(\SIG[6] ), 
+            .SP(VCC_net), .CK(done), .SR(LED_c_0_N_14), .Q(LED_c_1));
+    defparam LED_i0_i2.REGSET = "RESET";
+    defparam LED_i0_i2.SRMODE = "ASYNC";
+    VHI i1 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=12, LSE_RCOL=96, LSE_LLINE=18, LSE_RLINE=18, lineinfo="@0(19[3],25[12])" *) FD1P3XZ LED_i0_i3 (.D(\SIG[7] ), 
+            .SP(VCC_net), .CK(done), .SR(LED_c_0_N_14), .Q(LED_c_2));
+    defparam LED_i0_i3.REGSET = "RESET";
+    defparam LED_i0_i3.SRMODE = "ASYNC";
+    
+endmodule
+
+//
+// Verilog Description of module spi
+//
+
+module spi (input cs_c, output done, input sck_c, output \SIG[5] , output \SIG[6] , 
+            output \SIG[7] , input sdi_c);
+    
+    (* is_clock=1, lineinfo="@1(12[15],12[19])" *) wire done;
+    wire [7:0]SIG;
+    (* is_clock=1, lineinfo="@1(6[30],6[33])" *) wire sck_c;
+    
+    wire GND_net;
+    
+    (* lineinfo="@2(22[19],22[22])" *) INV i9_1_lut (.A(cs_c), .Z(done));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i2 (.D(SIG[1]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(SIG[2]));
+    defparam SIG_i0_i2.REGSET = "RESET";
+    defparam SIG_i0_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i3 (.D(SIG[2]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(SIG[3]));
+    defparam SIG_i0_i3.REGSET = "RESET";
+    defparam SIG_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i4 (.D(SIG[3]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(SIG[4]));
+    defparam SIG_i0_i4.REGSET = "RESET";
+    defparam SIG_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i5 (.D(SIG[4]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(\SIG[5] ));
+    defparam SIG_i0_i5.REGSET = "RESET";
+    defparam SIG_i0_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i6 (.D(\SIG[5] ), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(\SIG[6] ));
+    defparam SIG_i0_i6.REGSET = "RESET";
+    defparam SIG_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i7 (.D(\SIG[6] ), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(\SIG[7] ));
+    defparam SIG_i0_i7.REGSET = "RESET";
+    defparam SIG_i0_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) IOL_B SIG_i0_i0 (.PADDI(sdi_c), 
+            .DO1(GND_net), .DO0(GND_net), .CE(cs_c), .IOLTO(GND_net), 
+            .HOLD(GND_net), .INCLK(sck_c), .OUTCLK(GND_net), .DI0(SIG[0]));
+    defparam SIG_i0_i0.LATCHIN = "NONE_REG";
+    defparam SIG_i0_i0.DDROUT = "NO";
+    VLO i1 (.Z(GND_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=13, LSE_RCOL=86, LSE_LLINE=17, LSE_RLINE=17, lineinfo="@2(18[15],20[38])" *) FD1P3XZ SIG_i0_i1 (.D(SIG[0]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(SIG[1]));
+    defparam SIG_i0_i1.REGSET = "RESET";
+    defparam SIG_i0_i1.SRMODE = "CE_OVER_LSR";
+    
+endmodule

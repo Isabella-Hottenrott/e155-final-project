@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="2" build_time="1763585646">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1763585646"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1763574976"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1763574976"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1763585621">
+            <Task name="Map" build_result="2" update_result="0" update_time="1763585621"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1763581733"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1763585631">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1763585631"/>
+            <Task name="PostParVM" build_result="0" update_result="2" update_time="1763574976"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1763585632"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1763574976"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1763585612">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1763585612"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1763585632"/>
+            <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1763585206"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1763585206"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1763585206"/>
+        </Milestone>
+        <Report name="finalproject_top.bgn" last_build_time="1763585646" last_build_size="1135"/>
+        <Report name="finalproject_top.bin" last_build_time="1763585646" last_build_size="104156"/>
+        <Report name="finalproject_top.lsedata" last_build_time="0" last_build_size="0"/>
+        <Report name="finalproject_top.twr.html" last_build_time="1763585632" last_build_size="12505"/>
+        <Report name="finalproject_top.udb" last_build_time="1763585631" last_build_size="3666"/>
+        <Report name="finalproject_top_map.udb" last_build_time="1763585621" last_build_size="2765"/>
+        <Report name="finalproject_top_rtl.udb" last_build_time="1763585612" last_build_size="1981"/>
+        <Report name="finalproject_top_syn.udb" last_build_time="1763585612" last_build_size="2004"/>
+    </Strategy>
+</BuildStatus>
+                         

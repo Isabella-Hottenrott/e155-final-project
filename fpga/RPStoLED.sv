@@ -2,6 +2,7 @@ module RPStoLED(input logic sck,
 input logic reset,
                 input logic [7:0] SIG,
                 input logic done,
+input logic start,
                 output logic [2:0] LED);
 
     logic [2:0] RPS;
@@ -17,7 +18,7 @@ input logic reset,
     always @(posedge done, negedge reset)
 if (~reset)
 LED = 3'b000;
-        else if (done) begin
+        else if (done&start) begin
             LED[2] = RPS[2]; //rock
             LED[1] = RPS[1]; //paper
             LED[0] = RPS[0]; //scissors

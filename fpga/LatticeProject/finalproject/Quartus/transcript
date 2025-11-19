@@ -1,0 +1,34 @@
+# Compile of spi.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of RPStoLED.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.finalprojtb -voptargs=+acc
+# vsim -gui work.finalprojtb -voptargs="+acc" 
+# Start time: 12:49:15 on Nov 19,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.finalprojtb(fast)
+# Loading work.finalproj(fast)
+# Loading work.spi(fast)
+# Loading work.RPStoLED(fast)
+add wave  \
+sim:/finalprojtb/vectornum \
+sim:/finalprojtb/sdi \
+sim:/finalprojtb/sck \
+sim:/finalprojtb/reset \
+sim:/finalprojtb/LEDexp \
+sim:/finalprojtb/LED \
+sim:/finalprojtb/errors \
+sim:/finalprojtb/cs \
+sim:/finalprojtb/clk
+# Load canceled
+run -all
+# completed with  0 errors
+# ** Note: $stop    : C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv(98)
+#    Time: 720 ns  Iteration: 0  Instance: /finalprojtb
+# Break in Module finalprojtb at C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv line 98
+# End time: 13:09:08 on Nov 19,2025, Elapsed time: 0:19:53
+# Errors: 0, Warnings: 6

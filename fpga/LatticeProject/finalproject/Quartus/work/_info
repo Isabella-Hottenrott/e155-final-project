@@ -1,0 +1,128 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/WINDOWS/system32
+T_opt
+!s110 1763585356
+V;DJnkH:4YSilj3LFcG]CR2
+04 11 4 work finalprojtb fast 0
+=1-00be43eaec35-691e2d4c-9d-26c4
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U4 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vfinalproj
+2C:/Users/ihottenrott/finalproject/source/top/finalproj.sv
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1763585336
+!i10b 1
+!s100 :SnmR3CE<^?M0z[oh:l2^3
+Ib;?eeRmV9ga^Wo<Fj_Mh91
+S1
+Z4 dC:/Users/ihottenrott/finalproject/Quartus
+w1763584874
+8C:/Users/ihottenrott/finalproject/source/top/finalproj.sv
+FC:/Users/ihottenrott/finalproject/source/top/finalproj.sv
+!i122 1
+L0 6 18
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z7 !s108 1763585336.000000
+!s107 C:/Users/ihottenrott/finalproject/source/top/finalproj.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/finalproject/source/top/finalproj.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vfinalprojtb
+2C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv
+R2
+R3
+!i10b 1
+!s100 6LjaiB_QX6lI1keGG9Z5i2
+I3Ro3fh<U_KIc>]3?3LFB61
+S1
+R4
+w1763585126
+8C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv
+FC:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv
+!i122 2
+L0 1 110
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/finalproject/source/top/finalprojtb.sv|
+!i113 0
+R8
+R1
+vRPStoLED
+2C:/Users/ihottenrott/finalproject/source/top/RPStoLED.sv
+R2
+R3
+!i10b 1
+!s100 6X;CgFR23B0Deb6_oMT@O1
+IC<TJ>28aN:dNmPZAB><3I1
+S1
+R4
+w1763584895
+8C:/Users/ihottenrott/finalproject/source/top/RPStoLED.sv
+FC:/Users/ihottenrott/finalproject/source/top/RPStoLED.sv
+!i122 3
+L0 1 28
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/finalproject/source/top/RPStoLED.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/finalproject/source/top/RPStoLED.sv|
+!i113 0
+R8
+R1
+n@r@p@sto@l@e@d
+vspi
+2C:/Users/ihottenrott/finalproject/source/top/spi.sv
+R2
+R3
+!i10b 1
+!s100 V<N:RCclo:CHf]zP2:W`33
+IOLINoYkmRhgm>D45:;`=R2
+S1
+R4
+w1763584959
+8C:/Users/ihottenrott/finalproject/source/top/spi.sv
+FC:/Users/ihottenrott/finalproject/source/top/spi.sv
+!i122 0
+L0 1 24
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/finalproject/source/top/spi.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/finalproject/source/top/spi.sv|
+!i113 0
+R8
+R1

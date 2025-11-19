@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell finalproj.TECH
+Register bits:  10 of 5280 (0.189%)
+I/O cells:      7
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        10          100.0
+                                 IB         4          100.0
+                                INV         1          100.0
+                              IOL_B         1          100.0
+                               LUT4         1          100.0
+                                 OB         3          100.0
+SUB MODULES
+                           RPStoLED         1
+                                spi         1
+                              TOTAL        22
+----------------------------------------------------------------------
+Report for cell RPStoLED.v1
+Instance Path : RPStoLED
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         3           30.0
+                               LUT4         1          100.0
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell spi.v1
+Instance Path : spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         7           70.0
+                                INV         1          100.0
+                              IOL_B         1          100.0
+                              TOTAL         9
