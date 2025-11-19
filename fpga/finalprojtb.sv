@@ -17,7 +17,7 @@ module finalprojtb();
        
     initial begin
             errors=0; vectornum=5'd0; #10; reset=1'b0; #10;
-            vectornum=5'd1; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;   //rock
+            vectornum=5'd1; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;  
             vectornum=5'd2; sck=1'b0; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;
             vectornum=5'd3; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd4; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
@@ -44,7 +44,7 @@ module finalprojtb();
             #10;
             vectornum=5'd23; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;  
             vectornum=5'd24; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
-            vectornum=5'd25; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10; //paper
+            vectornum=5'd25; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10; 
             vectornum=5'd26; sck=1'b0; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;
             vectornum=5'd27; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd28; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
@@ -73,7 +73,7 @@ module finalprojtb();
             vectornum=5'd46; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd47; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd48; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
-            vectornum=5'd49; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10; //scissors
+            vectornum=5'd49; sck=1'b1; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10; 
             vectornum=5'd50; sck=1'b0; cs=1'b1; sdi=1'b1; LEDexp=3'b000; #10;
             vectornum=5'd51; sck=1'b1; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;
             vectornum=5'd52; sck=1'b0; cs=1'b1; sdi=1'b0; LEDexp=3'b000; #10;

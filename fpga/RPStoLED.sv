@@ -18,7 +18,7 @@ input logic start,
     always @(posedge done, negedge reset)
 if (~reset)
 LED = 3'b000;
-        else if (done&start) begin
+        else if (done) begin
             LED[2] = RPS[2]; //rock
             LED[1] = RPS[1]; //paper
             LED[0] = RPS[0]; //scissors

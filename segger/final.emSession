@@ -57,13 +57,13 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="37" y="304" useTextEdit="1" path="../main.c" left="0" selected="1" top="293" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="184" useTextEdit="1" path="../main.c" left="0" selected="1" top="177" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="30" y="313" useTextEdit="1" path="../VL53L0X.c" left="0" top="313" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="2" y="121" useTextEdit="1" path="../VL53L0X.h" left="0" top="86" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="60" useTextEdit="1" path="../STM32L432KC_SPI.c" left="0" top="25" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="102" useTextEdit="1" path="../STM32L432KC_I2C.c" left="0" top="67" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="71" useTextEdit="1" path="../STM32L432KC_SPI.c" left="0" top="26" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="116" useTextEdit="1" path="../STM32L432KC_I2C.c" left="0" top="94" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="198" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="179" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="final" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/squis/Downloads/HMC FINAL SEMESTER/E155/e155-final-project" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="final" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/squis/Downloads/HMC FINAL SEMESTER/E155/e155-final-project" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
