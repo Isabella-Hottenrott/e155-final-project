@@ -120,4 +120,3 @@ void togglePin(int gpio_pin) {
 	// Use XOR to toggle
 	GPIO_PORT_PTR->ODR ^= (1 << pin_offset);
 }
-

@@ -44,7 +44,7 @@
 void initSPI(int br, int cpol, int cpha);
 
 /*Sets up GPIO Port B pins for SPI functionality*/
-void SPIGPIO(void);
+void SPIGPIO();
 
 /* Transmits a character (1 byte) over SPI and returns the received character.
  *    -- send: the character to send over SPI

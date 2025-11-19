@@ -18,4 +18,3 @@ void configureClock();
 void configureHSIasClk();
 
 #endif
-

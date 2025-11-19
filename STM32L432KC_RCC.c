@@ -40,6 +40,4 @@ void configureClock(){
 
 void configureHSIasClk(){
   RCC->CR |= RCC_CR_HSION;
-
- // SystemCoreClockUpdate();
   }
