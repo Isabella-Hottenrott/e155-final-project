@@ -1,0 +1,9 @@
+#Start recording tcl command: 11/25/2025 11:06:03
+#Project Location: C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp; Project name: lcd_disp
+prj_open "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/lcd_disp.rdf"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/image_buffer/image_buffer.ipx"
+prj_add_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/addr_manager.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/spram.sv"
+prj_save 
+prj_close
+#Stop recording: 11/25/2025 14:41:19

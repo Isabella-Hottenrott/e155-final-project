@@ -1,0 +1,26 @@
+#Start recording tcl command: 11/24/2025 15:36:20
+#Project Location: C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp; Project name: lcd_disp
+prj_create -name "lcd_disp" -impl "impl_1" -dev iCE40UP3K-UWG30ITR -performance "High-Performance_1.2V" -synthesis "lse"
+file copy -force -- "C:/Users/wchan/Documents/GitHub/ili9341_fpga/hellosoc_top.sv" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/tft_ili9341.sv" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/tft_ili9341_spi.sv" "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1"
+prj_add_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv" "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/tft_ili9341.sv" "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/tft_ili9341_spi.sv"
+prj_save 
+prj_add_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/clkdiv.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/clkdiv.v" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash.v" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash_bb.v" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll.v" "C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll_bb.v"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash_bb.v"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll_bb.v"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/clkdiv.v"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/clkdiv.v"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash.v"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash_bb.v"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll.v"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll_bb.v"
+prj_add_source "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/image_buffer/image_buffer.ipx"
+#Stop recording: 11/24/2025 20:14:44
