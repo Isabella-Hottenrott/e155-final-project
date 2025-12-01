@@ -21,4 +21,5 @@ mcuMux(.byteIn(synchSPIbyte), .interpretWE(interpretWE), .screenWE(screenWE), .o
 
 
 
+
 endmodule
