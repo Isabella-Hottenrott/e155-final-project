@@ -13,6 +13,7 @@ logic done, interpretWE, screenWE;
 logic [7:0] unsynchSPIbyte, synchSPIbyte;
 logic [6:0] directedBits;
 
+//try new way next
 
 spi spi(.sck(sck), .sdi(sdi), .cs(cs), .byteOut(unsynchSPIbyte), .done(spiInDone));
 synchronizer(.clk(clk), .byteIn(unsynchSPIbyte), .reset(reset), .byteOutSynch(synchSPIbyte));

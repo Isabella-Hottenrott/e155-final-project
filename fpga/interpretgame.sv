@@ -8,6 +8,8 @@ module interpretgame(input  logic clk,
 logic [1:0] user;
 assign WLD = gameState[1:0];
 
+//try new way next
+
 always_ff (@ posedge clk)
     if (reset) begin
         oldwinlose = 2'b00;

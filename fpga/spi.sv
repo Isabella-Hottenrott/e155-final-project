@@ -6,7 +6,7 @@ module spi(input  logic sck,
 
 logic [3:0] eightCounter;
 logic [7:0] intermedByte
-
+//try new way next
     always_ff @(posedge sck)
         if (cs)  begin 
             {intermedByte[7:0]} = {intermedByte[6:0], sdi};

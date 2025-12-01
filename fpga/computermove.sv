@@ -5,6 +5,7 @@ module computermove(input  logic clk,
                         output logic [1:0] computer); 
 
 logic usrRock, usrPaper, usrScissors, compRock, compPaper, compScissors;
+//try new way next
 
 assign usrRock = (~gameState[5])&(~gameState[4]); //00
 assign usrPaper = (~gameState[5])&(gameState[4]); //01
