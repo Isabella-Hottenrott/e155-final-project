@@ -21,12 +21,12 @@ module hellosoc_top(
 
 	//Create clock 
 	// Internal high-speed oscillator
-	HSOSC #(.CLKHF_DIV(2'b01)) //24MHz
+	HSOSC #(.CLKHF_DIV(2'b00)) //48MHz
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
-	// Counter
+	// Counter 
 	always_ff @(posedge int_osc) begin  
-		counter <= counter + 19'd3; //operates at ~137Hz
+		counter <= counter + 20'd3; //operates at ~137Hz. you could get closer to 120Hz by changing to 21'd5 but this is close enough
 	end
 	
 	// Not Needed
