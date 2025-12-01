@@ -2,8 +2,7 @@ module spi(input  logic sck,
             input  logic sdi,
             input  logic cs,
             output logic [7:0] byteOut,
-            output logic done,
-            output logic start); //TODO change
+            output logic done); //TODO change
 
 logic [3:0] eightCounter;
 logic [7:0] intermedByte
