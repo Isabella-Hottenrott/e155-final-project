@@ -5,7 +5,7 @@ module mcuMux(input  logic byteIn,
 
 assign interpretWE = byteIn[0];
 assign screenWE = ~byteIn[0];
-
+//try new way next
 assign out = byteIn[7:1];
 
 endmodule

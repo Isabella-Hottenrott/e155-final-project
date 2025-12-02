@@ -330,14 +330,15 @@ void play_round(struct VL53L0X *TOF1,
     uint8_t computerRPS = (uint8_t) computerRPSint;
     uint8_t formatPlay = formatPlays(userRPS, computerRPS);
 
-    digitalWrite(CS, PIO_HIGH);
-    spiSend(formatPlay); // send the computer and user's play to FPGA
-    digitalWrite(CS, PIO_LOW);
-
 
     digitalWrite(CS, PIO_HIGH);
     spiSend(dsplCompScreen); // display the computer's move
     digitalWrite(CS, PIO_LOW);
+
+    digitalWrite(CS, PIO_HIGH);
+    spiSend(formatPlay); // send the computer and user's play to FPGA
+    digitalWrite(CS, PIO_LOW);
+
 
     delay_millis(TIM15, 1000);
 
