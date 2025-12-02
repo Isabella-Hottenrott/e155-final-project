@@ -1,0 +1,8 @@
+#Start recording tcl command: 12/1/2025 21:01:25
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_fpga/lcd_fpga; Project name: lcd_fpga
+prj_create -name "lcd_fpga" -impl "impl_1" -dev iCE40UP5K-UWG30ITR -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_fpga/lcd_fpga/source/impl_1/lcd_driver.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_fpga/lcd_fpga/source/impl_1/messages.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_fpga/lcd_fpga/message_writer/message_writer.ipx"
+#Stop recording: 12/1/2025 22:13:39
