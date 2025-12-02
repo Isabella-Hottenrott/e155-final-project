@@ -12,7 +12,7 @@ module finalproj(input logic sck,
 				output logic chip_en,
                 output logic [7:0] DB);
 				
-	
+	/*
 		
 	//intermediate logic 
 	logic start, done;
@@ -43,18 +43,18 @@ module finalproj(input logic sck,
 	
 	always_ff @(posedge sck) begin
 		case(
-			/*
-			    "msg_0": "Rock",
-				"msg_1": "Paper",
-				"msg_2": "Scissors",
-				"msg_3": "You Win!",
-				"msg_4": "You Lose!",
-				"msg_5": "Tie",
-				"msg_6": "Starting...",
-				"msg_7": "Next Level?"
-				*/
+			
+			    //"msg_0": "Rock",
+				//"msg_1": "Paper",
+				//"msg_2": "Scissors",
+				//"msg_3": "You Win!",
+				//"msg_4": "You Lose!",
+				//"msg_5": "Tie",
+				//"msg_6": "Starting...",
+				//"msg_7": "Next Level?"
+				
 	end
-		
+	*/
 		
 				
 				

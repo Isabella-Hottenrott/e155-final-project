@@ -61,7 +61,7 @@ module lcd_driver(
 		.clk(clk), 
 		.msg_index(screen), // use input screen signal directly for message selection
 		.char_index(char_counter), // use internal character counter
-		.data(data), // actual data
+		.data(data), // actual data. to be written to screen
 		.valid(valid)
 	);
 	

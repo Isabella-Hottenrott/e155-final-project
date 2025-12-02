@@ -31,6 +31,4 @@ chooseaddr chooseaddr(.clk(clk), .reset(reset), .screenWE(screenWE), .directedBi
 lcd_driver lcd_driver(.reset(reset), .screen(screencode), .DB(DB), .change_screen(change_screen), .rw(rw), .rs(rs), .en(en));
 
 
-
-
 endmodule

@@ -14,15 +14,15 @@ def string_to_hex(text, max_width=20):
         codes.append(ord(char))
     return codes
 
-def pack_bytes_to_36bit(bytes_list):
+def pack_bytes_to_64bit(bytes_list):
     """Pack up to 4 bytes into a 36-bit hex value"""
     # Pad with zeros if less than 4 bytes
-    while len(bytes_list) < 4:
+    while len(bytes_list) < 8:
         bytes_list.append(0x00)
     
-    # Combine 4 bytes into 36-bit value
+    # Combine 8 bytes into 64-bit value
     # Byte order: [byte3][byte2][byte1][byte0]
-    value = (bytes_list[3] << 24) | (bytes_list[2] << 16) | (bytes_list[1] << 8) | bytes_list[0]
+    value =  (bytes_list[7] << 56) | (bytes_list[6] << 48) | (bytes_list[5] << 40) | (bytes_list[4] << 32) | (bytes_list[3] << 24) | (bytes_list[2] << 16) | (bytes_list[1] << 8) | bytes_list[0]
     return f"{value:09X}"
 
 def create_mem_file(messages_dict, output_file="messages.mem"):
@@ -38,8 +38,8 @@ def create_mem_file(messages_dict, output_file="messages.mem"):
     """
     mem_lines = []
     mem_lines.append("// Auto-generated LCD memory initialization file")
-    mem_lines.append("// Format: 36-bit hex (9 hex digits per line)")
-    mem_lines.append("// Each line stores 4 ASCII characters")
+    mem_lines.append("// Format: 64-bit hex (16 hex digits per line)")
+    mem_lines.append("// Each line stores 8 ASCII characters")
     mem_lines.append("")
     
     address = 0
@@ -48,8 +48,8 @@ def create_mem_file(messages_dict, output_file="messages.mem"):
         mem_lines.append(f"// {msg_name}: \"{text}\"")
         
         # Split message into 4-character chunks
-        for i in range(0, len(text), 4):
-            chunk = text[i:i+4]
+        for i in range(0, len(text), 8):
+            chunk = text[i:i+8]
             char_codes = [ord(c) for c in chunk]
             hex_val = pack_bytes_to_36bit(char_codes)
             mem_lines.append(hex_val)
