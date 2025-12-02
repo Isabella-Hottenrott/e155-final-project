@@ -1,16 +1,24 @@
+// Wava Chan
+// Nov 2025
+// top module for the display
+// using https://github.com/thekroko/ili9341_fpga/blob/master/hellosoc_top.sv 
+
 module hellosoc_top(
 	input reset,
-	input logic flash_miso,
 	input tft_sdo, output wire tft_sck, output wire tft_sdi, 
 	output wire tft_dc, output wire tft_reset, output wire tft_cs,
+	
+	// flash data
+	input logic flash_miso,
 	output logic flash_mosi, output logic flash_sclk, output logic flash_cs_n,
+	
 	input logic[3:0] image);
 
 
 
 	//Create clock 
 	logic int_osc; // internal clock
-	logic [19:0] counter;
+	logic [20:0] counter;
 
 	// Internal high-speed oscillator
 	HSOSC #(.CLKHF_DIV(2'b00)) //48MHz
@@ -20,11 +28,12 @@ module hellosoc_top(
 	always_ff @(posedge int_osc) begin  
 		counter <= counter + 20'd3; //operates at ~137Hz. you could get closer to 120Hz by changing to 21'd5 but this is close enough
 	end
+	logic tft_clk = counter[20]; //TODO: i do not know at what rate this is supposed to be at. maybe 100MHz? but we can't do that
 	
 	logic [15:0] currentPixel;
 
 	// ************************ Address Manager
-	logic [16:0] imageAddress;
+	logic [23:0] imageAddress;
 	logic addr_done;
 	addr_manager am(
 		.clk(int_osc),
@@ -73,6 +82,7 @@ module hellosoc_top(
 
 
 	// *************************** Framebuffer
+	//TODO: i think we have to rework this somehow...
 	reg[16:0] framebufferIndex = 17'd0;
 	wire fbClk;
 	
@@ -92,3 +102,10 @@ module hellosoc_top(
 	tft_ili9341 #(.INPUT_CLK_MHZ(100)) tft(tft_clk, tft_sdo, tft_sck, tft_sdi, tft_dc, tft_reset, tft_cs, currentPixel, fbClk);
 
 endmodule
+
+
+//My Questions
+/*
+How do I access the FLASH lines? Do i need to jump something on the board??? https://upduino.readthedocs.io/en/latest/tutorials/qspi_flash.html?highlight=spi%20flash
+
+*/

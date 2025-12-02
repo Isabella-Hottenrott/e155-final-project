@@ -1,0 +1,41 @@
+---------------------------------------------------
+Report for cell hellosoc_top
+   Instance path: hellosoc_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        183        100.0
+                               LUTGATE	        163        100.0
+                                LUTCCU	         20        100.0
+                                 IOBUF	         13        100.0
+                                PFUREG	        107        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          addr_manager	          1         3.8
+                          flash_reader	          1        40.4
+                     video_line_buffer	          1         8.2
+---------------------------------------------------
+Report for cell video_line_buffer
+   Instance path: hellosoc_top/vlb
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         8.2
+                               LUTGATE	          3         1.8
+                                LUTCCU	         12        60.0
+                                PFUREG	         11        10.3
+---------------------------------------------------
+Report for cell flash_reader
+   Instance path: hellosoc_top/fr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         74        40.4
+                               LUTGATE	         66        40.5
+                                LUTCCU	          8        40.0
+                                PFUREG	         86        80.4
+---------------------------------------------------
+Report for cell addr_manager
+   Instance path: hellosoc_top/am
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         3.8
+                               LUTGATE	          7         4.3
+                                PFUREG	         10         9.3

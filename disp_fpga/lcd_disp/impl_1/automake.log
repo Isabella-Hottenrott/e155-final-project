@@ -1,21 +1,34 @@
-iant/2024.2/ip/pmi/pmi_dsp.v. VERI-1328
-Analyzing Verilog file c:/users/wchan/documents/github/ili9341_fpga/jtagflash.v. VERI-1482
-Analyzing Verilog file c:/users/wchan/documents/github/ili9341_fpga/pll.v. VERI-1482
-Analyzing Verilog file c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv. VERI-1482
-Analyzing Verilog file c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/tft_ili9341.sv. VERI-1482
-Analyzing Verilog file c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/tft_ili9341_spi.sv. VERI-1482
-Analyzing Verilog file c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/clkdiv.sv. VERI-1482
-Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
-Analyzing VHDL file c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd
 
-INFO <35921014> - c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
-INFO <35921504> - The default VHDL library search path is now "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/impl_1". VHDL-1504
-Top module language type = Verilog.
-Top module name (Verilog, mixed language): hellosoc_top
-INFO <35901018> - c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv(1): compiling module hellosoc_top. VERI-1018
-WARNING <35901220> - c:/users/wchan/documents/github/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv(41): using initial value of ledA since it is never assigned. VERI-1220
-INFO <35901018> - C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2&apos;b01). VERI-1018
-INFO <35901018> - c:/users/wchan/documents/github/ili9341_fpga/pll.v(39): compiling module pll. VERI-1018
-ERROR <35901063> - c:/users/wchan/documents/github/ili9341_fpga/pll.v(94): instantiating unknown module altpll. VERI-1063
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "lcd_disp_impl_1.twr" "lcd_disp_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt lcd_disp_impl_1.twr lcd_disp_impl_1.udb -gui -msgset C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/promote.xml
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  hellosoc_top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: UWG30
+Performance Grade:   High-Performance_1.2V
 
-child process exited abnormally
+
+
+Successfully loading udb, 0.06 seconds
+
+Initializing timer
+Starting design annotation....
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  71  counted  628  covered  501
+Changing speed to m;   changing temperature to -40
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 104 MB
+
+ 1.217896s wall, 0.906250s user + 0.281250s system = 1.187500s CPU (97.5%)
+

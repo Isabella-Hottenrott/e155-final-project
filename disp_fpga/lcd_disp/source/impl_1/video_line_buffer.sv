@@ -109,17 +109,18 @@ module video_line_buffer (
     // -------------------------------------------------------------------------
     // 3. SPRAM Instantiation
     // -------------------------------------------------------------------------
-    SB_SPRAM256KA spram_inst (
-        .ADDRESS    (spram_addr),
-        .DATAIN     (spram_wdata),
-        .MASKWREN   (4'b1111),
-        .WREN       (spram_wren),
-        .CHIPSELECT (spram_cs),
-        .CLOCK      (clk),
-        .STANDBY    (1'b0),
+    //SB_SPRAM256KA spram_inst (
+	SP256K spram_inst( //file:///C:/lscc/radiant/2024.2/docs/webhelp/eng/index.htm#page/Reference%20Guides/FPGA%20Libraries%20Reference%20Guide/Alphanumeric_Primitives_List.11.206.htm#ww2947041
+        .AD    		(spram_addr),
+        .DI     	(spram_wdata),
+        .MASKWE   	(4'b1111),
+        .WE	       	(spram_wren),
+        .CS 		(spram_cs),
+        .CK     	(clk),
+        .STDBY    	(1'b0),
         .SLEEP      (1'b0),
-        .POWEROFF   (1'b0),
-        .DATAOUT    (spram_rdata)
+        .PWROFF_N   (1'b0),
+        .DO    (spram_rdata)
     );
 
     // -------------------------------------------------------------------------

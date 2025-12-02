@@ -97,7 +97,7 @@ module flash_reader(
             next_state    <= STATE_IDLE;
         end else begin
             data_valid_out <= 1'b0; // Default low
-            next_state = state; // Default assignment to prevent latching
+            next_state <= state; // Default assignment to prevent latching
 
             // MISO Data Shifting
             if (sclk_enable && sample_miso) begin

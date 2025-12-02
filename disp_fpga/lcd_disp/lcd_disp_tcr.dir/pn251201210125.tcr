@@ -1,0 +1,23 @@
+#Start recording tcl command: 12/1/2025 15:44:26
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp; Project name: lcd_disp
+prj_open "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/lcd_disp.rdf"
+prj_remove_source "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/spram.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/video_line_buffer.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/flash_reader.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {hellosoc_top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/clkdiv.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_device -part iCE40UP5K-UWG30ITR -performance "High-Performance_1.2V"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 12/1/2025 21:01:25

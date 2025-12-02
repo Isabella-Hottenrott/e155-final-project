@@ -1,0 +1,43 @@
+----------------------------------------------------------------------
+Report for cell hellosoc_top.TECH
+Register bits:  107 of 5280 (2.027%)
+I/O cells:      13
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        10          100.0
+                            FD1P3XZ       107          100.0
+                              HSOSC         1          100.0
+                                 IB         5          100.0
+                               LUT4        91          100.0
+                                 OB         8          100.0
+SUB MODULES
+                       addr_manager         1
+                       flash_reader         1
+                  video_line_buffer         1
+                              TOTAL       225
+----------------------------------------------------------------------
+Report for cell video_line_buffer.v1
+Instance Path : vlb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         6           60.0
+                            FD1P3XZ        11           10.3
+                               LUT4         3            3.3
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell flash_reader.v1
+Instance Path : fr
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4           40.0
+                            FD1P3XZ        86           80.4
+                               LUT4        69           75.8
+                              TOTAL       159
+----------------------------------------------------------------------
+Report for cell addr_manager.v1
+Instance Path : am
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        10            9.3
+                               LUT4        13           14.3
+                              TOTAL        23

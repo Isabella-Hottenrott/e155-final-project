@@ -5,7 +5,7 @@ module tft_ili9341(
 		output wire tft_dc, output reg tft_reset, output wire tft_cs,
 		input[15:0] framebufferData, output wire framebufferClk
 	);
-	
+	//TODO: adjust clocks
 	parameter INPUT_CLK_MHZ = 120; /* recommended */
 	
 	// Initial assignments

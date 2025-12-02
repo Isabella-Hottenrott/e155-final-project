@@ -1,5 +1,5 @@
 -a "iCE40UP"
--p iCE40UP3K
+-p iCE40UP5K
 -t UWG30
 -sp "High-Performance_1.2V"
 -frequency 200
@@ -39,18 +39,18 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/impl_1" "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp"
+-path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/impl_1" "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp"
 -ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv"
-"C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/tft_ili9341.sv"
-"C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/tft_ili9341_spi.sv"
-"C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp/source/impl_1/clkdiv.sv"
--ver "C:/Users/wchan/Documents/GitHub/ili9341_fpga/jtagflash.v"
-"C:/Users/wchan/Documents/GitHub/ili9341_fpga/pll.v"
+-sver "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/hellosoc_top.sv"
+"C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/tft_ili9341.sv"
+"C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/tft_ili9341_spi.sv"
+"C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/addr_manager.sv"
+"C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/video_line_buffer.sv"
+"C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp/source/impl_1/flash_reader.sv"
 
 
--path "C:/Users/wchan/Documents/GitHub/disp_fpga/lcd_disp"
+-path "C:/Users/wchan/Documents/GitHub/e155-final-project/disp_fpga/lcd_disp"
 -top hellosoc_top
 -udb "lcd_disp_impl_1_rtl.udb"
 -output_hdl "lcd_disp_impl_1.vm"
