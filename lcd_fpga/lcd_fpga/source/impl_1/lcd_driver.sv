@@ -223,6 +223,8 @@ module lcd_driver(
 				end
 				DISPLAY_ON_WAIT: set_delay(21'd1);
 				WRITE_SCREEN: begin
+					// TODO: write character data from ROM
+					// Set rs=1 (data mode), rw=0 (write), DB=[character]
 					rs <= 1'b1; // data mode
 					rw <= 1'b0; // write
 					DB <= data; // from messages ROM
