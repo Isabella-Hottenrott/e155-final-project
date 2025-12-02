@@ -1,0 +1,36 @@
+// Auto-generated LCD memory initialization file
+// Format: 36-bit hex (9 hex digits per line)
+// Each line stores 4 ASCII characters
+
+// msg_0: "Rock"
+06B636F52
+
+// msg_1: "Paper"
+065706150
+000000072
+
+// msg_2: "Scissors"
+073696353
+073726F73
+
+// msg_3: "You Win!"
+020756F59
+0216E6957
+
+// msg_4: "You Lose!"
+020756F59
+065736F4C
+000000021
+
+// msg_5: "Tie"
+000656954
+
+// msg_6: "Starting..."
+072617453
+0676E6974
+0002E2E2E
+
+// msg_7: "Next Level?"
+07478654E
+076654C20
+0003F6C65
