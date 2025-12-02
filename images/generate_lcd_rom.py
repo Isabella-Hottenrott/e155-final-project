@@ -2,9 +2,6 @@
 """
 Generate .mem file for LCD messages using HD44780 character codes
 Supports ASCII text and custom character definitions
-
-The WH2002AE-1 uses a 36-bit wide memory (4 bytes per address)
-9-bit addressing allows 512 locations
 """
 
 def string_to_hex(text, max_width=20):
@@ -15,8 +12,8 @@ def string_to_hex(text, max_width=20):
     return codes
 
 def pack_bytes_to_64bit(bytes_list):
-    """Pack up to 4 bytes into a 36-bit hex value"""
-    # Pad with zeros if less than 4 bytes
+    """Pack up to 8 bytes into a 64-bit hex value"""
+    # Pad with zeros if less than 8 bytes
     while len(bytes_list) < 8:
         bytes_list.append(0x00)
     
@@ -47,11 +44,11 @@ def create_mem_file(messages_dict, output_file="messages.mem"):
     for msg_name, text in messages_dict.items():
         mem_lines.append(f"// {msg_name}: \"{text}\"")
         
-        # Split message into 4-character chunks
+        # Split message into 8-character chunks
         for i in range(0, len(text), 8):
             chunk = text[i:i+8]
             char_codes = [ord(c) for c in chunk]
-            hex_val = pack_bytes_to_36bit(char_codes)
+            hex_val = pack_bytes_to_64bit(char_codes)
             mem_lines.append(hex_val)
             address += 1
         
