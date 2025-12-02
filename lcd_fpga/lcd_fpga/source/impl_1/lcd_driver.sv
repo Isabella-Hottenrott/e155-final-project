@@ -34,6 +34,17 @@ module lcd_driver(
     state_t state, next_state;
 	
 	// write display data to storage
+	logic [7:0] msg_index, char_index, data; // character in message?
+	logic valid;
+	
+	
+	messages mes( //essentially a wrapper for the EBR_DP block
+		.clk(clk), 
+		.msg_index(msg_index), // message?
+		.char_index(char_index), // character in message?
+		.data(data), // actual data
+		.valid(valid)
+	);
 	
 	//should this be it's own module? use the RAM_DP IP block
 	
