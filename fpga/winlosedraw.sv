@@ -1,17 +1,23 @@
 module winlosedraw(input  logic clk,
-                        input logic reset,
-                        input  logic interpretWE,
-                        input  logic [1:0] computer,
-                        input  logic [1:0] user,
-                        output logic [5:0] gameState); 
+                    input logic reset,
+                    input  logic interpretWE,
+                    input  logic [1:0] thiscomputer,
+                    input  logic [1:0] user,
+                    output logic [1:0] result); 
 
-assign gameState[5:4] = user;
-assign gameState[3:2] = computer;
 
-assign gameState[0] = (~|user)&(~computer[1])|((~user[1]&user[0])&^computer)|((user[1]&~user[0])&(~computer[0]));
-assign gameState[1] = (~|user)&(~computer[0])|((~user[1]&user[0])&(~computer[1]))|((user[1]&~user[0])&(^computer));
-
-//try new way next
+    always_comb begin
+        if (thiscomputer == user) begin
+            result = 2'b11; // tie
+        end else begin
+            case (thiscomputer)
+                2'b00: result = (user == 2'b10) ? 2'b01 : 2'b10; 
+                2'b01: result = (user == 2'b00) ? 2'b01 : 2'b10; 
+                2'b10: result = (user == 2'b01) ? 2'b01 : 2'b10;
+                default: result = 2'b00; // give invalid result if wrong
+            endcase
+        end
+    end
 
 
 endmodule

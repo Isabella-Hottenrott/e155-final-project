@@ -1,48 +1,42 @@
 module computermove(input  logic clk,
                         input logic reset,
                         input logic interpretWE,
-                        input  logic [5:0] gameState,
-                        output logic [1:0] computer); 
+                        input  logic [1:0] thisuser,
+                        output logic [1:0] thiscomputer); 
 
-logic usrRock, usrPaper, usrScissors, compRock, compPaper, compScissors;
-//try new way next
+    logic [1:0] nextcomputer;
 
-assign usrRock = (~gameState[5])&(~gameState[4]); //00
-assign usrPaper = (~gameState[5])&(gameState[4]); //01
-assign usrScissors = (gameState[5])&(~gameState[4]); //10
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            thiscomputer <= 2'b00;      // start with Rock
+        end else if (interpretWE) begin
+            thiscomputer <= nextcomputer;  // calc next only when WE
+        end
+    end
 
-assign compRock = (~gameState[3])&(~gameState[2]); //00
-assign compPaper = (~gameState[3])&(gameState[2]); //01
-assign compScissors = (gameState[3])&(~gameState[2]); //10
 
-always_comb begin
-    casez (gameState[1:0])
-        2'b01:   // computer previously won
-                if (usrRock) 
-                    assign computer = 2'b00;
-                else if (usrPaper)
-                    assign computer = 2'b01;
-                else if (usrScissors)
-                    assign computer = 2'b10;
-                else
-                    assign computer = 2'b11;
+    always_comb begin
 
-        2'b10:  // computer previously lost 
-                if (!usrRock) | (!compRock) //nobody chose Rock
-                    assign computer = 2'b00;
-                else if (!usrPaper) | (!compPaper) //nobody chose Paper
-                    assign computer = 2'b01;
-                else if (!usrScissors) | (!compScissors) //nobody chose Paper
-                    assign computer = 2'b10;
-                else
-                    assign computer = 2'b11;
+        case ({thiscomputer, thisuser})
+            // Computer chose Rock
+            4'b00_00: nextcomputer = 2'b00; // tie 
+            4'b00_01: nextcomputer = 2'b10; // lose 
+            4'b00_10: nextcomputer = 2'b10; // win  
 
-        2'b11:  // computer previously tied 
-                assign computer = 2'b01; // for now play paper if tied
+            // Computer chose paper
+            4'b01_00: nextcomputer = 2'b00; // win
+            4'b01_01: nextcomputer = 2'b01; // tie
+            4'b01_10: nextcomputer = 2'b00; // lose
 
-        default:   computer = 2'b11; // for now computer defaults to wrong input if not working
-    endcase
-end
+            // Computer chose scissors
+            4'b10_00: nextcomputer = 2'b01; // lose
+            4'b10_01: nextcomputer = 2'b01; // tie
+            4'b10_10: nextcomputer = 2'b10; // win
+
+            default:  nextcomputer = 2'b11; // invalid comp value if none
+        endcase
+    end
+
 
 
 
