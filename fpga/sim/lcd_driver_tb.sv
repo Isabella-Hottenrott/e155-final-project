@@ -81,81 +81,69 @@ module lcd_driver_tb();
         $display("\n=== Waiting for initialization sequence ===");
         wait(dut.state == dut.WRITE_SCREEN);
         $display("Initialization complete at %0t ns", $time);
-        
         #100;
-        
         // Test 1: Display message 0
         $display("\n=== Test 1: Display Message 0 ===");
+        change_screen = 1'b1;
+        #10;
         screen = 4'h0;
-        
+        #10; // Hold for at least one clock cycle
+        change_screen = 1'b0;
         // Wait a few cycles to see character writes
         repeat(100) begin
             #10;
-            display_lcd_command();
+            // display_lcd_command(); // Now handled by always @(posedge en)
         end
-        
         #100;
-        
         // Test 2: Switch to message 1
         $display("\n=== Test 2: Switch to Message 1 ===");
+        change_screen = 1'b1;
+        #10;
         screen = 4'h1;
-        
-        // Wait for screen change to trigger DISPLAY_CLEAR
+        #10;
+        change_screen = 1'b0;
         wait(dut.state == dut.DISPLAY_CLEAR);
         $display("Screen change detected, entering DISPLAY_CLEAR state");
-        
-        // Wait for display to reinitialize and write new message
         wait(dut.state == dut.WRITE_SCREEN);
         $display("Back to WRITE_SCREEN state");
-        
         repeat(100) begin
             #10;
-            display_lcd_command();
+            // display_lcd_command(); // Now handled by always @(posedge en)
         end
-        
         #100;
-        
         // Test 3: Switch to message 3
         $display("\n=== Test 3: Switch to Message 3 ===");
+        change_screen = 1'b1;
+        #10;
         screen = 4'h3;
-        
+        #10;
+        change_screen = 1'b0;
         wait(dut.state == dut.DISPLAY_CLEAR);
         wait(dut.state == dut.WRITE_SCREEN);
-        
         repeat(100) begin
             #10;
-            display_lcd_command();
+            // display_lcd_command(); // Now handled by always @(posedge en)
         end
-        
         #100;
-        
         // Test 4: Rapid message switching
         $display("\n=== Test 4: Rapid Message Switching ===");
         for (int i = 0; i < 5; i++) begin
+            change_screen = 1'b1;
+            #10;
             screen = i;
+            #10;
+            change_screen = 1'b0;
             $display("Switching to message %d", i);
             repeat(50) #10;
         end
-        
         #200;
         $display("\n=== Test Complete ===");
         $finish;
     end
     
-    // Monitor for state changes and EN pulses
-    initial begin
-        forever begin
-            @(posedge clk);
-            if (dut.state == dut.WRITE_PULSE_EN && en) begin
-                $display("[%0t] EN PULSE: State=%s, RS=%b, DB=0x%02X", 
-                         $time, dut.state.name(), rs, DB);
-            end
-            if (dut.state != dut.state'($past(dut.state))) begin
-                $display("[%0t] STATE CHANGE: %s -> %s", 
-                         $time, $past(dut.state).name(), dut.state.name());
-            end
-        end
+    // Monitor for EN pulses and display LCD command
+    always @(posedge en) begin
+        display_lcd_command();
     end
-
 
 endmodule

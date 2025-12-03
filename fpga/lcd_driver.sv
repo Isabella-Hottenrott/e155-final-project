@@ -76,9 +76,7 @@ module lcd_driver(
 
     // Track if screen changed to reset character counter
     logic [3:0] prev_screen;
-    always_ff @(posedge clk) begin
-        prev_screen <= screen;
-    end
+    logic pending_screen_change;
     
     // state transitions
     always_comb begin
@@ -174,8 +172,15 @@ module lcd_driver(
             DB <= 8'h00;
             en <= 1'b0;
             delay_counter <= 21'b0;
+            char_counter <= 8'h00;
+            prev_screen <= screen;
+            pending_screen_change <= 1'b0;
         end
         else begin
+            // Track screen change
+            if (screen != prev_screen) begin
+                pending_screen_change <= 1'b1;
+            end
             en <= 1'b0; // default: disable
             case(state)
                 START: begin
@@ -235,13 +240,12 @@ module lcd_driver(
                     rw <= 1'b0; // write
                     DB <= data; // from messages ROM
                     delay_counter <= 21'd1; // 1 cycle pulse width
-                    
-                    // Increment character counter when screen changes
-                    if (screen != prev_screen) begin
+                    if (pending_screen_change) begin
                         char_counter <= 8'h00; // reset to first character
-                    end
-                    else if (valid && char_counter < 8'hFF) begin
-                        char_counter <= char_counter + 8'b01; // next character TODO: this is probably wrong
+                        pending_screen_change <= 1'b0;
+                        prev_screen <= screen;
+                    end else if (valid && char_counter < 8'h13) begin
+                        char_counter <= char_counter + 8'b01; // next character
                     end
                 end
                 WRITE_PULSE_EN: begin
