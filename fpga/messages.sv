@@ -14,20 +14,15 @@ module messages(
 	// 1. Address Calculation (160-bit / 20-char Mode)
 	// ---------------------------------------------------------
 	// We are storing 20 characters (bytes) per 160-bit RAM row.
-	// To find the Row: Divide char_index by 20.
-	// To find the Byte: Take char_index mod 20.
+	// Each message takes exactly 1 row (20 chars = 160 bits).
+	// Address = msg_index (since each message is 1 row)
+	// Byte selection within row = char_index (0-19)
 
-	// Assumption: Fixed 20-character blocks per message.
-	// 20 chars per row = 1 row per message.
-
-	// NOTE: With 512 deep RAM, you can store 512/3 = 170 full messages.
+	// NOTE: With 512 addresses, you can store 512 full messages.
 	logic [8:0] rd_addr;
 
 	always_comb begin
-		logic [8:0] char_index_div20;
-		char_index_div20 = char_index % 20;
-
-		rd_addr = msg_index + char_index_div20;
+		rd_addr = msg_index; // Message index is the row address
 	end
 
     // ---------------------------------------------------------
@@ -53,7 +48,7 @@ module messages(
     // 3. Pipelining for Latency
     // ---------------------------------------------------------
     // 1 cycle latency compensation.
-    // We need 3 bits to select one of 8 bytes (0-7).
+    // Store char_index to select byte within 160-bit word
     
     logic [7:0] byte_select_reg;
     logic       valid_reg;

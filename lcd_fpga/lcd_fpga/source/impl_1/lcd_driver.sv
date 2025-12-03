@@ -241,11 +241,6 @@ module lcd_driver(
 			endcase
 		end
 	end
-		
-	
-	// grab data for displays 
-	
-	
 	
 	
 endmodule
