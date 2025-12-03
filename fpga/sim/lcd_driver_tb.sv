@@ -37,9 +37,10 @@ module lcd_driver_tb();
         .en(en)
     );
     
-    // Task to display LCD command
+    // Task to display LCD command/data on EN pulse
     task display_lcd_command();
-        if (en) begin
+        // Check for rising edge of EN (pulse high)
+        if (en && dut.state == dut.WRITE_PULSE_EN) begin
             if (rs == 0 && rw == 0) begin
                 case (DB)
                     8'h38: $display("[%0t] CMD: Function Set (0x38)", $time);
@@ -51,9 +52,9 @@ module lcd_driver_tb();
                 endcase
             end else if (rs == 1 && rw == 0) begin
                 if (DB >= 32 && DB < 127) begin
-                    $display("[%0t] DATA: '%c' (0x%02X)", $time, DB, DB);
+                    $display("[%0t] DATA: '%c' (0x%02X) from messages[%d][%d]", $time, DB, DB, screen, dut.char_counter);
                 end else begin
-                    $display("[%0t] DATA: 0x%02X", $time, DB);
+                    $display("[%0t] DATA: 0x%02X from messages[%d][%d]", $time, DB, screen, dut.char_counter);
                 end
             end
         end
@@ -75,14 +76,7 @@ module lcd_driver_tb();
         $display("\n=== Reset released at %0t ns ===", $time);
         
         // Wait for initialization sequence to complete
-        // Initialization takes approximately:
-        // - POWER_ON_WAIT: ~2 cycles
-        // - 3x FUNCTION_SET with waits: ~6 cycles
-        // - DISPLAY_OFF with wait: ~2 cycles
-        // - DISPLAY_CLEAR with wait: ~2 cycles
-        // - ENTRY_MODE with wait: ~2 cycles
-        // - DISPLAY_ON with wait: ~2 cycles
-        // Total: ~18 cycles at 137Hz (~130ms)
+        // Initialization now includes pulse states for each command
         
         $display("\n=== Waiting for initialization sequence ===");
         wait(dut.state == dut.WRITE_SCREEN);
@@ -90,20 +84,20 @@ module lcd_driver_tb();
         
         #100;
         
-        // Test 1: Display message 0 "Rock"
-        $display("\n=== Test 1: Display Message 0 (Rock) ===");
+        // Test 1: Display message 0
+        $display("\n=== Test 1: Display Message 0 ===");
         screen = 4'h0;
         
         // Wait a few cycles to see character writes
-        repeat(30) begin
+        repeat(100) begin
             #10;
             display_lcd_command();
         end
         
         #100;
         
-        // Test 2: Switch to message 1 "Paper"
-        $display("\n=== Test 2: Switch to Message 1 (Paper) ===");
+        // Test 2: Switch to message 1
+        $display("\n=== Test 2: Switch to Message 1 ===");
         screen = 4'h1;
         
         // Wait for screen change to trigger DISPLAY_CLEAR
@@ -114,21 +108,21 @@ module lcd_driver_tb();
         wait(dut.state == dut.WRITE_SCREEN);
         $display("Back to WRITE_SCREEN state");
         
-        repeat(30) begin
+        repeat(100) begin
             #10;
             display_lcd_command();
         end
         
         #100;
         
-        // Test 3: Switch to message 3 "You Win!"
-        $display("\n=== Test 3: Switch to Message 3 (You Win!) ===");
+        // Test 3: Switch to message 3
+        $display("\n=== Test 3: Switch to Message 3 ===");
         screen = 4'h3;
         
         wait(dut.state == dut.DISPLAY_CLEAR);
         wait(dut.state == dut.WRITE_SCREEN);
         
-        repeat(30) begin
+        repeat(100) begin
             #10;
             display_lcd_command();
         end
@@ -148,10 +142,19 @@ module lcd_driver_tb();
         $finish;
     end
     
-    // Monitor for state changes (optional - for debugging)
+    // Monitor for state changes and EN pulses
     initial begin
-        $monitor("[%0t] State: %s, Screen: %d, EN: %b, RS: %b, RW: %b, DB: 0x%02X", 
-                 $time, dut.state.name(), screen, en, rs, rw, DB);
+        forever begin
+            @(posedge clk);
+            if (dut.state == dut.WRITE_PULSE_EN && en) begin
+                $display("[%0t] EN PULSE: State=%s, RS=%b, DB=0x%02X", 
+                         $time, dut.state.name(), rs, DB);
+            end
+            if (dut.state != dut.state'($past(dut.state))) begin
+                $display("[%0t] STATE CHANGE: %s -> %s", 
+                         $time, $past(dut.state).name(), dut.state.name());
+            end
+        end
     end
 
 
