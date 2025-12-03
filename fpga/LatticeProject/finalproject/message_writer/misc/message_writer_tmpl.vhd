@@ -7,10 +7,10 @@ component message_writer is
         rd_en_i: in std_logic;
         rd_clk_en_i: in std_logic;
         wr_en_i: in std_logic;
-        wr_data_i: in std_logic_vector(63 downto 0);
-        wr_addr_i: in std_logic_vector(8 downto 0);
-        rd_addr_i: in std_logic_vector(8 downto 0);
-        rd_data_o: out std_logic_vector(63 downto 0)
+        wr_data_i: in std_logic_vector(159 downto 0);
+        wr_addr_i: in std_logic_vector(2 downto 0);
+        rd_addr_i: in std_logic_vector(2 downto 0);
+        rd_data_o: out std_logic_vector(159 downto 0)
     );
 end component;
 

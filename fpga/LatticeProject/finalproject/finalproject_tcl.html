@@ -40,7 +40,61 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
+<A name="pn251202215839"></A><B><U><big>pn251202215839</big></U></B>
+#Start recording tcl command: 12/2/2025 10:28:44
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject; Project name: finalproject
+prj_open "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/finalproject.rdf"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/message_writer.ipx"
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_set_impl_opt -impl "top" {top} {finalproj}
+prj_remove_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/source/top/spi.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv"
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Synthesis -impl top
+#Stop recording: 12/2/2025 21:58:39
+
+
+
 </PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#pn251202215839>pn251202215839</A></LI>
+</UL>
+</DIV>
 
 <button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
 <script type="text/javascript">

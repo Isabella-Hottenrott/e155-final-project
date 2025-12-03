@@ -78,7 +78,7 @@
                     <ipxact:direction>in</ipxact:direction>
                     <ipxact:vectors>
                         <ipxact:vector>
-                            <ipxact:left>63</ipxact:left>
+                            <ipxact:left>159</ipxact:left>
                             <ipxact:right>0</ipxact:right>
                         </ipxact:vector>
                     </ipxact:vectors>
@@ -91,7 +91,7 @@
                     <ipxact:direction>in</ipxact:direction>
                     <ipxact:vectors>
                         <ipxact:vector>
-                            <ipxact:left>8</ipxact:left>
+                            <ipxact:left>2</ipxact:left>
                             <ipxact:right>0</ipxact:right>
                         </ipxact:vector>
                     </ipxact:vectors>
@@ -104,7 +104,7 @@
                     <ipxact:direction>in</ipxact:direction>
                     <ipxact:vectors>
                         <ipxact:vector>
-                            <ipxact:left>8</ipxact:left>
+                            <ipxact:left>2</ipxact:left>
                             <ipxact:right>0</ipxact:right>
                         </ipxact:vector>
                     </ipxact:vectors>
@@ -117,7 +117,7 @@
                     <ipxact:direction>out</ipxact:direction>
                     <ipxact:vectors>
                         <ipxact:vector>
-                            <ipxact:left>63</ipxact:left>
+                            <ipxact:left>159</ipxact:left>
                             <ipxact:right>0</ipxact:right>
                         </ipxact:vector>
                     </ipxact:vectors>
@@ -198,7 +198,7 @@
         </lsccip:deviceInfo>
         <lsccip:generationInfo>
             <lsccip:fileVersion>20180929</lsccip:fileVersion>
-            <lsccip:createdTimestamp>2025 12 02 15:03:55</lsccip:createdTimestamp>
+            <lsccip:createdTimestamp>2025 12 03 00:56:49</lsccip:createdTimestamp>
             <lsccip:radiantBuild>&quot;Lattice Radiant Software&quot; (64-bit) 2024.2.0.3.0</lsccip:radiantBuild>
         </lsccip:generationInfo>
     </ipxact:vendorExtensions>

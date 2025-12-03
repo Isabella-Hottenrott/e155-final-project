@@ -221,7 +221,7 @@ module lcd_driver(
                         char_counter <= 8'h00; // reset to first character
                     end
                     else if (valid && char_counter < 8'hFF) begin
-                        char_counter <= char_counter + 8'h01; // next character
+                        char_counter <= char_counter + 8'b01; // next character TODO: this is probably wrong
                     end
                 end
             endcase
