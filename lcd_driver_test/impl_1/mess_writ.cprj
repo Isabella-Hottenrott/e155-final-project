@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
+-ver "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v"
+-sdc "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/constraints/mess_writ.ldc"
+-path "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ" "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test"
+-top mess_writ
+-a "iCE40UP"
+-t "iCE40UP5K"

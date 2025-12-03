@@ -30,7 +30,7 @@ module messages(
     // ---------------------------------------------------------
     logic [159:0] ram_rd_data;
 
-    message_writer ebr_inst (
+    mess_writ ebr_inst ( //  message_writer ebr_inst (
         .wr_clk_i(clk),
         .rd_clk_i(clk),
         .rst_i(1'b0),
@@ -39,7 +39,7 @@ module messages(
         .rd_clk_en_i(1'b1),
         .wr_en_i(1'b0),
         .wr_data_i(160'b0),      // 160-bit zero write data
-        .wr_addr_i(9'b0),
+        .wr_addr_i(3'b0),
         .rd_addr_i(msg_index),
         .rd_data_o(ram_rd_data) // 160-bit read output
     );

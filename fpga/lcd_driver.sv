@@ -10,9 +10,9 @@
 
 module lcd_driver(
 	input logic clk,
-    input logic [7:0] screen,
+    input logic [2:0] screen,
     input logic reset,
-    input logic change_screen,
+    //input logic change_screen,
     output logic [7:0] DB, //data bus
     output logic rs,
     output logic rw, //read/write. high = read, low = write
@@ -75,7 +75,7 @@ module lcd_driver(
     end
 
     // Track if screen changed to reset character counter
-    logic [3:0] prev_screen;
+    logic [2:0] prev_screen;
     logic pending_screen_change;
     
     // state transitions
@@ -118,7 +118,7 @@ module lcd_driver(
 				else next_state <= state;
             end
             DISPLAY_OFF_WAIT: begin
-                if (delay_counter == 21'b0) next_state <= DISPLAY_CLEAR;
+                if (delay_counter == 21'b0) next_state <= ENTRY_MODE;//DISPLAY_CLEAR;
 				else next_state <= state;
             end
             DISPLAY_CLEAR: begin
@@ -131,7 +131,7 @@ module lcd_driver(
             end
             ENTRY_MODE: begin
                 if (delay_counter == 21'b0) next_state <= ENTRY_MODE_WAIT;
-				else next_state <= state;
+				else next_state <= ENTRY_MODE_WAIT;//state;
             end
             ENTRY_MODE_WAIT: begin
                 if (delay_counter == 21'b0) next_state <= DISPLAY_ON;
@@ -146,7 +146,7 @@ module lcd_driver(
 				else next_state <= state;
             end
             WRITE_SCREEN: begin
-                if (screen != prev_screen) next_state <= DISPLAY_CLEAR;
+                if (screen != prev_screen) next_state <= ENTRY_MODE; //DISPLAY_CLEAR;
                 else next_state <= WRITE_PULSE_EN;
             end
             WRITE_PULSE_EN: begin
@@ -173,7 +173,7 @@ module lcd_driver(
             en <= 1'b0;
             delay_counter <= 21'b0;
             char_counter <= 8'h00;
-            prev_screen <= screen;
+            prev_screen <= screen; 
             pending_screen_change <= 1'b0;
         end
         else begin

@@ -1334,3 +1334,2158 @@ run 5000000
 quit -sim
 # End time: 10:03:46 on Dec 03,2025, Elapsed time: 0:14:35
 # Errors: 0, Warnings: 5
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of messages_tb.sv was successful with warnings.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of lcd_driver_tb.sv failed with 1 errors.
+# Compile of messages_tb.sv failed with 6 errors.
+# 2 compiles, 2 failed with 7 errors.
+# Compile of lcd_driver_tb.sv failed with 1 errors.
+# Compile of messages_tb.sv failed with 6 errors.
+# 2 compiles, 2 failed with 7 errors.
+# Compile of lcd_driver_tb.sv failed with 2 errors.
+# Compile of messages_tb.sv failed with 6 errors.
+# 2 compiles, 2 failed with 8 errors.
+# Compile of lcd_driver_tb.sv failed with 2 errors.
+# Compile of lcd_driver_tb.sv was successful.
+vsim -gui work.lcd_driver_tb {-voptargs=+acc -L iCE40UP}
+# vsim -gui work.lcd_driver_tb -voptargs="+acc -L iCE40UP" 
+# Start time: 10:15:34 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/clk \
+sim:/lcd_driver_tb/dut/screen \
+sim:/lcd_driver_tb/dut/reset \
+sim:/lcd_driver_tb/dut/change_screen \
+sim:/lcd_driver_tb/dut/DB \
+sim:/lcd_driver_tb/dut/rs \
+sim:/lcd_driver_tb/dut/rw \
+sim:/lcd_driver_tb/dut/en \
+sim:/lcd_driver_tb/dut/state \
+sim:/lcd_driver_tb/dut/next_state \
+sim:/lcd_driver_tb/dut/delay_counter \
+sim:/lcd_driver_tb/dut/msg_index \
+sim:/lcd_driver_tb/dut/char_index \
+sim:/lcd_driver_tb/dut/data \
+sim:/lcd_driver_tb/dut/valid \
+sim:/lcd_driver_tb/dut/char_counter \
+sim:/lcd_driver_tb/dut/prev_screen
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 1: Display Message 0 ===
+# [520000] DATA: 0x00 from messages[ 0][  x]
+# [520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [580000] DATA: 0x00 from messages[ 0][  x]
+# [580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [640000] DATA: 0x00 from messages[ 0][  x]
+# [640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [700000] DATA: 0x00 from messages[ 0][  x]
+# [700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [760000] DATA: 0x00 from messages[ 0][  x]
+# [760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [820000] DATA: 0x00 from messages[ 0][  x]
+# [820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [880000] DATA: 0x00 from messages[ 0][  x]
+# [880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [940000] DATA: 0x00 from messages[ 0][  x]
+# [940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1000000] DATA: 0x00 from messages[ 0][  x]
+# [1000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1060000] DATA: 0x00 from messages[ 0][  x]
+# [1060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1120000] DATA: 0x00 from messages[ 0][  x]
+# [1120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1180000] DATA: 0x00 from messages[ 0][  x]
+# [1180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1240000] DATA: 0x00 from messages[ 0][  x]
+# [1240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1300000] DATA: 0x00 from messages[ 0][  x]
+# [1300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1360000] DATA: 0x00 from messages[ 0][  x]
+# [1360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1420000] DATA: 0x00 from messages[ 0][  x]
+# [1420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 2: Switch to Message 1 ===
+# Screen change detected, entering DISPLAY_CLEAR state
+run 5000000
+# Causality operation skipped due to absence of debug database file
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/mes/byte_select_reg \
+sim:/lcd_driver_tb/dut/mes/char_index \
+sim:/lcd_driver_tb/dut/mes/clk \
+sim:/lcd_driver_tb/dut/mes/data_out \
+sim:/lcd_driver_tb/dut/mes/msg_index \
+sim:/lcd_driver_tb/dut/mes/ram_rd_data \
+sim:/lcd_driver_tb/dut/mes/rd_addr \
+sim:/lcd_driver_tb/dut/mes/valid_out \
+sim:/lcd_driver_tb/dut/mes/valid_reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 50000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 1: Display Message 0 ===
+# [520000] DATA: 0x00 from messages[ 0][  x]
+# [520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [580000] DATA: 0x00 from messages[ 0][  x]
+# [580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [640000] DATA: 0x00 from messages[ 0][  x]
+# [640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [700000] DATA: 0x00 from messages[ 0][  x]
+# [700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [760000] DATA: 0x00 from messages[ 0][  x]
+# [760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [820000] DATA: 0x00 from messages[ 0][  x]
+# [820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [880000] DATA: 0x00 from messages[ 0][  x]
+# [880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [940000] DATA: 0x00 from messages[ 0][  x]
+# [940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1000000] DATA: 0x00 from messages[ 0][  x]
+# [1000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1060000] DATA: 0x00 from messages[ 0][  x]
+# [1060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1120000] DATA: 0x00 from messages[ 0][  x]
+# [1120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1180000] DATA: 0x00 from messages[ 0][  x]
+# [1180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1240000] DATA: 0x00 from messages[ 0][  x]
+# [1240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1300000] DATA: 0x00 from messages[ 0][  x]
+# [1300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1360000] DATA: 0x00 from messages[ 0][  x]
+# [1360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1420000] DATA: 0x00 from messages[ 0][  x]
+# [1420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 2: Switch to Message 1 ===
+# Screen change detected, entering DISPLAY_CLEAR state
+# Compile of lcd_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 50000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 1: Display Message 0 ===
+# [520000] DATA: 0x00 from messages[ 0][  x]
+# [520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [580000] DATA: 0x00 from messages[ 0][  x]
+# [580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [640000] DATA: 0x00 from messages[ 0][  x]
+# [640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [700000] DATA: 0x00 from messages[ 0][  x]
+# [700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [760000] DATA: 0x00 from messages[ 0][  x]
+# [760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [820000] DATA: 0x00 from messages[ 0][  x]
+# [820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [880000] DATA: 0x00 from messages[ 0][  x]
+# [880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [940000] DATA: 0x00 from messages[ 0][  x]
+# [940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1000000] DATA: 0x00 from messages[ 0][  x]
+# [1000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1060000] DATA: 0x00 from messages[ 0][  x]
+# [1060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1120000] DATA: 0x00 from messages[ 0][  x]
+# [1120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1180000] DATA: 0x00 from messages[ 0][  x]
+# [1180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1240000] DATA: 0x00 from messages[ 0][  x]
+# [1240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1300000] DATA: 0x00 from messages[ 0][  x]
+# [1300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1360000] DATA: 0x00 from messages[ 0][  x]
+# [1360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1420000] DATA: 0x00 from messages[ 0][  x]
+# [1420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1480000] DATA: 0x00 from messages[ 0][  x]
+# [1480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# 
+# === Test 2: Switch to Message 1 ===
+# [1600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [1660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [1720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x50
+# [1780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x61
+# [1840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x70
+# [1900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x65
+# [1960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x72
+# [2020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x20
+# [2860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [2920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [2980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [3940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [4960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [5980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [6940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [7960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [8980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [9940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [10960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [11980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [12940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [13960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [14980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [15940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [16960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [17980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [18940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [19960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [20980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [21940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [22960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [23980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [24940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [25960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [26980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [27940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [28960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [29980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [30940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [31960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [32980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [33940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [34960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [35980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [36940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [37960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [38980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [39940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [40960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [41980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [42940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [43960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [44980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [45940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [46960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47020000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47080000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47140000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47200000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47260000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47320000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47380000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47440000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47500000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47560000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47620000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47680000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47740000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47800000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47860000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47920000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [47980000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48040000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48100000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48160000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48220000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48280000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48340000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48400000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48460000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48520000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48580000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48640000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48700000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48760000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48820000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48880000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [48940000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49000000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49060000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49120000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49180000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49240000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49300000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49360000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49420000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49480000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49540000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49600000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49660000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49720000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49780000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49840000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49900000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# [49960000] EN PULSE: State=WRITE_PULSE_EN, RS=1, DB=0x00
+# Compile of lcd_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [390000] DATA: 0x00 from messages[ 0][  x]
+# [450000] DATA: 0x00 from messages[ 0][  x]
+# 
+# === Test 1: Display Message 0 ===
+# [510000] DATA: 0x00 from messages[ 0][  x]
+# [570000] DATA: 0x00 from messages[ 0][  x]
+# [630000] DATA: 0x00 from messages[ 0][  x]
+# [690000] DATA: 0x00 from messages[ 0][  x]
+# [750000] DATA: 0x00 from messages[ 0][  x]
+# [810000] DATA: 0x00 from messages[ 0][  x]
+# [870000] DATA: 0x00 from messages[ 0][  x]
+# [930000] DATA: 0x00 from messages[ 0][  x]
+# [990000] DATA: 0x00 from messages[ 0][  x]
+# [1050000] DATA: 0x00 from messages[ 0][  x]
+# [1110000] DATA: 0x00 from messages[ 0][  x]
+# [1170000] DATA: 0x00 from messages[ 0][  x]
+# [1230000] DATA: 0x00 from messages[ 0][  x]
+# [1290000] DATA: 0x00 from messages[ 0][  x]
+# [1350000] DATA: 0x00 from messages[ 0][  x]
+# [1410000] DATA: 0x00 from messages[ 0][  x]
+# [1470000] DATA: 0x00 from messages[ 0][  x]
+# [1530000] DATA: 0x00 from messages[ 0][  x]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1590000] DATA: 0x00 from messages[ 0][  x]
+# [1650000] DATA: 0x00 from messages[ 1][  x]
+# [1710000] DATA: 0x00 from messages[ 1][  x]
+# [1770000] DATA: 0x00 from messages[ 1][  x]
+# [1830000] DATA: 0x00 from messages[ 1][  x]
+# [1890000] DATA: 0x00 from messages[ 1][  x]
+# [1950000] DATA: 0x00 from messages[ 1][  x]
+# [2010000] DATA: 0x00 from messages[ 1][  x]
+# [2070000] DATA: 0x00 from messages[ 1][  x]
+# [2130000] DATA: 0x00 from messages[ 1][  x]
+# [2190000] DATA: 0x00 from messages[ 1][  x]
+# [2250000] DATA: 0x00 from messages[ 1][  x]
+# [2310000] DATA: 0x00 from messages[ 1][  x]
+# [2370000] DATA: 0x00 from messages[ 1][  x]
+# [2430000] DATA: 0x00 from messages[ 1][  x]
+# [2490000] DATA: 0x00 from messages[ 1][  x]
+# [2550000] DATA: 0x00 from messages[ 1][  x]
+# [2610000] DATA: 0x00 from messages[ 1][  x]
+# [2670000] DATA: 0x00 from messages[ 1][  x]
+# [2730000] DATA: 0x00 from messages[ 1][  x]
+# [2790000] DATA: 0x00 from messages[ 1][  x]
+# [2850000] DATA: 0x00 from messages[ 1][  x]
+# [2910000] DATA: 0x00 from messages[ 1][  x]
+# [2970000] DATA: 0x00 from messages[ 1][  x]
+# [3030000] DATA: 0x00 from messages[ 1][  x]
+# [3090000] DATA: 0x00 from messages[ 1][  x]
+# [3150000] DATA: 0x00 from messages[ 1][  x]
+# [3210000] DATA: 0x00 from messages[ 1][  x]
+# [3270000] DATA: 0x00 from messages[ 1][  x]
+# [3330000] DATA: 0x00 from messages[ 1][  x]
+# [3390000] DATA: 0x00 from messages[ 1][  x]
+# [3450000] DATA: 0x00 from messages[ 1][  x]
+# [3510000] DATA: 0x00 from messages[ 1][  x]
+# [3570000] DATA: 0x00 from messages[ 1][  x]
+# [3630000] DATA: 0x00 from messages[ 1][  x]
+# [3690000] DATA: 0x00 from messages[ 1][  x]
+# [3750000] DATA: 0x00 from messages[ 1][  x]
+# [3810000] DATA: 0x00 from messages[ 1][  x]
+# [3870000] DATA: 0x00 from messages[ 1][  x]
+# [3930000] DATA: 0x00 from messages[ 1][  x]
+# [3990000] DATA: 0x00 from messages[ 1][  x]
+# [4050000] DATA: 0x00 from messages[ 1][  x]
+# [4110000] DATA: 0x00 from messages[ 1][  x]
+# [4170000] DATA: 0x00 from messages[ 1][  x]
+# [4230000] DATA: 0x00 from messages[ 1][  x]
+# [4290000] DATA: 0x00 from messages[ 1][  x]
+# [4350000] DATA: 0x00 from messages[ 1][  x]
+# [4410000] DATA: 0x00 from messages[ 1][  x]
+# [4470000] DATA: 0x00 from messages[ 1][  x]
+# [4530000] DATA: 0x00 from messages[ 1][  x]
+# [4590000] DATA: 0x00 from messages[ 1][  x]
+# [4650000] DATA: 0x00 from messages[ 1][  x]
+# [4710000] DATA: 0x00 from messages[ 1][  x]
+# [4770000] DATA: 0x00 from messages[ 1][  x]
+# [4830000] DATA: 0x00 from messages[ 1][  x]
+# [4890000] DATA: 0x00 from messages[ 1][  x]
+# [4950000] DATA: 0x00 from messages[ 1][  x]
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/char_index
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/data
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/next_state
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/prev_screen
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/screen
+add wave -position insertpoint  \
+sim:/lcd_driver_tb/dut/state
+# Compile of lcd_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [390000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [450000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [510000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [570000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [630000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [690000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [750000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [810000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [870000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [930000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [990000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1050000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1110000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1170000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1230000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1290000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1350000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1410000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1470000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1530000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1590000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1650000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [1710000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [1770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [1830000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [1890000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [1950000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2010000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2070000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2130000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2190000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2250000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2310000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2370000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2430000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2490000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2550000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2610000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2670000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2730000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2790000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2850000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2910000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2970000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3030000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3090000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3150000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3210000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3270000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3330000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3390000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3450000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3510000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3570000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3630000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3690000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3750000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3810000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3870000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3930000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3990000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4050000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4110000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4170000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4230000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4290000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4350000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4410000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4470000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4530000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4590000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4650000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4710000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4830000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4890000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4950000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# Compile of lcd_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(187): (vopt-7061) Variable 'pending_screen_change' driven in an always_ff block, may not be driven by any other process. See C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(83).
+# ** Error (suppressible): C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(251): (vopt-7061) Variable 'pending_screen_change' driven in an always_ff block, may not be driven by any other process. See C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(83).
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=1.
+run 5000000
+# No Design Loaded!
+# Compile of lcd_driver.sv was successful.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.lcd_driver_tb
+# vsim -gui -voptargs="+acc -L iCE40UP" work.lcd_driver_tb 
+# Start time: 10:15:34 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=2.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [390000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [450000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [510000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [570000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [630000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [690000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [750000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [810000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [870000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [930000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [990000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1050000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1110000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1170000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1230000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1290000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1350000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1410000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1470000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1530000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1590000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+run 5000000
+add wave -position end  sim:/lcd_driver_tb/dut/delay_counter
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 370000 ns
+# [390000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [450000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [510000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [570000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [630000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [690000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [750000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [810000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [870000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [930000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [990000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1050000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1110000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1170000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1230000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1290000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1350000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1410000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1470000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1530000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1590000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Compile of lcd_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+add wave -position end  sim:/lcd_driver_tb/dut/pending_screen_change
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 50000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+run 500000
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+run 500000
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+run 500000
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+run 500000
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# Compile of lcd_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1690000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1750000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1810000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1870000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1930000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1990000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2710000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# [2770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2830000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2890000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2950000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3010000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3070000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3130000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3190000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3250000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3310000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3370000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3430000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3490000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3550000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3610000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3670000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3730000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3790000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3850000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3910000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3970000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4030000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4090000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4150000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4210000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4270000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4330000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4390000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4450000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4510000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4570000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4630000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4690000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4750000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4810000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4870000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4930000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [4990000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# Compile of lcd_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [1690000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1750000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1810000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1870000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1930000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1990000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2710000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [2770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2900000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [2960000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [3020000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [3080000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3140000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3200000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [3260000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [3320000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [3380000] DATA: '!' (0x21) from messages[ 3][  9]
+# [3440000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [3500000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [3560000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [3620000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [3740000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [3800000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [3860000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [3920000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [3980000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [4110000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4170000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [4230000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [4290000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [4350000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [4410000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [4470000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [4600000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [4660000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [4720000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [4780000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [4840000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [4900000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [4960000] DATA: ' ' (0x20) from messages[ 1][  7]
+run 5000000
+# [5020000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5150000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5210000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [5270000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [5330000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [5390000] DATA: 's' (0x73) from messages[ 2][  5]
+# [5450000] DATA: 's' (0x73) from messages[ 2][  6]
+# [5510000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [5640000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [5700000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [5760000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [5820000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [5880000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [5940000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [6000000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [6060000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6190000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [6250000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [6310000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [6370000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [6430000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [6490000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [6550000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [6610000] DATA: 's' (0x73) from messages[ 4][  8]
+# [6670000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [6730000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(141)
+#    Time: 6780 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 141

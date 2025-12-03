@@ -1,0 +1,4 @@
+BEGIN 1:lcd_driver:fast:work
+    char_counter :  1:lcd_driver_tb:fast:work
+    state :  1:lcd_driver_tb:fast:work
+END 

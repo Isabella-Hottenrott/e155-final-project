@@ -1,0 +1,12 @@
+#Start recording tcl command: 12/3/2025 08:31:36
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject; Project name: finalproject
+prj_open "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/finalproject.rdf"
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_save 
+prj_close
+#Stop recording: 12/3/2025 13:23:33

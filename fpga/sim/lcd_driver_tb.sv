@@ -102,7 +102,7 @@ module lcd_driver_tb();
         screen = 4'h1;
         #10;
         change_screen = 1'b0;
-        wait(dut.state == dut.DISPLAY_CLEAR);
+        wait(dut.state == dut.ENTRY_MODE);
         $display("Screen change detected, entering DISPLAY_CLEAR state");
         wait(dut.state == dut.WRITE_SCREEN);
         $display("Back to WRITE_SCREEN state");
@@ -118,7 +118,7 @@ module lcd_driver_tb();
         screen = 4'h3;
         #10;
         change_screen = 1'b0;
-        wait(dut.state == dut.DISPLAY_CLEAR);
+        wait(dut.state == dut.ENTRY_MODE);
         wait(dut.state == dut.WRITE_SCREEN);
         repeat(100) begin
             #10;

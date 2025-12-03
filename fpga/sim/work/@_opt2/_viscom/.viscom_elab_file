@@ -1,0 +1,1 @@
+C:/lscc/radiant/2024.2/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 7077888 work.lcd_driver_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -L iCE40UP -allow_unnamed -o _opt2 -id 13-00be43eaeac0-6930a93a-12a-3e78 +__design_bin_path+C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim +__betafsm
