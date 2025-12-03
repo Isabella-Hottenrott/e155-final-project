@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Tue Dec  2 16:16:10 2025
+Mapped on: Tue Dec  2 21:22:45 2025
 
 Design Information
 ------------------
@@ -22,23 +22,25 @@ Command line:   map -pdc C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
 Design Summary
 --------------
 
-   Number of slice registers:   0 out of  5280 (0%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:             1 out of  5280 (<1%)
-      Number of logic LUT4s:               1
-      Number of ripple logic:              0 (0 LUT4s)
-   Number of IO sites used:   11 out of 39 (28%)
-      Number of IO sites used for general PIO: 11
+   Number of slice registers: 179 out of  5280 (3%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           350 out of  5280 (7%)
+      Number of logic LUT4s:             162
+      Number of inserted feedthru LUT4s: 106
+      Number of replicated LUT4s:          4
+      Number of ripple logic:             39 (78 LUT4s)
+   Number of IO sites used:   15 out of 39 (38%)
+      Number of IO sites used for general PIO: 14
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 11 out of 36 (31%)
-      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      Number of IO sites used for PIO+I3C: 14 out of 36 (39%)
+      Number of IO sites used for OD+RGB IO buffers: 1 out of 3 (33%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 11 out of 39 (28%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 15 out of 39 (38%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -46,21 +48,18 @@ Design Summary
    Number of SRAMs:            0 out of 4 (0%)
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
-   Number of EBRs:             0 out of 30 (0%)
+   Number of EBRs:             8 out of 30 (27%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  0
-   Number of Clock Enables:  0
-   Number of LSRs:  0
-   Top 10 highest fanout non-clock nets:
-
-
-
-
-
-   Number of warnings:  20
-   Number of criticals: 0
-   Number of errors:    0
-
+   Number of Clocks:  3
+      Net clk: 160 loads, 160 rising, 0 falling (Driver: Pin counter_198__i21/Q)
+      Net int_osc: 11 loads, 11 rising, 0 falling (Driver: Pin
+     hf_osc.osc_inst/CLKHF)
+      Net sck_c: 12 loads, 12 rising, 0 falling (Driver: Port sck)
+   Number of Clock Enables:  7
+      Net VCC_net: 17 loads, 0 SLICEs
+      Net n2086: 4 loads, 4 SLICEs
+      Net n2097: 13 loads, 13 SLICEs
+      Net n2068: 8 loads, 8 SLICEs
 
                                     Page 1
 
@@ -68,41 +67,43 @@ Design Summary
 
 
 
+Design Summary (cont)
+---------------------
+      Pin cs: 8 loads, 7 SLICEs (Net: cs_c)
+      Net synchronizer.n480: 8 loads, 8 SLICEs
+      Net lcd_driver.n495: 5 loads, 5 SLICEs
+   Number of LSRs:  4
+      Pin reset: 59 loads, 59 SLICEs (Net: reset_c)
+      Net n2057: 4 loads, 4 SLICEs
+      Net synchronizer.n529: 8 loads, 8 SLICEs
+      Net lcd_driver.n2049: 5 loads, 5 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset_c: 67 loads
+      Net VCC_net: 41 loads
+      Net lcd_driver.state[4]: 35 loads
+      Net lcd_driver.mes.byte_select_reg[1]: 23 loads
+      Net n351: 23 loads
+      Net lcd_driver.mes.byte_select_reg[0]: 22 loads
+      Net directedBits[2]: 20 loads
+      Net directedBits[3]: 19 loads
+      Net directedBits[0]: 17 loads
+      Net directedBits[6]: 15 loads
+
+
+
+
+
+   Number of warnings:  0
+   Number of criticals: 0
+   Number of errors:    0
+
 Design Errors/Criticals/Warnings
 --------------------------------
 
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (4) : No port matched 'LED[2]'.
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (5) : No port matched 'LED[0]'.
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (6) : No port matched 'LED[1]'.
-WARNING <1027013> - map: No port matched 'LED[2]'.
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (4) : Can't resolve object 'LED[2]'
-     in constraint 'ldc_set_location -site {45} [get_ports {LED[2]}]'.
-WARNING <1027013> - map: No port matched 'LED[0]'.
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (5) : Can't resolve object 'LED[0]'
-     in constraint 'ldc_set_location -site {46} [get_ports {LED[0]}]'.
-WARNING <1027013> - map: No port matched 'LED[1]'.
-WARNING <1026001> - map: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
-     /LatticeProject/finalproject/pinout.pdc (6) : Can't resolve object 'LED[1]'
-     in constraint 'ldc_set_location -site {47} [get_ports {LED[1]}]'.
-WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {45}
-     [get_ports {LED[2]}]'.
-WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {46}
-     [get_ports {LED[0]}]'.
-WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {47}
-     [get_ports {LED[1]}]'.
-WARNING <71003020> - map: Top module port 'sck' does not connect to anything.
-WARNING <71003020> - map: Top module port 'sdi' does not connect to anything.
-WARNING <71003020> - map: Top module port 'cs' does not connect to anything.
-WARNING <71003020> - map: Top module port 'reset' does not connect to anything.
-WARNING <71003020> - map: Top module port 'sck' does not connect to anything.
-WARNING <71003020> - map: Top module port 'sdi' does not connect to anything.
-WARNING <71003020> - map: Top module port 'cs' does not connect to anything.
-WARNING <71003020> - map: Top module port 'reset' does not connect to anything.
+   No error, critical, or warning presents.
+INFO <52291017> - map: Port 'DB[1]' is located on BB_OD pad '41'. Its IO buffer
+     is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to
+     BB_OD.
 
 IO (PIO) Attributes
 -------------------
@@ -111,22 +112,21 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| DB[0]               | OUTPUT    |           |       |       |           |
+| reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| DB[1]               | OUTPUT    |           |       |       |           |
+| cs                  | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdi                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sck                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| DB[0]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | DB[2]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | DB[3]               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | DB[4]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| DB[5]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| DB[6]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| DB[7]               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
 
@@ -136,35 +136,84 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| DB[5]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| DB[6]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| DB[7]               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | chip_en             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | rw                  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | rs                  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| DB[1]               | OUTPUT    |           |       |       | OD        |
++---------------------+-----------+-----------+-------+-------+-----------+
 
-Removed logic
--------------
+OSC Summary
+-----------
 
-Block DB_pad[0].vhi_inst was optimized away.
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc.osc_inst
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     int_osc
+  DIV Setting:                                  00
+
+ASIC Components
+---------------
+
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[7].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[6].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[5].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[4].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[3].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[2].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[1].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: spi/intermedByte_i0_i0
+         Type: IOLOGIC
+Instance Name: hf_osc.osc_inst
+         Type: HFOSC
+
+                                    Page 3
+
+
+
+
+
 
 Constraint Summary
 ------------------
 
-   Total number of constraints: 8
-   Total number of constraints dropped: 3
-   Dropped constraints are:
-     ldc_set_location -site {45} [get_ports {LED[2]}]
-     ldc_set_location -site {46} [get_ports {LED[0]}]
-     ldc_set_location -site {47} [get_ports {LED[1]}]
+   Total number of constraints: 17
+   Total number of constraints dropped: 0
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
-Checksum -- map: 45a2831912cd016cbcbea0625f3b2497f12d6e5
+   Peak Memory Usage: 72 MB
+Checksum -- map: fdf61f303fef3be6499c30f3decff53168e97d33
 
 
 
@@ -194,7 +243,24 @@ Checksum -- map: 45a2831912cd016cbcbea0625f3b2497f12d6e5
 
 
 
-                                    Page 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

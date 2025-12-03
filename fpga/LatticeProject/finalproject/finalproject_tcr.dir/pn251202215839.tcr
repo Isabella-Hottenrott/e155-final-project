@@ -1,0 +1,44 @@
+#Start recording tcl command: 12/2/2025 10:28:44
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject; Project name: finalproject
+prj_open "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/finalproject.rdf"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/message_writer.ipx"
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_set_impl_opt -impl "top" {top} {finalproj}
+prj_remove_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/source/top/spi.sv"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv"
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Export -impl top
+prj_run PAR -impl top
+prj_run Synthesis -impl top
+#Stop recording: 12/2/2025 21:58:39

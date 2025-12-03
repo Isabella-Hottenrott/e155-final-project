@@ -1,0 +1,179 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project testing_final_project
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv failed with 3 errors.
+# Compile of messages_tb.sv failed with 10 errors.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# 13 compiles, 2 failed with 13 errors.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of messages_tb.sv failed with 7 errors.
+# 2 compiles, 1 failed with 7 errors.
+# Compile of messages_tb.sv failed with 7 errors.
+# Compile of messages_tb.sv failed with 6 errors.
+# Compile of messages_tb.sv failed with 7 errors.
+# Compile of messages_tb.sv failed with 6 errors.
+# Compile of messages_tb.sv was successful.
+vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
+# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
+# Start time: 21:40:57 on Dec 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
+#  For instance 'ebr_inst' at path 'messages'
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
+#  For instance 'ebr_inst' at path 'messages_tb.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# End time: 21:40:57 on Dec 02,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 13
+# Load canceled
+# Compile of clk_rst_gen.v was successful.
+# Compile of dut_inst.v failed with 2 errors.
+# Compile of dut_params.v failed with 1 errors.
+# Compile of mem_model.v was successful.
+# Compile of pdp_master.v was successful.
+# Compile of tb_top.v was successful.
+# 6 compiles, 2 failed with 3 errors.
+# Optimization canceled
+vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
+# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
+# Start time: 21:44:43 on Dec 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
+#  For instance 'ebr_inst' at path 'messages'
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
+#  For instance 'ebr_inst' at path 'messages_tb.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# End time: 21:44:44 on Dec 02,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 4
+# Compile of message_writer.v was successful.
+vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
+# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
+# Start time: 21:56:57 on Dec 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+add wave -position insertpoint  \
+sim:/messages_tb/dut/clk \
+sim:/messages_tb/dut/msg_index \
+sim:/messages_tb/dut/char_index \
+sim:/messages_tb/dut/data_out \
+sim:/messages_tb/dut/valid_out \
+sim:/messages_tb/dut/rd_addr \
+sim:/messages_tb/dut/ram_rd_data \
+sim:/messages_tb/dut/byte_select_reg \
+sim:/messages_tb/dut/valid_reg
+run800000
+# invalid command name "run800000"
+run 800000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x00 ()
+# char_index=          1, data=0x00 ()
+# char_index=          2, data=0x00 ()
+# char_index=          3, data=0x00 ()
+# char_index=          4, data=0x00 ()
+# char_index=          5, data=0x00 ()
+# char_index=          6, data=0x00 ()
+# char_index=          7, data=0x00 ()
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x00 ('')
+# char_index=          1, data=0x00 ('')
+# char_index=          2, data=0x00 ('')
+# char_index=          3, data=0x00 ('')
+# char_index=          4, data=0x00 ('')
+# char_index=          5, data=0x00 ('')
+# char_index=          6, data=0x00 ('')
+# char_index=          7, data=0x00 ('')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x00 ('')
+# char_index=          1, data=0x00 ('')
+# char_index=          2, data=0x00 ('')
+# char_index=          3, data=0x00 ('')
+# char_index=          4, data=0x00 ('')
+# char_index=          5, data=0x00 ('')
+# char_index=          6, data=0x00 ('')
+# char_index=          7, data=0x00 ('')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x00 ('')
+# Message 4, char 0: 0x00 ('')
+# Message 5, char 0: 0x00 ('')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: FAIL - Expected 0x20, got 0x00
+# char_index=          5: FAIL - Expected 0x20, got 0x00
+# char_index=          6: FAIL - Expected 0x20, got 0x00
+# char_index=          7: FAIL - Expected 0x20, got 0x00
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x00 ('')
+# char_index=          1, data=0x00 ('')
+# char_index=          2, data=0x00 ('')
+# char_index=          3, data=0x00 ('')
+# char_index=          4, data=0x00 ('')
+# char_index=          5, data=0x00 ('')
+# char_index=          6, data=0x00 ('')
+# char_index=          7, data=0x00 ('')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(111)
+#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 111

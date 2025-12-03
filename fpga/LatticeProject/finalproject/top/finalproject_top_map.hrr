@@ -3,6 +3,190 @@ Report for cell finalproj
    Instance path: finalproj
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          1        100.0
-                               LUTGATE	          1        100.0
-                                 IOBUF	         11        100.0
+                                 IOLGC	       1.00        100.0
+                                  LUT4	        350        100.0
+                               LUTGATE	        272        100.0
+                                LUTCCU	         78        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	         15        100.0
+                                PFUREG	        179        100.0
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                            chooseaddr	          1        12.6
+                         interpretgame	          1         1.1
+                            lcd_driver	          1        42.3
+                                   spi	          1         1.1
+                          synchronizer	          1         2.9
+---------------------------------------------------
+Report for cell interpretgame
+   Instance path: finalproj/interpretgame
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         1.1
+                               LUTGATE	          4         1.5
+                                PFUREG	          4         2.2
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          computermove	          1         0.6
+                           winlosedraw	          1         0.6
+---------------------------------------------------
+Report for cell winlosedraw
+   Instance path: finalproj/interpretgame/winlosedraw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.6
+                               LUTGATE	          2         0.7
+---------------------------------------------------
+Report for cell computermove
+   Instance path: finalproj/interpretgame/computermove
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.6
+                               LUTGATE	          2         0.7
+                                PFUREG	          2         1.1
+---------------------------------------------------
+Report for cell synchronizer
+   Instance path: finalproj/synchronizer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         2.9
+                               LUTGATE	         10         3.7
+                                PFUREG	         16         8.9
+---------------------------------------------------
+Report for cell chooseaddr
+   Instance path: finalproj/chooseaddr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         44        12.6
+                               LUTGATE	         28        10.3
+                                LUTCCU	         16        20.5
+---------------------------------------------------
+Report for cell lcd_driver
+   Instance path: finalproj/lcd_driver
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        148        42.3
+                               LUTGATE	        108        39.7
+                                LUTCCU	         40        51.3
+                                PFUREG	        127        70.9
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              messages	          1        14.0
+---------------------------------------------------
+Report for cell messages
+   Instance path: finalproj/lcd_driver/mes
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         49        14.0
+                               LUTGATE	         41        15.1
+                                LUTCCU	          8        10.3
+                                PFUREG	         67        37.4
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                        message_writer	          1         0.0
+---------------------------------------------------
+Report for cell message_writer
+   Instance path: finalproj/lcd_driver/mes/ebr_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         64        35.8
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)	          1         0.0
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         64        35.8
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)	          1         0.0
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         64        35.8
+                                   EBR	          8        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)	          1         0.0
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)	          1         0.0
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[7].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[6].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[5].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[4].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)
+   Instance path: finalproj/lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         4.5
+                                   EBR	          1        12.5
+---------------------------------------------------
+Report for cell spi
+   Instance path: finalproj/spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                  LUT4	          4         1.1
+                               LUTGATE	          4         1.5
+                                 IOREG	          1        100.0
+                                PFUREG	         11         6.1

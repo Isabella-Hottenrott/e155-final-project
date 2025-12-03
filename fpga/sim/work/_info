@@ -1,0 +1,540 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject
+T_opt
+!s110 1764741418
+V7NSdMU5OT4ij=U_RI7I=31
+04 11 4 work messages_tb fast 0
+04 8 4 work messages fast 0
+=1-00be43eaeac0-692fd12a-8c-60bc
+R0
+!s12f OEM25U23 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc -L iCE40UP
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2024.2;79
+vchooseaddr
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1764739771
+!i10b 1
+!s100 CQWXzjDR6W>QRAnI4UQhB1
+IinzD10lnkZn5C4]h`HPZf0
+S1
+Z4 dC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim
+w1764720284
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv
+!i122 1
+L0 1 48
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z7 !s108 1764739771.000000
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vclk_rst_gen
+Z9 2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/tb_top.v
+Z10 !s110 1764740576
+!i10b 1
+!s100 gkZmcC5RfBQ@Fh:iA9JiV3
+I4zXO6OVZ5n1DQ5YY`XaSb0
+R4
+w1615878336
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/clk_rst_gen.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/clk_rst_gen.v
+!i122 16
+L0 6 37
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1764740576.000000
+Z12 !s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/dut_inst.v|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/dut_params.v|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/clk_rst_gen.v|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/pdp_master.v|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/mem_model.v|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/tb_top.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/tb_top.v|
+!i113 0
+Z14 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcomputermove
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv
+R2
+R3
+!i10b 1
+!s100 OoBPeHOZALnAK9@H]@0AK0
+IAj7NVa2IKHmZfI85nfAP20
+S1
+R4
+Z15 w1764654718
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv
+!i122 2
+L0 1 45
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv|
+!i113 0
+R8
+R1
+vfinalproj
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv
+R2
+R3
+!i10b 1
+!s100 dd_0BXJzbkg;UNK6?z?P^1
+IXBdl]>Yi@oU3n8=fD8=a]1
+S1
+R4
+w1764717937
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv
+!i122 3
+L0 6 29
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv|
+!i113 0
+R8
+R1
+vfinalprojtb
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv
+R2
+R3
+!i10b 1
+!s100 6LjaiB_QX6lI1keGG9Z5i2
+I:B^dLl4CedEYI@UEm:c6o3
+S1
+R4
+w1764632024
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv
+!i122 0
+L0 1 110
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv|
+!i113 0
+R8
+R1
+vinterpretgame
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv
+R2
+R3
+!i10b 1
+!s100 dOZ>:YKbS=B]D1?[^1=:60
+ID[VeM4Ma;LNG`::6J3fom2
+S1
+R4
+w1764735307
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv
+!i122 4
+L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv|
+!i113 0
+R8
+R1
+vlcd_driver
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv
+R2
+R3
+!i10b 1
+!s100 L5aOJGgi1e3jMYW47PD@_3
+I^eML3SD=d[3EGeV3cKVGZ0
+S1
+R4
+w1764739324
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv
+!i122 5
+L0 5 226
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv|
+!i113 0
+R8
+R1
+vlcd_driver_tb
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv
+R2
+!s110 1764739809
+!i10b 1
+!s100 gA_U_YC<[fPaj`YM^A5G:1
+I@eBdP]b1lUR5]TQ<8Y8N:2
+S1
+R4
+w1764739797
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv
+!i122 11
+L0 6 153
+R5
+R6
+r1
+!s85 0
+31
+!s108 1764739809.000000
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv|
+!i113 0
+R8
+R1
+vmcuMux
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv
+R2
+R3
+!i10b 1
+!s100 kd?T9Gbg5JVmW3COa4]Jk1
+If3:PJzL=MmFLb2WVLU6@Q1
+S1
+R4
+w1764720361
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv
+!i122 6
+L0 1 11
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv|
+!i113 0
+R8
+R1
+nmcu@mux
+vmem_model
+R9
+R10
+!i10b 1
+!s100 Hi24LPUd4Sn^Daj@Md33]3
+IOY6j6nzG`gS7F0fnZ]zlh2
+R4
+w1615878338
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/mem_model.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/mem_model.v
+!i122 16
+L0 4 346
+R5
+R6
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R1
+vmessage_writer
+Z16 2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v
+Z17 !s110 1764741386
+!i10b 1
+!s100 RI]TS=EU7QDfa4Y>[`C3j0
+IGRKk:_BSV82Xf7kGc?eoV0
+R4
+Z18 w1764716635
+Z19 8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v
+Z20 FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v
+!i122 17
+L0 11 186
+R5
+R6
+r1
+!s85 0
+31
+Z21 !s108 1764741386.000000
+Z22 !s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v|
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v|
+!i113 0
+R14
+R1
+vmessage_writer_ipgen_lscc_ram_dp
+R16
+R17
+!i10b 1
+!s100 6e:M<4i>@Zo;D<Tf[^bh03
+IYzGk>48<zZYHJE7gTo;:f0
+R4
+R18
+R19
+R20
+!i122 17
+L0 252 350
+R5
+R6
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 0
+R14
+R1
+vmessage_writer_ipgen_lscc_ram_dp_core
+R16
+R17
+!i10b 1
+!s100 _ae2IKoZ=6@nDGiM6MjoZ0
+IOWPBg<P5L5CX3CYF]DfSn3
+R4
+R18
+R19
+R20
+!i122 17
+L0 3996 2847
+R5
+R6
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 0
+R14
+R1
+vmessage_writer_ipgen_lscc_ram_dp_main
+R16
+R17
+!i10b 1
+!s100 n_Q26MEaz7`^jiAbO:V9<2
+I0HSVZFhP^dk=P`Dg?<CSi0
+R4
+R18
+R19
+R20
+!i122 17
+L0 657 3278
+R5
+R6
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 0
+R14
+R1
+vmessages
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv
+R2
+R3
+!i10b 1
+!s100 fW@cG1<8CMGLKJJ3D5Dn31
+IGF`92C7VUX_BSElIb;>SA1
+S1
+R4
+w1764720938
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv
+!i122 7
+L0 5 85
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv|
+!i113 0
+R8
+R1
+vmessages_tb
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv
+R2
+!s110 1764740403
+!i10b 1
+!s100 FOf8H:hHGMBgRG2`bUfo?0
+INE2`fom;:OFX5Q_[Jc[QG3
+S1
+R4
+w1764740396
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv
+!i122 12
+L0 6 109
+R5
+R6
+r1
+!s85 0
+31
+!s108 1764740403.000000
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv|
+!i113 0
+R8
+R1
+vpdp_master
+R9
+R10
+!i10b 1
+!s100 b8WRFGef4NMMoY8JDn1LU2
+IZmDNh`1P`Q<TFmARMHe>z0
+R4
+w1712791658
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/pdp_master.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/pdp_master.v
+!i122 16
+L0 6 320
+R5
+R6
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R1
+vspi
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv
+R2
+R3
+!i10b 1
+!s100 YO9N0T]Z>?^8YFDgUZR_X0
+I@b?aUNS6ck=1iKhjz5KIH3
+S1
+R4
+w1764720458
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv
+!i122 8
+L0 1 24
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv|
+!i113 0
+R8
+R1
+vsynchronizer
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv
+R2
+Z24 !s110 1764739772
+!i10b 1
+!s100 `3>1lelHO>GdUQogUV6792
+IToiQQYo=b@Ade5:fk`VI52
+S1
+R4
+w1764720780
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv
+!i122 9
+L0 1 17
+R5
+R6
+r1
+!s85 0
+31
+Z25 !s108 1764739772.000000
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv|
+!i113 0
+R8
+R1
+vtb_top
+R9
+R10
+!i10b 1
+!s100 [DRG37`47^PLOmYg9X5^92
+IV[XY:EX;CnIWSG[b40ZjC1
+R4
+R18
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/tb_top.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/tb_top.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/dut_params.v
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/testbench/dut_inst.v
+!i122 16
+L0 68 308
+R5
+R6
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R1
+vwinlosedraw
+2C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv
+R2
+R24
+!i10b 1
+!s100 0P5Kh=<3b9fO=lDF^QnOA3
+I5;SZGBJeXmCO2VH021R[51
+S1
+R4
+R15
+8C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv
+FC:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv
+!i122 10
+L0 1 23
+R5
+R6
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv|
+!i113 0
+R8
+R1

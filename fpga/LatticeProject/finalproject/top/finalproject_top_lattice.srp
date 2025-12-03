@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Dec  2 16:15:46 2025
+Tue Dec  2 21:22:23 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top_lattice.synproj -logfile finalproject_top_lattice.srp -gui -msgset C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml 
@@ -197,6 +197,7 @@ INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Use
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): finalproj
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(6): compiling module finalproj. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b0). VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(1): compiling module spi. VERI-1018
 WARNING <35901209> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(13): expression size 32 truncated to fit in target size 4. VERI-1209
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/synchronizer.sv(1): compiling module synchronizer. VERI-1018
@@ -204,15 +205,8 @@ INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/interpretgame.sv(1): compiling module interpretgame. VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/computermove.sv(1): compiling module computermove. VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/winlosedraw.sv(1): compiling module winlosedraw. VERI-1018
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): actual bit length 1 differs from formal bit length 2 for port thiscomputer. VERI-1330
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): actual bit length 1 differs from formal bit length 2 for port result. VERI-1330
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv(1): compiling module chooseaddr. VERI-1018
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): actual bit length 1 differs from formal bit length 2 for port thiscomputer. VERI-1330
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): actual bit length 1 differs from formal bit length 2 for port result. VERI-1330
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): actual bit length 1 differs from formal bit length 8 for port screencode. VERI-1330
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(5): compiling module lcd_driver. VERI-1018
-WARNING <35901220> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(24): using initial value of clk since it is never assigned. VERI-1220
-INFO <35901018> - synthesis: C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b0). VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5): compiling module messages. VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(11): compiling module message_writer. VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(252): compiling module message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1). VERI-1018
@@ -227,12 +221,12 @@ INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): compiling module message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0). VERI-1018
 INFO <35901018> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): compiling module message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0). VERI-1018
 WARNING <35935040> - synthesis: Register valid_reg clock is stuck at One. VDB-5040
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(62): actual bit length 4 differs from formal bit length 8 for port msg_index. VERI-1330
-WARNING <35931002> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(51): net delay_done does not have a driver. VDB-1002
-WARNING <35901330> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): actual bit length 1 differs from formal bit length 4 for port screen. VERI-1330
-WARNING <35931002> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(69): net clk does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): net change_screen does not have a driver. VDB-1002
+WARNING <35901209> - synthesis: c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(71): expression size 8 truncated to fit in target size 4. VERI-1209
 [Parameter Setting Section Start]
+
+	[Parameter Settings for Instance(s): hf_osc]
+	(Module: HSOSC)
+		CLKHF_DIV                 2'b00
 
 	[Parameter Settings for Instance(s): ebr_inst]
 	(Module: message_writer)
@@ -2462,64 +2456,119 @@ WARNING <35931002> - synthesis: c:/users/wchan/documents/github/e155-final-proje
 		DATA_WIDTH_R              "8"
 
 [Parameter Setting Section End]
-WARNING <35001771> - synthesis: Initial value found on net n1 will be ignored due to unrecognized driver type
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: rs
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: rw
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: chip_en
-######## Missing driver on net rs. Patching with GND.
-######## Missing driver on net rw. Patching with GND.
-######## Missing driver on net chip_en. Patching with GND.
-######## Missing driver on net clk. Patching with GND.
-######## Missing driver on net \lcd_driver/delay_done. Patching with GND.
-CRITICAL <35001747> - synthesis: Bit(s) of register driving \lcd_driver/prev_screen[3:0] stuck at '0': 3, 2, 1
 INFO <35001774> - synthesis: Extracted state machine for register '\lcd_driver/state' with one-hot encoding
-State machine has 2 reachable states with original encodings of:
+State machine has 17 reachable states with original encodings of:
 
  00000000000000000000000000000000 
 
  00000000000000000000000000000001 
 
+ 00000000000000000000000000000010 
+
+ 00000000000000000000000000000011 
+
+ 00000000000000000000000000000100 
+
+ 00000000000000000000000000000101 
+
+ 00000000000000000000000000000110 
+
+ 00000000000000000000000000000111 
+
+ 00000000000000000000000000001000 
+
+ 00000000000000000000000000001001 
+
+ 00000000000000000000000000001010 
+
+ 00000000000000000000000000001011 
+
+ 00000000000000000000000000001100 
+
+ 00000000000000000000000000001101 
+
+ 00000000000000000000000000001110 
+
+ 00000000000000000000000000001111 
+
+ 00000000000000000000000000010000 
+
 original encoding -> new encoding (one-hot encoding)
 
- 00000000000000000000000000000000 -> 01
+ 00000000000000000000000000000000 -> 00000000000000001
 
- 00000000000000000000000000000001 -> 10
+ 00000000000000000000000000000001 -> 00000000000000010
+
+ 00000000000000000000000000000010 -> 00000000000000100
+
+ 00000000000000000000000000000011 -> 00000000000001000
+
+ 00000000000000000000000000000100 -> 00000000000010000
+
+ 00000000000000000000000000000101 -> 00000000000100000
+
+ 00000000000000000000000000000110 -> 00000000001000000
+
+ 00000000000000000000000000000111 -> 00000000010000000
+
+ 00000000000000000000000000001000 -> 00000000100000000
+
+ 00000000000000000000000000001001 -> 00000001000000000
+
+ 00000000000000000000000000001010 -> 00000010000000000
+
+ 00000000000000000000000000001011 -> 00000100000000000
+
+ 00000000000000000000000000001100 -> 00001000000000000
+
+ 00000000000000000000000000001101 -> 00010000000000000
+
+ 00000000000000000000000000001110 -> 00100000000000000
+
+ 00000000000000000000000000001111 -> 01000000000000000
+
+ 00000000000000000000000000010000 -> 10000000000000000
 
 
 
 
-CRITICAL <35001747> - synthesis: Bit(s) of register \lcd_driver/state_FSM stuck at '0': 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 4
-CRITICAL <35001747> - synthesis: Bit(s) of register \lcd_driver/state_FSM stuck at '0': 0
-CRITICAL <35001747> - synthesis: Bit(s) of register driving DB[7:0] stuck at '0': 7, 6, 5, 4, 3, 2, 1, 0
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sck
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sdi
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: cs
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: reset
+WARNING <35935040> - synthesis: Register \lcd_driver/rw clock is stuck at Zero. VDB-5040
+INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (finalproj)######################
-Number of register bits => 0 of 5280 (0 % )
+Number of register bits => 179 of 5280 (3 % )
+CCU2 => 39
+FD1P3XZ => 179
+HSOSC => 1
+IB => 4
+IOL_B => 1
+LUT4 => 160
 OB => 11
+PDP4K => 8
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
+Number of odd-length carry chains : 4
+Number of even-length carry chains : 2
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 3
+  Net : int_osc, loads : 0
+  Net : clk, loads : 17
+  Net : sck_c, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : DB[0], loads : 0
-  Net : DB[1], loads : 0
-  Net : DB[2], loads : 0
-  Net : DB[3], loads : 0
-  Net : DB[4], loads : 0
-  Net : DB[5], loads : 0
-  Net : DB[6], loads : 0
-  Net : DB[7], loads : 0
-  Net : chip_en, loads : 0
-  Net : rw, loads : 0
+  Net : reset_c, loads : 67
+  Net : lcd_driver/state[4], loads : 35
+  Net : lcd_driver/n2049, loads : 30
+  Net : lcd_driver/mes/rd_addr[8], loads : 26
+  Net : lcd_driver/n3103, loads : 25
+  Net : lcd_driver/mes/rd_addr[6], loads : 25
+  Net : lcd_driver/mes/rd_addr[7], loads : 25
+  Net : lcd_driver/n1435, loads : 24
+  Net : lcd_driver/n15, loads : 24
+  Net : lcd_driver/n24, loads : 23
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -2528,10 +2577,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 109 MB
+Peak Memory Usage: 119 MB
 
 --------------------------------------------------------------
-Total CPU Time: 5 secs 
-Total REAL Time: 12 secs 
+Total CPU Time: 6 secs 
+Total REAL Time: 13 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 3ba7df682a6c69b85a0eceb5d0824b45606d197e
+Checksum -- synthesis -- netlist: 5802afd1c11b9770a4c48c9d6ec5fbab2d13aa

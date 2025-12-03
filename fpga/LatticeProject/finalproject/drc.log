@@ -1,5 +1,5 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
-Tue Dec  2 16:55:43 2025
+Tue Dec  2 20:25:22 2025
 
 WARNING <71003020> - Top module port 'sck' does not connect to anything.
 WARNING <71003020> - Top module port 'sdi' does not connect to anything.

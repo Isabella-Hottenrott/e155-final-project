@@ -2,7 +2,7 @@ module interpretgame(input  logic clk,
                         input logic reset,
                         input  logic interpretWE,
                         input  logic [6:0] directedBits,
-                        output logic [1:0] thiscomputer,
+                        output logic [1:0] thiscomputer, // 
                         output logic [1:0] result); 
 
 

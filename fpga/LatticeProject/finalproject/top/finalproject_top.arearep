@@ -1,8 +1,249 @@
 ----------------------------------------------------------------------
 Report for cell finalproj.TECH
-Register bits:  0 of 5280 (0.000%)
-I/O cells:      11
+Register bits:  179 of 5280 (3.390%)
+I/O cells:      15
                                   Cell usage:
                                cell     count   Res Usage(%)
+                               CCU2        39          100.0
+                            FD1P3XZ       179          100.0
+                              HSOSC         1          100.0
+                                 IB         4          100.0
+                              IOL_B         1          100.0
+                               LUT4       160          100.0
                                  OB        11          100.0
-                              TOTAL        11
+                              PDP4K         8          100.0
+SUB MODULES
+                         chooseaddr         1
+                       computermove         1
+                      interpretgame         1
+                         lcd_driver         1
+                     message_writer         1
+message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                           messages         1
+                                spi         1
+                       synchronizer         1
+                        winlosedraw         1
+                              TOTAL       422
+----------------------------------------------------------------------
+Report for cell interpretgame.v1
+Instance Path : interpretgame
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         4            2.2
+                               LUT4         4            2.5
+SUB MODULES
+                       computermove         1
+                        winlosedraw         1
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell winlosedraw.v1
+Instance Path : interpretgame.winlosedraw
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2            1.2
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell computermove.v1
+Instance Path : interpretgame.computermove
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         2            1.1
+                               LUT4         2            1.2
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell synchronizer.v1
+Instance Path : synchronizer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        16            8.9
+                               LUT4        10            6.2
+                              TOTAL        26
+----------------------------------------------------------------------
+Report for cell chooseaddr.v1
+Instance Path : chooseaddr
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         8           20.5
+                               LUT4        30           18.8
+                              TOTAL        38
+----------------------------------------------------------------------
+Report for cell lcd_driver.v1
+Instance Path : lcd_driver
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        20           51.3
+                            FD1P3XZ       127           70.9
+                               LUT4       108           67.5
+                              PDP4K         8          100.0
+SUB MODULES
+                     message_writer         1
+message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                           messages         1
+                              TOTAL       275
+----------------------------------------------------------------------
+Report for cell messages.v1
+Instance Path : lcd_driver.mes
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4           10.3
+                            FD1P3XZ        67           37.4
+                               LUT4        41           25.6
+                              PDP4K         8          100.0
+SUB MODULES
+                     message_writer         1
+message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                              TOTAL       131
+----------------------------------------------------------------------
+Report for cell message_writer.v1
+Instance Path : lcd_driver.mes.ebr_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        64           35.8
+                              PDP4K         8          100.0
+SUB MODULES
+message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                              TOTAL        82
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        64           35.8
+                              PDP4K         8          100.0
+SUB MODULES
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                              TOTAL        81
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        64           35.8
+                              PDP4K         8          100.0
+SUB MODULES
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)         1
+message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)         1
+                              TOTAL        80
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[7].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[6].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[5].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[4].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0).v1
+Instance Path : lcd_driver.mes.ebr_inst.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            4.5
+                              PDP4K         1           12.5
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell spi.v1
+Instance Path : spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        11            6.1
+                              IOL_B         1          100.0
+                               LUT4         4            2.5
+                              TOTAL        16

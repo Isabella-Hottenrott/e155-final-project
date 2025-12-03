@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Report>
+<ReportView version="2.0">
+    <Implement name="top">
+        <ToolReport id="toolpio" path="C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/drc.log" status="1"/>
+        <ToolReport id="toolsso" path="" status="0"/>
+    </Implement>
+</ReportView>

@@ -13,12 +13,21 @@ module lcd_driver_tb();
     logic rs;
     logic rw;
     logic en;
+    logic clk; 
+
+    // generate clk
+
+    always 
+		begin 
+			clk = 1; #5; clk = 0; #5;
+		end
     
     // Internal test signals
     integer test_cycle = 0;
     
     // Instantiate DUT
     lcd_driver dut (
+        .clk(clk),
         .screen(screen),
         .reset(reset),
         .change_screen(change_screen),
@@ -144,11 +153,6 @@ module lcd_driver_tb();
         $monitor("[%0t] State: %s, Screen: %d, EN: %b, RS: %b, RW: %b, DB: 0x%02X", 
                  $time, dut.state.name(), screen, en, rs, rw, DB);
     end
-    
-    // Optional: Dump waveforms
-    initial begin
-        $dumpfile("lcd_driver_tb.vcd");
-        $dumpvars(0, lcd_driver_tb);
-    end
+
 
 endmodule

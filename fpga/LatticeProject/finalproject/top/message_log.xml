@@ -7,259 +7,12 @@
             <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {19} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {19} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-            <Dynamic>ldc_set_location -site {20} [get_ports cs]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {20} [get_ports cs]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports reset]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports reset]</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-        </Message>
-    </Task>
     <Task name="Map">
         <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>4</Dynamic>
-            <Dynamic>No port matched 'LED[2]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>5</Dynamic>
-            <Dynamic>No port matched 'LED[0]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>5</Navigation>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>6</Dynamic>
-            <Dynamic>No port matched 'LED[1]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>1027013</ID>
-            <Severity>16</Severity>
-            <Dynamic>port</Dynamic>
-            <Dynamic>LED[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>4</Dynamic>
-            <Dynamic>Can't resolve object 'LED[2]' in constraint 'ldc_set_location -site {45} [get_ports {LED[2]}]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>1027013</ID>
-            <Severity>16</Severity>
-            <Dynamic>port</Dynamic>
-            <Dynamic>LED[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>5</Dynamic>
-            <Dynamic>Can't resolve object 'LED[0]' in constraint 'ldc_set_location -site {46} [get_ports {LED[0]}]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>5</Navigation>
-        </Message>
-        <Message>
-            <ID>1027013</ID>
-            <Severity>16</Severity>
-            <Dynamic>port</Dynamic>
-            <Dynamic>LED[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
-            <Dynamic>6</Dynamic>
-            <Dynamic>Can't resolve object 'LED[1]' in constraint 'ldc_set_location -site {47} [get_ports {LED[1]}]'.</Dynamic>
-            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>1011001</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {45} [get_ports {LED[2]}]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1011001</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {46} [get_ports {LED[0]}]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1011001</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {47} [get_ports {LED[1]}]</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>reset</Dynamic>
+            <ID>52291017</ID>
+            <Severity>1</Severity>
+            <Dynamic>DB[1]</Dynamic>
+            <Dynamic>41</Dynamic>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -489,6 +242,14 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
             <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(1): </Dynamic>
             <Dynamic>spi</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv</Navigation>
@@ -549,14 +310,6 @@
             <Dynamic>lcd_driver</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
             <Navigation>5</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
-            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
-            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
-            <Navigation>756</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -924,6 +677,14 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
             <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(1): </Dynamic>
             <Dynamic>spi</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv</Navigation>
@@ -979,26 +740,6 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>2</Dynamic>
-            <Dynamic>thiscomputer</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>71</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>2</Dynamic>
-            <Dynamic>result</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>71</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv(1): </Dynamic>
@@ -1007,58 +748,12 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>2</Dynamic>
-            <Dynamic>thiscomputer</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>72</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>2</Dynamic>
-            <Dynamic>result</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>72</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>screencode</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>72</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(5): </Dynamic>
             <Dynamic>lcd_driver</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
             <Navigation>5</Navigation>
-        </Message>
-        <Message>
-            <ID>35901220</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(24): </Dynamic>
-            <Dynamic>clk</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
-            <Navigation>24</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
-            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
-            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
-            <Navigation>756</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1171,74 +866,13 @@
             <Dynamic>One</Dynamic>
         </Message>
         <Message>
-            <ID>35901330</ID>
+            <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(62): </Dynamic>
-            <Dynamic>4</Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(71): </Dynamic>
             <Dynamic>8</Dynamic>
-            <Dynamic>msg_index</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
-            <Navigation>62</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(51): </Dynamic>
-            <Dynamic>delay_done</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
-            <Navigation>51</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): </Dynamic>
-            <Dynamic>1</Dynamic>
             <Dynamic>4</Dynamic>
-            <Dynamic>screen</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>74</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(69): </Dynamic>
-            <Dynamic>clk</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>69</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): </Dynamic>
-            <Dynamic>change_screen</Dynamic>
-            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
-            <Navigation>74</Navigation>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>n1</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>rs</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>rw</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>chip_en</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>driving \lcd_driver/prev_screen[3:0]</Dynamic>
-            <Dynamic>3, 2, 1</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>71</Navigation>
         </Message>
         <Message>
             <ID>35001774</ID>
@@ -1247,42 +881,14 @@
             <Dynamic>one-hot</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>\lcd_driver/state_FSM</Dynamic>
-            <Dynamic>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 4</Dynamic>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\lcd_driver/rw</Dynamic>
+            <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>\lcd_driver/state_FSM</Dynamic>
-            <Dynamic>0</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>driving DB[7:0]</Dynamic>
-            <Dynamic>7, 6, 5, 4, 3, 2, 1, 0</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>cs</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>256</Severity>
-            <Dynamic>reset</Dynamic>
+            <ID>35002039</ID>
+            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

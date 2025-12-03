@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.2.0.3.0
-// Netlist written on Tue Dec  2 16:15:58 2025
+// Netlist written on Tue Dec  2 21:22:36 2025
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v"
@@ -75,21 +75,2277 @@ module finalproj (input sck, input sdi, input cs, input reset, output rs,
             output rw, output chip_en, output [7:0]DB);
     
     wire GND_net;
-    
     wire VCC_net;
+    (* SET_AS_NETWORK="sck_c", is_clock=1, lineinfo="@2(6[30],6[33])" *) wire sck_c;
+    wire sdi_c;
+    wire cs_c;
+    wire reset_c;
+    wire rs_c;
+    wire chip_en_c;
+    wire DB_c_7;
+    wire DB_c_6;
+    wire DB_c_5;
+    wire DB_c_4;
+    wire DB_c_3;
+    wire DB_c_2;
+    wire DB_c_1;
+    wire DB_c_0;
+    wire [1:0]thiscomputer;
+    wire [1:0]result;
+    wire [7:0]synchSPIbyte;
+    wire [6:0]directedBits;
+    wire [7:0]screencode;
+    (* is_clock=1, lineinfo="@2(63[8],63[15])" *) wire int_osc;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    wire [3:0]eightCounter;
+    wire [7:0]intermedByte;
+    wire [6:0]n42;
     
-    VHI i133 (.Z(VCC_net));
+    wire n2097, n2086, n2472;
+    wire [20:0]n89;
+    
+    wire n21, n20, n19, n18, n17, n16, n15, n14, n13, n12, 
+        n11, n10, n9, n8, n7, n6, n5, n4, n3, n2, n4341, 
+        n3557, n3556, n3553, n4338, n3552, n3548, n3578, n3577, 
+        n3574, n13_adj_143, n351, n2068, n4335, n2057, n3566, 
+        n4332, n2842, n2840, n2838, n2836, n126, n2834, n4329, 
+        n3235, n4326, n3549, n2832, n2424, n2830, n4323, n2180, 
+        n2828, n4320, n4317, n4314, n2826, n2824, n2468, n36, 
+        n33, n4296, n3230;
+    
+    VHI i2 (.Z(VCC_net));
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_3 (.A0(GND_net), 
+            .B0(VCC_net), .C0(n20), .D0(n2824), .CI0(n2824), .A1(GND_net), 
+            .B1(GND_net), .C1(n19), .D1(n4314), .CI1(n4314), .CO0(n4314), 
+            .CO1(n2826), .S0(n89[1]), .S1(n89[2]));
+    defparam counter_198_add_4_3.INIT0 = "0xc33c";
+    defparam counter_198_add_4_3.INIT1 = "0xc33c";
+    (* syn_instantiated=1 *) HSOSC hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
+            .CLKHF(int_osc));
+    defparam hf_osc.CLKHF_DIV = "0b00";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_1 (.A0(GND_net), 
+            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(VCC_net), 
+            .C1(n21), .D1(n4296), .CI1(n4296), .CO0(n4296), .CO1(n2824), 
+            .S1(n89[0]));
+    defparam counter_198_add_4_1.INIT0 = "0xc33c";
+    defparam counter_198_add_4_1.INIT1 = "0xc33c";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_21 (.A0(GND_net), 
+            .B0(GND_net), .C0(n2), .D0(n2842), .CI0(n2842), .A1(GND_net), 
+            .B1(GND_net), .C1(clk), .D1(n4341), .CI1(n4341), .CO0(n4341), 
+            .S0(n89[19]), .S1(n89[20]));
+    defparam counter_198_add_4_21.INIT0 = "0xc33c";
+    defparam counter_198_add_4_21.INIT1 = "0xc33c";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_19 (.A0(GND_net), 
+            .B0(GND_net), .C0(n4), .D0(n2840), .CI0(n2840), .A1(GND_net), 
+            .B1(GND_net), .C1(n3), .D1(n4338), .CI1(n4338), .CO0(n4338), 
+            .CO1(n2842), .S0(n89[17]), .S1(n89[18]));
+    defparam counter_198_add_4_19.INIT0 = "0xc33c";
+    defparam counter_198_add_4_19.INIT1 = "0xc33c";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_17 (.A0(GND_net), 
+            .B0(GND_net), .C0(n6), .D0(n2838), .CI0(n2838), .A1(GND_net), 
+            .B1(GND_net), .C1(n5), .D1(n4335), .CI1(n4335), .CO0(n4335), 
+            .CO1(n2840), .S0(n89[15]), .S1(n89[16]));
+    defparam counter_198_add_4_17.INIT0 = "0xc33c";
+    defparam counter_198_add_4_17.INIT1 = "0xc33c";
+    (* lut_function="(A+(B))", lineinfo="@5(12[11],18[4])" *) LUT4 i1549_2_lut (.A(synchSPIbyte[0]), 
+            .B(reset_c), .Z(n2086));
+    defparam i1549_2_lut.INIT = "0xeeee";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_15 (.A0(GND_net), 
+            .B0(GND_net), .C0(n8), .D0(n2836), .CI0(n2836), .A1(GND_net), 
+            .B1(GND_net), .C1(n7), .D1(n4332), .CI1(n4332), .CO0(n4332), 
+            .CO1(n2838), .S0(n89[13]), .S1(n89[14]));
+    defparam counter_198_add_4_15.INIT0 = "0xc33c";
+    defparam counter_198_add_4_15.INIT1 = "0xc33c";
+    (* lut_function="(A+(B))", lineinfo="@6(77[9],146[16])" *) LUT4 i1559_2_lut (.A(n126), 
+            .B(reset_c), .Z(n2097));
+    defparam i1559_2_lut.INIT = "0xeeee";
+    (* lut_function="((B)+!A)", lineinfo="@6(150[15],229[8])" *) LUT4 i1531_2_lut (.A(n351), 
+            .B(reset_c), .Z(n2068));
+    defparam i1531_2_lut.INIT = "0xdddd";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i21 (.D(n89[20]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(clk));
+    defparam counter_198__i21.REGSET = "RESET";
+    defparam counter_198__i21.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@2(9[17],9[22])" *) IB reset_pad (.I(reset), .O(reset_c));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=16, LSE_RCOL=157, LSE_LLINE=83, LSE_RLINE=83, lineinfo="@2(83[16],83[157])" *) interpretgame interpretgame (directedBits[5], 
+            n2086, clk, reset_c, directedBits[6], {thiscomputer}, 
+            {result});
+    (* lineinfo="@2(8[29],8[31])" *) IB cs_pad (.I(cs), .O(cs_c));
+    (* lineinfo="@2(7[29],7[32])" *) IB sdi_pad (.I(sdi), .O(sdi_c));
+    (* lineinfo="@2(6[30],6[33])" *) IB sck_pad (.I(sck), .O(sck_c));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[0]  (.I(DB_c_0), .O(DB[0]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[1]  (.I(DB_c_1), .O(DB[1]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[2]  (.I(DB_c_2), .O(DB[2]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[3]  (.I(DB_c_3), .O(DB[3]));
+    (* lut_function="(!(A))", lineinfo="@2(8[29],8[31])" *) LUT4 i1520_1_lut (.A(cs_c), 
+            .Z(n2057));
+    defparam i1520_1_lut.INIT = "0x5555";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i20 (.D(n89[19]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n2));
+    defparam counter_198__i20.REGSET = "RESET";
+    defparam counter_198__i20.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i19 (.D(n89[18]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n3));
+    defparam counter_198__i19.REGSET = "RESET";
+    defparam counter_198__i19.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i18 (.D(n89[17]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n4));
+    defparam counter_198__i18.REGSET = "RESET";
+    defparam counter_198__i18.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i17 (.D(n89[16]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n5));
+    defparam counter_198__i17.REGSET = "RESET";
+    defparam counter_198__i17.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i16 (.D(n89[15]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n6));
+    defparam counter_198__i16.REGSET = "RESET";
+    defparam counter_198__i16.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i15 (.D(n89[14]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n7));
+    defparam counter_198__i15.REGSET = "RESET";
+    defparam counter_198__i15.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i14 (.D(n89[13]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n8));
+    defparam counter_198__i14.REGSET = "RESET";
+    defparam counter_198__i14.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i13 (.D(n89[12]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n9));
+    defparam counter_198__i13.REGSET = "RESET";
+    defparam counter_198__i13.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i12 (.D(n89[11]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n10));
+    defparam counter_198__i12.REGSET = "RESET";
+    defparam counter_198__i12.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i11 (.D(n89[10]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n11));
+    defparam counter_198__i11.REGSET = "RESET";
+    defparam counter_198__i11.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i10 (.D(n89[9]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n12));
+    defparam counter_198__i10.REGSET = "RESET";
+    defparam counter_198__i10.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i9 (.D(n89[8]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n13));
+    defparam counter_198__i9.REGSET = "RESET";
+    defparam counter_198__i9.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i8 (.D(n89[7]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n14));
+    defparam counter_198__i8.REGSET = "RESET";
+    defparam counter_198__i8.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i7 (.D(n89[6]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n15));
+    defparam counter_198__i7.REGSET = "RESET";
+    defparam counter_198__i7.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i6 (.D(n89[5]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n16));
+    defparam counter_198__i6.REGSET = "RESET";
+    defparam counter_198__i6.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i5 (.D(n89[4]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n17));
+    defparam counter_198__i5.REGSET = "RESET";
+    defparam counter_198__i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_13 (.A0(GND_net), 
+            .B0(GND_net), .C0(n10), .D0(n2834), .CI0(n2834), .A1(GND_net), 
+            .B1(GND_net), .C1(n9), .D1(n4329), .CI1(n4329), .CO0(n4329), 
+            .CO1(n2836), .S0(n89[11]), .S1(n89[12]));
+    defparam counter_198_add_4_13.INIT0 = "0xc33c";
+    defparam counter_198_add_4_13.INIT1 = "0xc33c";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_11 (.A0(GND_net), 
+            .B0(GND_net), .C0(n12), .D0(n2832), .CI0(n2832), .A1(GND_net), 
+            .B1(GND_net), .C1(n11), .D1(n4326), .CI1(n4326), .CO0(n4326), 
+            .CO1(n2834), .S0(n89[9]), .S1(n89[10]));
+    defparam counter_198_add_4_11.INIT0 = "0xc33c";
+    defparam counter_198_add_4_11.INIT1 = "0xc33c";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i4 (.D(n89[3]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n18));
+    defparam counter_198__i4.REGSET = "RESET";
+    defparam counter_198__i4.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i3 (.D(n89[2]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n19));
+    defparam counter_198__i3.REGSET = "RESET";
+    defparam counter_198__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_9 (.A0(GND_net), 
+            .B0(GND_net), .C0(n14), .D0(n2830), .CI0(n2830), .A1(GND_net), 
+            .B1(GND_net), .C1(n13), .D1(n4323), .CI1(n4323), .CO0(n4323), 
+            .CO1(n2832), .S0(n89[7]), .S1(n89[8]));
+    defparam counter_198_add_4_9.INIT0 = "0xc33c";
+    defparam counter_198_add_4_9.INIT1 = "0xc33c";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i2 (.D(n89[1]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n20));
+    defparam counter_198__i2.REGSET = "RESET";
+    defparam counter_198__i2.SRMODE = "CE_OVER_LSR";
     VLO i1 (.Z(GND_net));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[0]  (.I(GND_net), .O(DB[0]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[1]  (.I(GND_net), .O(DB[1]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[2]  (.I(GND_net), .O(DB[2]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[3]  (.I(GND_net), .O(DB[3]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[4]  (.I(GND_net), .O(DB[4]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[5]  (.I(GND_net), .O(DB[5]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[6]  (.I(GND_net), .O(DB[6]));
-    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[7]  (.I(GND_net), .O(DB[7]));
-    (* lineinfo="@2(12[18],12[25])" *) OB chip_en_pad (.I(GND_net), .O(chip_en));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@2(81[15],81[107])" *) synchronizer synchronizer ({intermedByte}, 
+            clk, {directedBits}, reset_c, synchSPIbyte[0], n2468, 
+            n2424, n36, n42[4], n3566, n3235, n33, n3574, n2180, 
+            eightCounter[3], n2472);
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[4]  (.I(DB_c_4), .O(DB[4]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[5]  (.I(DB_c_5), .O(DB[5]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[6]  (.I(DB_c_6), .O(DB[6]));
+    (* lineinfo="@2(13[36],13[38])" *) OB \DB_pad[7]  (.I(DB_c_7), .O(DB[7]));
+    (* lineinfo="@2(12[18],12[25])" *) OB chip_en_pad (.I(chip_en_c), .O(chip_en));
     (* lineinfo="@2(11[18],11[20])" *) OB rw_pad (.I(GND_net), .O(rw));
-    (* lineinfo="@2(10[18],10[20])" *) OB rs_pad (.I(GND_net), .O(rs));
+    (* lineinfo="@2(10[18],10[20])" *) OB rs_pad (.I(rs_c), .O(rs));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=170, LSE_LLINE=84, LSE_RLINE=84, lineinfo="@2(84[13],84[170])" *) chooseaddr chooseaddr ({directedBits}, 
+            n42[4], {thiscomputer}, n2472, screencode[5], {result}, 
+            n3566, n33, n2468, n2180, n36, n2424, screencode[4], 
+            n3235, n3574, screencode[3], n3552, n3553, n13_adj_143, 
+            n3549, n3548, n3556, n3557, n3577, n3578, n3230);
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@2(86[13],86[137])" *) lcd_driver lcd_driver (n351, 
+            clk, reset_c, n126, n2068, DB_c_6, rs_c, DB_c_5, DB_c_4, 
+            DB_c_3, DB_c_2, DB_c_1, DB_c_7, DB_c_0, screencode[3], 
+            chip_en_c, n3577, n3230, n3578, directedBits[3], n3556, 
+            n3557, n13_adj_143, n3548, n3549, directedBits[0], screencode[4], 
+            screencode[5], n2097, n3552, n3553);
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@2(79[6],79[79])" *) spi spi (sdi_c, 
+            cs_c, {intermedByte}, sck_c, n2057, eightCounter[3]);
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_7 (.A0(GND_net), 
+            .B0(GND_net), .C0(n16), .D0(n2828), .CI0(n2828), .A1(GND_net), 
+            .B1(GND_net), .C1(n15), .D1(n4320), .CI1(n4320), .CO0(n4320), 
+            .CO1(n2830), .S0(n89[5]), .S1(n89[6]));
+    defparam counter_198_add_4_7.INIT0 = "0xc33c";
+    defparam counter_198_add_4_7.INIT1 = "0xc33c";
+    (* lineinfo="@2(69[14],69[29])" *) FA2 counter_198_add_4_5 (.A0(GND_net), 
+            .B0(GND_net), .C0(n18), .D0(n2826), .CI0(n2826), .A1(GND_net), 
+            .B1(GND_net), .C1(n17), .D1(n4317), .CI1(n4317), .CO0(n4317), 
+            .CO1(n2828), .S0(n89[3]), .S1(n89[4]));
+    defparam counter_198_add_4_5.INIT0 = "0xc33c";
+    defparam counter_198_add_4_5.INIT1 = "0xc33c";
+    (* syn_use_carry_chain=1, lineinfo="@2(69[14],69[29])" *) FD1P3XZ counter_198__i1 (.D(n89[0]), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(n21));
+    defparam counter_198__i1.REGSET = "RESET";
+    defparam counter_198__i1.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module interpretgame
+//
+
+module interpretgame (input \directedBits[5] , input n2086, input clk, 
+            input reset_c, input \directedBits[6] , output [1:0]thiscomputer, 
+            output [1:0]result);
+    
+    wire [1:0]user;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=16, LSE_RCOL=157, LSE_LLINE=83, LSE_RLINE=83, lineinfo="@5(12[11],18[4])" *) FD1P3XZ user__i1 (.D(\directedBits[6] ), 
+            .SP(n2086), .CK(clk), .SR(reset_c), .Q(user[1]));
+    defparam user__i1.REGSET = "RESET";
+    defparam user__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=80, LSE_LCOL=13, LSE_RCOL=136, LSE_LLINE=22, LSE_RLINE=22, lineinfo="@5(22[13],22[136])" *) winlosedraw winlosedraw ({thiscomputer}, 
+            {user}, {result});
+    (* LSE_LINE_FILE_ID=80, LSE_LCOL=14, LSE_RCOL=125, LSE_LLINE=21, LSE_RLINE=21, lineinfo="@5(21[14],21[125])" *) computermove computermove (n2086, 
+            {thiscomputer}, clk, reset_c, {user});
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=16, LSE_RCOL=157, LSE_LLINE=83, LSE_RLINE=83, lineinfo="@5(12[11],18[4])" *) FD1P3XZ user__i0 (.D(\directedBits[5] ), 
+            .SP(n2086), .CK(clk), .SR(reset_c), .Q(user[0]));
+    defparam user__i0.REGSET = "RESET";
+    defparam user__i0.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module winlosedraw
+//
+
+module winlosedraw (input [1:0]thiscomputer, input [1:0]user, output [1:0]result);
+    
+    
+    (* lut_function="(A (B (C (D)+!C !(D))+!B !((D)+!C))+!A !(B (C+!(D))+!B (C (D))))" *) LUT4 i2695_4_lut (.A(thiscomputer[1]), 
+            .B(user[0]), .C(user[1]), .D(thiscomputer[0]), .Z(result[0]));
+    defparam i2695_4_lut.INIT = "0x8539";
+    (* lut_function="(A (B+!(D))+!A !(B (C (D)+!C !(D))+!B (C)))" *) LUT4 i2740_4_lut (.A(user[0]), 
+            .B(user[1]), .C(thiscomputer[0]), .D(thiscomputer[1]), .Z(result[1]));
+    defparam i2740_4_lut.INIT = "0x8deb";
+    
+endmodule
+
+//
+// Verilog Description of module computermove
+//
+
+module computermove (input n2086, output [1:0]thiscomputer, input clk, 
+            input reset_c, input [1:0]user);
+    
+    wire [1:0]nextcomputer;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    (* LSE_LINE_FILE_ID=80, LSE_LCOL=14, LSE_RCOL=125, LSE_LLINE=21, LSE_RLINE=21, lineinfo="@4(9[15],15[8])" *) FD1P3XZ thiscomputer___i0 (.D(nextcomputer[0]), 
+            .SP(n2086), .CK(clk), .SR(reset_c), .Q(thiscomputer[0]));
+    defparam thiscomputer___i0.REGSET = "RESET";
+    defparam thiscomputer___i0.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C+(D))+!B ((D)+!C))+!A (B (C+(D))+!B !(C+!(D))))", lineinfo="@4(20[9],37[16])" *) LUT4 nextcomputer_1__I_0_4_lut (.A(user[0]), 
+            .B(thiscomputer[1]), .C(thiscomputer[0]), .D(user[1]), .Z(nextcomputer[1]));
+    defparam nextcomputer_1__I_0_4_lut.INIT = "0xefc2";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B+(C (D))))", lineinfo="@4(20[9],37[16])" *) LUT4 nextcomputer_0__I_0_4_lut (.A(user[1]), 
+            .B(thiscomputer[1]), .C(user[0]), .D(thiscomputer[0]), .Z(nextcomputer[0]));
+    defparam nextcomputer_0__I_0_4_lut.INIT = "0xfce4";
+    (* LSE_LINE_FILE_ID=80, LSE_LCOL=14, LSE_RCOL=125, LSE_LLINE=21, LSE_RLINE=21, lineinfo="@4(9[15],15[8])" *) FD1P3XZ thiscomputer___i1 (.D(nextcomputer[1]), 
+            .SP(n2086), .CK(clk), .SR(reset_c), .Q(thiscomputer[1]));
+    defparam thiscomputer___i1.REGSET = "RESET";
+    defparam thiscomputer___i1.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module synchronizer
+//
+
+module synchronizer (input [7:0]intermedByte, input clk, output [6:0]directedBits, 
+            input reset_c, output \synchSPIbyte[0] , output n2468, input n2424, 
+            output n36, input n37, output n3566, input n3235, output n33, 
+            output n3574, output n2180, input \eightCounter[3] , output n2472);
+    
+    wire [7:0]intermedByte_adj_142;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire n480, n529, n7, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i7 (.D(intermedByte[7]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[7]));
+    defparam intermedByte__i7.REGSET = "RESET";
+    defparam intermedByte__i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i6 (.D(intermedByte[6]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[6]));
+    defparam intermedByte__i6.REGSET = "RESET";
+    defparam intermedByte__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i5 (.D(intermedByte[5]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[5]));
+    defparam intermedByte__i5.REGSET = "RESET";
+    defparam intermedByte__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i4 (.D(intermedByte[4]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[4]));
+    defparam intermedByte__i4.REGSET = "RESET";
+    defparam intermedByte__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i3 (.D(intermedByte[3]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[3]));
+    defparam intermedByte__i3.REGSET = "RESET";
+    defparam intermedByte__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i2 (.D(intermedByte[2]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[2]));
+    defparam intermedByte__i2.REGSET = "RESET";
+    defparam intermedByte__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i1 (.D(intermedByte[1]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[1]));
+    defparam intermedByte__i1.REGSET = "RESET";
+    defparam intermedByte__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i7 (.D(intermedByte_adj_142[7]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[6]));
+    defparam byteOutSynch__i7.REGSET = "RESET";
+    defparam byteOutSynch__i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i6 (.D(intermedByte_adj_142[6]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[5]));
+    defparam byteOutSynch__i6.REGSET = "RESET";
+    defparam byteOutSynch__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i5 (.D(intermedByte_adj_142[5]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[4]));
+    defparam byteOutSynch__i5.REGSET = "RESET";
+    defparam byteOutSynch__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i4 (.D(intermedByte_adj_142[4]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[3]));
+    defparam byteOutSynch__i4.REGSET = "RESET";
+    defparam byteOutSynch__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i3 (.D(intermedByte_adj_142[3]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[2]));
+    defparam byteOutSynch__i3.REGSET = "RESET";
+    defparam byteOutSynch__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i2 (.D(intermedByte_adj_142[2]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[1]));
+    defparam byteOutSynch__i2.REGSET = "RESET";
+    defparam byteOutSynch__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i1 (.D(intermedByte_adj_142[1]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(directedBits[0]));
+    defparam byteOutSynch__i1.REGSET = "RESET";
+    defparam byteOutSynch__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ byteOutSynch__i0 (.D(intermedByte_adj_142[0]), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(\synchSPIbyte[0] ));
+    defparam byteOutSynch__i0.REGSET = "RESET";
+    defparam byteOutSynch__i0.SRMODE = "CE_OVER_LSR";
+    VHI i1 (.Z(VCC_net));
+    (* lut_function="(A+(B))" *) LUT4 i1936_2_lut (.A(directedBits[6]), .B(directedBits[3]), 
+            .Z(n2468));
+    defparam i1936_2_lut.INIT = "0xeeee";
+    (* lut_function="(!(A+((C+(D))+!B)))" *) LUT4 i2_3_lut_4_lut (.A(directedBits[1]), 
+            .B(directedBits[6]), .C(directedBits[3]), .D(n2424), .Z(n36));
+    defparam i2_3_lut_4_lut.INIT = "0x0004";
+    (* lut_function="(!(A+!(B (C (D)))))" *) LUT4 i2816_3_lut_4_lut (.A(directedBits[1]), 
+            .B(directedBits[6]), .C(directedBits[3]), .D(n37), .Z(n3566));
+    defparam i2816_3_lut_4_lut.INIT = "0x4000";
+    (* lut_function="(A (D)+!A (B (C)))", lineinfo="@10(8[11],15[5])" *) LUT4 i2820_4_lut_4_lut (.A(directedBits[2]), 
+            .B(directedBits[3]), .C(n3235), .D(n33), .Z(n3574));
+    defparam i2820_4_lut_4_lut.INIT = "0xea40";
+    (* lut_function="(A (B))", lineinfo="@10(8[11],15[5])" *) LUT4 i2_2_lut (.A(directedBits[4]), 
+            .B(directedBits[3]), .Z(n7));
+    defparam i2_2_lut.INIT = "0x8888";
+    (* lut_function="(!(((C+!(D))+!B)+!A))", lineinfo="@10(8[11],15[5])" *) LUT4 i4_4_lut (.A(n7), 
+            .B(directedBits[1]), .C(directedBits[6]), .D(directedBits[5]), 
+            .Z(n2180));
+    defparam i4_4_lut.INIT = "0x0800";
+    (* lut_function="(!(A+(B)))" *) LUT4 i2914_2_lut (.A(reset_c), .B(\eightCounter[3] ), 
+            .Z(n529));
+    defparam i2914_2_lut.INIT = "0x1111";
+    (* lut_function="(!(A))", lineinfo="@2(9[17],9[22])" *) LUT4 i181_1_lut (.A(reset_c), 
+            .Z(n480));
+    defparam i181_1_lut.INIT = "0x5555";
+    (* lut_function="(!((B+(C))+!A))", lineinfo="@10(8[11],15[5])" *) LUT4 i1_2_lut_3_lut (.A(directedBits[1]), 
+            .B(directedBits[6]), .C(directedBits[3]), .Z(n33));
+    defparam i1_2_lut_3_lut.INIT = "0x0202";
+    (* lut_function="(A+(B))" *) LUT4 i1940_2_lut (.A(directedBits[2]), .B(directedBits[0]), 
+            .Z(n2472));
+    defparam i1940_2_lut.INIT = "0xeeee";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=15, LSE_RCOL=107, LSE_LLINE=81, LSE_RLINE=81, lineinfo="@10(8[11],15[5])" *) FD1P3XZ intermedByte__i0 (.D(intermedByte[0]), 
+            .SP(n480), .CK(clk), .SR(n529), .Q(intermedByte_adj_142[0]));
+    defparam intermedByte__i0.REGSET = "RESET";
+    defparam intermedByte__i0.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module chooseaddr
+//
+
+module chooseaddr (input [6:0]directedBits, output n37, input [1:0]thiscomputer, 
+            input n2472, output \screencode[5] , input [1:0]result, input n3566, 
+            input n33, input n2468, input n2180, input n36, output n2424, 
+            output \screencode[4] , output n3235, input n3574, output \screencode[3] , 
+            output n3552, output n3553, output n13, output n3549, output n3548, 
+            output n3556, output n3557, output n3577, output n3578, 
+            output n3230);
+    
+    
+    wire n2782, n4248, GND_net, n2784;
+    wire [6:0]n42;
+    
+    wire n2800, n4257, cout;
+    wire [6:0]n42_adj_133;
+    
+    wire n2798, n4251, n2796, n4239, n3554, n4260, cout_adj_125, 
+        n3559, n18, n24, n4230, n2780, n3634, n4227, n4, n3562, 
+        n24_adj_128, n21, n4_adj_130, n3571, screencode_3__N_23, n10, 
+        n4242, n3550, n3568;
+    
+    (* lineinfo="@3(39[34],39[55])" *) FA2 add_23_add_5_5 (.A0(GND_net), .B0(directedBits[3]), 
+            .C0(GND_net), .D0(n2782), .CI0(n2782), .A1(GND_net), .B1(directedBits[4]), 
+            .C1(GND_net), .D1(n4248), .CI1(n4248), .CO0(n4248), .CO1(n2784), 
+            .S0(n42[3]), .S1(n37));
+    defparam add_23_add_5_5.INIT0 = "0xc33c";
+    defparam add_23_add_5_5.INIT1 = "0xc33c";
+    (* lineinfo="@3(35[34],35[61])" *) FA2 add_22_add_5_7 (.A0(GND_net), .B0(directedBits[5]), 
+            .C0(GND_net), .D0(n2800), .CI0(n2800), .A1(GND_net), .B1(directedBits[6]), 
+            .C1(GND_net), .D1(n4257), .CI1(n4257), .CO0(n4257), .CO1(cout), 
+            .S0(n42_adj_133[5]), .S1(n42_adj_133[6]));
+    defparam add_22_add_5_7.INIT0 = "0xc33c";
+    defparam add_22_add_5_7.INIT1 = "0xc33c";
+    (* lineinfo="@3(35[34],35[61])" *) FA2 add_22_add_5_5 (.A0(GND_net), .B0(directedBits[3]), 
+            .C0(GND_net), .D0(n2798), .CI0(n2798), .A1(GND_net), .B1(directedBits[4]), 
+            .C1(GND_net), .D1(n4251), .CI1(n4251), .CO0(n4251), .CO1(n2800), 
+            .S0(n42_adj_133[3]), .S1(n42_adj_133[4]));
+    defparam add_22_add_5_5.INIT0 = "0xc33c";
+    defparam add_22_add_5_5.INIT1 = "0xc33c";
+    (* lineinfo="@3(35[34],35[61])" *) FA2 add_22_add_5_3 (.A0(GND_net), .B0(directedBits[1]), 
+            .C0(thiscomputer[1]), .D0(n2796), .CI0(n2796), .A1(GND_net), 
+            .B1(directedBits[2]), .C1(GND_net), .D1(n4239), .CI1(n4239), 
+            .CO0(n4239), .CO1(n2798), .S0(n42_adj_133[1]), .S1(n42_adj_133[2]));
+    defparam add_22_add_5_3.INIT0 = "0xc33c";
+    defparam add_22_add_5_3.INIT1 = "0xc33c";
+    (* lut_function="(!(A ((D)+!B)+!A (((D)+!C)+!B)))" *) LUT4 i2810_4_lut (.A(n42[5]), 
+            .B(directedBits[6]), .C(directedBits[1]), .D(n2472), .Z(n3554));
+    defparam i2810_4_lut.INIT = "0x00c8";
+    (* lineinfo="@3(39[34],39[55])" *) FA2 add_23_add_5_7 (.A0(GND_net), .B0(directedBits[5]), 
+            .C0(GND_net), .D0(n2784), .CI0(n2784), .A1(GND_net), .B1(directedBits[6]), 
+            .C1(GND_net), .D1(n4260), .CI1(n4260), .CO0(n4260), .CO1(cout_adj_125), 
+            .S0(n42[5]), .S1(n42[6]));
+    defparam add_23_add_5_7.INIT0 = "0xc33c";
+    defparam add_23_add_5_7.INIT1 = "0xc33c";
+    (* lut_function="(A (B (C))+!A (B (C+(D))+!B !(C+!(D))))" *) LUT4 i38_4_lut (.A(directedBits[2]), 
+            .B(n3559), .C(directedBits[6]), .D(directedBits[1]), .Z(n18));
+    defparam i38_4_lut.INIT = "0xc5c0";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i37_3_lut (.A(n18), 
+            .B(n3554), .C(directedBits[3]), .Z(n24));
+    defparam i37_3_lut.INIT = "0xcaca";
+    (* lut_function="(!(A+(B+!(C))))" *) LUT4 i1_3_lut (.A(directedBits[5]), 
+            .B(directedBits[4]), .C(n24), .Z(\screencode[5] ));
+    defparam i1_3_lut.INIT = "0x1010";
+    (* lineinfo="@3(39[34],39[55])" *) FA2 add_23_add_5_1 (.A0(GND_net), .B0(GND_net), 
+            .C0(GND_net), .A1(GND_net), .B1(directedBits[0]), .C1(result[0]), 
+            .D1(n4230), .CI1(n4230), .CO0(n4230), .CO1(n2780), .S1(n42[0]));
+    defparam add_23_add_5_1.INIT0 = "0xc33c";
+    defparam add_23_add_5_1.INIT1 = "0xc33c";
+    (* lut_function="(!(A (B)+!A !(B)))" *) LUT4 i2830_2_lut (.A(directedBits[0]), 
+            .B(directedBits[1]), .Z(n3634));
+    defparam i2830_2_lut.INIT = "0x6666";
+    (* lineinfo="@3(35[34],35[61])" *) FA2 add_22_add_5_1 (.A0(GND_net), .B0(GND_net), 
+            .C0(GND_net), .A1(GND_net), .B1(directedBits[0]), .C1(thiscomputer[0]), 
+            .D1(n4227), .CI1(n4227), .CO0(n4227), .CO1(n2796), .S1(n42_adj_133[0]));
+    defparam add_22_add_5_1.INIT0 = "0xc33c";
+    defparam add_22_add_5_1.INIT1 = "0xc33c";
+    (* lut_function="(A (B+(C+!(D)))+!A (B+(C (D))))" *) LUT4 i2796_4_lut (.A(n3566), 
+            .B(n33), .C(n4), .D(directedBits[0]), .Z(n3562));
+    defparam i2796_4_lut.INIT = "0xfcee";
+    (* lut_function="(!(A (B (C)+!B (C (D)))+!A (B+((D)+!C))))" *) LUT4 i40_4_lut (.A(n3562), 
+            .B(n3634), .C(directedBits[2]), .D(n2468), .Z(n24_adj_128));
+    defparam i40_4_lut.INIT = "0x0a3a";
+    (* lut_function="(A+(B (C)))" *) LUT4 i1_3_lut_adj_17 (.A(n2180), .B(n36), 
+            .C(n42_adj_133[4]), .Z(n21));
+    defparam i1_3_lut_adj_17.INIT = "0xeaea";
+    (* lut_function="(A (B (C)+!B (C+(D)))+!A !(B+!(D)))" *) LUT4 i1_4_lut (.A(n4_adj_130), 
+            .B(n2424), .C(n21), .D(n24_adj_128), .Z(\screencode[4] ));
+    defparam i1_4_lut.INIT = "0xb3a0";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut (.A(directedBits[6]), .B(directedBits[3]), 
+            .Z(n4));
+    defparam i1_2_lut.INIT = "0x8888";
+    (* lut_function="(!(A ((C)+!B)+!A (C)))" *) LUT4 i2_3_lut (.A(directedBits[6]), 
+            .B(n42[3]), .C(directedBits[1]), .Z(n3235));
+    defparam i2_3_lut.INIT = "0x0d0d";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i2804_4_lut (.A(n42_adj_133[3]), 
+            .B(directedBits[2]), .C(n2180), .D(n36), .Z(n3571));
+    defparam i2804_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A (B (C+!(D))+!B !(C+(D)))+!A (B (C)))" *) LUT4 i52_4_lut (.A(n3574), 
+            .B(n3571), .C(directedBits[0]), .D(n2424), .Z(screencode_3__N_23));
+    defparam i52_4_lut.INIT = "0xc0ca";
+    (* lut_function="(A+!((C+(D))+!B))" *) LUT4 i1_4_lut_adj_18 (.A(screencode_3__N_23), 
+            .B(n10), .C(n2424), .D(directedBits[2]), .Z(\screencode[3] ));
+    defparam i1_4_lut_adj_18.INIT = "0xaaae";
+    (* lut_function="(A+(B))" *) LUT4 i1893_2_lut (.A(directedBits[5]), .B(directedBits[4]), 
+            .Z(n2424));
+    defparam i1893_2_lut.INIT = "0xeeee";
+    (* lineinfo="@3(39[34],39[55])" *) FA2 add_23_add_5_3 (.A0(GND_net), .B0(directedBits[1]), 
+            .C0(result[1]), .D0(n2780), .CI0(n2780), .A1(GND_net), .B1(directedBits[2]), 
+            .C1(GND_net), .D1(n4242), .CI1(n4242), .CO0(n4242), .CO1(n2782), 
+            .S0(n42[1]), .S1(n42[2]));
+    defparam add_23_add_5_3.INIT0 = "0xc33c";
+    defparam add_23_add_5_3.INIT1 = "0xc33c";
+    (* lut_function="(!(A (B (C+!(D))+!B (C (D)+!C !(D)))+!A (B+(C (D)+!C !(D)))))" *) LUT4 i2790_4_lut (.A(n42[6]), 
+            .B(directedBits[6]), .C(directedBits[2]), .D(directedBits[3]), 
+            .Z(n3550));
+    defparam i2790_4_lut.INIT = "0x0b30";
+    (* lut_function="(A (B (C)))" *) LUT4 i2814_2_lut_3_lut (.A(n42_adj_133[0]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3552));
+    defparam i2814_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="(!((B+(C))+!A))" *) LUT4 i2824_2_lut_3_lut (.A(n42[0]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3553));
+    defparam i2824_2_lut_3_lut.INIT = "0x0202";
+    (* lut_function="(!(A (B (C (D))+!B (C))+!A (((D)+!C)+!B)))" *) LUT4 i24_4_lut (.A(n3568), 
+            .B(cout_adj_125), .C(directedBits[3]), .D(n2472), .Z(n13));
+    defparam i24_4_lut.INIT = "0x0aca";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i2828_4_lut (.A(n42_adj_133[6]), 
+            .B(directedBits[2]), .C(n2180), .D(n36), .Z(n3549));
+    defparam i2828_4_lut.INIT = "0xc8c0";
+    (* lut_function="(!((B+(C))+!A))" *) LUT4 i2829_3_lut (.A(n3550), .B(n2424), 
+            .C(directedBits[1]), .Z(n3548));
+    defparam i2829_3_lut.INIT = "0x0202";
+    (* lut_function="(A (B (C)))" *) LUT4 i2799_2_lut_3_lut (.A(cout), .B(directedBits[2]), 
+            .C(directedBits[0]), .Z(n3568));
+    defparam i2799_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="(A (B (C)))" *) LUT4 i2792_2_lut_3_lut (.A(n42_adj_133[1]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3556));
+    defparam i2792_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="(!((B+(C))+!A))" *) LUT4 i2822_2_lut_3_lut (.A(n42[1]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3557));
+    defparam i2822_2_lut_3_lut.INIT = "0x0202";
+    (* lut_function="(A (B (C)))" *) LUT4 i2800_2_lut_3_lut (.A(n42_adj_133[2]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3577));
+    defparam i2800_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="(!((B+(C))+!A))" *) LUT4 i2823_2_lut_3_lut (.A(n42[2]), 
+            .B(directedBits[2]), .C(directedBits[0]), .Z(n3578));
+    defparam i2823_2_lut_3_lut.INIT = "0x0202";
+    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i1_3_lut_4_lut (.A(directedBits[0]), 
+            .B(n33), .C(directedBits[6]), .D(directedBits[3]), .Z(n10));
+    defparam i1_3_lut_4_lut.INIT = "0xeccc";
+    (* lut_function="(!(A+((C+(D))+!B)))" *) LUT4 i1_4_lut_adj_19 (.A(directedBits[4]), 
+            .B(directedBits[6]), .C(directedBits[1]), .D(directedBits[5]), 
+            .Z(n3230));
+    defparam i1_4_lut_adj_19.INIT = "0x0004";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_20 (.A(directedBits[2]), 
+            .B(directedBits[0]), .Z(n4_adj_130));
+    defparam i1_2_lut_adj_20.INIT = "0x8888";
+    (* lut_function="(!((((D)+!C)+!B)+!A))" *) LUT4 i2794_3_lut_4_lut (.A(n42_adj_133[5]), 
+            .B(directedBits[2]), .C(directedBits[0]), .D(directedBits[1]), 
+            .Z(n3559));
+    defparam i2794_3_lut_4_lut.INIT = "0x0080";
+    VLO i1 (.Z(GND_net));
+    
+endmodule
+
+//
+// Verilog Description of module lcd_driver
+//
+
+module lcd_driver (output n351, input clk, input reset_c, output n126, 
+            input n2068, output DB_c_6, output rs_c, output DB_c_5, 
+            output DB_c_4, output DB_c_3, output DB_c_2, output DB_c_1, 
+            output DB_c_7, output DB_c_0, input \screencode[3] , output chip_en_c, 
+            input n3577, input n3230, input n3578, input \directedBits[3] , 
+            input n3556, input n3557, input n13, input n3548, input n3549, 
+            input \directedBits[0] , input \screencode[4] , input \screencode[5] , 
+            input n2097, input n3552, input n3553);
+    
+    wire [31:0]state;
+    wire [20:0]delay_counter;
+    wire [7:0]char_counter;
+    wire [7:0]screencode;
+    wire [3:0]prev_screen;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    wire [7:0]data;
+    wire [2:0]byte_select_reg;
+    wire [21:0]n117;
+    
+    wire n835, n2789, n4305, GND_net, n2791;
+    wire [7:0]n47;
+    
+    wire n839, n2821, n4293, VCC_net, n2805, n4269, n2807, n843, 
+        n847, n2787, n4302, n2803, n4266, n851, n855, n859, 
+        n863, n867, n871, n879, n875, n1435, n4263, n2819, n4290, 
+        n1, n2817, n4287, n2815, n4284, n803, n468, n469, n3100, 
+        n3104, n11, n1054, n11_adj_111, n3922, n3970, n1_adj_112, 
+        n10, n4299, n3080, n14, n1056, n1058, n1052, n2032, 
+        n3, n340, n2003, n3221, n15, n24, n1053, n3103, n2813, 
+        n4281, n1045, n1044, n1465, n1046, n1047, n4, n1050, 
+        n10_adj_113;
+    wire [16:0]n178;
+    
+    wire n1049, n14_adj_114, n3964, n3910, n1048, n4096, n831, 
+        n827, n2455, n819, n811, n815, n807, n4095, n495, n2049, 
+        n1_adj_115, n10_adj_116, n2811, n4278, n2809, n4275, n4272, 
+        n1_adj_117, n8, n3_adj_118, n10_adj_119, n9, n23, n31, 
+        n14_adj_120, n22, n21, n2793, n4311, n3110, n23_adj_121, 
+        n4308;
+    
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_297_i5_4_lut (.A(state[4]), 
+            .B(n117[10]), .C(delay_counter[9]), .D(n351), .Z(n835));
+    defparam Select_297_i5_4_lut.INIT = "0xeca0";
+    (* lineinfo="@6(224[41],224[61])" *) FA2 add_87_add_5_5 (.A0(GND_net), 
+            .B0(char_counter[3]), .C0(GND_net), .D0(n2789), .CI0(n2789), 
+            .A1(GND_net), .B1(char_counter[4]), .C1(GND_net), .D1(n4305), 
+            .CI1(n4305), .CO0(n4305), .CO1(n2791), .S0(n47[3]), .S1(n47[4]));
+    defparam add_87_add_5_5.INIT0 = "0xc33c";
+    defparam add_87_add_5_5.INIT1 = "0xc33c";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i1 (.D(n1435), .SP(VCC_net), 
+            .CK(clk), .SR(reset_c), .Q(state[4]));
+    defparam state_FSM_i1.REGSET = "RESET";
+    defparam state_FSM_i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_301_i5_4_lut (.A(state[4]), 
+            .B(n117[11]), .C(delay_counter[10]), .D(n351), .Z(n839));
+    defparam Select_301_i5_4_lut.INIT = "0xeca0";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_22 (.A0(GND_net), .B0(delay_counter[20]), 
+            .C0(VCC_net), .D0(n2821), .CI0(n2821), .A1(GND_net), .B1(GND_net), 
+            .C1(GND_net), .D1(n4293), .CI1(n4293), .CO0(n4293), .S0(n117[21]));
+    defparam add_258_22.INIT0 = "0xc33c";
+    defparam add_258_22.INIT1 = "0xc33c";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_6 (.A0(GND_net), .B0(delay_counter[4]), 
+            .C0(VCC_net), .D0(n2805), .CI0(n2805), .A1(GND_net), .B1(delay_counter[5]), 
+            .C1(VCC_net), .D1(n4269), .CI1(n4269), .CO0(n4269), .CO1(n2807), 
+            .S0(n117[5]), .S1(n117[6]));
+    defparam add_258_6.INIT0 = "0xc33c";
+    defparam add_258_6.INIT1 = "0xc33c";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_305_i5_4_lut (.A(delay_counter[11]), 
+            .B(n117[12]), .C(state[4]), .D(n351), .Z(n843));
+    defparam Select_305_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_309_i5_4_lut (.A(delay_counter[12]), 
+            .B(n117[13]), .C(state[4]), .D(n351), .Z(n847));
+    defparam Select_309_i5_4_lut.INIT = "0xeca0";
+    (* lineinfo="@6(224[41],224[61])" *) FA2 add_87_add_5_3 (.A0(GND_net), 
+            .B0(char_counter[1]), .C0(GND_net), .D0(n2787), .CI0(n2787), 
+            .A1(GND_net), .B1(char_counter[2]), .C1(GND_net), .D1(n4302), 
+            .CI1(n4302), .CO0(n4302), .CO1(n2789), .S0(n47[1]), .S1(n47[2]));
+    defparam add_87_add_5_3.INIT0 = "0xc33c";
+    defparam add_87_add_5_3.INIT1 = "0xc33c";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_4 (.A0(GND_net), .B0(delay_counter[2]), 
+            .C0(VCC_net), .D0(n2803), .CI0(n2803), .A1(GND_net), .B1(delay_counter[3]), 
+            .C1(VCC_net), .D1(n4266), .CI1(n4266), .CO0(n4266), .CO1(n2805), 
+            .S0(n117[3]), .S1(n117[4]));
+    defparam add_258_4.INIT0 = "0xc33c";
+    defparam add_258_4.INIT1 = "0xc33c";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_313_i5_4_lut (.A(delay_counter[13]), 
+            .B(n117[14]), .C(state[4]), .D(n351), .Z(n851));
+    defparam Select_313_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_317_i5_4_lut (.A(state[4]), 
+            .B(n117[15]), .C(delay_counter[14]), .D(n351), .Z(n855));
+    defparam Select_317_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_321_i5_4_lut (.A(delay_counter[15]), 
+            .B(n117[16]), .C(state[4]), .D(n351), .Z(n859));
+    defparam Select_321_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_325_i5_4_lut (.A(delay_counter[16]), 
+            .B(n117[17]), .C(state[4]), .D(n351), .Z(n863));
+    defparam Select_325_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_329_i5_4_lut (.A(state[4]), 
+            .B(n117[18]), .C(delay_counter[17]), .D(n351), .Z(n867));
+    defparam Select_329_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_333_i5_4_lut (.A(state[4]), 
+            .B(n117[19]), .C(delay_counter[18]), .D(n351), .Z(n871));
+    defparam Select_333_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_341_i5_4_lut (.A(delay_counter[19]), 
+            .B(n117[20]), .C(state[4]), .D(n351), .Z(n879));
+    defparam Select_341_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_337_i5_4_lut (.A(state[4]), 
+            .B(n117[21]), .C(delay_counter[20]), .D(n351), .Z(n875));
+    defparam Select_337_i5_4_lut.INIT = "0xeca0";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i7 (.D(n1), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_6));
+    defparam DB__i7.REGSET = "RESET";
+    defparam DB__i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_2 (.A0(GND_net), .B0(delay_counter[0]), 
+            .C0(n126), .D0(VCC_net), .A1(GND_net), .B1(delay_counter[1]), 
+            .C1(VCC_net), .D1(n4263), .CI1(n4263), .CO0(n4263), .CO1(n2803), 
+            .S0(n117[1]), .S1(n117[2]));
+    defparam add_258_2.INIT0 = "0xc33c";
+    defparam add_258_2.INIT1 = "0xc33c";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_20 (.A0(GND_net), .B0(delay_counter[18]), 
+            .C0(VCC_net), .D0(n2819), .CI0(n2819), .A1(GND_net), .B1(delay_counter[19]), 
+            .C1(VCC_net), .D1(n4290), .CI1(n4290), .CO0(n4290), .CO1(n2821), 
+            .S0(n117[19]), .S1(n117[20]));
+    defparam add_258_20.INIT0 = "0xc33c";
+    defparam add_258_20.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ rs (.D(n803), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(rs_c));
+    defparam rs.REGSET = "RESET";
+    defparam rs.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_18 (.A0(GND_net), .B0(delay_counter[16]), 
+            .C0(VCC_net), .D0(n2817), .CI0(n2817), .A1(GND_net), .B1(delay_counter[17]), 
+            .C1(VCC_net), .D1(n4287), .CI1(n4287), .CO0(n4287), .CO1(n2819), 
+            .S0(n117[17]), .S1(n117[18]));
+    defparam add_258_18.INIT0 = "0xc33c";
+    defparam add_258_18.INIT1 = "0xc33c";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_16 (.A0(GND_net), .B0(delay_counter[14]), 
+            .C0(VCC_net), .D0(n2815), .CI0(n2815), .A1(GND_net), .B1(delay_counter[15]), 
+            .C1(VCC_net), .D1(n4284), .CI1(n4284), .CO0(n4284), .CO1(n2817), 
+            .S0(n117[15]), .S1(n117[16]));
+    defparam add_258_16.INIT0 = "0xc33c";
+    defparam add_258_16.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i6 (.D(n468), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_5));
+    defparam DB__i6.REGSET = "RESET";
+    defparam DB__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i5 (.D(n469), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_4));
+    defparam DB__i5.REGSET = "RESET";
+    defparam DB__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i4 (.D(n3100), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_3));
+    defparam DB__i4.REGSET = "RESET";
+    defparam DB__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i3 (.D(n3104), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_2));
+    defparam DB__i3.REGSET = "RESET";
+    defparam DB__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i2 (.D(n11), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_1));
+    defparam DB__i2.REGSET = "RESET";
+    defparam DB__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i8 (.D(n1_adj_112), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_7));
+    defparam DB__i8.REGSET = "RESET";
+    defparam DB__i8.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+(C))+!A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_0_i11_3_lut (.A(data[0]), 
+            .B(n1054), .C(state[4]), .Z(n11_adj_111));
+    defparam select_142_Select_0_i11_3_lut.INIT = "0xecec";
+    (* lut_function="(A (B (C+!(D)))+!A (B (C (D))))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_7_i1_4_lut (.A(n3922), 
+            .B(state[4]), .C(n3970), .D(byte_select_reg[2]), .Z(n1_adj_112));
+    defparam select_142_Select_7_i1_4_lut.INIT = "0xc088";
+    (* lut_function="(A (B))" *) LUT4 i2_2_lut (.A(char_counter[6]), .B(char_counter[1]), 
+            .Z(n10));
+    defparam i2_2_lut.INIT = "0x8888";
+    (* lineinfo="@6(224[41],224[61])" *) FA2 add_87_add_5_1 (.A0(GND_net), 
+            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(char_counter[0]), 
+            .C1(n3080), .D1(n4299), .CI1(n4299), .CO0(n4299), .CO1(n2787), 
+            .S1(n47[0]));
+    defparam add_87_add_5_1.INIT0 = "0xc33c";
+    defparam add_87_add_5_1.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ DB__i1 (.D(n11_adj_111), 
+            .SP(n2068), .CK(clk), .SR(reset_c), .Q(DB_c_0));
+    defparam DB__i1.REGSET = "RESET";
+    defparam DB__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(70[15],72[8])" *) FD1P3XZ prev_screen_i3 (.D(\screencode[3] ), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(prev_screen[3]));
+    defparam prev_screen_i3.REGSET = "RESET";
+    defparam prev_screen_i3.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i6_4_lut (.A(char_counter[4]), 
+            .B(char_counter[7]), .C(char_counter[5]), .D(char_counter[3]), 
+            .Z(n14));
+    defparam i6_4_lut.INIT = "0x8000";
+    (* lut_function="(!(A (B (C (D)))))" *) LUT4 i2922_4_lut (.A(char_counter[0]), 
+            .B(n14), .C(n10), .D(char_counter[2]), .Z(n3080));
+    defparam i2922_4_lut.INIT = "0x7fff";
+    (* lut_function="(A (B+(C))+!A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_1_i11_3_lut (.A(data[1]), 
+            .B(n1056), .C(state[4]), .Z(n11));
+    defparam select_142_Select_1_i11_3_lut.INIT = "0xecec";
+    (* lut_function="(A+(B+(C (D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i2_4_lut (.A(n1056), 
+            .B(n1058), .C(data[2]), .D(state[4]), .Z(n3104));
+    defparam i2_4_lut.INIT = "0xfeee";
+    (* lut_function="(A+(B))", lineinfo="@6(160[13],227[20])" *) LUT4 i1_2_lut (.A(n1058), 
+            .B(n1052), .Z(n2032));
+    defparam i1_2_lut.INIT = "0xeeee";
+    (* lut_function="(A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_146_Select_0_i3_2_lut (.A(n117[1]), 
+            .B(n351), .Z(n3));
+    defparam select_146_Select_0_i3_2_lut.INIT = "0x8888";
+    (* lut_function="(A+(B+(C (D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i2_4_lut_adj_1 (.A(n340), 
+            .B(n2032), .C(data[3]), .D(state[4]), .Z(n3100));
+    defparam i2_4_lut_adj_1.INIT = "0xfeee";
+    (* lut_function="(A+(B (C+(D))+!B (C)))", lineinfo="@6(160[13],227[20])" *) LUT4 i1_4_lut (.A(n2003), 
+            .B(state[4]), .C(n3), .D(delay_counter[0]), .Z(n3221));
+    defparam i1_4_lut.INIT = "0xfefa";
+    (* lut_function="(A (B))", lineinfo="@6(77[9],146[16])" *) LUT4 i1_2_lut_adj_2 (.A(state[4]), 
+            .B(n15), .Z(n24));
+    defparam i1_2_lut_adj_2.INIT = "0x8888";
+    (* lut_function="(A (B+(C+(D)))+!A (B+!(C+!(D))))", lineinfo="@6(77[9],146[16])" *) LUT4 i2_4_lut_adj_3 (.A(n1053), 
+            .B(n24), .C(n126), .D(n1054), .Z(n3103));
+    defparam i2_4_lut_adj_3.INIT = "0xefec";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_14 (.A0(GND_net), .B0(delay_counter[12]), 
+            .C0(VCC_net), .D0(n2813), .CI0(n2813), .A1(GND_net), .B1(delay_counter[13]), 
+            .C1(VCC_net), .D1(n4281), .CI1(n4281), .CO0(n4281), .CO1(n2815), 
+            .S0(n117[13]), .S1(n117[14]));
+    defparam add_258_14.INIT0 = "0xc33c";
+    defparam add_258_14.INIT1 = "0xc33c";
+    (* lut_function="(A (B+!(C))+!A (B))", lineinfo="@6(77[9],146[16])" *) LUT4 i928_3_lut (.A(n1045), 
+            .B(n1044), .C(n126), .Z(n1465));
+    defparam i928_3_lut.INIT = "0xcece";
+    (* lut_function="(A (B+(C))+!A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_4_i15_3_lut (.A(data[4]), 
+            .B(n340), .C(state[4]), .Z(n469));
+    defparam select_142_Select_4_i15_3_lut.INIT = "0xecec";
+    (* lut_function="(A+(B))", lineinfo="@6(160[13],227[20])" *) LUT4 i1_2_lut_adj_4 (.A(n1046), 
+            .B(n1047), .Z(n4));
+    defparam i1_2_lut_adj_4.INIT = "0xeeee";
+    (* lut_function="(A (B+(C))+!A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_5_i15_3_lut (.A(data[5]), 
+            .B(n340), .C(state[4]), .Z(n468));
+    defparam select_142_Select_5_i15_3_lut.INIT = "0xecec";
+    (* lut_function="(A+(B (C)))" *) LUT4 Select_265_i5_3_lut (.A(state[4]), 
+            .B(rs_c), .C(n351), .Z(n803));
+    defparam Select_265_i5_3_lut.INIT = "0xeaea";
+    (* lut_function="(A+(B))", lineinfo="@6(160[13],227[20])" *) LUT4 i2_2_lut_adj_5 (.A(n1050), 
+            .B(n1053), .Z(n10_adj_113));
+    defparam i2_2_lut_adj_5.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i6_4_lut_adj_6 (.A(n178[7]), 
+            .B(n1049), .C(n178[11]), .D(n178[15]), .Z(n14_adj_114));
+    defparam i6_4_lut_adj_6.INIT = "0xfffe";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(70[15],72[8])" *) FD1P3XZ prev_screen_i2 (.D(screencode[2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(prev_screen[2]));
+    defparam prev_screen_i2.REGSET = "RESET";
+    defparam prev_screen_i2.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i7_4_lut (.A(n1045), 
+            .B(n14_adj_114), .C(n10_adj_113), .D(n178[13]), .Z(n351));
+    defparam i7_4_lut.INIT = "0xfffe";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(70[15],72[8])" *) FD1P3XZ prev_screen_i1 (.D(screencode[1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(prev_screen[1]));
+    defparam prev_screen_i1.REGSET = "RESET";
+    defparam prev_screen_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i20 (.D(n875), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[20]));
+    defparam delay_counter__i20.REGSET = "RESET";
+    defparam delay_counter__i20.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C+!(D)))+!A (B (C (D))))", lineinfo="@6(160[13],227[20])" *) LUT4 select_142_Select_6_i1_4_lut (.A(n3964), 
+            .B(state[4]), .C(n3910), .D(byte_select_reg[2]), .Z(n1));
+    defparam select_142_Select_6_i1_4_lut.INIT = "0xc088";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i19 (.D(n879), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[19]));
+    defparam delay_counter__i19.REGSET = "RESET";
+    defparam delay_counter__i19.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i18 (.D(n871), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[18]));
+    defparam delay_counter__i18.REGSET = "RESET";
+    defparam delay_counter__i18.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i17 (.D(n867), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[17]));
+    defparam delay_counter__i17.REGSET = "RESET";
+    defparam delay_counter__i17.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i16 (.D(n863), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[16]));
+    defparam delay_counter__i16.REGSET = "RESET";
+    defparam delay_counter__i16.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i15 (.D(n859), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[15]));
+    defparam delay_counter__i15.REGSET = "RESET";
+    defparam delay_counter__i15.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i14 (.D(n855), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[14]));
+    defparam delay_counter__i14.REGSET = "RESET";
+    defparam delay_counter__i14.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i13 (.D(n851), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[13]));
+    defparam delay_counter__i13.REGSET = "RESET";
+    defparam delay_counter__i13.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i12 (.D(n847), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[12]));
+    defparam delay_counter__i12.REGSET = "RESET";
+    defparam delay_counter__i12.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i11 (.D(n843), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[11]));
+    defparam delay_counter__i11.REGSET = "RESET";
+    defparam delay_counter__i11.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i3_4_lut (.A(state[4]), 
+            .B(n1048), .C(n4), .D(n2003), .Z(n4096));
+    defparam i3_4_lut.INIT = "0xfffe";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i10 (.D(n839), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[10]));
+    defparam delay_counter__i10.REGSET = "RESET";
+    defparam delay_counter__i10.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i9 (.D(n835), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[9]));
+    defparam delay_counter__i9.REGSET = "RESET";
+    defparam delay_counter__i9.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i8 (.D(n831), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[8]));
+    defparam delay_counter__i8.REGSET = "RESET";
+    defparam delay_counter__i8.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i7 (.D(n827), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[7]));
+    defparam delay_counter__i7.REGSET = "RESET";
+    defparam delay_counter__i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i6 (.D(n2455), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[6]));
+    defparam delay_counter__i6.REGSET = "RESET";
+    defparam delay_counter__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i5 (.D(n819), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[5]));
+    defparam delay_counter__i5.REGSET = "RESET";
+    defparam delay_counter__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i4 (.D(n811), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[4]));
+    defparam delay_counter__i4.REGSET = "RESET";
+    defparam delay_counter__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i3 (.D(n815), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[3]));
+    defparam delay_counter__i3.REGSET = "RESET";
+    defparam delay_counter__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i2 (.D(n807), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[2]));
+    defparam delay_counter__i2.REGSET = "RESET";
+    defparam delay_counter__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i1 (.D(n4095), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[1]));
+    defparam delay_counter__i1.REGSET = "RESET";
+    defparam delay_counter__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i1 (.D(n47[1]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[1]));
+    defparam char_counter_i1.REGSET = "RESET";
+    defparam char_counter_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i2 (.D(n47[2]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[2]));
+    defparam char_counter_i2.REGSET = "RESET";
+    defparam char_counter_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i3 (.D(n47[3]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[3]));
+    defparam char_counter_i3.REGSET = "RESET";
+    defparam char_counter_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i4 (.D(n47[4]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[4]));
+    defparam char_counter_i4.REGSET = "RESET";
+    defparam char_counter_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i5 (.D(n47[5]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[5]));
+    defparam char_counter_i5.REGSET = "RESET";
+    defparam char_counter_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i6 (.D(n47[6]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[6]));
+    defparam char_counter_i6.REGSET = "RESET";
+    defparam char_counter_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i7 (.D(n47[7]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[7]));
+    defparam char_counter_i7.REGSET = "RESET";
+    defparam char_counter_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ char_counter_i0 (.D(n47[0]), 
+            .SP(n495), .CK(clk), .SR(n2049), .Q(char_counter[0]));
+    defparam char_counter_i0.REGSET = "RESET";
+    defparam char_counter_i0.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ en (.D(n4096), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(chip_en_c));
+    defparam en.REGSET = "RESET";
+    defparam en.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i17 (.D(reset_c), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(n1044));
+    defparam state_FSM_i17.REGSET = "RESET";
+    defparam state_FSM_i17.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B))", lineinfo="@6(160[13],227[20])" *) LUT4 select_146_Select_1_i1_2_lut (.A(delay_counter[1]), 
+            .B(state[4]), .Z(n1_adj_115));
+    defparam select_146_Select_1_i1_2_lut.INIT = "0x8888";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i4_4_lut (.A(n1044), 
+            .B(n1047), .C(n1_adj_115), .D(n1046), .Z(n10_adj_116));
+    defparam i4_4_lut.INIT = "0xfffe";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_12 (.A0(GND_net), .B0(delay_counter[10]), 
+            .C0(VCC_net), .D0(n2811), .CI0(n2811), .A1(GND_net), .B1(delay_counter[11]), 
+            .C1(VCC_net), .D1(n4278), .CI1(n4278), .CO0(n4278), .CO1(n2813), 
+            .S0(n117[11]), .S1(n117[12]));
+    defparam add_258_12.INIT0 = "0xc33c";
+    defparam add_258_12.INIT1 = "0xc33c";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_10 (.A0(GND_net), .B0(delay_counter[8]), 
+            .C0(VCC_net), .D0(n2809), .CI0(n2809), .A1(GND_net), .B1(delay_counter[9]), 
+            .C1(VCC_net), .D1(n4275), .CI1(n4275), .CO0(n4275), .CO1(n2811), 
+            .S0(n117[9]), .S1(n117[10]));
+    defparam add_258_10.INIT0 = "0xc33c";
+    defparam add_258_10.INIT1 = "0xc33c";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(C)))", lineinfo="@6(160[13],227[20])" *) LUT4 i5_4_lut (.A(n117[2]), 
+            .B(n10_adj_116), .C(n1048), .D(n351), .Z(n4095));
+    defparam i5_4_lut.INIT = "0xfefc";
+    (* lineinfo="@6(169[66],169[86])" *) FA2 add_258_8 (.A0(GND_net), .B0(delay_counter[6]), 
+            .C0(VCC_net), .D0(n2807), .CI0(n2807), .A1(GND_net), .B1(delay_counter[7]), 
+            .C1(VCC_net), .D1(n4272), .CI1(n4272), .CO0(n4272), .CO1(n2809), 
+            .S0(n117[7]), .S1(n117[8]));
+    defparam add_258_8.INIT0 = "0xc33c";
+    defparam add_258_8.INIT1 = "0xc33c";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_269_i5_4_lut (.A(state[4]), 
+            .B(n117[3]), .C(delay_counter[2]), .D(n351), .Z(n807));
+    defparam Select_269_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_277_i5_4_lut (.A(delay_counter[3]), 
+            .B(n117[4]), .C(state[4]), .D(n351), .Z(n815));
+    defparam Select_277_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_273_i5_4_lut (.A(state[4]), 
+            .B(n117[5]), .C(delay_counter[4]), .D(n351), .Z(n811));
+    defparam Select_273_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_281_i5_4_lut (.A(state[4]), 
+            .B(n117[6]), .C(delay_counter[5]), .D(n351), .Z(n819));
+    defparam Select_281_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))", lineinfo="@6(37[13],37[18])" *) LUT4 i1923_4_lut (.A(state[4]), 
+            .B(n117[7]), .C(delay_counter[6]), .D(n351), .Z(n2455));
+    defparam i1923_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_289_i5_4_lut (.A(state[4]), 
+            .B(n117[8]), .C(delay_counter[7]), .D(n351), .Z(n827));
+    defparam Select_289_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 Select_293_i5_4_lut (.A(state[4]), 
+            .B(n117[9]), .C(delay_counter[8]), .D(n351), .Z(n831));
+    defparam Select_293_i5_4_lut.INIT = "0xeca0";
+    (* lut_function="(A (B (C+!(D)))+!A (B (C (D))))", lineinfo="@6(70[15],72[8])" *) LUT4 i1_4_lut_adj_7 (.A(n3577), 
+            .B(n3230), .C(n3578), .D(\directedBits[3] ), .Z(screencode[2]));
+    defparam i1_4_lut_adj_7.INIT = "0xc088";
+    (* lut_function="(A (B (C+!(D)))+!A (B (C (D))))", lineinfo="@6(70[15],72[8])" *) LUT4 i1_4_lut_adj_8 (.A(n3556), 
+            .B(n3230), .C(n3557), .D(\directedBits[3] ), .Z(screencode[1]));
+    defparam i1_4_lut_adj_8.INIT = "0xc088";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i16 (.D(n1465), .SP(VCC_net), 
+            .CK(clk), .SR(reset_c), .Q(n1045));
+    defparam state_FSM_i16.REGSET = "RESET";
+    defparam state_FSM_i16.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i15 (.D(n1045), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1046));
+    defparam state_FSM_i15.REGSET = "RESET";
+    defparam state_FSM_i15.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B+!(C))+!A))", lineinfo="@6(150[15],229[8])" *) LUT4 i1512_2_lut_3_lut_3_lut (.A(state[4]), 
+            .B(reset_c), .C(n15), .Z(n2049));
+    defparam i1512_2_lut_3_lut_3_lut.INIT = "0x2020";
+    (* lut_function="(!(A (B)+!A !(B)))", lineinfo="@6(142[21],142[42])" *) LUT4 not_equal_38_i1_2_lut (.A(screencode[0]), 
+            .B(prev_screen[0]), .Z(n1_adj_117));
+    defparam not_equal_38_i1_2_lut.INIT = "0x6666";
+    (* lut_function="(A (B (C+!(D))+!B (C+(D)))+!A !(B (D)+!B !(D)))", lineinfo="@6(142[21],142[42])" *) LUT4 i2_4_lut_adj_9 (.A(n13), 
+            .B(screencode[1]), .C(n3230), .D(prev_screen[1]), .Z(n8));
+    defparam i2_4_lut_adj_9.INIT = "0xb3ec";
+    (* lut_function="(!(A (B)+!A !(B)))", lineinfo="@6(142[21],142[42])" *) LUT4 not_equal_38_i3_2_lut (.A(screencode[2]), 
+            .B(prev_screen[2]), .Z(n3_adj_118));
+    defparam not_equal_38_i3_2_lut.INIT = "0x6666";
+    (* lut_function="(A (B+(C+!(D)))+!A (B+(C+(D))))", lineinfo="@6(142[21],142[42])" *) LUT4 i4_4_lut_adj_10 (.A(\screencode[3] ), 
+            .B(n8), .C(n1_adj_117), .D(prev_screen[3]), .Z(n10_adj_119));
+    defparam i4_4_lut_adj_10.INIT = "0xfdfe";
+    (* lut_function="(A+(B (C+!(D))+!B (C (D))))", lineinfo="@6(142[21],142[42])" *) LUT4 i3_4_lut_adj_11 (.A(n3_adj_118), 
+            .B(n3548), .C(n3549), .D(\directedBits[0] ), .Z(n9));
+    defparam i3_4_lut_adj_11.INIT = "0xfaee";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(142[21],142[42])" *) LUT4 i2_4_lut_adj_12 (.A(n9), 
+            .B(\screencode[4] ), .C(n10_adj_119), .D(\screencode[5] ), 
+            .Z(n15));
+    defparam i2_4_lut_adj_12.INIT = "0xfffe";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i14 (.D(n1046), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1049));
+    defparam state_FSM_i14.REGSET = "RESET";
+    defparam state_FSM_i14.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i13 (.D(n1049), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1047));
+    defparam state_FSM_i13.REGSET = "RESET";
+    defparam state_FSM_i13.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i12 (.D(n1047), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1050));
+    defparam state_FSM_i12.REGSET = "RESET";
+    defparam state_FSM_i12.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i11 (.D(n1050), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1048));
+    defparam state_FSM_i11.REGSET = "RESET";
+    defparam state_FSM_i11.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i10 (.D(n1048), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n178[7]));
+    defparam state_FSM_i10.REGSET = "RESET";
+    defparam state_FSM_i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i9 (.D(n178[7]), 
+            .SP(n2097), .CK(clk), .SR(reset_c), .Q(n1052));
+    defparam state_FSM_i9.REGSET = "RESET";
+    defparam state_FSM_i9.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i8 (.D(n1052), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n1053));
+    defparam state_FSM_i8.REGSET = "RESET";
+    defparam state_FSM_i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i7 (.D(n3103), .SP(VCC_net), 
+            .CK(clk), .SR(reset_c), .Q(n1054));
+    defparam state_FSM_i7.REGSET = "RESET";
+    defparam state_FSM_i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i6 (.D(n1054), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n178[11]));
+    defparam state_FSM_i6.REGSET = "RESET";
+    defparam state_FSM_i6.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i5 (.D(n178[11]), 
+            .SP(n2097), .CK(clk), .SR(reset_c), .Q(n1056));
+    defparam state_FSM_i5.REGSET = "RESET";
+    defparam state_FSM_i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i4 (.D(n1056), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n178[13]));
+    defparam state_FSM_i4.REGSET = "RESET";
+    defparam state_FSM_i4.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C)))", lineinfo="@6(150[15],229[8])" *) LUT4 i2_3_lut (.A(delay_counter[4]), 
+            .B(delay_counter[8]), .C(delay_counter[17]), .Z(n23));
+    defparam i2_3_lut.INIT = "0xfefe";
+    (* lut_function="(A+(B+(C)))", lineinfo="@6(150[15],229[8])" *) LUT4 i2_3_lut_adj_13 (.A(delay_counter[14]), 
+            .B(delay_counter[9]), .C(delay_counter[10]), .Z(n31));
+    defparam i2_3_lut_adj_13.INIT = "0xfefe";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i3 (.D(n178[13]), 
+            .SP(n2097), .CK(clk), .SR(reset_c), .Q(n1058));
+    defparam state_FSM_i3.REGSET = "RESET";
+    defparam state_FSM_i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@6(77[9],146[16])" *) FD1P3XZ state_FSM_i2 (.D(n1058), .SP(n2097), 
+            .CK(clk), .SR(reset_c), .Q(n178[15]));
+    defparam state_FSM_i2.REGSET = "RESET";
+    defparam state_FSM_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(150[15],229[8])" *) FD1P3XZ delay_counter__i0 (.D(n3221), 
+            .SP(VCC_net), .CK(clk), .SR(reset_c), .Q(delay_counter[0]));
+    defparam delay_counter__i0.REGSET = "RESET";
+    defparam delay_counter__i0.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B))", lineinfo="@6(82[21],82[43])" *) LUT4 i1_2_lut_adj_14 (.A(delay_counter[3]), 
+            .B(delay_counter[19]), .Z(n14_adj_120));
+    defparam i1_2_lut_adj_14.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(82[21],82[43])" *) LUT4 i9_4_lut (.A(delay_counter[13]), 
+            .B(delay_counter[2]), .C(delay_counter[12]), .D(delay_counter[15]), 
+            .Z(n22));
+    defparam i9_4_lut.INIT = "0xfffe";
+    VLO i1 (.Z(GND_net));
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(82[21],82[43])" *) LUT4 i8_4_lut (.A(delay_counter[16]), 
+            .B(delay_counter[1]), .C(delay_counter[18]), .D(delay_counter[0]), 
+            .Z(n21));
+    defparam i8_4_lut.INIT = "0xfffe";
+    (* lineinfo="@6(224[41],224[61])" *) FA2 add_87_add_5_9 (.A0(GND_net), 
+            .B0(char_counter[7]), .C0(GND_net), .D0(n2793), .CI0(n2793), 
+            .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(n4311), .CI1(n4311), 
+            .CO0(n4311), .S0(n47[7]));
+    defparam add_87_add_5_9.INIT0 = "0xc33c";
+    defparam add_87_add_5_9.INIT1 = "0xc33c";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(82[21],82[43])" *) LUT4 i2_4_lut_adj_15 (.A(delay_counter[6]), 
+            .B(n31), .C(delay_counter[7]), .D(n23), .Z(n3110));
+    defparam i2_4_lut_adj_15.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(82[21],82[43])" *) LUT4 i10_4_lut (.A(delay_counter[20]), 
+            .B(delay_counter[5]), .C(delay_counter[11]), .D(n14_adj_120), 
+            .Z(n23_adj_121));
+    defparam i10_4_lut.INIT = "0xfffe";
+    (* lut_function="(!(A+(B+(C+(D)))))", lineinfo="@6(82[21],82[43])" *) LUT4 i2919_4_lut (.A(n23_adj_121), 
+            .B(n3110), .C(n21), .D(n22), .Z(n126));
+    defparam i2919_4_lut.INIT = "0x0001";
+    (* lut_function="(A (B ((D)+!C)+!B !(C))+!A (B (D)))", lineinfo="@6(77[9],146[16])" *) LUT4 i898_4_lut (.A(state[4]), 
+            .B(n126), .C(n15), .D(n178[15]), .Z(n1435));
+    defparam i898_4_lut.INIT = "0xce0a";
+    (* lineinfo="@6(224[41],224[61])" *) FA2 add_87_add_5_7 (.A0(GND_net), 
+            .B0(char_counter[5]), .C0(GND_net), .D0(n2791), .CI0(n2791), 
+            .A1(GND_net), .B1(char_counter[6]), .C1(GND_net), .D1(n4308), 
+            .CI1(n4308), .CO0(n4308), .CO1(n2793), .S0(n47[5]), .S1(n47[6]));
+    defparam add_87_add_5_7.INIT0 = "0xc33c";
+    defparam add_87_add_5_7.INIT1 = "0xc33c";
+    (* lut_function="(!((B)+!A))" *) LUT4 i196_2_lut_2_lut (.A(state[4]), 
+            .B(reset_c), .Z(n495));
+    defparam i196_2_lut_2_lut.INIT = "0x2222";
+    (* lut_function="(A (B (C+!(D)))+!A (B (C (D))))", lineinfo="@6(70[15],72[8])" *) LUT4 i1_4_lut_adj_16 (.A(n3552), 
+            .B(n3230), .C(n3553), .D(\directedBits[3] ), .Z(screencode[0]));
+    defparam i1_4_lut_adj_16.INIT = "0xc088";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@6(160[13],227[20])" *) LUT4 i2_3_lut_4_lut (.A(n1054), 
+            .B(n1058), .C(n1052), .D(n1056), .Z(n2003));
+    defparam i2_3_lut_4_lut.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C)))", lineinfo="@6(160[13],227[20])" *) LUT4 i2_2_lut_3_lut (.A(n1048), 
+            .B(n1046), .C(n1047), .Z(n340));
+    defparam i2_2_lut_3_lut.INIT = "0xfefe";
+    (* LSE_LINE_FILE_ID=79, LSE_LCOL=14, LSE_RCOL=6, LSE_LLINE=49, LSE_RLINE=55, lineinfo="@6(49[14],55[6])" *) messages mes ({char_counter}, 
+            byte_select_reg[2], clk, \screencode[5] , data[0], n3970, 
+            n3964, data[3], data[2], data[5], data[4], \screencode[3] , 
+            \screencode[4] , n3910, n3922, data[1], screencode[0], 
+            screencode[1], screencode[2]);
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=13, LSE_RCOL=137, LSE_LLINE=86, LSE_RLINE=86, lineinfo="@6(70[15],72[8])" *) FD1P3XZ prev_screen_i0 (.D(screencode[0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(prev_screen[0]));
+    defparam prev_screen_i0.REGSET = "RESET";
+    defparam prev_screen_i0.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module messages
+//
+
+module messages (input [7:0]char_counter, output \byte_select_reg[2] , input clk, 
+            input \screencode[5] , output \data[0] , output n3970, output n3964, 
+            output \data[3] , output \data[2] , output \data[5] , output \data[4] , 
+            input \screencode[3] , input \screencode[4] , output n3910, 
+            output n3922, output \data[1] , input \screencode[0] , input \screencode[1] , 
+            input \screencode[2] );
+    
+    wire [63:0]ram_rd_data;
+    wire [2:0]byte_select_reg;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    wire [8:0]rd_addr;
+    
+    wire n3931, n3934, n3949, n3952, n3494, n3495, n3501, n3500, 
+        n3512, n2777, n4254, GND_net, n3973, n3513, n3976, n3522, 
+        n3907, n3521, n3967, n3958, n3961, n3940, n3943, n3925, 
+        n3916, n3536, n3537, n3546, n3937, n3545, n2775, n4245, 
+        n3919, n3901, n3955, n3913, n4233, n2773, n4236, VCC_net;
+    
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3931_bdd_4_lut (.A(n3931), 
+            .B(ram_rd_data[43]), .C(ram_rd_data[35]), .D(byte_select_reg[1]), 
+            .Z(n3934));
+    defparam n3931_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_7  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[16]), .C(ram_rd_data[24]), .D(byte_select_reg[1]), 
+            .Z(n3949));
+    defparam \byte_select_reg[0]_bdd_4_lut_7 .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3949_bdd_4_lut (.A(n3949), 
+            .B(ram_rd_data[8]), .C(ram_rd_data[0]), .D(byte_select_reg[1]), 
+            .Z(n3952));
+    defparam n3949_bdd_4_lut.INIT = "0xaad8";
+    (* LSE_LINE_FILE_ID=79, LSE_LCOL=14, LSE_RCOL=6, LSE_LLINE=49, LSE_RLINE=55, lineinfo="@8(60[15],65[8])" *) FD1P3XZ byte_select_reg_i1 (.D(char_counter[1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(byte_select_reg[1]));
+    defparam byte_select_reg_i1.REGSET = "RESET";
+    defparam byte_select_reg_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=79, LSE_LCOL=14, LSE_RCOL=6, LSE_LLINE=49, LSE_RLINE=55, lineinfo="@8(60[15],65[8])" *) FD1P3XZ byte_select_reg_i0 (.D(char_counter[0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(byte_select_reg[0]));
+    defparam byte_select_reg_i0.REGSET = "RESET";
+    defparam byte_select_reg_i0.SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2690_3_lut (.A(ram_rd_data[5]), 
+            .B(ram_rd_data[13]), .C(byte_select_reg[0]), .Z(n3494));
+    defparam i2690_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2691_3_lut (.A(ram_rd_data[21]), 
+            .B(ram_rd_data[29]), .C(byte_select_reg[0]), .Z(n3495));
+    defparam i2691_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2697_3_lut (.A(ram_rd_data[53]), 
+            .B(ram_rd_data[61]), .C(byte_select_reg[0]), .Z(n3501));
+    defparam i2697_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2696_3_lut (.A(ram_rd_data[37]), 
+            .B(ram_rd_data[45]), .C(byte_select_reg[0]), .Z(n3500));
+    defparam i2696_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2708_3_lut (.A(ram_rd_data[2]), 
+            .B(ram_rd_data[10]), .C(byte_select_reg[0]), .Z(n3512));
+    defparam i2708_3_lut.INIT = "0xcaca";
+    (* lineinfo="@8(29[19],29[63])" *) FA2 screencode_5__I_0_7 (.A0(GND_net), 
+            .B0(\screencode[5] ), .C0(GND_net), .D0(n2777), .CI0(n2777), 
+            .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(n4254), .CI1(n4254), 
+            .CO0(n4254), .S0(rd_addr[8]));
+    defparam screencode_5__I_0_7.INIT0 = "0xc33c";
+    defparam screencode_5__I_0_7.INIT1 = "0xc33c";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[52]), .C(ram_rd_data[60]), .D(byte_select_reg[1]), 
+            .Z(n3973));
+    defparam \byte_select_reg[0]_bdd_4_lut .INIT = "0xe4aa";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2709_3_lut (.A(ram_rd_data[18]), 
+            .B(ram_rd_data[26]), .C(byte_select_reg[0]), .Z(n3513));
+    defparam i2709_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3973_bdd_4_lut (.A(n3973), 
+            .B(ram_rd_data[44]), .C(ram_rd_data[36]), .D(byte_select_reg[1]), 
+            .Z(n3976));
+    defparam n3973_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2718_3_lut (.A(ram_rd_data[50]), 
+            .B(ram_rd_data[58]), .C(byte_select_reg[0]), .Z(n3522));
+    defparam i2718_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_2  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[54]), .C(ram_rd_data[62]), .D(byte_select_reg[1]), 
+            .Z(n3907));
+    defparam \byte_select_reg[0]_bdd_4_lut_2 .INIT = "0xe4aa";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2717_3_lut (.A(ram_rd_data[34]), 
+            .B(ram_rd_data[42]), .C(byte_select_reg[0]), .Z(n3521));
+    defparam i2717_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_10  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[55]), .C(ram_rd_data[63]), .D(byte_select_reg[1]), 
+            .Z(n3967));
+    defparam \byte_select_reg[0]_bdd_4_lut_10 .INIT = "0xe4aa";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i204534_i1_3_lut (.A(n3952), 
+            .B(n3958), .C(\byte_select_reg[2] ), .Z(\data[0] ));
+    defparam i204534_i1_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3967_bdd_4_lut (.A(n3967), 
+            .B(ram_rd_data[47]), .C(ram_rd_data[39]), .D(byte_select_reg[1]), 
+            .Z(n3970));
+    defparam n3967_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_9  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[22]), .C(ram_rd_data[30]), .D(byte_select_reg[1]), 
+            .Z(n3961));
+    defparam \byte_select_reg[0]_bdd_4_lut_9 .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3961_bdd_4_lut (.A(n3961), 
+            .B(ram_rd_data[14]), .C(ram_rd_data[6]), .D(byte_select_reg[1]), 
+            .Z(n3964));
+    defparam n3961_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i201519_i1_3_lut (.A(n3940), 
+            .B(n3934), .C(\byte_select_reg[2] ), .Z(\data[3] ));
+    defparam i201519_i1_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[1]_bdd_4_lut  (.A(byte_select_reg[1]), 
+            .B(n3521), .C(n3522), .D(\byte_select_reg[2] ), .Z(n3943));
+    defparam \byte_select_reg[1]_bdd_4_lut .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3943_bdd_4_lut (.A(n3943), 
+            .B(n3513), .C(n3512), .D(\byte_select_reg[2] ), .Z(\data[2] ));
+    defparam n3943_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[1]_bdd_4_lut_3  (.A(byte_select_reg[1]), 
+            .B(n3500), .C(n3501), .D(\byte_select_reg[2] ), .Z(n3925));
+    defparam \byte_select_reg[1]_bdd_4_lut_3 .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3925_bdd_4_lut (.A(n3925), 
+            .B(n3495), .C(n3494), .D(\byte_select_reg[2] ), .Z(\data[5] ));
+    defparam n3925_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i202122_i1_3_lut (.A(n3916), 
+            .B(n3976), .C(\byte_select_reg[2] ), .Z(\data[4] ));
+    defparam i202122_i1_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2732_3_lut (.A(ram_rd_data[1]), 
+            .B(ram_rd_data[9]), .C(byte_select_reg[0]), .Z(n3536));
+    defparam i2732_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2733_3_lut (.A(ram_rd_data[17]), 
+            .B(ram_rd_data[25]), .C(byte_select_reg[0]), .Z(n3537));
+    defparam i2733_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2742_3_lut (.A(ram_rd_data[49]), 
+            .B(ram_rd_data[57]), .C(byte_select_reg[0]), .Z(n3546));
+    defparam i2742_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_6  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[19]), .C(ram_rd_data[27]), .D(byte_select_reg[1]), 
+            .Z(n3937));
+    defparam \byte_select_reg[0]_bdd_4_lut_6 .INIT = "0xe4aa";
+    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 i2741_3_lut (.A(ram_rd_data[33]), 
+            .B(ram_rd_data[41]), .C(byte_select_reg[0]), .Z(n3545));
+    defparam i2741_3_lut.INIT = "0xcaca";
+    (* lineinfo="@8(29[19],29[63])" *) FA2 screencode_5__I_0_5 (.A0(GND_net), 
+            .B0(\screencode[3] ), .C0(GND_net), .D0(n2775), .CI0(n2775), 
+            .A1(GND_net), .B1(\screencode[4] ), .C1(GND_net), .D1(n4245), 
+            .CI1(n4245), .CO0(n4245), .CO1(n2777), .S0(rd_addr[6]), 
+            .S1(rd_addr[7]));
+    defparam screencode_5__I_0_5.INIT0 = "0xc33c";
+    defparam screencode_5__I_0_5.INIT1 = "0xc33c";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3907_bdd_4_lut (.A(n3907), 
+            .B(ram_rd_data[46]), .C(ram_rd_data[38]), .D(byte_select_reg[1]), 
+            .Z(n3910));
+    defparam n3907_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_4  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[23]), .C(ram_rd_data[31]), .D(byte_select_reg[1]), 
+            .Z(n3919));
+    defparam \byte_select_reg[0]_bdd_4_lut_4 .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3919_bdd_4_lut (.A(n3919), 
+            .B(ram_rd_data[15]), .C(ram_rd_data[7]), .D(byte_select_reg[1]), 
+            .Z(n3922));
+    defparam n3919_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[1]_bdd_4_lut_2  (.A(byte_select_reg[1]), 
+            .B(n3545), .C(n3546), .D(\byte_select_reg[2] ), .Z(n3901));
+    defparam \byte_select_reg[1]_bdd_4_lut_2 .INIT = "0xe4aa";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_8  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[48]), .C(ram_rd_data[56]), .D(byte_select_reg[1]), 
+            .Z(n3955));
+    defparam \byte_select_reg[0]_bdd_4_lut_8 .INIT = "0xe4aa";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_3  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[20]), .C(ram_rd_data[28]), .D(byte_select_reg[1]), 
+            .Z(n3913));
+    defparam \byte_select_reg[0]_bdd_4_lut_3 .INIT = "0xe4aa";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3937_bdd_4_lut (.A(n3937), 
+            .B(ram_rd_data[11]), .C(ram_rd_data[3]), .D(byte_select_reg[1]), 
+            .Z(n3940));
+    defparam n3937_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3913_bdd_4_lut (.A(n3913), 
+            .B(ram_rd_data[12]), .C(ram_rd_data[4]), .D(byte_select_reg[1]), 
+            .Z(n3916));
+    defparam n3913_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3955_bdd_4_lut (.A(n3955), 
+            .B(ram_rd_data[40]), .C(ram_rd_data[32]), .D(byte_select_reg[1]), 
+            .Z(n3958));
+    defparam n3955_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (B+(D))+!A !((D)+!C))" *) LUT4 n3901_bdd_4_lut (.A(n3901), 
+            .B(n3537), .C(n3536), .D(\byte_select_reg[2] ), .Z(\data[1] ));
+    defparam n3901_bdd_4_lut.INIT = "0xaad8";
+    (* lut_function="(A (C+!(D))+!A (B (D)))" *) LUT4 \byte_select_reg[0]_bdd_4_lut_5  (.A(byte_select_reg[0]), 
+            .B(ram_rd_data[51]), .C(ram_rd_data[59]), .D(byte_select_reg[1]), 
+            .Z(n3931));
+    defparam \byte_select_reg[0]_bdd_4_lut_5 .INIT = "0xe4aa";
+    (* lineinfo="@8(29[19],29[63])" *) FA2 screencode_5__I_0_1 (.A0(GND_net), 
+            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(\screencode[0] ), 
+            .C1(char_counter[6]), .D1(n4233), .CI1(n4233), .CO0(n4233), 
+            .CO1(n2773), .S1(rd_addr[3]));
+    defparam screencode_5__I_0_1.INIT0 = "0xc33c";
+    defparam screencode_5__I_0_1.INIT1 = "0xc33c";
+    (* lineinfo="@8(29[19],29[63])" *) FA2 screencode_5__I_0_3 (.A0(GND_net), 
+            .B0(\screencode[1] ), .C0(char_counter[7]), .D0(n2773), .CI0(n2773), 
+            .A1(GND_net), .B1(\screencode[2] ), .C1(GND_net), .D1(n4236), 
+            .CI1(n4236), .CO0(n4236), .CO1(n2775), .S0(rd_addr[4]), 
+            .S1(rd_addr[5]));
+    defparam screencode_5__I_0_3.INIT0 = "0xc33c";
+    defparam screencode_5__I_0_3.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=77, ORIG_MODULE_NAME="message_writer", LATTICE_IP_GENERATED="1", LSE_LCOL=20, LSE_RCOL=6, LSE_LLINE=37, LSE_RLINE=49, lineinfo="@8(37[20],49[6])" *) message_writer ebr_inst ({ram_rd_data}, 
+            clk, rd_addr[8], rd_addr[7], rd_addr[6], rd_addr[5], rd_addr[4], 
+            rd_addr[3], char_counter[5], char_counter[4], char_counter[3]);
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=79, LSE_LCOL=14, LSE_RCOL=6, LSE_LLINE=49, LSE_RLINE=55, lineinfo="@8(60[15],65[8])" *) FD1P3XZ byte_select_reg_i2 (.D(char_counter[2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\byte_select_reg[2] ));
+    defparam byte_select_reg_i2.REGSET = "RESET";
+    defparam byte_select_reg_i2.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module message_writer
+//
+
+(* ORIG_MODULE_NAME="message_writer", LATTICE_IP_GENERATED="1" *) module message_writer (output [63:0]ram_rd_data, 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] );
+    
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=99, LSE_RCOL=34, LSE_LLINE=181, LSE_RLINE=195, lineinfo="@0(181[99],195[34])" *) \message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) lscc_ram_dp_inst ({ram_rd_data}, 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] );
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) (output [63:0]ram_rd_data, 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] );
+    
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=44, LSE_RCOL=47, LSE_LLINE=577, LSE_RLINE=591, lineinfo="@0(577[44],591[47])" *) \message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) mem_main ({ram_rd_data}, 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] );
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_main(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT="hex",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1) (output [63:0]ram_rd_data, 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] );
+    
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[7].no_init.u_mem0  (ram_rd_data[60], 
+            clk, ram_rd_data[59], ram_rd_data[58], ram_rd_data[57], 
+            ram_rd_data[56], \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , 
+            \rd_addr[5] , \rd_addr[4] , \rd_addr[3] , \char_counter[5] , 
+            \char_counter[4] , \char_counter[3] , ram_rd_data[63], ram_rd_data[62], 
+            ram_rd_data[61]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[6].no_init.u_mem0  (ram_rd_data[55], 
+            clk, ram_rd_data[54], ram_rd_data[48], ram_rd_data[53], 
+            \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] , ram_rd_data[52], ram_rd_data[51], ram_rd_data[50], 
+            ram_rd_data[49]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[5].no_init.u_mem0  (ram_rd_data[40], 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] , ram_rd_data[47], ram_rd_data[46], ram_rd_data[45], 
+            ram_rd_data[44], ram_rd_data[43], ram_rd_data[42], ram_rd_data[41]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[4].no_init.u_mem0  (ram_rd_data[32], 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] , ram_rd_data[39], ram_rd_data[38], ram_rd_data[37], 
+            ram_rd_data[36], ram_rd_data[35], ram_rd_data[34], ram_rd_data[33]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0  (ram_rd_data[24], 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] , ram_rd_data[31], ram_rd_data[30], ram_rd_data[29], 
+            ram_rd_data[28], ram_rd_data[27], ram_rd_data[26], ram_rd_data[25]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0  (ram_rd_data[16], 
+            clk, \rd_addr[8] , \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , 
+            \rd_addr[4] , \rd_addr[3] , \char_counter[5] , \char_counter[4] , 
+            \char_counter[3] , ram_rd_data[23], ram_rd_data[22], ram_rd_data[21], 
+            ram_rd_data[20], ram_rd_data[19], ram_rd_data[18], ram_rd_data[17]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0  (ram_rd_data[13], 
+            clk, ram_rd_data[12], ram_rd_data[11], ram_rd_data[10], 
+            ram_rd_data[9], ram_rd_data[14], ram_rd_data[8], \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] , 
+            ram_rd_data[15]);
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0) \NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0  (ram_rd_data[7], 
+            clk, ram_rd_data[6], ram_rd_data[5], ram_rd_data[4], ram_rd_data[3], 
+            ram_rd_data[2], ram_rd_data[1], ram_rd_data[0], \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] );
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0) (output \ram_rd_data[60] , 
+            input clk, output \ram_rd_data[59] , output \ram_rd_data[58] , 
+            output \ram_rd_data[57] , output \ram_rd_data[56] , input \rd_addr[8] , 
+            input \rd_addr[7] , input \rd_addr[6] , input \rd_addr[5] , 
+            input \rd_addr[4] , input \rd_addr[3] , input \char_counter[5] , 
+            input \char_counter[4] , input \char_counter[3] , output \ram_rd_data[63] , 
+            output \ram_rd_data[62] , output \ram_rd_data[61] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[59] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[58] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[57] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[56] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[63] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_0, \ICE_MEM.rd_data_w [7], Open_1, \ICE_MEM.rd_data_w [6], 
+            Open_2, \ICE_MEM.rd_data_w [5], Open_3, \ICE_MEM.rd_data_w [4], 
+            Open_4, \ICE_MEM.rd_data_w [3], Open_5, \ICE_MEM.rd_data_w [2], 
+            Open_6, \ICE_MEM.rd_data_w [1], Open_7, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[62] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[61] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[60] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0) (output \ram_rd_data[55] , 
+            input clk, output \ram_rd_data[54] , output \ram_rd_data[48] , 
+            output \ram_rd_data[53] , input \rd_addr[8] , input \rd_addr[7] , 
+            input \rd_addr[6] , input \rd_addr[5] , input \rd_addr[4] , 
+            input \rd_addr[3] , input \char_counter[5] , input \char_counter[4] , 
+            input \char_counter[3] , output \ram_rd_data[52] , output \ram_rd_data[51] , 
+            output \ram_rd_data[50] , output \ram_rd_data[49] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[54] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[48] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[53] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[52] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_8, \ICE_MEM.rd_data_w [7], Open_9, \ICE_MEM.rd_data_w [6], 
+            Open_10, \ICE_MEM.rd_data_w [5], Open_11, \ICE_MEM.rd_data_w [4], 
+            Open_12, \ICE_MEM.rd_data_w [3], Open_13, \ICE_MEM.rd_data_w [2], 
+            Open_14, \ICE_MEM.rd_data_w [1], Open_15, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[51] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[50] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[49] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[55] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0) (output \ram_rd_data[40] , 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] , 
+            output \ram_rd_data[47] , output \ram_rd_data[46] , output \ram_rd_data[45] , 
+            output \ram_rd_data[44] , output \ram_rd_data[43] , output \ram_rd_data[42] , 
+            output \ram_rd_data[41] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[47] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_16, \ICE_MEM.rd_data_w [7], Open_17, \ICE_MEM.rd_data_w [6], 
+            Open_18, \ICE_MEM.rd_data_w [5], Open_19, \ICE_MEM.rd_data_w [4], 
+            Open_20, \ICE_MEM.rd_data_w [3], Open_21, \ICE_MEM.rd_data_w [2], 
+            Open_22, \ICE_MEM.rd_data_w [1], Open_23, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[46] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[45] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[44] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[43] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[42] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[41] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[40] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0) (output \ram_rd_data[32] , 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] , 
+            output \ram_rd_data[39] , output \ram_rd_data[38] , output \ram_rd_data[37] , 
+            output \ram_rd_data[36] , output \ram_rd_data[35] , output \ram_rd_data[34] , 
+            output \ram_rd_data[33] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[39] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_24, \ICE_MEM.rd_data_w [7], Open_25, \ICE_MEM.rd_data_w [6], 
+            Open_26, \ICE_MEM.rd_data_w [5], Open_27, \ICE_MEM.rd_data_w [4], 
+            Open_28, \ICE_MEM.rd_data_w [3], Open_29, \ICE_MEM.rd_data_w [2], 
+            Open_30, \ICE_MEM.rd_data_w [1], Open_31, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[38] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[37] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[36] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[35] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[34] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[33] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[32] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0) (output \ram_rd_data[24] , 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] , 
+            output \ram_rd_data[31] , output \ram_rd_data[30] , output \ram_rd_data[29] , 
+            output \ram_rd_data[28] , output \ram_rd_data[27] , output \ram_rd_data[26] , 
+            output \ram_rd_data[25] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[31] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_32, \ICE_MEM.rd_data_w [7], Open_33, \ICE_MEM.rd_data_w [6], 
+            Open_34, \ICE_MEM.rd_data_w [5], Open_35, \ICE_MEM.rd_data_w [4], 
+            Open_36, \ICE_MEM.rd_data_w [3], Open_37, \ICE_MEM.rd_data_w [2], 
+            Open_38, \ICE_MEM.rd_data_w [1], Open_39, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[30] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[29] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[28] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[27] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[26] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[25] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[24] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0) (output \ram_rd_data[16] , 
+            input clk, input \rd_addr[8] , input \rd_addr[7] , input \rd_addr[6] , 
+            input \rd_addr[5] , input \rd_addr[4] , input \rd_addr[3] , 
+            input \char_counter[5] , input \char_counter[4] , input \char_counter[3] , 
+            output \ram_rd_data[23] , output \ram_rd_data[22] , output \ram_rd_data[21] , 
+            output \ram_rd_data[20] , output \ram_rd_data[19] , output \ram_rd_data[18] , 
+            output \ram_rd_data[17] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[23] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_40, \ICE_MEM.rd_data_w [7], Open_41, \ICE_MEM.rd_data_w [6], 
+            Open_42, \ICE_MEM.rd_data_w [5], Open_43, \ICE_MEM.rd_data_w [4], 
+            Open_44, \ICE_MEM.rd_data_w [3], Open_45, \ICE_MEM.rd_data_w [2], 
+            Open_46, \ICE_MEM.rd_data_w [1], Open_47, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[22] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[21] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[20] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[19] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[18] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[17] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[16] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0) (output \ram_rd_data[13] , 
+            input clk, output \ram_rd_data[12] , output \ram_rd_data[11] , 
+            output \ram_rd_data[10] , output \ram_rd_data[9] , output \ram_rd_data[14] , 
+            output \ram_rd_data[8] , input \rd_addr[8] , input \rd_addr[7] , 
+            input \rd_addr[6] , input \rd_addr[5] , input \rd_addr[4] , 
+            input \rd_addr[3] , input \char_counter[5] , input \char_counter[4] , 
+            input \char_counter[3] , output \ram_rd_data[15] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[12] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[11] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[10] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[9] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[14] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[8] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[15] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_48, \ICE_MEM.rd_data_w [7], Open_49, \ICE_MEM.rd_data_w [6], 
+            Open_50, \ICE_MEM.rd_data_w [5], Open_51, \ICE_MEM.rd_data_w [4], 
+            Open_52, \ICE_MEM.rd_data_w [3], Open_53, \ICE_MEM.rd_data_w [2], 
+            Open_54, \ICE_MEM.rd_data_w [1], Open_55, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    VLO i1 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[13] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0) 
+//
+
+module \message_writer_ipgen_lscc_ram_dp_core(MEM_ID="message_writer",MEM_SIZE="64,512",FAMILY="iCE40UP",DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0) (output \ram_rd_data[7] , 
+            input clk, output \ram_rd_data[6] , output \ram_rd_data[5] , 
+            output \ram_rd_data[4] , output \ram_rd_data[3] , output \ram_rd_data[2] , 
+            output \ram_rd_data[1] , output \ram_rd_data[0] , input \rd_addr[8] , 
+            input \rd_addr[7] , input \rd_addr[6] , input \rd_addr[5] , 
+            input \rd_addr[4] , input \rd_addr[3] , input \char_counter[5] , 
+            input \char_counter[4] , input \char_counter[3] );
+    
+    wire [7:0]\ICE_MEM.rd_data_w ;
+    (* is_clock=1, lineinfo="@2(64[8],64[11])" *) wire clk;
+    
+    wire GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i7  (.D(\ICE_MEM.rd_data_w [6]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[6] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i7 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i6  (.D(\ICE_MEM.rd_data_w [5]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[5] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i6 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i5  (.D(\ICE_MEM.rd_data_w [4]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[4] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i5 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i4  (.D(\ICE_MEM.rd_data_w [3]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[3] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i4 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i3  (.D(\ICE_MEM.rd_data_w [2]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[2] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i3 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i2  (.D(\ICE_MEM.rd_data_w [1]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[1] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i2 .SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i1  (.D(\ICE_MEM.rd_data_w [0]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[0] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i1 .SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    (* syn_instantiated=1, LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(1225[80],1239[83])" *) PDP4K \ICE_MEM.u_mem0  (.DI({GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net}), .ADR({GND_net, GND_net, \rd_addr[8] , 
+            \rd_addr[7] , \rd_addr[6] , \rd_addr[5] , \rd_addr[4] , 
+            \rd_addr[3] , \char_counter[5] , \char_counter[4] , \char_counter[3] }), 
+            .CKW(clk), .CKR(clk), .CEW(GND_net), .CER(VCC_net), .RE(VCC_net), 
+            .WE(GND_net), .MASK_N({GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
+            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net}), 
+            .DO({Open_56, \ICE_MEM.rd_data_w [7], Open_57, \ICE_MEM.rd_data_w [6], 
+            Open_58, \ICE_MEM.rd_data_w [5], Open_59, \ICE_MEM.rd_data_w [4], 
+            Open_60, \ICE_MEM.rd_data_w [3], Open_61, \ICE_MEM.rd_data_w [2], 
+            Open_62, \ICE_MEM.rd_data_w [1], Open_63, \ICE_MEM.rd_data_w [0]}));
+    defparam \ICE_MEM.u_mem0 .INITVAL_0 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_1 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_2 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_3 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_4 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_5 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_6 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_7 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_8 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_9 = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_A = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_B = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_C = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_D = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_E = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .INITVAL_F = "0x0000000000000000000000000000000000000000000000000000000000000000";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_W = "8";
+    defparam \ICE_MEM.u_mem0 .DATA_WIDTH_R = "8";
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=72, LSE_LCOL=80, LSE_RCOL=83, LSE_LLINE=1225, LSE_RLINE=1239, lineinfo="@0(4748[37],4761[40])" *) FD1P3XZ \ICE_MEM.genblk6.rd_buff_r_i8  (.D(\ICE_MEM.rd_data_w [7]), 
+            .SP(VCC_net), .CK(clk), .SR(GND_net), .Q(\ram_rd_data[7] ));
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .REGSET = "RESET";
+    defparam \ICE_MEM.genblk6.rd_buff_r_i8 .SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module spi
+//
+
+module spi (input sdi_c, input cs_c, output [7:0]intermedByte, input sck_c, 
+            input n2057, output \eightCounter[3] );
+    
+    (* SET_AS_NETWORK="sck_c", is_clock=1, lineinfo="@2(6[30],6[33])" *) wire sck_c;
+    
+    wire n3, n4;
+    wire [3:0]n21;
+    
+    wire n2, GND_net, VCC_net;
+    
+    (* lineinfo="@9(13[29],13[43])" *) FD1P3XZ eightCounter_200__i1 (.D(n21[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(n2057), .Q(n4));
+    defparam eightCounter_200__i1.REGSET = "RESET";
+    defparam eightCounter_200__i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A (B)+!A !(B)))", lineinfo="@9(13[29],13[43])" *) LUT4 i2180_2_lut (.A(n3), 
+            .B(n4), .Z(n21[1]));
+    defparam i2180_2_lut.INIT = "0x6666";
+    (* lineinfo="@9(13[29],13[43])" *) FD1P3XZ eightCounter_200__i4 (.D(n21[3]), 
+            .SP(VCC_net), .CK(sck_c), .SR(n2057), .Q(\eightCounter[3] ));
+    defparam eightCounter_200__i4.REGSET = "RESET";
+    defparam eightCounter_200__i4.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A))", lineinfo="@9(13[29],13[43])" *) LUT4 i2178_1_lut (.A(n4), 
+            .Z(n21[0]));
+    defparam i2178_1_lut.INIT = "0x5555";
+    (* lineinfo="@9(13[29],13[43])" *) FD1P3XZ eightCounter_200__i3 (.D(n21[2]), 
+            .SP(VCC_net), .CK(sck_c), .SR(n2057), .Q(n2));
+    defparam eightCounter_200__i3.REGSET = "RESET";
+    defparam eightCounter_200__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@9(13[29],13[43])" *) FD1P3XZ eightCounter_200__i2 (.D(n21[1]), 
+            .SP(VCC_net), .CK(sck_c), .SR(n2057), .Q(n3));
+    defparam eightCounter_200__i2.REGSET = "RESET";
+    defparam eightCounter_200__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i7 (.D(intermedByte[6]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[7]));
+    defparam intermedByte_i0_i7.REGSET = "RESET";
+    defparam intermedByte_i0_i7.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A (B (C)+!B !(C))+!A !(C)))", lineinfo="@9(13[29],13[43])" *) LUT4 i2187_2_lut_3_lut (.A(n3), 
+            .B(n4), .C(n2), .Z(n21[2]));
+    defparam i2187_2_lut_3_lut.INIT = "0x7878";
+    (* lut_function="(!(A (B (C (D)+!C !(D))+!B !(D))+!A !(D)))", lineinfo="@9(13[29],13[43])" *) LUT4 i2194_3_lut_4_lut (.A(n3), 
+            .B(n4), .C(n2), .D(\eightCounter[3] ), .Z(n21[3]));
+    defparam i2194_3_lut_4_lut.INIT = "0x7f80";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i6 (.D(intermedByte[5]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[6]));
+    defparam intermedByte_i0_i6.REGSET = "RESET";
+    defparam intermedByte_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i5 (.D(intermedByte[4]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[5]));
+    defparam intermedByte_i0_i5.REGSET = "RESET";
+    defparam intermedByte_i0_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i4 (.D(intermedByte[3]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[4]));
+    defparam intermedByte_i0_i4.REGSET = "RESET";
+    defparam intermedByte_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i3 (.D(intermedByte[2]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[3]));
+    defparam intermedByte_i0_i3.REGSET = "RESET";
+    defparam intermedByte_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i2 (.D(intermedByte[1]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[2]));
+    defparam intermedByte_i0_i2.REGSET = "RESET";
+    defparam intermedByte_i0_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) FD1P3XZ intermedByte_i0_i1 (.D(intermedByte[0]), 
+            .SP(cs_c), .CK(sck_c), .SR(GND_net), .Q(intermedByte[1]));
+    defparam intermedByte_i0_i1.REGSET = "RESET";
+    defparam intermedByte_i0_i1.SRMODE = "CE_OVER_LSR";
+    VLO i1 (.Z(GND_net));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=79, LSE_LLINE=79, LSE_RLINE=79, lineinfo="@9(10[15],19[5])" *) IOL_B intermedByte_i0_i0 (.PADDI(sdi_c), 
+            .DO1(GND_net), .DO0(GND_net), .CE(cs_c), .IOLTO(GND_net), 
+            .HOLD(GND_net), .INCLK(sck_c), .OUTCLK(GND_net), .DI0(intermedByte[0]));
+    defparam intermedByte_i0_i0.LATCHIN = "NONE_REG";
+    defparam intermedByte_i0_i0.DDROUT = "NO";
+    VHI i2 (.Z(VCC_net));
     
 endmodule

@@ -22,11 +22,10 @@ module messages_tb();
     );
     
     // Clock generation
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk; // 10ns period
-    end
-    
+    always 
+		begin 
+			clk = 1; #5; clk = 0; #5;
+		end
     // Test procedure
     initial begin
         // Initialize
@@ -40,7 +39,7 @@ module messages_tb();
         for (int i = 0; i < 8; i++) begin
             char_index = i;
             #10; // Wait one cycle for latency
-            $display("char_index=%d, data=0x%02X ('%c')", i, data, (data >= 32 && data < 127) ? data : '?');
+            $display("char_index=%d, data=0x%02X (%c)", i, data, data);//(data >= 32 && data < 127) ? data : '?');
         end
         
         #20; // Gap between messages
@@ -51,7 +50,7 @@ module messages_tb();
         for (int i = 0; i < 8; i++) begin
             char_index = i;
             #10;
-            $display("char_index=%d, data=0x%02X ('%c')", i, data, (data >= 32 && data < 127) ? data : '?');
+            $display("char_index=%d, data=0x%02X ('%c')", i, data, data); //(data >= 32 && data < 127) ? data : '?');
         end
         
         #20;
@@ -62,7 +61,7 @@ module messages_tb();
         for (int i = 0; i < 8; i++) begin
             char_index = i;
             #10;
-            $display("char_index=%d, data=0x%02X ('%c')", i, data, (data >= 32 && data < 127) ? data : '?');
+            $display("char_index=%d, data=0x%02X ('%c')", i, data, data); //(data >= 32 && data < 127) ? data : '?');
         end
         
         #20;
@@ -72,15 +71,15 @@ module messages_tb();
         msg_index = 8'h03; // "You Win!"
         char_index = 8'h00;
         #10;
-        $display("Message 3, char 0: 0x%02X ('%c')", data, (data >= 32 && data < 127) ? data : '?');
+        $display("Message 3, char 0: 0x%02X ('%c')", data, data); //(data >= 32 && data < 127) ? data : '?');
         
         msg_index = 8'h04; // "You Lose!"
         #10;
-        $display("Message 4, char 0: 0x%02X ('%c')", data, (data >= 32 && data < 127) ? data : '?');
+        $display("Message 4, char 0: 0x%02X ('%c')", data, data); //(data >= 32 && data < 127) ? data : '?');
         
         msg_index = 8'h05; // "Tie"
         #10;
-        $display("Message 5, char 0: 0x%02X ('%c')", data, (data >= 32 && data < 127) ? data : '?');
+        $display("Message 5, char 0: 0x%02X ('%c')", data, data); //(data >= 32 && data < 127) ? data : '?');
         
         #20;
         
@@ -105,17 +104,11 @@ module messages_tb();
         for (int i = 0; i < 8; i++) begin
             char_index = i;
             #10;
-            $display("char_index=%d, data=0x%02X ('%c')", i, data, (data >= 32 && data < 127) ? data : '?');
+            $display("char_index=%d, data=0x%02X ('%c')", i, data, data); //(data >= 32 && data < 127) ? data : '?');
         end
         
         #50;
         $finish;
-    end
-    
-    // Optional: Dump waveforms for GTKWave
-    initial begin
-        $dumpfile("messages_tb.vcd");
-        $dumpvars(0, messages_tb);
     end
 
 endmodule
