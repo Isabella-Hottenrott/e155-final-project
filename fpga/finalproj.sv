@@ -11,7 +11,8 @@ module finalproj(input logic sck,
 
 logic done, interpretWE, screenWE;
 logic [7:0] unsynchSPIbyte, synchSPIbyte;
-logic [6:0] directedBits;
+logic [6:0] directedBits, screencode;
+logic [1:0] thiscomputer, result;
 
 //try new way next
 
