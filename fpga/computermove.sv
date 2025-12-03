@@ -2,7 +2,7 @@ module computermove(input  logic clk,
                         input logic reset,
                         input logic interpretWE,
                         input  logic [1:0] thisuser,
-                        output logic [1:0] thiscomputer); 
+                        output logic [1:0] thiscomputer);
 
     logic [1:0] nextcomputer;
 
@@ -19,8 +19,8 @@ module computermove(input  logic clk,
 
         case ({thiscomputer, thisuser})
             // Computer chose Rock
-            4'b00_00: nextcomputer = 2'b00; // tie 
-            4'b00_01: nextcomputer = 2'b10; // lose 
+            4'b00_00: nextcomputer = 2'b00; // tie
+            4'b00_01: nextcomputer = 2'b10; // lose
             4'b00_10: nextcomputer = 2'b10; // win  
 
             // Computer chose paper

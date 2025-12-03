@@ -14,13 +14,13 @@
 #define reset  PB0 //CHANGE!
 #define nextRoundButton  PB1 //CHANGE!
 
-#define rstScreen 00000100
-#define startScreen 00000110
-#define plcMoveScreen 00001000
-#define dsplCompScreen 10001010
-#define dsplWinLoseScreen 10010000
-#define nextrndScreen 00010000
-#define tenDoneScreen 01111110
+#define rstScreen 00000111
+#define startScreen 00001011
+#define plcMoveScreen 00001111
+#define dsplCompScreen 10010011
+#define dsplWinLoseScreen 10100011
+#define nextrndScreen 01000011
+#define tenDoneScreen 01000111
 
 
 //Fn Prototype
@@ -189,15 +189,15 @@ uint8_t formatPlays(uint8_t userRPS, uint8_t computerRPS) {
         case 0: // computer choses rock
             printf("computer chooses rock\n");
             if (userRPS == 0){
-                formatPlay = 1; // 8'b00_00_00_1 
+                formatPlay = 1; // 8'b00_00_00_01 
                 printf("user rock\n");
                 break;
             } else if (userRPS == 1){
-                formatPlay = 33; // 8'b01_00_00_1 
+                formatPlay = 33; // 8'b01_00_00_01 
                 printf("user paper\n");
                 break;
             } else if (userRPS == 2){
-                formatPlay = 65; // 8'b10_00_00_1 
+                formatPlay = 65; // 8'b10_00_00_01 
                 printf("user scissors\n");
                 break;
             }
@@ -205,15 +205,15 @@ uint8_t formatPlays(uint8_t userRPS, uint8_t computerRPS) {
         case 1: // computer chooses paper
             printf("computer chooses paper\n");
             if (userRPS == 0){
-                formatPlay = 9; // 8'b00_01_00_1 
+                formatPlay = 9; // 8'b00_01_00_01 
                 printf("user rock\n");
                 break;
             } else if (userRPS == 1){
-                formatPlay = 41; // 8'b01_01_00_1 
+                formatPlay = 41; // 8'b01_01_00_01 
                 printf("user paper\n");
                 break;
             } else if (userRPS == 2){
-                formatPlay = 73; // 8'b10_01_00_1 
+                formatPlay = 73; // 8'b10_01_00_01 
                 printf("user scissors\n");
                 break;
             }
@@ -221,15 +221,15 @@ uint8_t formatPlays(uint8_t userRPS, uint8_t computerRPS) {
         case 2: // computer chooses scissors
             printf("computer chooses scissors\n");
             if (userRPS == 0){
-                formatPlay = 17; // 8'b00_10_00_1 
+                formatPlay = 17; // 8'b00_10_00_01 
                 printf("user rock\n");
                 break;
             } else if (userRPS == 1){
-                formatPlay = 49;  // 8'b01_10_00_1 
+                formatPlay = 49;  // 8'b01_10_00_01 
                 printf("user paper\n");
                 break;
             } else if (userRPS == 2){
-                formatPlay = 81;     // 8'b10_10_00_1 
+                formatPlay = 81;     // 8'b10_10_00_01 
                 printf("user scissors\n");
                 break;
             }

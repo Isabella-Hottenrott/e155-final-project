@@ -1,11 +1,12 @@
-module mcuMux(input  logic byteIn,
+module mcuMux(input logic [7:0] byteIn,
             output logic interpretWE,
             output logic screenWE,
-            output  logic [6:0] out);
+            output  logic [5:0] directedBits);
 
-assign interpretWE = byteIn[0];
-assign screenWE = ~byteIn[0];
-//try new way next
-assign out = byteIn[7:1];
+assign interpretWE = ~byteIn[1]&byteIn[0];
+assign screenWE = byteIn[1]&byteIn[0];
+
+assign directedBits = byteIn[7:2];
+
 
 endmodule
