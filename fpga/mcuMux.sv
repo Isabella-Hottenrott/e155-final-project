@@ -1,4 +1,4 @@
-module mcuMux(input  logic byteIn,
+module mcuMux(input logic [7:0] byteIn,
             output logic interpretWE,
             output logic screenWE,
             output  logic [6:0] out);

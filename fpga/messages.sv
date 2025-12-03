@@ -33,10 +33,8 @@ module messages(
     // 2. RAM Instantiation (Read-Only Mode)
     // ---------------------------------------------------------
     logic [63:0] ram_rd_data;
-    
-    // Note: Ensure your IP block name matches the new configuration 
-    // (e.g., 'ram_dp_64x512' or whatever you named it in Radiant).
-    ram_dp_64x512 ebr_inst (
+
+    message_writer ebr_inst (
         .wr_clk_i(clk),
         .rd_clk_i(clk),
         .rst_i(1'b0),

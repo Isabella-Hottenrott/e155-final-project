@@ -4,16 +4,16 @@
 set ret 0
 if {[catch {
 
-if {![file exists {C:/Users/ihottenrott/finalproject/top}]} {
-  file mkdir {C:/Users/ihottenrott/finalproject/top}
+if {![file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}]} {
+  file mkdir {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}
 }
-cd {C:/Users/ihottenrott/finalproject/top}
+cd {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}
 
-sys_set_attribute -gui on -msg {C:/Users/ihottenrott/finalproject/promote.xml}
-msg_load {C:/Users/ihottenrott/finalproject/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml}
+msg_load {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml}
 des_set_project_udb -in {finalproject_top_syn.udb} -out {finalproject_top_map.udb} -milestone map -pm ice40tp
 des_set_reference_udb -clean
-map_set_option {pdc_file "C:/Users/ihottenrott/finalproject/pinout.pdc"}
+map_set_option {pdc_file "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc"}
 # map option
 map_set_option { report_symbol_cross_reference false report_signal_cross_reference false   ignore_constraint_errors false}
 map_run

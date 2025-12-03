@@ -5,12 +5,13 @@ module synchronizer(input  logic clk,
 
 logic[7:0] intermedByte;
 
-always_ff @(posedge clk)
+always_ff @(posedge clk) begin
         if (reset)   
-            byteOutSynch = 8'b0;
+            byteOutSynch <= 8'b0;
         else begin 
             intermedByte <= byteIn;
             byteOutSynch <= intermedByte;
         end
+	end
 
 endmodule

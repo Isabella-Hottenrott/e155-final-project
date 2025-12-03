@@ -61,8 +61,8 @@ module lcd_driver(
 		.clk(clk), 
 		.msg_index(screen), // use input screen signal directly for message selection
 		.char_index(char_counter), // use internal character counter
-		.data(data), // actual data. to be written to screen
-		.valid(valid)
+		.data_out(data), // actual data. to be written to screen
+		.valid_out(valid)
 	);
 	
 	//TODO adjust based on input clock
@@ -103,7 +103,7 @@ module lcd_driver(
 	
 	// state transitions
 	always_comb begin
-		next_state = state; // default: hold state
+		next_state <= state; // default: hold state
 		case (state)
 			START: begin
 				next_state <= POWER_ON_WAIT;

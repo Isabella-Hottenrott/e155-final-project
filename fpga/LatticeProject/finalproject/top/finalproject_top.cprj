@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/source/top/finalproj.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/source/top/RPStoLED.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv"
+-path "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject"
+-top finalproj
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"

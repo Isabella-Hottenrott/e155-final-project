@@ -1,6 +1,585 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+            <Dynamic>ldc_set_location -site {19} [get_ports sdi]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {19} [get_ports sdi]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+            <Dynamic>ldc_set_location -site {20} [get_ports cs]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {20} [get_ports cs]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+            <Dynamic>ldc_set_location -site {28} [get_ports reset]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {28} [get_ports reset]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>No port matched 'LED[2]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>No port matched 'LED[0]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>6</Dynamic>
+            <Dynamic>No port matched 'LED[1]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>LED[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>Can't resolve object 'LED[2]' in constraint 'ldc_set_location -site {45} [get_ports {LED[2]}]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>LED[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>Can't resolve object 'LED[0]' in constraint 'ldc_set_location -site {46} [get_ports {LED[0]}]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>LED[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Dynamic>
+            <Dynamic>6</Dynamic>
+            <Dynamic>Can't resolve object 'LED[1]' in constraint 'ldc_set_location -site {47} [get_ports {LED[1]}]'.</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {45} [get_ports {LED[2]}]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {46} [get_ports {LED[0]}]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {47} [get_ports {LED[1]}]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>reset</Dynamic>
+        </Message>
+    </Task>
     <Task name="Synthesis">
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM9</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM8</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>I</Dynamic>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(11): </Dynamic>
+            <Dynamic>message_writer</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>11</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(252): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>252</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(657): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_main(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>657</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>PDP4K(DATA_WIDTH_W=&quot;8&quot;,DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>693</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)</Dynamic>
+            <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35831038</ID>
+            <Severity>1</Severity>
+            <Dynamic>finalproj</Dynamic>
+        </Message>
+        <Message>
+            <ID>35831026</ID>
+            <Severity>16</Severity>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM9</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM8</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>I</Dynamic>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(6): </Dynamic>
+            <Dynamic>finalproj</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(1): </Dynamic>
+            <Dynamic>spi</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/synchronizer.sv(1): </Dynamic>
+            <Dynamic>synchronizer</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/synchronizer.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/mcumux.sv(1): </Dynamic>
+            <Dynamic>mcuMux</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/mcumux.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/interpretgame.sv(1): </Dynamic>
+            <Dynamic>interpretgame</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/interpretgame.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/computermove.sv(1): </Dynamic>
+            <Dynamic>computermove</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/computermove.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/winlosedraw.sv(1): </Dynamic>
+            <Dynamic>winlosedraw</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/winlosedraw.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv(1): </Dynamic>
+            <Dynamic>chooseaddr</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(5): </Dynamic>
+            <Dynamic>lcd_driver</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5): </Dynamic>
+            <Dynamic>messages</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>message_writer.v(63): </Dynamic>
+            <Dynamic>message_writer</Dynamic>
+            <Navigation>message_writer.v</Navigation>
+            <Navigation>63</Navigation>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>valid_reg</Dynamic>
+            <Dynamic>One</Dynamic>
+        </Message>
         <Message>
             <ID>35935050</ID>
             <Severity>16</Severity>
@@ -332,48 +911,378 @@
             <ID>35921504</ID>
             <Severity>1</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Users/ihottenrott/finalproject/top</Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top</Dynamic>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/finalproject/source/top/finalproj.sv(6): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(6): </Dynamic>
             <Dynamic>finalproj</Dynamic>
-            <Navigation>c:/users/ihottenrott/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/finalproject/source/top/spi.sv(1): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(1): </Dynamic>
             <Dynamic>spi</Dynamic>
-            <Navigation>c:/users/ihottenrott/finalproject/source/top/spi.sv</Navigation>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35935040</ID>
+            <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>start</Dynamic>
-            <Dynamic>One</Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv(13): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/spi.sv</Navigation>
+            <Navigation>13</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/finalproject/source/top/rpstoled.sv(1): </Dynamic>
-            <Dynamic>RPStoLED</Dynamic>
-            <Navigation>c:/users/ihottenrott/finalproject/source/top/rpstoled.sv</Navigation>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/synchronizer.sv(1): </Dynamic>
+            <Dynamic>synchronizer</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/synchronizer.sv</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35002039</ID>
+            <ID>35901018</ID>
             <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/mcumux.sv(1): </Dynamic>
+            <Dynamic>mcuMux</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/mcumux.sv</Navigation>
+            <Navigation>1</Navigation>
         </Message>
-    </Task>
-    <Task name="Export">
         <Message>
-            <ID>1081100</ID>
+            <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/interpretgame.sv(1): </Dynamic>
+            <Dynamic>interpretgame</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/interpretgame.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/computermove.sv(1): </Dynamic>
+            <Dynamic>computermove</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/computermove.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/winlosedraw.sv(1): </Dynamic>
+            <Dynamic>winlosedraw</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/winlosedraw.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Dynamic>thiscomputer</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(71): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Dynamic>result</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv(1): </Dynamic>
+            <Dynamic>chooseaddr</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/chooseaddr.sv</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Dynamic>thiscomputer</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Dynamic>result</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(72): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>screencode</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(5): </Dynamic>
+            <Dynamic>lcd_driver</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35901220</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(24): </Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>24</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5): </Dynamic>
+            <Dynamic>messages</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(11): </Dynamic>
+            <Dynamic>message_writer</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>11</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(252): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>252</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(657): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_main(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=512,WADDR_WIDTH=9,WDATA_WIDTH=64,RADDR_DEPTH=512,RADDR_WIDTH=9,RDATA_WIDTH=64,INIT_FILE_FORMAT=&quot;hex&quot;,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>657</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>PDP4K(DATA_WIDTH_W=&quot;8&quot;,DATA_WIDTH_R=&quot;8&quot;)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>693</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b011000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0101000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v(3996): </Dynamic>
+            <Dynamic>message_writer_ipgen_lscc_ram_dp_core(MEM_ID=&quot;message_writer&quot;,MEM_SIZE=&quot;64,512&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b01000,DATA_WIDTH_R=32'b01000,BYTE_ENABLE=1'b0,POSx=32'b0111000,POSy=32'b0)</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/message_writer/rtl/message_writer.v</Navigation>
+            <Navigation>3996</Navigation>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>valid_reg</Dynamic>
+            <Dynamic>One</Dynamic>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(62): </Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>msg_index</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>62</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(51): </Dynamic>
+            <Dynamic>delay_done</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
+            <Navigation>51</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>screen</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>74</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(69): </Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>69</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv(74): </Dynamic>
+            <Dynamic>change_screen</Dynamic>
+            <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/latticeproject/finalproject/source/top/finalproj.sv</Navigation>
+            <Navigation>74</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>n1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>rs</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>rw</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>chip_en</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>driving \lcd_driver/prev_screen[3:0]</Dynamic>
+            <Dynamic>3, 2, 1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>1</Severity>
+            <Dynamic>\lcd_driver/state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>\lcd_driver/state_FSM</Dynamic>
+            <Dynamic>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>\lcd_driver/state_FSM</Dynamic>
+            <Dynamic>0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>driving DB[7:0]</Dynamic>
+            <Dynamic>7, 6, 5, 4, 3, 2, 1, 0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>cs</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>reset</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

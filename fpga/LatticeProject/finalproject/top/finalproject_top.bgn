@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 19 12:54:01 2025
+Tue Dec  2 16:16:33 2025
 
 
-Command: bitgen -w -gui -msgset C:/Users/ihottenrott/finalproject/promote.xml -freq 0 finalproject_top.udb C:/Users/ihottenrott/finalproject/top/finalproject_top 
+Command: bitgen -w -gui -msgset C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml -freq 0 finalproject_top.udb C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top 
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.
@@ -21,6 +21,6 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:/Users/ihottenrott/finalproject/top/finalproject_top.bin".
+Saving bit stream in "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top.bin".
 INFO <1081100> - Bitstream authenticated.
 Bitstream generation complete!

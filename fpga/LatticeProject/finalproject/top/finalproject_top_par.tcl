@@ -4,13 +4,13 @@
 set ret 0
 if {[catch {
 
-if {![file exists {C:/Users/ihottenrott/finalproject/top}]} {
-  file mkdir {C:/Users/ihottenrott/finalproject/top}
+if {![file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}]} {
+  file mkdir {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}
 }
-cd {C:/Users/ihottenrott/finalproject/top}
+cd {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top}
 
-sys_set_attribute -gui on -msg {C:/Users/ihottenrott/finalproject/promote.xml}
-msg_load {C:/Users/ihottenrott/finalproject/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml}
+msg_load {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml}
 des_set_project_udb -in {finalproject_top_map.udb} -out {finalproject_top.udb} -milestone par -pm ice40tp
 des_set_reference_udb -clean
 # par option
@@ -18,13 +18,13 @@ par_set_option { disable_timing_driven false placement_iterations 1 placement_it
 # run place & route
 par_run
 # backup netlist & constraint file
-if {[file exists {C:/Users/ihottenrott/finalproject/top/finalproject_top_syn.udb}] && [file exists {C:/Users/ihottenrott/finalproject/top/finalproject_top_map.udb}] && [file exists {C:/Users/ihottenrott/finalproject/top/finalproject_top.udb}]} {
-  file delete -force {C:/Users/ihottenrott/finalproject/top/incr/finalproject_top_syn.udb} {C:/Users/ihottenrott/finalproject/top/incr/finalproject_top_map.udb} {C:/Users/ihottenrott/finalproject/top/incr/finalproject_top.udb} {C:/Users/ihottenrott/finalproject/top/incr/lastrun.pdc}
-  file copy -force -- {C:/Users/ihottenrott/finalproject/top/finalproject_top_syn.udb} {C:/Users/ihottenrott/finalproject/top/incr/postsyn.udb}
-  file copy -force -- {C:/Users/ihottenrott/finalproject/top/finalproject_top_map.udb} {C:/Users/ihottenrott/finalproject/top/incr/postmap.udb}
-  file copy -force -- {C:/Users/ihottenrott/finalproject/top/finalproject_top.udb} {C:/Users/ihottenrott/finalproject/top/incr/postpar.udb}
-  if [file exists {C:/Users/ihottenrott/finalproject/pinout.pdc}] {
-    file copy -force -- {C:/Users/ihottenrott/finalproject/pinout.pdc} {C:/Users/ihottenrott/finalproject/top/incr/lastrun.pdc}
+if {[file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top_syn.udb}] && [file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top_map.udb}] && [file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top.udb}]} {
+  file delete -force {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/finalproject_top_syn.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/finalproject_top_map.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/finalproject_top.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/lastrun.pdc}
+  file copy -force -- {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top_syn.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/postsyn.udb}
+  file copy -force -- {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top_map.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/postmap.udb}
+  file copy -force -- {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/finalproject_top.udb} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/postpar.udb}
+  if [file exists {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc}] {
+    file copy -force -- {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc} {C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/top/incr/lastrun.pdc}
   }
 }
 

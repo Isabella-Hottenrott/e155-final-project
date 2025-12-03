@@ -5,17 +5,18 @@ module spi(input  logic sck,
             output logic done); //TODO change
 
 logic [3:0] eightCounter;
-logic [7:0] intermedByte
+logic [7:0] intermedByte;
 //try new way next
-    always_ff @(posedge sck)
+    always_ff @(posedge sck) begin
         if (cs)  begin 
-            {intermedByte[7:0]} = {intermedByte[6:0], sdi};
-            eightCounter = eightCounter+1;
+            {intermedByte[7:0]} <= {intermedByte[6:0], sdi};
+            eightCounter <= eightCounter+1;
         end
         else begin 
-            intermedByte = intermedByte;
-            eightCounter = 4'b0;
+            intermedByte <= intermedByte;
+            eightCounter <= 4'b0;
         end
+	end
 
     assign byteOut = eightCounter[3] ? intermedByte : 8'b0; // if counter counted to 8, display the value
     assign done = ~cs; // additional signal to know SPI is done

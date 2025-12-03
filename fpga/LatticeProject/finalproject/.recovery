@@ -2,21 +2,18 @@
 <RadiantProject version="4.2" radiant="2024.2.0.3.0" title="finalproject" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" family_int="ice40tp" device_int="itpa08" package_int="SG48" operation_int="IND" speed_int="6" default_implementation="top">
     <Options/>
     <Implementation title="top" dir="top" description="top" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="chooseaddr"/>
+        <Options def_top="RPStoLED" top="finalproj"/>
         <Source name="source/top/finalproj.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog"/>
-        </Source>
-        <Source name="source/top/spi.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="spi"/>
+            <Options VerilogStandard="System Verilog" top_module="finalproj"/>
         </Source>
         <Source name="source/top/RPStoLED.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="RPStoLED"/>
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="source/top/finalprojtb.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../synchronizer.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="synchronizer"/>
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../winlosedraw.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog"/>
@@ -28,19 +25,22 @@
             <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../lcd_driver.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="lcd_driver"/>
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../interpretgame.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="interpretgame"/>
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../computermove.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../../chooseaddr.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog" top_module="chooseaddr"/>
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="message_writer/message_writer.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
+        </Source>
+        <Source name="../../spi.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="pinout.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>

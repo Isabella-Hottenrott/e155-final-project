@@ -1,3 +1,13 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
-Wed Nov 19 12:00:49 2025
+Tue Dec  2 16:55:43 2025
 
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'cs' does not connect to anything.
+WARNING <71003020> - Top module port 'reset' does not connect to anything.
+WARNING <1027013> - No port matched 'LED[2]'.
+WARNING <1026001> - C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc (4) : Can't resolve object 'LED[2]' in constraint 'ldc_set_location -site {45} [get_ports {LED[2]}]'.
+WARNING <1027013> - No port matched 'LED[0]'.
+WARNING <1026001> - C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc (5) : Can't resolve object 'LED[0]' in constraint 'ldc_set_location -site {46} [get_ports {LED[0]}]'.
+WARNING <1027013> - No port matched 'LED[1]'.
+WARNING <1026001> - C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/pinout.pdc (6) : Can't resolve object 'LED[1]' in constraint 'ldc_set_location -site {47} [get_ports {LED[1]}]'.

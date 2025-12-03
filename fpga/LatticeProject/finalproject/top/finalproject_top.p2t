@@ -1,6 +1,6 @@
 -w
 -gui
--msgset "C:/Users/ihottenrott/finalproject/promote.xml"
+-msgset "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/promote.xml"
 -n 1
 -t 1
 -s 1

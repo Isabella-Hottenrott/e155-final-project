@@ -2,13 +2,11 @@
 
 <clocks>
     <clockitem name = "sck"  type = "port" />
-    <clockitem name = "done"  type = "net" />
-    <clockitem name = "cs"  type = "port" />
 </clocks>
 
 <!--
     //=============================================================
-    //  Number of Clocks processed: 2
+    //  Number of Clocks processed: 1
     //
     //  If a clock cannot be found in the top level pins section,
     //  that means it is an internal clock.

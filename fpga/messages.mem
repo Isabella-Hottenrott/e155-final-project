@@ -2,29 +2,37 @@
 // Format: 64-bit hex (16 hex digits per line)
 // Each line stores 8 ASCII characters
 
-// msg_0: "Rock"
-06B636F52
+// msg_0: "Rock". 0
+06B636F52000000
 
-// msg_1: "Paper"
+// msg_1: "Paper". 8
+//do we need extra 2020 etc etc to pad out everything?
 7265706150
 
-// msg_2: "Scissors"
+// msg_2: "Scissors". 16
 73726F7373696353
 
-// msg_3: "You Win!"
+// msg_3: "You Win!". 24
 216E695720756F59
 
-// msg_4: "You Lose!"
+// msg_4: "You Lose!". 32
 65736F4C20756F59
 000000021
 
-// msg_5: "Tie"
+// msg_5: "Tie" 48
 000656954
 
-// msg_6: "Starting..."
+// msg_6: "Starting..." 56
 676E697472617453
 0002E2E2E
 
-// msg_7: "Next Level?"
+// msg_7: "Next Level?" 72
 76654C207478654E
 0003F6C65
+
+// msg_8: "Go!" 80
+000216F47
+
+// msg_9: "Game Over" 88
+65764F20656D6147
+000000072
