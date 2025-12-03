@@ -31,7 +31,7 @@ module messages_tb();
 
 
         // Initialize
-        msg_index = 8'h00;
+        msg_index = 3'h00;
         char_index = 8'h00;
         
         #20; // Wait for initial pipeline latency (2 cycles)
@@ -48,7 +48,7 @@ module messages_tb();
         
         // Test 2: Read message 1 "Paper" sequentially
         $display("\n=== Test 2: Reading Message 1 (Paper) ===");
-        msg_index =  8'h01;
+        msg_index =  3'h01;
         for (int i = 0; i < 20; i++) begin
             char_index = i;
             #10;
@@ -59,8 +59,8 @@ module messages_tb();
         
         // Test 3: Read message 2 "Scissors" sequentially
         $display("\n=== Test 3: Reading Message 2 (Scissors) ===");
-        msg_index = 8'h02;
-        for (int i = 0; i < 8; i++) begin
+        msg_index = 3'h02;
+        for (int i = 0; i < 20; i++) begin
             char_index = i;
             #10;
             $display("char_index=%d, data=0x%02X ('%c')", i, data, data); //(data >= 32 && data < 127) ? data : '?');
@@ -70,8 +70,8 @@ module messages_tb();
         
         // Test 4: Test message switching with same char_index
         $display("\n=== Test 4: Switching Messages ===");
-        msg_index = 8'h03; // "You Win!"
-        char_index = 8'h00;
+        msg_index = 3'h03; // "You Win!"
+        char_index = 8'h01;
         #10;
         $display("Message 3, char 0: 0x%02X ('%c')", data, data); //(data >= 32 && data < 127) ? data : '?');
         
@@ -105,7 +105,7 @@ module messages_tb();
         msg_index = 8'h03;
         for (int i = 0; i < 8; i++) begin
             char_index = i;
-            #10;
+            #20;
             $display("char_index=%d, data=0x%02X ('%c')", i, data, data); //(data >= 32 && data < 127) ? data : '?');
         end
         

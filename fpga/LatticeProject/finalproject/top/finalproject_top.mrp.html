@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Tue Dec  2 21:22:45 2025
+Mapped on: Wed Dec  3 09:45:04 2025
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,13 +61,13 @@ Command line:   map -pdc C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers: 179 out of  5280 (3%)
+   Number of slice registers: 275 out of  5280 (5%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           350 out of  5280 (7%)
-      Number of logic LUT4s:             162
-      Number of inserted feedthru LUT4s: 106
+   Number of LUT4s:           507 out of  5280 (10%)
+      Number of logic LUT4s:             234
+      Number of inserted feedthru LUT4s: 199
       Number of replicated LUT4s:          4
-      Number of ripple logic:             39 (78 LUT4s)
+      Number of ripple logic:             35 (70 LUT4s)
    Number of IO sites used:   15 out of 39 (38%)
       Number of IO sites used for general PIO: 14
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -87,37 +87,37 @@ Command line:   map -pdc C:/Users/wchan/Documents/GitHub/e155-final-project/fpga
    Number of SRAMs:            0 out of 4 (0%)
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
-   Number of EBRs:             8 out of 30 (27%)
+   Number of EBRs:             20 out of 30 (67%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  3
-      Net clk: 160 loads, 160 rising, 0 falling (Driver: Pin counter_198__i21/Q)
       Net int_osc: 11 loads, 11 rising, 0 falling (Driver: Pin
      hf_osc.osc_inst/CLKHF)
+      Net clk: 280 loads, 280 rising, 0 falling (Driver: Pin counter_293__i21/Q)
       Net sck_c: 12 loads, 12 rising, 0 falling (Driver: Port sck)
    Number of Clock Enables:  7
-      Net VCC_net: 17 loads, 0 SLICEs
-      Net n2086: 4 loads, 4 SLICEs
-      Net n2097: 13 loads, 13 SLICEs
-      Net n2068: 8 loads, 8 SLICEs
+      Net VCC_net: 41 loads, 0 SLICEs
       Pin cs: 8 loads, 7 SLICEs (Net: cs_c)
-      Net synchronizer.n480: 8 loads, 8 SLICEs
-      Net lcd_driver.n495: 5 loads, 5 SLICEs
+      Net n2503: 13 loads, 13 SLICEs
+      Net n2504: 4 loads, 4 SLICEs
+      Net synchronizer.n748: 8 loads, 8 SLICEs
+      Net lcd_driver.n757: 5 loads, 5 SLICEs
+      Net n2483: 8 loads, 8 SLICEs
    Number of LSRs:  4
-      Pin reset: 59 loads, 59 SLICEs (Net: reset_c)
-      Net n2057: 4 loads, 4 SLICEs
-      Net synchronizer.n529: 8 loads, 8 SLICEs
-      Net lcd_driver.n2049: 5 loads, 5 SLICEs
+      Net n2462: 4 loads, 4 SLICEs
+      Pin reset: 62 loads, 62 SLICEs (Net: reset_c)
+      Net synchronizer.n797: 8 loads, 8 SLICEs
+      Net lcd_driver.n3417: 5 loads, 5 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net reset_c: 67 loads
-      Net VCC_net: 41 loads
-      Net lcd_driver.state[4]: 35 loads
-      Net lcd_driver.mes.byte_select_reg[1]: 23 loads
-      Net n351: 23 loads
-      Net lcd_driver.mes.byte_select_reg[0]: 22 loads
-      Net directedBits[2]: 20 loads
-      Net directedBits[3]: 19 loads
-      Net directedBits[0]: 17 loads
-      Net directedBits[6]: 15 loads
+      Net lcd_driver.char_counter[1]: 81 loads
+      Net reset_c: 70 loads
+      Net VCC_net: 65 loads
+      Net lcd_driver.char_counter[0]: 46 loads
+      Net lcd_driver.n375: 22 loads
+      Net directedBits[2]: 21 loads
+      Net lcd_driver.screencode[0]: 21 loads
+      Net lcd_driver.screencode[1]: 21 loads
+      Net lcd_driver.screencode[2]: 21 loads
+      Net lcd_driver.char_counter[3]: 20 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -181,32 +181,68 @@ OSC 1:                                 Pin/Node Value
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[7].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[6].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[5].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[4].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[3].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[2].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[1].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
-Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
-     UTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
-         Type: EBR
 Instance Name: spi/intermedByte_i0_i0
          Type: IOLOGIC
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[9].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[8].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[7].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[6].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[5].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[4].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[3].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[2].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[1].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[19].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[18].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[17].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[16].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[15].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[14].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[13].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[12].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[11].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[10].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
+Instance Name: lcd_driver/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_RO
+     UTE[0].DATA_ROUTE[0].mem_init.u_mem0/ICE_MEM.u_mem0.ebr_inst
+         Type: EBR
 Instance Name: hf_osc.osc_inst
          Type: HFOSC
 
@@ -219,8 +255,8 @@ Instance Name: hf_osc.osc_inst
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 72 MB
-Checksum -- map: fdf61f303fef3be6499c30f3decff53168e97d33
+   Peak Memory Usage: 75 MB
+Checksum -- map: 5b6a1d2d83d85801bc713df9d1c79795aa0cf6d9
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

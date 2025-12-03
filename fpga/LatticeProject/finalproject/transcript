@@ -13,10 +13,11 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
+project open C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/testing_final_project
 # Loading project testing_final_project
 # Compile of finalprojtb.sv was successful.
-# Compile of lcd_driver_tb.sv failed with 3 errors.
-# Compile of messages_tb.sv failed with 10 errors.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of messages_tb.sv was successful with warnings.
 # Compile of chooseaddr.sv was successful.
 # Compile of computermove.sv was successful.
 # Compile of finalproj.sv was successful.
@@ -27,76 +28,50 @@
 # Compile of spi.sv was successful.
 # Compile of synchronizer.sv was successful.
 # Compile of winlosedraw.sv was successful.
-# 13 compiles, 2 failed with 13 errors.
-# Compile of lcd_driver_tb.sv was successful.
-# Compile of messages_tb.sv failed with 7 errors.
-# 2 compiles, 1 failed with 7 errors.
-# Compile of messages_tb.sv failed with 7 errors.
-# Compile of messages_tb.sv failed with 6 errors.
-# Compile of messages_tb.sv failed with 7 errors.
-# Compile of messages_tb.sv failed with 6 errors.
-# Compile of messages_tb.sv was successful.
-vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
-# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
-# Start time: 21:40:57 on Dec 02,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
-#  For instance 'ebr_inst' at path 'messages'
-# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
-#  For instance 'ebr_inst' at path 'messages_tb.dut'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Error loading design
-# End time: 21:40:57 on Dec 02,2025, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 13
-# Load canceled
-# Compile of clk_rst_gen.v was successful.
-# Compile of dut_inst.v failed with 2 errors.
-# Compile of dut_params.v failed with 1 errors.
-# Compile of mem_model.v was successful.
-# Compile of pdp_master.v was successful.
-# Compile of tb_top.v was successful.
-# 6 compiles, 2 failed with 3 errors.
-# Optimization canceled
-vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
-# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
-# Start time: 21:44:43 on Dec 02,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
-#  For instance 'ebr_inst' at path 'messages'
-# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(37): Module 'message_writer' is not defined.
-#  For instance 'ebr_inst' at path 'messages_tb.dut'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Error loading design
-# End time: 21:44:44 on Dec 02,2025, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 4
 # Compile of message_writer.v was successful.
-vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
-# vsim -gui work.messages_tb work.messages -voptargs="+acc -L iCE40UP" -L iCE40UP 
-# Start time: 21:56:57 on Dec 02,2025
+# 14 compiles, 0 failed with no errors.
+vsim -gui work.messages work.messages_tb {-voptargs=+acc -L iCE40UP}
+# vsim -gui work.messages work.messages_tb -voptargs="+acc -L iCE40UP" 
+# Start time: 09:49:11 on Dec 03,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast__1)
+# Loading work.messages(fast)
 # Loading work.message_writer(fast__1)
 # Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
 # Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
-# Loading work.messages(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
 # Loading work.message_writer(fast)
 # Loading work.message_writer_ipgen_lscc_ram_dp(fast)
 # Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
@@ -105,11 +80,36 @@ vsim -gui work.messages_tb work.messages {-voptargs=+acc -L iCE40UP} -L iCE40UP
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
 # Loading iCE40UP.PDP4K(fast__1)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
 # Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
 add wave -position insertpoint  \
 sim:/messages_tb/dut/clk \
 sim:/messages_tb/dut/msg_index \
@@ -120,1378 +120,6 @@ sim:/messages_tb/dut/rd_addr \
 sim:/messages_tb/dut/ram_rd_data \
 sim:/messages_tb/dut/byte_select_reg \
 sim:/messages_tb/dut/valid_reg
-run800000
-# invalid command name "run800000"
-run 800000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x00 ()
-# char_index=          1, data=0x00 ()
-# char_index=          2, data=0x00 ()
-# char_index=          3, data=0x00 ()
-# char_index=          4, data=0x00 ()
-# char_index=          5, data=0x00 ()
-# char_index=          6, data=0x00 ()
-# char_index=          7, data=0x00 ()
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x00 ('')
-# Message 4, char 0: 0x00 ('')
-# Message 5, char 0: 0x00 ('')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x00
-# char_index=          5: FAIL - Expected 0x20, got 0x00
-# char_index=          6: FAIL - Expected 0x20, got 0x00
-# char_index=          7: FAIL - Expected 0x20, got 0x00
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(111)
-#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
-# 1
-# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 111
-# Compile of messages_tb.sv failed with 2 errors.
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast__1)
-# Loading work.message_writer(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-run 500000
-# ** Warning: (vsim-7) Failed to open readmem file "messages.mem" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(33)
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb
-# Memory initialized from messages.mem
-# Verifying memory contents:
-# ERROR: Memory[0] incorrect: xxxxxxxxxxxxxxxx
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x00 ()
-# char_index=          1, data=0x00 ()
-# char_index=          2, data=0x00 ()
-# char_index=          3, data=0x00 ()
-# char_index=          4, data=0x00 ()
-# char_index=          5, data=0x00 ()
-# char_index=          6, data=0x00 ()
-# char_index=          7, data=0x00 ()
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x00 ('')
-# Message 4, char 0: 0x00 ('')
-# Message 5, char 0: 0x00 ('')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x00
-# char_index=          5: FAIL - Expected 0x20, got 0x00
-# char_index=          6: FAIL - Expected 0x20, got 0x00
-# char_index=          7: FAIL - Expected 0x20, got 0x00
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# Compile of messages.mem failed with 1 errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast__1)
-# Loading work.message_writer(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-run 500000
-# Memory initialized from messages.mem
-# Verifying memory contents:
-# ERROR: Memory[0] incorrect: 526f636b20202020
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x00 ()
-# char_index=          1, data=0x00 ()
-# char_index=          2, data=0x00 ()
-# char_index=          3, data=0x00 ()
-# char_index=          4, data=0x00 ()
-# char_index=          5, data=0x00 ()
-# char_index=          6, data=0x00 ()
-# char_index=          7, data=0x00 ()
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x00 ('')
-# Message 4, char 0: 0x00 ('')
-# Message 5, char 0: 0x00 ('')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x00
-# char_index=          5: FAIL - Expected 0x20, got 0x00
-# char_index=          6: FAIL - Expected 0x20, got 0x00
-# char_index=          7: FAIL - Expected 0x20, got 0x00
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x00 ('')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Error (suppressible): C:\Users\wchan\Documents\GitHub\e155-final-project\fpga\sim\messages_tb.sv(34): (vopt-7063) Failed to find 'ram' in hierarchical name 'dut.ebr_inst.ram'.
-#         Region: messages_tb
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
-run 80000
-# No Design Loaded!
-# Compile of messages_tb.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# No Design Loaded!
-vsim -gui work.messages_tb {-voptargs=+acc -L iCE40UP} -L iCE40UP
-# vsim -gui work.messages_tb -voptargs="+acc -L iCE40UP" -L iCE40UP 
-# Start time: 21:56:57 on Dec 02,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=2.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 80000
-# Memory initialized from messages.mem
-# Verifying memory contents:
-# Memory[0] correct: 526f636b20202020
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-run 800000
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(125)
-#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
-# 1
-# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 125
-# Compile of message_writer.v was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 800000
-# Memory initialized from messages.mem
-# Verifying memory contents:
-# ERROR: Memory[0] incorrect: 202020206b636f52
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(125)
-#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
-# 1
-# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 125
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 50000
-# Memory initialized from messages.mem
-# Verifying memory contents:
-# ERROR: Memory[0] incorrect: 202020206b636f52
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-run 500000
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x00 ('')
-# Message 4, char 0: 0x00 ('')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-run 500000
-# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(125)
-#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
-# 1
-# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 125
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 50000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-run 100000
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-run 1000000
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x00 ('')
-# char_index=          3, data=0x00 ('')
-# char_index=          4, data=0x00 ('')
-# char_index=          5, data=0x00 ('')
-# char_index=          6, data=0x00 ('')
-# char_index=          7, data=0x00 ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x00 ('')
-# Message 4, char 0: 0x00 ('')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(114)
-#    Time: 560 ns  Iteration: 0  Instance: /messages_tb
-# 1
-# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 114
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          8, data=0x20 (' ')
-# char_index=          9, data=0x20 (' ')
-# char_index=         10, data=0x20 (' ')
-# char_index=         11, data=0x72 ('r')
-# char_index=         12, data=0x65 ('e')
-# char_index=         13, data=0x70 ('p')
-# char_index=         14, data=0x61 ('a')
-# char_index=         15, data=0x50 ('P')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (64) for port 'wr_data_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (64) for port 'rd_data_o'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0xzz ()
-# char_index=          3, data=0xzz ()
-# char_index=          4, data=0xzz ()
-# char_index=          5, data=0xzz ()
-# char_index=          6, data=0xzz ()
-# char_index=          7, data=0xzz ()
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0xzz ('')
-# char_index=          3, data=0xzz ('')
-# char_index=          4, data=0xzz ('')
-# char_index=          5, data=0xzz ('')
-# char_index=          6, data=0xzz ('')
-# char_index=          7, data=0xzz ('')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0xzz ('')
-# char_index=          3, data=0xzz ('')
-# char_index=          4, data=0xzz ('')
-# char_index=          5, data=0xzz ('')
-# char_index=          6, data=0xzz ('')
-# char_index=          7, data=0xzz ('')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0xzz
-# char_index=          5: FAIL - Expected 0x20, got 0xzz
-# char_index=          6: FAIL - Expected 0x20, got 0xzz
-# char_index=          7: FAIL - Expected 0x20, got 0xzz
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0xzz ('')
-# char_index=          3, data=0xzz ('')
-# char_index=          4, data=0xzz ('')
-# char_index=          5, data=0xzz ('')
-# char_index=          6, data=0xzz ('')
-# Compile of message_writer.v was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x6b ('k')
-# char_index=          5, data=0x63 ('c')
-# char_index=          6, data=0x6f ('o')
-# char_index=          7, data=0x52 ('R')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x6b ('k')
-# char_index=          5, data=0x63 ('c')
-# char_index=          6, data=0x6f ('o')
-# char_index=          7, data=0x52 ('R')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of message_writer.v was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x6b ('k')
-# char_index=          5, data=0x63 ('c')
-# char_index=          6, data=0x6f ('o')
-# char_index=          7, data=0x52 ('R')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: FAIL - Expected 0x20, got 0x2e
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x6b ('k')
-# char_index=          5, data=0x63 ('c')
-# char_index=          6, data=0x6f ('o')
-# char_index=          7, data=0x52 ('R')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: FAIL - Expected 0x20, got 0x2e
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# Compile of messages_tb.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-# Compile of lcd_driver.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x2e ('.')
-# char_index=          6, data=0x2e ('.')
-# char_index=          7, data=0x2e ('.')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          8, data=0x20 (' ')
-# char_index=          9, data=0x20 (' ')
-# char_index=         10, data=0x20 (' ')
-# char_index=         11, data=0x72 ('r')
-# char_index=         12, data=0x65 ('e')
-# char_index=         13, data=0x70 ('p')
-# char_index=         14, data=0x61 ('a')
-# char_index=         15, data=0x50 ('P')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          8, data=0x20 (' ')
-# char_index=          9, data=0x20 (' ')
-# char_index=         10, data=0x20 (' ')
-# char_index=         11, data=0x72 ('r')
-# char_index=         12, data=0x65 ('e')
-# char_index=         13, data=0x70 ('p')
-# char_index=         14, data=0x61 ('a')
-# char_index=         15, data=0x50 ('P')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=         16, data=0x20 (' ')
-# char_index=         17, data=0x20 (' ')
-# char_index=         18, data=0x73 ('s')
-# char_index=         19, data=0x73 ('s')
-# char_index=         20, data=0x73 ('s')
-# char_index=         21, data=0x69 ('i')
-# char_index=         22, data=0x63 ('c')
-# char_index=         23, data=0x53 ('S')
-# char_index=         24, data=0x72 ('r')
-# char_index=         25, data=0x6f ('o')
-# char_index=         26, data=0x69 ('i')
-# char_index=         27, data=0x57 ('W')
-# char_index=         28, data=0x20 (' ')
-# char_index=         29, data=0x75 ('u')
-# char_index=         30, data=0x6f ('o')
-# char_index=         31, data=0x59 ('Y')
-# char_index=         32, data=0x21 ('!')
-# char_index=         33, data=0x6e ('n')
-# char_index=         34, data=0x6f ('o')
-# char_index=         35, data=0x4c ('L')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x65 ('e')
-# Message 4, char 0: 0x65 ('e')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x20 ( )
-# char_index=          1, data=0x20 ( )
-# char_index=          2, data=0x20 ( )
-# char_index=          3, data=0x20 ( )
-# char_index=          4, data=0x6b (k)
-# char_index=          5, data=0x63 (c)
-# char_index=          6, data=0x6f (o)
-# char_index=          7, data=0x52 (R)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          8, data=0x20 (' ')
-# char_index=          9, data=0x20 (' ')
-# char_index=         10, data=0x20 (' ')
-# char_index=         11, data=0x72 ('r')
-# char_index=         12, data=0x65 ('e')
-# char_index=         13, data=0x70 ('p')
-# char_index=         14, data=0x61 ('a')
-# char_index=         15, data=0x50 ('P')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=         16, data=0x20 (' ')
-# char_index=         17, data=0x20 (' ')
-# char_index=         18, data=0x73 ('s')
-# char_index=         19, data=0x73 ('s')
-# char_index=         20, data=0x73 ('s')
-# char_index=         21, data=0x69 ('i')
-# char_index=         22, data=0x63 ('c')
-# char_index=         23, data=0x53 ('S')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x72 ('r')
-# Message 4, char 0: 0x72 ('r')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x6f
-# char_index=          7: FAIL - Expected 0x20, got 0x52
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x20 (' ')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
 run 500000
 # === Test 1: Reading Message 0 (Rock) ===
 # char_index=          0, data=0x52 (R)
@@ -1501,634 +129,6 @@ run 500000
 # char_index=          4, data=0x20 ( )
 # char_index=          5, data=0x20 ( )
 # char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          8, data=0x52 ('R')
-# char_index=          9, data=0x6f ('o')
-# char_index=         10, data=0x70 ('p')
-# char_index=         11, data=0x65 ('e')
-# char_index=         12, data=0x72 ('r')
-# char_index=         13, data=0x20 (' ')
-# char_index=         14, data=0x20 (' ')
-# char_index=         15, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=         16, data=0x50 ('P')
-# char_index=         17, data=0x61 ('a')
-# char_index=         18, data=0x69 ('i')
-# char_index=         19, data=0x73 ('s')
-# char_index=         20, data=0x73 ('s')
-# char_index=         21, data=0x73 ('s')
-# char_index=         22, data=0x6f ('o')
-# char_index=         23, data=0x72 ('r')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x53 ('S')
-# Message 4, char 0: 0x53 ('S')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x6f (o)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x63 ('c')
-# char_index=          3, data=0x6b ('k')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x63 ('c')
-# char_index=          3, data=0x6b ('k')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x52 ('R')
-# Message 4, char 0: 0x52 ('R')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x6f (o)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x2e ('.')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x2e ('.')
-# char_index=          1, data=0x2e ('.')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages.sv was successful.
-# Compile of message_writer.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading iCE40UP.PDP4K(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading iCE40UP.PDP4K(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading iCE40UP.PDP4K(fast__7)
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x6f (o)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x2e ('.')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x2e ('.')
-# char_index=          1, data=0x2e ('.')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of message_writer.v was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 37
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x6f (o)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x2e ('.')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x2e ('.')
-# char_index=          1, data=0x2e ('.')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x20 (' ')
-# Message 5, char 0: 0x20 (' ')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: PASS - Got space (0x20)
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x52 ('R')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x20 (' ')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages.sv was successful.
-# Compile of message_writer.v was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 49
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x52 (R)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x20 ( )
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x75 ('u')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x57 ('W')
-# char_index=          5, data=0x69 ('i')
-# char_index=          6, data=0x6e ('n')
-# char_index=          7, data=0x21 ('!')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x21 ('!')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x61 ('a')
-# char_index=          3, data=0x72 ('r')
-# char_index=          4, data=0x74 ('t')
-# char_index=          5, data=0x69 ('i')
-# char_index=          6, data=0x6e ('n')
-# char_index=          7, data=0x67 ('g')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x67 ('g')
-# Message 4, char 0: 0x53 ('S')
-# Message 5, char 0: 0x50 ('P')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x4e
-# char_index=          5: FAIL - Expected 0x20, got 0x4c
-# char_index=          6: PASS - Got space (0x20)
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x70 ('p')
-# char_index=          3, data=0x65 ('e')
-# char_index=          4, data=0x72 ('r')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages.sv failed with 1 errors.
-# Compile of messages.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 49
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x52 (R)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x6b (k)
-# char_index=          4, data=0x20 ( )
-# char_index=          5, data=0x20 ( )
-# char_index=          6, data=0x65 (e)
-# char_index=          7, data=0x76 (v)
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x76 ('v')
-# char_index=          1, data=0x65 ('e')
-# char_index=          2, data=0x75 ('u')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x57 ('W')
-# char_index=          5, data=0x69 ('i')
-# char_index=          6, data=0x72 ('r')
-# char_index=          7, data=0x73 ('s')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x73 ('s')
-# char_index=          1, data=0x63 ('c')
-# char_index=          2, data=0x61 ('a')
-# char_index=          3, data=0x72 ('r')
-# char_index=          4, data=0x74 ('t')
-# char_index=          5, data=0x69 ('i')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x20 (' ')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x54 ('T')
-# Message 5, char 0: 0x50 ('P')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x4e
-# char_index=          5: FAIL - Expected 0x20, got 0x4c
-# char_index=          6: FAIL - Expected 0x20, got 0x65
-# char_index=          7: FAIL - Expected 0x20, got 0x76
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x76 ('v')
-# char_index=          1, data=0x65 ('e')
-# char_index=          2, data=0x70 ('p')
-# char_index=          3, data=0x65 ('e')
-# char_index=          4, data=0x72 ('r')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x20 (' ')
-# Compile of messages.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 38
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 38
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x52 (R)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x65 (e)
-# char_index=          4, data=0x73 (s)
-# char_index=          5, data=0x69 (i)
-# char_index=          6, data=0x73 (s)
-# char_index=          7, data=0x20 ( )
-# 
-# === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x76 ('v')
-# char_index=          1, data=0x65 ('e')
-# char_index=          2, data=0x70 ('p')
-# char_index=          3, data=0x73 ('s')
-# char_index=          4, data=0x57 ('W')
-# char_index=          5, data=0x6f ('o')
-# char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x67 ('g')
-# 
-# === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x20 (' ')
-# char_index=          1, data=0x6f ('o')
-# char_index=          2, data=0x69 ('i')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x4c ('L')
-# char_index=          5, data=0x20 (' ')
-# char_index=          6, data=0x6e ('n')
-# char_index=          7, data=0x76 ('v')
-# 
-# === Test 4: Switching Messages ===
-# Message 3, char 0: 0x20 (' ')
-# Message 4, char 0: 0x50 ('P')
-# Message 5, char 0: 0x59 ('Y')
-# 
-# === Test 5: Verifying Space Padding (0x20) ===
-# char_index=          4: FAIL - Expected 0x20, got 0x54
-# char_index=          5: PASS - Got space (0x20)
-# char_index=          6: FAIL - Expected 0x20, got 0x73
-# char_index=          7: PASS - Got space (0x20)
-# 
-# === Test 6: Multi-row Message (You Win!) ===
-# char_index=          0, data=0x76 ('v')
-# char_index=          1, data=0x65 ('e')
-# char_index=          2, data=0x75 ('u')
-# char_index=          3, data=0x20 (' ')
-# char_index=          4, data=0x20 (' ')
-# char_index=          5, data=0x69 ('i')
-# char_index=          6, data=0x65 ('e')
-# Compile of messages_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.messages_tb(fast)
-# Loading work.messages(fast)
-# Loading work.message_writer(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
-# Loading iCE40UP.PDP4K(fast)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
-# Loading iCE40UP.PDP4K(fast__1)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
-# Loading iCE40UP.PDP4K(fast__2)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
-# Loading iCE40UP.PDP4K(fast__3)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
-# Loading iCE40UP.PDP4K(fast__4)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
-# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 38
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (9) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 38
-run 500000
-# === Test 1: Reading Message 0 (Rock) ===
-# char_index=          0, data=0x52 (R)
-# char_index=          1, data=0x52 (R)
-# char_index=          2, data=0x63 (c)
-# char_index=          3, data=0x65 (e)
-# char_index=          4, data=0x73 (s)
-# char_index=          5, data=0x69 (i)
-# char_index=          6, data=0x73 (s)
 # char_index=          7, data=0x20 ( )
 # char_index=          8, data=0x20 ( )
 # char_index=          9, data=0x20 ( )
@@ -2138,20 +138,20 @@ run 500000
 # char_index=         13, data=0x20 ( )
 # char_index=         14, data=0x20 ( )
 # char_index=         15, data=0x20 ( )
-# char_index=         16, data=0x00 ()
-# char_index=         17, data=0x00 ()
-# char_index=         18, data=0x00 ()
-# char_index=         19, data=0x00 ()
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
 # 
 # === Test 2: Reading Message 1 (Paper) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x6f ('o')
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x61 ('a')
 # char_index=          2, data=0x70 ('p')
-# char_index=          3, data=0x73 ('s')
-# char_index=          4, data=0x57 ('W')
-# char_index=          5, data=0x6f ('o')
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
 # char_index=          6, data=0x20 (' ')
-# char_index=          7, data=0x67 ('g')
+# char_index=          7, data=0x20 (' ')
 # char_index=          8, data=0x20 (' ')
 # char_index=          9, data=0x20 (' ')
 # char_index=         10, data=0x20 (' ')
@@ -2160,15 +160,1177 @@ run 500000
 # char_index=         13, data=0x20 (' ')
 # char_index=         14, data=0x20 (' ')
 # char_index=         15, data=0x20 (' ')
-# char_index=         16, data=0x00 ('')
-# char_index=         17, data=0x00 ('')
-# char_index=         18, data=0x00 ('')
-# char_index=         19, data=0x00 ('')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
 # 
 # === Test 3: Reading Message 2 (Scissors) ===
-# char_index=          0, data=0x00 ('')
-# char_index=          1, data=0x6f ('o')
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x63 ('c')
 # char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+run 800000
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
 # char_index=          3, data=0x20 (' ')
-# End time: 01:07:59 on Dec 03,2025, Elapsed time: 3:11:02
-# Errors: 0, Warnings: 4
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 920 ns  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+# Compile of messages.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 500000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x52 (R)
+# char_index=          1, data=0x6f (o)
+# char_index=          2, data=0x63 (c)
+# char_index=          3, data=0x6b (k)
+# char_index=          4, data=0x20 ( )
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x61 ('a')
+# char_index=          2, data=0x70 ('p')
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x63 ('c')
+# char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+run 500000
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
+# char_index=          3, data=0x20 (' ')
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 920 ns  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+# Compile of messages_tb.sv was successful with warnings.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 500000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x52 (R)
+# char_index=          1, data=0x6f (o)
+# char_index=          2, data=0x63 (c)
+# char_index=          3, data=0x6b (k)
+# char_index=          4, data=0x20 ( )
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x61 ('a')
+# char_index=          2, data=0x70 ('p')
+run 500000
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x53 ('S')
+# char_index=          1, data=0x63 ('c')
+# char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+run 500000
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
+# char_index=          3, data=0x20 (' ')
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# Compile of messages_tb.sv was successful with warnings.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x52 (R)
+# char_index=          1, data=0x6f (o)
+# char_index=          2, data=0x63 (c)
+# char_index=          3, data=0x6b (k)
+# char_index=          4, data=0x20 ( )
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x61 ('a')
+# char_index=          2, data=0x70 ('p')
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x53 ('S')
+# char_index=          1, data=0x63 ('c')
+# char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x59 ('Y')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x54 ('T')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x59 ('Y')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
+# char_index=          3, data=0x20 (' ')
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1630 ns  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# Compile of messages_tb.sv was successful with warnings.
+# Compile of messages.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x52 (R)
+# char_index=          1, data=0x6f (o)
+# char_index=          2, data=0x63 (c)
+# char_index=          3, data=0x6b (k)
+# char_index=          4, data=0x20 ( )
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x61 ('a')
+# char_index=          2, data=0x70 ('p')
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x63 ('c')
+# char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x63 ('c')
+# Message 4, char 0: 0x6f ('o')
+# Message 5, char 0: 0x6f ('o')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x59 ('Y')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
+# char_index=          3, data=0x20 (' ')
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1 us  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+# Compile of message_writer.v was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of messages_tb.sv was successful with warnings.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# 14 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x52 (R)
+# char_index=          1, data=0x6f (o)
+# char_index=          2, data=0x63 (c)
+# char_index=          3, data=0x6b (k)
+# char_index=          4, data=0x20 ( )
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x52 ('R')
+# char_index=          1, data=0x61 ('a')
+# char_index=          2, data=0x70 ('p')
+# char_index=          3, data=0x65 ('e')
+# char_index=          4, data=0x72 ('r')
+# char_index=          5, data=0x20 (' ')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x50 ('P')
+# char_index=          1, data=0x63 ('c')
+# char_index=          2, data=0x69 ('i')
+# char_index=          3, data=0x73 ('s')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x6f ('o')
+# char_index=          6, data=0x72 ('r')
+# char_index=          7, data=0x73 ('s')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x63 ('c')
+# Message 4, char 0: 0x6f ('o')
+# Message 5, char 0: 0x6f ('o')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x59 ('Y')
+# char_index=          1, data=0x6f ('o')
+# char_index=          2, data=0x75 ('u')
+# char_index=          3, data=0x20 (' ')
+# char_index=          4, data=0x57 ('W')
+# char_index=          5, data=0x69 ('i')
+# char_index=          6, data=0x6e ('n')
+# char_index=          7, data=0x21 ('!')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1 us  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+# Compile of message_writer.v was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages(fast)
+# Loading work.message_writer(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__20)
+# Loading iCE40UP.PDP4K(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__21)
+# Loading iCE40UP.PDP4K(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__22)
+# Loading iCE40UP.PDP4K(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__23)
+# Loading iCE40UP.PDP4K(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__24)
+# Loading iCE40UP.PDP4K(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__25)
+# Loading iCE40UP.PDP4K(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__26)
+# Loading iCE40UP.PDP4K(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__27)
+# Loading iCE40UP.PDP4K(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__28)
+# Loading iCE40UP.PDP4K(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__29)
+# Loading iCE40UP.PDP4K(fast__19)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__30)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__31)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__32)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__33)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__34)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__35)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__36)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__37)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__38)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__39)
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast__1)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x20 ( )
+# char_index=          1, data=0x52 (R)
+# char_index=          2, data=0x6f (o)
+# char_index=          3, data=0x63 (c)
+# char_index=          4, data=0x6b (k)
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x50 ('P')
+# char_index=          2, data=0x61 ('a')
+# char_index=          3, data=0x70 ('p')
+# char_index=          4, data=0x65 ('e')
+# char_index=          5, data=0x72 ('r')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x53 ('S')
+# char_index=          2, data=0x63 ('c')
+# char_index=          3, data=0x69 ('i')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x73 ('s')
+# char_index=          6, data=0x6f ('o')
+# char_index=          7, data=0x72 ('r')
+# char_index=          8, data=0x73 ('s')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x59 ('Y')
+# char_index=          2, data=0x6f ('o')
+# char_index=          3, data=0x75 ('u')
+# char_index=          4, data=0x20 (' ')
+# char_index=          5, data=0x57 ('W')
+# char_index=          6, data=0x69 ('i')
+# char_index=          7, data=0x6e ('n')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1 us  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+quit -sim
+# End time: 10:03:46 on Dec 03,2025, Elapsed time: 0:14:35
+# Errors: 0, Warnings: 5

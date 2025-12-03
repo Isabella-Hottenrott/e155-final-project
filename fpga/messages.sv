@@ -4,7 +4,7 @@
 
 module messages(
     input  logic        clk, // 0-255 Message ID
-    input  logic [7:0]  msg_index, // 0-255 Character position within the message
+    input  logic [2:0]  msg_index, // 0-255 Character position within the message
     input  logic [7:0]  char_index,
     output logic [7:0]  data_out,
     output logic        valid_out
@@ -22,7 +22,7 @@ module messages(
 	logic [8:0] rd_addr;
 
 	always_comb begin
-		rd_addr = msg_index; // Message index is the row address
+		rd_addr <= msg_index; // Message index is the row address
 	end
 
     // ---------------------------------------------------------
@@ -40,18 +40,18 @@ module messages(
         .wr_en_i(1'b0),
         .wr_data_i(160'b0),      // 160-bit zero write data
         .wr_addr_i(9'b0),
-        .rd_addr_i(rd_addr),
+        .rd_addr_i(msg_index),
         .rd_data_o(ram_rd_data) // 160-bit read output
     );
 
     // ---------------------------------------------------------
-    // 3. Pipelining for Latency
+    // 3. Pipelining for LatencyS
     // ---------------------------------------------------------
     // 1 cycle latency compensation.
     // Store char_index to select byte within 160-bit word
     
     logic [7:0] byte_select_reg;
-    logic       valid_reg;
+    logic       valid_reg; // i think this signal does not do anything lol
 
     always_ff @(posedge clk) begin
         byte_select_reg <= char_index;
@@ -65,27 +65,27 @@ module messages(
     // Memory Layout: [Byte7][Byte6]...[Byte1][Byte0]
     
     always_comb begin
-        case(byte_select_reg)
-			4'd0:  data_out = ram_rd_data[7:0];
-			4'd1:  data_out = ram_rd_data[15:8];
-			4'd2:  data_out = ram_rd_data[23:16];
-			4'd3:  data_out = ram_rd_data[31:24];
-			4'd4:  data_out = ram_rd_data[39:32];
-			4'd5:  data_out = ram_rd_data[47:40];
-			4'd6:  data_out = ram_rd_data[55:48];
-			4'd7:  data_out = ram_rd_data[63:56];
-			4'd8:  data_out = ram_rd_data[71:64];
-			4'd9:  data_out = ram_rd_data[79:72];
-			4'd10: data_out = ram_rd_data[87:80];
-			4'd11: data_out = ram_rd_data[95:88];
-			4'd12: data_out = ram_rd_data[103:96];
-			4'd13: data_out = ram_rd_data[111:104];
-			4'd14: data_out = ram_rd_data[119:112];
-			4'd15: data_out = ram_rd_data[127:120];
-			4'd16: data_out = ram_rd_data[135:128];
-			4'd17: data_out = ram_rd_data[143:136];
-			4'd18: data_out = ram_rd_data[151:144];
-			4'd19: data_out = ram_rd_data[159:152];
+        case(char_index)
+			8'd0:  data_out = ram_rd_data[7:0];
+			8'd1:  data_out = ram_rd_data[15:8];
+			8'd2:  data_out = ram_rd_data[23:16];
+			8'd3:  data_out = ram_rd_data[31:24];
+			8'd4:  data_out = ram_rd_data[39:32];
+			8'd5:  data_out = ram_rd_data[47:40];
+			8'd6:  data_out = ram_rd_data[55:48];
+			8'd7:  data_out = ram_rd_data[63:56];
+			8'd8:  data_out = ram_rd_data[71:64];
+			8'd9:  data_out = ram_rd_data[79:72];
+			8'd10: data_out = ram_rd_data[87:80];
+			8'd11: data_out = ram_rd_data[95:88];
+			8'd12: data_out = ram_rd_data[103:96];
+			8'd13: data_out = ram_rd_data[111:104];
+			8'd14: data_out = ram_rd_data[119:112];
+			8'd15: data_out = ram_rd_data[127:120];
+			8'd16: data_out = ram_rd_data[135:128];
+			8'd17: data_out = ram_rd_data[143:136];
+			8'd18: data_out = ram_rd_data[151:144];
+			8'd19: data_out = ram_rd_data[159:152];
 			default: data_out = 8'h00;
 		endcase
 	end

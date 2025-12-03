@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE 
-// Netlist written on Tue Dec  2 21:22:22 2025
+// Netlist written on Wed Dec  3 09:44:40 2025
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/lscc/radiant/2024.2/ip/common/adder/rtl/lscc_adder.v"
@@ -70,10 +70,10 @@ module message_writer (wr_clk_i, rd_clk_i, rst_i, wr_clk_en_i, rd_en_i,
     input rd_en_i;
     input rd_clk_en_i;
     input wr_en_i;
-    input [63:0]wr_data_i;
+    input [159:0]wr_data_i;
     input [8:0]wr_addr_i;
     input [8:0]rd_addr_i;
-    output [63:0]rd_data_o;
+    output [159:0]rd_data_o;
     
     
     
