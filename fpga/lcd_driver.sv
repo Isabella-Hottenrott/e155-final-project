@@ -132,7 +132,7 @@ module lcd_driver(
 				else next_state <= state;
             end
             DISPLAY_OFF_WAIT: begin
-                if (delay_counter == 21'b0) next_state <= ENTRY_MODE;//DISPLAY_CLEAR;
+                if (delay_counter == 21'b0) next_state <= DISPLAY_CLEAR;
 				else next_state <= state;
             end
             DISPLAY_CLEAR: begin
@@ -160,7 +160,7 @@ module lcd_driver(
 				else next_state <= state;
             end
             WRITE_SCREEN: begin
-                if (screen != prev_screen) next_state <= ENTRY_MODE; //DISPLAY_CLEAR;
+                if (screen != prev_screen) next_state <= DISPLAY_CLEAR;
                 else next_state <= WRITE_PULSE_EN;
             end
             WRITE_PULSE_EN: begin
@@ -182,16 +182,17 @@ module lcd_driver(
 
     always_ff @(posedge clk, negedge reset) begin 
         if (~reset) begin
-			/*
+			
             rs <= 1'b0;
             rw <= 1'b0;
             DB <= 8'h00;
             en <= 1'b0;	
-			*/
+			/*
 			rs <= 1'b1;
             rw <= 1'b1;
             DB <= 8'hFF;
             en <= 1'b1;	
+			*/
 			
             delay_counter <= 21'b0;
             char_counter <= 8'h00;
