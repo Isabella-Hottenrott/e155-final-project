@@ -3489,3 +3489,1310 @@ run 5000000
 #    Time: 6780 ns  Iteration: 0  Instance: /lcd_driver_tb
 # 1
 # Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 141
+add wave -position end  sim:/lcd_driver_tb/dut/en
+add wave -position end  sim:/lcd_driver_tb/dut/rs
+add wave -position end  sim:/lcd_driver_tb/dut/rw
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 5000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [1690000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1750000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1810000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1870000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1930000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1990000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2710000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [2770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2900000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [2960000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [3020000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [3080000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3140000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3200000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [3260000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [3320000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [3380000] DATA: '!' (0x21) from messages[ 3][  9]
+# [3440000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [3500000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [3560000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [3620000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [3740000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [3800000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [3860000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [3920000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [3980000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [4110000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4170000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [4230000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [4290000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [4350000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [4410000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [4470000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [4600000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [4660000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [4720000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [4780000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [4840000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [4900000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [4960000] DATA: ' ' (0x20) from messages[ 1][  7]
+run 5000000
+# [5020000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5150000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5210000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [5270000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [5330000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [5390000] DATA: 's' (0x73) from messages[ 2][  5]
+# [5450000] DATA: 's' (0x73) from messages[ 2][  6]
+# [5510000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [5640000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [5700000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [5760000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [5820000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [5880000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [5940000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [6000000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [6060000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6190000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [6250000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [6310000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [6370000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [6430000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [6490000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [6550000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [6610000] DATA: 's' (0x73) from messages[ 4][  8]
+# [6670000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [6730000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(141)
+#    Time: 6780 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 141
+add wave -position end  sim:/lcd_driver_tb/dut/data
+add wave -position end  sim:/lcd_driver_tb/dut/DB
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 800000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# Initialization complete at 340000 ns
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# 
+# === Test 1: Display Message 0 ===
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+run 800000
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+run 8000000
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [1690000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1750000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1810000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1870000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1930000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1990000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2710000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [2770000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2900000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [2960000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [3020000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [3080000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3140000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3200000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [3260000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [3320000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [3380000] DATA: '!' (0x21) from messages[ 3][  9]
+# [3440000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [3500000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [3560000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [3620000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [3740000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [3800000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [3860000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [3920000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [3980000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [4110000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4170000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [4230000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [4290000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [4350000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [4410000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [4470000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [4600000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [4660000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [4720000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [4780000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [4840000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [4900000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [4960000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [5020000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5150000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5210000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [5270000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [5330000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [5390000] DATA: 's' (0x73) from messages[ 2][  5]
+# [5450000] DATA: 's' (0x73) from messages[ 2][  6]
+# [5510000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [5640000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [5700000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [5760000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [5820000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [5880000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [5940000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [6000000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [6060000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6190000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [6250000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [6310000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [6370000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [6430000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [6490000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [6550000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [6610000] DATA: 's' (0x73) from messages[ 4][  8]
+# [6670000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [6730000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(141)
+#    Time: 6780 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 141
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of messages.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart -f 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:\Users\wchan\Documents\GitHub\e155-final-project\fpga\messages.sv(33): Module 'mess_writ' is not defined.
+#  For instance 'ebr_inst' at path 'lcd_driver_tb.dut.mes'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Compile of messages.sv was successful.
+run 8000
+# No Design Loaded!
+vsim -gui {-voptargs=+acc -L iCE40UP} work.lcd_driver_tb
+# vsim -gui -voptargs="+acc -L iCE40UP" work.lcd_driver_tb 
+# Start time: 10:15:34 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(29): (vopt-2912) Port 'change_screen' not found in module 'lcd_driver' (4th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# End time: 20:08:37 on Dec 03,2025, Elapsed time: 9:53:03
+# Errors: 2, Warnings: 4
+# Compile of lcd_driver_tb.sv was successful.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.lcd_driver_tb
+# vsim -gui -voptargs="+acc -L iCE40UP" work.lcd_driver_tb 
+# Start time: 20:09:45 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 8000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# 
+# === Test 1: Display Message 0 ===
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1440000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [1570000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1630000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1690000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1750000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1810000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1870000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [1930000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [1990000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2780000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [2840000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [2900000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [2960000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3020000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3080000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [3140000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [3200000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [3260000] DATA: '!' (0x21) from messages[ 3][  9]
+# [3320000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [3380000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [3440000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [3500000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [3560000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [3620000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [3740000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [3800000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [3860000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [3990000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4050000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [4110000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [4170000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [4230000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [4290000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [4350000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [4480000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [4540000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [4600000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [4660000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [4720000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [4780000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [4840000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [4900000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5030000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5090000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [5150000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [5210000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [5270000] DATA: 's' (0x73) from messages[ 2][  5]
+# [5330000] DATA: 's' (0x73) from messages[ 2][  6]
+# [5390000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [5520000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [5580000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [5640000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [5700000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [5760000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [5820000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [5880000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [5940000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6070000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [6130000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [6190000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [6250000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [6310000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [6370000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [6430000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [6490000] DATA: 's' (0x73) from messages[ 4][  8]
+# [6550000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [6610000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(139)
+#    Time: 6660 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 139
+add wave -position end  sim:/lcd_driver_tb/dut/reset
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 80000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# 
+# === Test 1: Display Message 0 ===
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# 
+# === Test 2: Switch to Message 1 ===
+# [1440000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [1570000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [1630000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [1690000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [1750000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [1810000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [1870000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [1930000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [1990000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2050000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [2110000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [2170000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [2230000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [2290000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [2350000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [2410000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [2470000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [2530000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [2590000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [2650000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [2780000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [2840000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [2900000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [2960000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3020000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3080000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [3140000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [3200000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [3260000] DATA: '!' (0x21) from messages[ 3][  9]
+# [3320000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [3380000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [3440000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [3500000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [3560000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [3620000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [3740000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [3800000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [3860000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [3990000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4050000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [4110000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [4170000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [4230000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [4290000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [4350000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [4480000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [4540000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [4600000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [4660000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [4720000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [4780000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [4840000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [4900000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5030000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5090000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [5150000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [5210000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [5270000] DATA: 's' (0x73) from messages[ 2][  5]
+# [5330000] DATA: 's' (0x73) from messages[ 2][  6]
+# [5390000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [5520000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [5580000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [5640000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [5700000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [5760000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [5820000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [5880000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [5940000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6070000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [6130000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [6190000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [6250000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [6310000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [6370000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [6430000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [6490000] DATA: 's' (0x73) from messages[ 4][  8]
+# [6550000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [6610000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(139)
+#    Time: 6660 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 139
+# Compile of lcd_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcd_driver_tb(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'screen'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcd_driver_tb/dut/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run 8000000
+# === LCD Driver Testbench ===
+# Starting at time 0 ns
+# 
+# === Reset released at 100000 ns ===
+# 
+# === Waiting for initialization sequence ===
+# [360000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [420000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [480000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [540000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [600000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [660000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [720000] DATA: ' ' (0x20) from messages[ 0][  7]
+# [780000] DATA: ' ' (0x20) from messages[ 0][  8]
+# [840000] DATA: ' ' (0x20) from messages[ 0][  9]
+# [900000] DATA: ' ' (0x20) from messages[ 0][ 10]
+# [960000] DATA: ' ' (0x20) from messages[ 0][ 11]
+# [1020000] DATA: ' ' (0x20) from messages[ 0][ 12]
+# [1080000] DATA: ' ' (0x20) from messages[ 0][ 13]
+# [1140000] DATA: ' ' (0x20) from messages[ 0][ 14]
+# 
+# === Test 1: Display Message 0 ===
+# [1200000] DATA: ' ' (0x20) from messages[ 0][ 15]
+# [1260000] DATA: ' ' (0x20) from messages[ 0][ 16]
+# [1320000] DATA: ' ' (0x20) from messages[ 0][ 17]
+# [1380000] DATA: ' ' (0x20) from messages[ 0][ 18]
+# [1440000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1500000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1560000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1620000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1680000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1740000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1800000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1860000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1920000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [1980000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [2040000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [2100000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [2160000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [2220000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# [2280000] DATA: ' ' (0x20) from messages[ 0][ 19]
+# 
+# === Test 2: Switch to Message 1 ===
+# [2340000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# Screen change detected, entering DISPLAY_CLEAR state
+# Back to WRITE_SCREEN state
+# [2470000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [2530000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [2590000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [2650000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [2710000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [2770000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [2830000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [2890000] DATA: ' ' (0x20) from messages[ 1][  8]
+# [2950000] DATA: ' ' (0x20) from messages[ 1][  9]
+# [3010000] DATA: ' ' (0x20) from messages[ 1][ 10]
+# [3070000] DATA: ' ' (0x20) from messages[ 1][ 11]
+# [3130000] DATA: ' ' (0x20) from messages[ 1][ 12]
+# [3190000] DATA: ' ' (0x20) from messages[ 1][ 13]
+# [3250000] DATA: ' ' (0x20) from messages[ 1][ 14]
+# [3310000] DATA: ' ' (0x20) from messages[ 1][ 15]
+# [3370000] DATA: ' ' (0x20) from messages[ 1][ 16]
+# [3430000] DATA: ' ' (0x20) from messages[ 1][ 17]
+# [3490000] DATA: ' ' (0x20) from messages[ 1][ 18]
+# 
+# === Test 3: Switch to Message 3 ===
+# [3550000] DATA: ' ' (0x20) from messages[ 1][ 19]
+# [3680000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [3740000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [3800000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [3860000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [3920000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [3980000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [4040000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [4100000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# [4160000] DATA: '!' (0x21) from messages[ 3][  9]
+# [4220000] DATA: ' ' (0x20) from messages[ 3][ 10]
+# [4280000] DATA: ' ' (0x20) from messages[ 3][ 11]
+# [4340000] DATA: ' ' (0x20) from messages[ 3][ 12]
+# [4400000] DATA: ' ' (0x20) from messages[ 3][ 13]
+# [4460000] DATA: ' ' (0x20) from messages[ 3][ 14]
+# [4520000] DATA: ' ' (0x20) from messages[ 3][ 15]
+# [4580000] DATA: ' ' (0x20) from messages[ 3][ 16]
+# [4640000] DATA: ' ' (0x20) from messages[ 3][ 17]
+# [4700000] DATA: ' ' (0x20) from messages[ 3][ 18]
+# 
+# === Test 4: Rapid Message Switching ===
+# [4760000] DATA: ' ' (0x20) from messages[ 3][ 19]
+# Switching to message           0
+# [4890000] DATA: ' ' (0x20) from messages[ 0][  1]
+# [4950000] DATA: 'R' (0x52) from messages[ 0][  2]
+# [5010000] DATA: 'o' (0x6f) from messages[ 0][  3]
+# [5070000] DATA: 'c' (0x63) from messages[ 0][  4]
+# [5130000] DATA: 'k' (0x6b) from messages[ 0][  5]
+# [5190000] DATA: ' ' (0x20) from messages[ 0][  6]
+# [5250000] DATA: ' ' (0x20) from messages[ 0][  7]
+# Switching to message           1
+# [5380000] DATA: ' ' (0x20) from messages[ 1][  1]
+# [5440000] DATA: 'P' (0x50) from messages[ 1][  2]
+# [5500000] DATA: 'a' (0x61) from messages[ 1][  3]
+# [5560000] DATA: 'p' (0x70) from messages[ 1][  4]
+# [5620000] DATA: 'e' (0x65) from messages[ 1][  5]
+# [5680000] DATA: 'r' (0x72) from messages[ 1][  6]
+# [5740000] DATA: ' ' (0x20) from messages[ 1][  7]
+# [5800000] DATA: ' ' (0x20) from messages[ 1][  8]
+# Switching to message           2
+# [5930000] DATA: ' ' (0x20) from messages[ 2][  1]
+# [5990000] DATA: 'S' (0x53) from messages[ 2][  2]
+# [6050000] DATA: 'c' (0x63) from messages[ 2][  3]
+# [6110000] DATA: 'i' (0x69) from messages[ 2][  4]
+# [6170000] DATA: 's' (0x73) from messages[ 2][  5]
+# [6230000] DATA: 's' (0x73) from messages[ 2][  6]
+# [6290000] DATA: 'o' (0x6f) from messages[ 2][  7]
+# Switching to message           3
+# [6420000] DATA: ' ' (0x20) from messages[ 3][  1]
+# [6480000] DATA: 'Y' (0x59) from messages[ 3][  2]
+# [6540000] DATA: 'o' (0x6f) from messages[ 3][  3]
+# [6600000] DATA: 'u' (0x75) from messages[ 3][  4]
+# [6660000] DATA: ' ' (0x20) from messages[ 3][  5]
+# [6720000] DATA: 'W' (0x57) from messages[ 3][  6]
+# [6780000] DATA: 'i' (0x69) from messages[ 3][  7]
+# [6840000] DATA: 'n' (0x6e) from messages[ 3][  8]
+# Switching to message           4
+# [6970000] DATA: ' ' (0x20) from messages[ 4][  1]
+# [7030000] DATA: 'Y' (0x59) from messages[ 4][  2]
+# [7090000] DATA: 'o' (0x6f) from messages[ 4][  3]
+# [7150000] DATA: 'u' (0x75) from messages[ 4][  4]
+# [7210000] DATA: ' ' (0x20) from messages[ 4][  5]
+# [7270000] DATA: 'L' (0x4c) from messages[ 4][  6]
+# [7330000] DATA: 'o' (0x6f) from messages[ 4][  7]
+# [7390000] DATA: 's' (0x73) from messages[ 4][  8]
+# [7450000] DATA: 'e' (0x65) from messages[ 4][  9]
+# [7510000] DATA: ' ' (0x20) from messages[ 4][ 10]
+# 
+# === Test Complete ===
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv(141)
+#    Time: 7560 ns  Iteration: 0  Instance: /lcd_driver_tb
+# 1
+# Break in Module lcd_driver_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv line 141
+quit -sim
+# End time: 21:11:17 on Dec 03,2025, Elapsed time: 1:01:32
+# Errors: 0, Warnings: 5
+vsim -gui {-voptargs=+acc -L iCE40UP} work.messages_tb
+# vsim -gui -voptargs="+acc -L iCE40UP" work.messages_tb 
+# Start time: 21:11:35 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run -all
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x20 ( )
+# char_index=          1, data=0x52 (R)
+# char_index=          2, data=0x6f (o)
+# char_index=          3, data=0x63 (c)
+# char_index=          4, data=0x6b (k)
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x50 ('P')
+# char_index=          2, data=0x61 ('a')
+# char_index=          3, data=0x70 ('p')
+# char_index=          4, data=0x65 ('e')
+# char_index=          5, data=0x72 ('r')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x53 ('S')
+# char_index=          2, data=0x63 ('c')
+# char_index=          3, data=0x69 ('i')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x73 ('s')
+# char_index=          6, data=0x6f ('o')
+# char_index=          7, data=0x72 ('r')
+# char_index=          8, data=0x73 ('s')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x59 ('Y')
+# char_index=          2, data=0x6f ('o')
+# char_index=          3, data=0x75 ('u')
+# char_index=          4, data=0x20 (' ')
+# char_index=          5, data=0x57 ('W')
+# char_index=          6, data=0x69 ('i')
+# char_index=          7, data=0x6e ('n')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1 us  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+add wave -position end  sim:/messages_tb/dut/byte_select_reg
+add wave -position end  sim:/messages_tb/dut/char_index
+add wave -position end  sim:/messages_tb/dut/clk
+add wave -position end  sim:/messages_tb/dut/data_out
+add wave -position end  sim:/messages_tb/dut/msg_index
+add wave -position end  sim:/messages_tb/dut/ram_rd_data
+add wave -position end  sim:/messages_tb/dut/rd_addr
+add wave -position end  sim:/messages_tb/dut/valid_out
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.messages_tb(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'msg_index'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /messages_tb/dut/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+run -all
+# === Test 1: Reading Message 0 (Rock) ===
+# char_index=          0, data=0x20 ( )
+# char_index=          1, data=0x52 (R)
+# char_index=          2, data=0x6f (o)
+# char_index=          3, data=0x63 (c)
+# char_index=          4, data=0x6b (k)
+# char_index=          5, data=0x20 ( )
+# char_index=          6, data=0x20 ( )
+# char_index=          7, data=0x20 ( )
+# char_index=          8, data=0x20 ( )
+# char_index=          9, data=0x20 ( )
+# char_index=         10, data=0x20 ( )
+# char_index=         11, data=0x20 ( )
+# char_index=         12, data=0x20 ( )
+# char_index=         13, data=0x20 ( )
+# char_index=         14, data=0x20 ( )
+# char_index=         15, data=0x20 ( )
+# char_index=         16, data=0x20 ( )
+# char_index=         17, data=0x20 ( )
+# char_index=         18, data=0x20 ( )
+# char_index=         19, data=0x20 ( )
+# 
+# === Test 2: Reading Message 1 (Paper) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x50 ('P')
+# char_index=          2, data=0x61 ('a')
+# char_index=          3, data=0x70 ('p')
+# char_index=          4, data=0x65 ('e')
+# char_index=          5, data=0x72 ('r')
+# char_index=          6, data=0x20 (' ')
+# char_index=          7, data=0x20 (' ')
+# char_index=          8, data=0x20 (' ')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 3: Reading Message 2 (Scissors) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x53 ('S')
+# char_index=          2, data=0x63 ('c')
+# char_index=          3, data=0x69 ('i')
+# char_index=          4, data=0x73 ('s')
+# char_index=          5, data=0x73 ('s')
+# char_index=          6, data=0x6f ('o')
+# char_index=          7, data=0x72 ('r')
+# char_index=          8, data=0x73 ('s')
+# char_index=          9, data=0x20 (' ')
+# char_index=         10, data=0x20 (' ')
+# char_index=         11, data=0x20 (' ')
+# char_index=         12, data=0x20 (' ')
+# char_index=         13, data=0x20 (' ')
+# char_index=         14, data=0x20 (' ')
+# char_index=         15, data=0x20 (' ')
+# char_index=         16, data=0x20 (' ')
+# char_index=         17, data=0x20 (' ')
+# char_index=         18, data=0x20 (' ')
+# char_index=         19, data=0x20 (' ')
+# 
+# === Test 4: Switching Messages ===
+# Message 3, char 0: 0x53 ('S')
+# Message 4, char 0: 0x59 ('Y')
+# Message 5, char 0: 0x59 ('Y')
+# 
+# === Test 5: Verifying Space Padding (0x20) ===
+# char_index=          4: PASS - Got space (0x20)
+# char_index=          5: PASS - Got space (0x20)
+# char_index=          6: PASS - Got space (0x20)
+# char_index=          7: PASS - Got space (0x20)
+# 
+# === Test 6: Multi-row Message (You Win!) ===
+# char_index=          0, data=0x20 (' ')
+# char_index=          1, data=0x59 ('Y')
+# char_index=          2, data=0x6f ('o')
+# char_index=          3, data=0x75 ('u')
+# char_index=          4, data=0x20 (' ')
+# char_index=          5, data=0x57 ('W')
+# char_index=          6, data=0x69 ('i')
+# char_index=          7, data=0x6e ('n')
+# ** Note: $finish    : C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv(113)
+#    Time: 1 us  Iteration: 0  Instance: /messages_tb
+# 1
+# Break in Module messages_tb at C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/messages_tb.sv line 113
+quit -sim
+# End time: 21:30:14 on Dec 03,2025, Elapsed time: 0:18:39
+# Errors: 0, Warnings: 5
+# Compile of lcd_driver.sv was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# 13 compiles, 0 failed with no errors.
+# Compile of lcdtb.sv was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# Compile of lcdtb.sv was successful.
+# Compile of top.sv was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.lcdtb -L iCE40UP
+# vsim -gui -voptargs="+acc -L iCE40UP" work.lcdtb -L iCE40UP 
+# Start time: 21:32:03 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcdtb(fast)
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.message_writer(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_main(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__6)
+# Loading iCE40UP.PDP4K(fast__6)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__7)
+# Loading iCE40UP.PDP4K(fast__7)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__8)
+# Loading iCE40UP.PDP4K(fast__8)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__9)
+# Loading iCE40UP.PDP4K(fast__9)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__10)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__11)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__12)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__13)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__14)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__15)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__16)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__17)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__18)
+# Loading work.message_writer_ipgen_lscc_ram_dp_core(fast__19)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'wr_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /lcdtb/dut/lcd_d/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (3) for port 'rd_addr_i'. The port definition is at: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /lcdtb/dut/lcd_d/mes/ebr_inst File: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv Line: 33
+add wave -position end sim:/lcdtb/*
+run -all
+add wave -position end  sim:/lcdtb/dut/DB
+add wave -position end  sim:/lcdtb/dut/lcd_d/mes/msg_index
+add wave -position end  sim:/lcdtb/dut/lcd_d/mes/char_index
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/work/@_opt/_lib3_0.qpg".
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/work/@_opt/_lib3_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/work/@_opt".
+# ** Error: (vopt-11) Could not find work.lcdtb(fast).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=4.
+# Break key hit
