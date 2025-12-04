@@ -1,0 +1,6 @@
+#Start recording tcl command: 12/3/2025 16:11:27
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test; Project name: lcd_driver_test
+prj_open "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/lcd_driver_test.rdf"
+prj_save 
+prj_close
+#Stop recording: 12/3/2025 16:17:49

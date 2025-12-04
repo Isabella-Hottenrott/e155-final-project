@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35935050</ID>
@@ -59,7 +66,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(11): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(11):</Dynamic>
             <Dynamic>mess_writ</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>11</Navigation>
@@ -67,7 +74,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(252): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(252):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=8,WADDR_WIDTH=3,WDATA_WIDTH=160,RADDR_DEPTH=8,RADDR_WIDTH=3,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>252</Navigation>
@@ -75,7 +82,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(657): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(657):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=8,WADDR_WIDTH=3,WDATA_WIDTH=160,RADDR_DEPTH=8,RADDR_WIDTH=3,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_M   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>657</Navigation>
@@ -83,7 +90,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000004E205320542059205920532050205220&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_V   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -91,7 +98,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000004E205320542059205920532050205220&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -99,7 +106,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000786561746569756F756F69637061636F&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,I   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -107,7 +114,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000786561746569756F756F69637061636F&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -115,7 +122,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000002074747220204C20572073737265206B&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -123,7 +130,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000002074747220204C20572073737265206B&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -131,7 +138,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000654C6E692020736F6E69726F20202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -139,7 +146,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000654C6E692020736F6E69726F20202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -147,7 +154,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020762067202020652021207320202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -155,7 +162,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020762067202020652021207320202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -163,7 +170,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -171,7 +178,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -179,7 +186,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -187,7 +194,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -195,7 +202,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -203,7 +210,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -275,7 +282,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv(5): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv(5):</Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv</Navigation>
             <Navigation>5</Navigation>
@@ -283,7 +290,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756):</Dynamic>
             <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
@@ -291,7 +298,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(11): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(11):</Dynamic>
             <Dynamic>lcd_driver</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
             <Navigation>11</Navigation>
@@ -299,7 +306,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5):</Dynamic>
             <Dynamic>messages</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv</Navigation>
             <Navigation>5</Navigation>
@@ -307,7 +314,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>mess_writ.v(63): </Dynamic>
+            <Dynamic>mess_writ.v(63):</Dynamic>
             <Dynamic>mess_writ</Dynamic>
             <Navigation>mess_writ.v</Navigation>
             <Navigation>63</Navigation>
@@ -376,7 +383,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(1): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(1):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>1</Navigation>
@@ -384,7 +391,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v(40): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v(40):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v</Navigation>
             <Navigation>40</Navigation>
@@ -392,7 +399,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(2): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(2):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>2</Navigation>
@@ -400,7 +407,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v(50): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v(50):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/adder/rtl/lscc_adder.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v</Navigation>
             <Navigation>50</Navigation>
@@ -408,7 +415,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(3): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(3):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>3</Navigation>
@@ -416,7 +423,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v</Navigation>
             <Navigation>52</Navigation>
@@ -424,7 +431,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(4): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(4):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>4</Navigation>
@@ -432,7 +439,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v(39): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v(39):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/counter/rtl/lscc_cntr.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v</Navigation>
             <Navigation>39</Navigation>
@@ -440,7 +447,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(5): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(5):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>5</Navigation>
@@ -448,7 +455,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v(44): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v(44):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/fifo/rtl/lscc_fifo.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v</Navigation>
             <Navigation>44</Navigation>
@@ -456,7 +463,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(6): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(6):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>6</Navigation>
@@ -464,7 +471,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v(47): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v(47):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v</Navigation>
             <Navigation>47</Navigation>
@@ -472,7 +479,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(7): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(7):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>7</Navigation>
@@ -480,7 +487,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v</Navigation>
             <Navigation>52</Navigation>
@@ -488,7 +495,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(8): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(8):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>8</Navigation>
@@ -496,7 +503,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v(53): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v(53):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v</Navigation>
             <Navigation>53</Navigation>
@@ -504,7 +511,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(9): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(9):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>9</Navigation>
@@ -512,7 +519,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v(52): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v(52):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v</Navigation>
             <Navigation>52</Navigation>
@@ -520,7 +527,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(10): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(10):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>10</Navigation>
@@ -528,7 +535,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v(51): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v(51):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v</Navigation>
             <Navigation>51</Navigation>
@@ -536,7 +543,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(11): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(11):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>11</Navigation>
@@ -544,7 +551,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v(48): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v(48):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v</Navigation>
             <Navigation>48</Navigation>
@@ -552,7 +559,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(12): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(12):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>12</Navigation>
@@ -560,7 +567,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v</Navigation>
             <Navigation>45</Navigation>
@@ -568,7 +575,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(13): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(13):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>13</Navigation>
@@ -576,7 +583,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/rom/rtl/lscc_rom.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v</Navigation>
             <Navigation>45</Navigation>
@@ -584,7 +591,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(14): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(14):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>14</Navigation>
@@ -592,7 +599,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v(50): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v(50):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v</Navigation>
             <Navigation>50</Navigation>
@@ -600,7 +607,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(15): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(15):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>15</Navigation>
@@ -608,7 +615,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v(49): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v(49):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v</Navigation>
             <Navigation>49</Navigation>
@@ -616,7 +623,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(16): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(16):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>16</Navigation>
@@ -624,7 +631,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v(45): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v(45):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v</Navigation>
             <Navigation>45</Navigation>
@@ -632,7 +639,7 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(17): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v(17):</Dynamic>
             <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_dsp.v</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v</Navigation>
             <Navigation>17</Navigation>
@@ -640,7 +647,7 @@
         <Message>
             <ID>35921014</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
+            <Dynamic>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd(4):</Dynamic>
             <Dynamic>components</Dynamic>
             <Navigation>c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd</Navigation>
             <Navigation>4</Navigation>
@@ -654,7 +661,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv(5): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv(5):</Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/source/impl_1/top.sv</Navigation>
             <Navigation>5</Navigation>
@@ -662,7 +669,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756):</Dynamic>
             <Dynamic>HSOSC(CLKHF_DIV=2'b0)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
@@ -670,7 +677,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(11): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv(11):</Dynamic>
             <Dynamic>lcd_driver</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/lcd_driver.sv</Navigation>
             <Navigation>11</Navigation>
@@ -678,7 +685,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv(5):</Dynamic>
             <Dynamic>messages</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/fpga/messages.sv</Navigation>
             <Navigation>5</Navigation>
@@ -686,7 +693,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(11): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(11):</Dynamic>
             <Dynamic>mess_writ</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>11</Navigation>
@@ -694,7 +701,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(252): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(252):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=8,WADDR_WIDTH=3,WDATA_WIDTH=160,RADDR_DEPTH=8,RADDR_WIDTH=3,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>252</Navigation>
@@ -702,7 +709,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(657): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(657):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=8,WADDR_WIDTH=3,WDATA_WIDTH=160,RADDR_DEPTH=8,RADDR_WIDTH=3,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_M   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>657</Navigation>
@@ -710,7 +717,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000004E205320542059205920532050205220&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_V   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -718,7 +725,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000004E205320542059205920532050205220&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -726,7 +733,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000786561746569756F756F69637061636F&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,I   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -734,7 +741,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000786561746569756F756F69637061636F&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -742,7 +749,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000002074747220204C20572073737265206B&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -750,7 +757,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000002074747220204C20572073737265206B&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -758,7 +765,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000654C6E692020736F6E69726F20202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -766,7 +773,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000654C6E692020736F6E69726F20202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -774,7 +781,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020762067202020652021207320202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -782,7 +789,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020762067202020652021207320202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -790,7 +797,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -798,7 +805,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693):</Dynamic>
             <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
@@ -806,7 +813,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -814,7 +821,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -822,7 +829,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -830,7 +837,7 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v(3996):</Dynamic>
             <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,8&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
             <Navigation>c:/users/wchan/documents/github/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
@@ -868,13 +875,6 @@
         <Message>
             <ID>35002039</ID>
             <Severity>1</Severity>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

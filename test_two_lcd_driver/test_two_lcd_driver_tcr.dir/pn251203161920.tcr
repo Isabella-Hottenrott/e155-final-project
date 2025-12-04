@@ -1,0 +1,10 @@
+#Start recording tcl command: 12/3/2025 16:17:49
+#Project Location: C:/Users/wchan/Documents/GitHub/e155-final-project/test_two_lcd_driver; Project name: test_two_lcd_driver
+prj_create -name "test_two_lcd_driver" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_add_source "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/source/impl_1/top.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv"
+prj_save 
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 12/3/2025 16:19:20
