@@ -49,6 +49,10 @@ module lcd_driver(
     } state_t;
 
     state_t state, next_state;
+	
+	// Testing logic 
+	logic [5:0] state_count;
+	assign test = (state_count == 6'd8);
     
     // Timing counter for delays (only used within WAIT states)
     logic [20:0] delay_counter;
@@ -117,11 +121,11 @@ module lcd_driver(
 				else next_state <= state;
             end
             INIT_WAIT_3: begin
-                if (delay_counter == 21'b0) next_state <= DISPLAY_OFF;
+                if (delay_counter == 21'b0) next_state <= INIT_FUNCTION_SET_4;
 				else next_state <= state;
             end
             INIT_FUNCTION_SET_4: begin
-                if (delay_counter == 21'b0) next_state <= INIT_WAIT_3;
+                if (delay_counter == 21'b0) next_state <= INIT_WAIT_4;
 				else next_state <= state;
             end
             INIT_WAIT_4: begin
@@ -198,6 +202,8 @@ module lcd_driver(
             char_counter <= 8'h00;
             prev_screen <= screen; 
             pending_screen_change <= 1'b0;
+			
+			state_count <= 0;
         end
         else begin
             // Track screen change
@@ -205,18 +211,20 @@ module lcd_driver(
                 pending_screen_change <= 1'b1;
             end
             en <= 1'b0; // default: disable
-			test <= 1'b0; 
+			//test <= 1'b0; 
             case(state)
                 START: begin
                     rs <= 1'b0;
                     rw <= 1'b0;
                     DB <= 8'h00;
-                    delay_counter <= 21'd2; // 15ms delay, ~2 cycles
+                    delay_counter <= 21'd200; // 16ms delay, ~200 cycles
 					char_counter <= 8'h00; //REDUNDANT?
+					
+					state_count <= state_count + 6'b1;
                 end
                 POWER_ON_WAIT: begin
                     // Decrement delay counter
-					//prev_screen <= screen;
+					state_count <= state_count + 6'b1;
                     if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 end
             INIT_FUNCTION_SET_1, INIT_FUNCTION_SET_2, INIT_FUNCTION_SET_3: begin
@@ -224,7 +232,9 @@ module lcd_driver(
                 rw <= 1'b0; // write
                 DB <= 8'b00110000; // 0x30: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
-                delay_counter <= 21'd2; // 1 cycle for enable hold + 1 for safety = ~15ms total
+                delay_counter <= 21'd75; // 1 cycle for enable hold + 1 for safety = ~15ms total
+				
+				state_count <= state_count + 6'b1;
             end
 			INIT_FUNCTION_SET_4: begin
 				rs <= 1'b0; // command mode
@@ -232,6 +242,8 @@ module lcd_driver(
                 DB <= 8'b00111000; // 0x38: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
                 delay_counter <= 21'd2; // 1 cycle for enable hold + 1 for safety = ~15ms total
+				
+				state_count <= state_count + 6'b1;
             end
 				
             INIT_WAIT_1: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
@@ -243,7 +255,9 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00001000; // 0x08: display off
                     en <= 1'b1;
-                    delay_counter <= 21'd1;
+                    delay_counter <= 21'd2;
+					
+					state_count <= state_count + 6'b1;
                 end
                 DISPLAY_OFF_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 DISPLAY_CLEAR: begin
@@ -251,7 +265,9 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00000001; // 0x01: clear display
                     en <= 1'b1;
-                    delay_counter <= 21'd1; // ~1.6ms for clear
+                    delay_counter <= 21'd75; // ~1.6ms for clear
+					
+					state_count <= state_count + 6'b1;
                 end
                 DISPLAY_CLEAR_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 ENTRY_MODE: begin
@@ -260,6 +276,7 @@ module lcd_driver(
                     DB <= 8'b00000110; // 0x06: increment, no shift
                     en <= 1'b1;
                     delay_counter <= 21'd1;
+				
                 end
                 ENTRY_MODE_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 DISPLAY_ON: begin

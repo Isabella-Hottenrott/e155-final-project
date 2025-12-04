@@ -33,8 +33,8 @@ module top(input logic reset,
 	end
 	
 	//testing flags
-	//assign leds[0] = clk;
-	assign leds[1] = int_osc;
+	assign leds[0] = clk;
+	//assign leds[1] = int_osc;
 	assign leds[2] = screen[2];
 
 	
@@ -47,7 +47,7 @@ module top(input logic reset,
 						.rw(rw),
 						.rs(rs),
 						.en(en),
-						.test(leds[0])	);
+						.test(leds[1])	);
 	
 	always_ff @(posedge clk) begin // TODO: should i be using an fsm to simulate the other data?
 
