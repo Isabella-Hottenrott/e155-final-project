@@ -90,6 +90,21 @@ void pinMode(int gpio_pin, int function) {
 	}
 }
 
+void pinsMode(const int *pins, int count, int mode)
+{
+    for (int i = 0; i < count; i++)
+        pinMode(pins[i], mode);
+}
+
+void digitalWrites(const int *pins, int count, uint8_t value)
+{
+    for (int i = 0; i < count; i++)
+    {
+        uint8_t bit = (value >> i) & 0x01;
+        digitalWrite(pins[i], bit ? PIO_HIGH : PIO_LOW);
+    }
+}
+
 int digitalRead(int gpio_pin) {
 	// Get pointer to base address of the corresponding GPIO pin and pin offset
 	GPIO_TypeDef * GPIO_PORT_PTR = gpioPinToBase(gpio_pin);

@@ -109,4 +109,7 @@ void togglePin(int gpio_pin);
 
 void setAF(int pin);
 
+void pinsMode(const int *pins, int count, int mode);
+void digitalWrites(const int *pins, int count, uint8_t value);
+
 #endif

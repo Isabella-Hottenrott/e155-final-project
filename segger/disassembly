@@ -1,0 +1,326 @@
+    0000        movs r0, r0
+    0000        movs r0, r0
+    4240        rsbs r0, r0, #0
+    000F        movs r7, r1
+    0000        movs r0, r0
+    0000        movs r0, r0
+    9680        str r6, [sp, #0x0200]
+    0098        lsls r0, r3, #2
+    0000        movs r0, r0
+    0000        movs r0, r0
+    E100        b 0x080004AC
+    05F5        lsls r5, r6, #23
+    0000        movs r0, r0
+    0000        movs r0, r0
+    CA00        ldm r2!, {}
+    3B9A        subs r3, #0x9A
+    0000        movs r0, r0
+    0000        movs r0, r0
+    E400        b 0x07FFFABC
+    540B        strb r3, [r1, r0]
+    0002        movs r2, r0
+    0000        movs r0, r0
+    E8004876    srsdb #22
+    0017        movs r7, r2
+    0000        movs r0, r0
+    1000        asrs r0, r0, #0
+    D4A5        bmi 0x08000218
+    00E8        lsls r0, r5, #3
+    0000        movs r0, r0
+    A000        adr r0, 0x080002D4
+    4E72        ldr r6, =0xFA4EF000
+    0918        lsrs r0, r3, #4
+    0000        movs r0, r0
+    4000        ands r0, r0
+    107A        asrs r2, r7, #1
+    5AF3        ldrh r3, [r6, r3]
+    0000        movs r0, r0
+    8000        strh r0, [r0]
+    A4C6        adr r4, 0x080005FC
+    8D7E        ldrh r6, [r7, #0x2A]
+    0003        movs r3, r0
+    0000        movs r0, r0
+    6FC1        ldr r1, [r0, #0x7C]
+    86F2        strh r2, [r6, #0x36]
+    0023        movs r3, r4
+    0000        movs r0, r0
+    5D8A        ldrb r2, [r1, r6]
+    4578        cmp r0, pc
+    0163        lsls r3, r4, #5
+    0000        movs r0, r0
+    A764        adr r7, 0x0800048C
+    B6B3        undefined opcode
+    0DE0        lsrs r0, r4, #23
+    0000        movs r0, r0
+    89E8        ldrh r0, [r5, #14]
+    2304        movs r3, #4
+    8AC7        ldrh r7, [r0, #22]
+--- system_stm32l4xx.c -- 203 ------------------------------
+#endif
+/* FPU settings ------------------------------------------------------------*/
+#if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+SCB->CPACR |= ((3UL << 20U)|(3UL << 22U)); /* set CP10 and CP11 Full Access */
+    F64E5188    movw r1, #0xED88
+    F2CE0100    movt r1, #0xE000
+    6808        ldr r0, [r1]
+    F4400070    orr r0, r0, #0xF00000
+    6008        str r0, [r1]
+--- system_stm32l4xx.c -- 208 ------------------------------
+#endif
+/* Reset the RCC clock configuration to the default reset state ------------*/
+/* Set MSION bit */
+RCC->CR |= RCC_CR_MSION;
+    F2410200    movw r2, #0x1000
+    F2C40202    movt r2, #0x4002
+    6810        ldr r0, [r2]
+    F0400001    orr r0, r0, #1
+    6010        str r0, [r2]
+    F2410108    movw r1, #0x1008
+    F2C40102    movt r1, #0x4002
+--- system_stm32l4xx.c -- 213 ------------------------------
+/* Reset CFGR register */
+RCC->CFGR = 0x00000000U;
+    2000        movs r0, #0
+    6008        str r0, [r1]
+--- system_stm32l4xx.c -- 216 ------------------------------
+/* Reset HSEON, CSSON , HSION, and PLLON bits */
+RCC->CR &= 0xEAF6FFFFU;
+    6811        ldr r1, [r2]
+    F64F73FF    movw r3, #0xFFFF
+    F6CE23F6    movt r3, #0xEAF6
+    4019        ands r1, r3
+    6011        str r1, [r2]
+    F241030C    movw r3, #0x100C
+    F2C40302    movt r3, #0x4002
+--- system_stm32l4xx.c -- 219 ------------------------------
+/* Reset PLLCFGR register */
+RCC->PLLCFGR = 0x00001000U;
+    F44F5180    mov.w r1, #0x1000
+    6019        str r1, [r3]
+--- system_stm32l4xx.c -- 222 ------------------------------
+/* Reset HSEBYP bit */
+RCC->CR &= 0xFFFBFFFFU;
+    6811        ldr r1, [r2]
+    F4212180    bic r1, r1, #0x040000
+    6011        str r1, [r2]
+--- system_stm32l4xx.c -- 225 ------------------------------
+/* Disable all interrupts */
+RCC->CIER = 0x00000000U;
+    F2410118    movw r1, #0x1018
+    F2C40102    movt r1, #0x4002
+    6008        str r0, [r1]
+--- system_stm32l4xx.c -- 228 ------------------------------
+}
+    4770        bx lr
+<MSIRangeTable>
+    86A0        strh r0, [r4, #0x34]
+    0001        movs r1, r0
+    0D40        lsrs r0, r0, #21
+    0003        movs r3, r0
+    1A80        subs r0, r0, r2
+    0006        movs r6, r0
+    3500        adds r5, #0
+    000C        movs r4, r1
+    4240        rsbs r0, r0, #0
+    000F        movs r7, r1
+    8480        strh r0, [r0, #0x24]
+    001E        movs r6, r3
+    0900        lsrs r0, r0, #4
+    003D        movs r5, r7
+    1200        asrs r0, r0, #8
+    007A        lsls r2, r7, #1
+    2400        movs r4, #0
+    00F4        lsls r4, r6, #3
+    3600        adds r6, #0
+    016E        lsls r6, r5, #5
+    4800        ldr r0, =0x02DC6C00
+    01E8        lsls r0, r5, #7
+    6C00        ldr r0, [r0, #0x40]
+    02DC        lsls r4, r3, #11
+--- main.c -- 39 -------------------------------------------
+struct VL53L0X *TOF5,
+struct VL53L0X *TOF6,
+struct VL53L0X *TOF7);
+int main(){
+    B580        push {r7, lr}
+    B0D0        sub sp, sp, #0x0140
+    2000        movs r0, #0
+    9011        str r0, [sp, #0x44]
+    904F        str r0, [sp, #0x013C]
+--- main.c -- 44 -------------------------------------------
+struct VL53L0X myTOFsensor1;
+myTOFsensor1.io_2v8 = false;
+    F88D0125    strb.w r0, [sp, #0x0125]
+--- main.c -- 47 -------------------------------------------
+myTOFsensor1.address = 0b0101001;
+    2229        movs r2, #0x29
+    F88D2126    strb.w r2, [sp, #0x0126]
+--- main.c -- 48 -------------------------------------------
+myTOFsensor1.io_timeout = 500;
+    F44F71FA    mov.w r1, #0x01F4
+    914A        str r1, [sp, #0x0128]
+--- main.c -- 49 -------------------------------------------
+myTOFsensor1.did_timeout = false;
+    F88D012C    strb.w r0, [sp, #0x012C]
+--- main.c -- 50 -------------------------------------------
+struct VL53L0X myTOFsensor2;
+myTOFsensor2.io_2v8 = false;
+    F88D010D    strb.w r0, [sp, #0x010D]
+--- main.c -- 53 -------------------------------------------
+myTOFsensor2.address = 0b0101001;
+    F88D210E    strb.w r2, [sp, #0x010E]
+--- main.c -- 54 -------------------------------------------
+myTOFsensor2.io_timeout = 500;
+    9144        str r1, [sp, #0x0110]
+--- main.c -- 55 -------------------------------------------
+myTOFsensor2.did_timeout = false;
+    F88D0114    strb.w r0, [sp, #0x0114]
+--- main.c -- 56 -------------------------------------------
+struct VL53L0X myTOFsensor3;
+myTOFsensor3.io_2v8 = false;
+    F88D00F5    strb.w r0, [sp, #0xF5]
+--- main.c -- 59 -------------------------------------------
+myTOFsensor3.address = 0b0101001;
+    F88D20F6    strb.w r2, [sp, #0xF6]
+--- main.c -- 60 -------------------------------------------
+myTOFsensor3.io_timeout = 500;
+    913E        str r1, [sp, #0xF8]
+--- main.c -- 61 -------------------------------------------
+myTOFsensor3.did_timeout = false;
+    F88D00FC    strb.w r0, [sp, #0xFC]
+--- main.c -- 62 -------------------------------------------
+struct VL53L0X myTOFsensor4;
+myTOFsensor4.io_2v8 = false;
+    F88D00DD    strb.w r0, [sp, #0xDD]
+--- main.c -- 65 -------------------------------------------
+myTOFsensor4.address = 0b0101001;
+    F88D20DE    strb.w r2, [sp, #0xDE]
+--- main.c -- 66 -------------------------------------------
+myTOFsensor4.io_timeout = 500;
+    9138        str r1, [sp, #0xE0]
+--- main.c -- 67 -------------------------------------------
+myTOFsensor4.did_timeout = false;
+    F88D00E4    strb.w r0, [sp, #0xE4]
+--- main.c -- 68 -------------------------------------------
+struct VL53L0X myTOFsensor5;
+myTOFsensor5.io_2v8 = false;
+    F88D00C5    strb.w r0, [sp, #0xC5]
+--- main.c -- 71 -------------------------------------------
+myTOFsensor5.address = 0b0101001;
+    F88D20C6    strb.w r2, [sp, #0xC6]
+--- main.c -- 72 -------------------------------------------
+myTOFsensor5.io_timeout = 500;
+    9132        str r1, [sp, #0xC8]
+--- main.c -- 73 -------------------------------------------
+myTOFsensor5.did_timeout = false;
+    F88D00CC    strb.w r0, [sp, #0xCC]
+--- main.c -- 74 -------------------------------------------
+struct VL53L0X myTOFsensor6;
+myTOFsensor6.io_2v8 = false;
+    F88D00AD    strb.w r0, [sp, #0xAD]
+--- main.c -- 77 -------------------------------------------
+myTOFsensor6.address = 0b0101001;
+    F88D20AE    strb.w r2, [sp, #0xAE]
+--- main.c -- 78 -------------------------------------------
+myTOFsensor6.io_timeout = 500;
+    912C        str r1, [sp, #0xB0]
+--- main.c -- 79 -------------------------------------------
+myTOFsensor6.did_timeout = false;
+    F88D00B4    strb.w r0, [sp, #0xB4]
+--- main.c -- 80 -------------------------------------------
+struct VL53L0X myTOFsensor7;
+myTOFsensor7.io_2v8 = false;
+    F88D0095    strb.w r0, [sp, #0x95]
+--- main.c -- 83 -------------------------------------------
+myTOFsensor7.address = 0b0101001;
+    F88D2096    strb.w r2, [sp, #0x96]
+--- main.c -- 84 -------------------------------------------
+myTOFsensor7.io_timeout = 500;
+    9126        str r1, [sp, #0x98]
+--- main.c -- 85 -------------------------------------------
+myTOFsensor7.did_timeout = false;
+    F88D009C    strb.w r0, [sp, #0x9C]
+--- main.c -- 86 -------------------------------------------
+configurePLL();
+    F002FCEB    bl 0x08002DE0 <configurePLL>
+--- main.c -- 88 -------------------------------------------
+configureFlash();
+    F002FC3B    bl 0x08002C84 <configureFlash>
+--- main.c -- 89 -------------------------------------------
+configureHSIasClk();
+    F002FD21    bl 0x08002E54 <configureHSIasClk>
+    9811        ldr r0, [sp, #0x44]
+--- main.c -- 90 -------------------------------------------
+gpioEnable(GPIO_PORT_A);
+    F000FA3A    bl 0x0800088C <gpioEnable>
+--- main.c -- 91 -------------------------------------------
+gpioEnable(GPIO_PORT_B);
+    2001        movs r0, #1
+    900F        str r0, [sp, #0x3C]
+    F000FA36    bl 0x0800088C <gpioEnable>
+    9911        ldr r1, [sp, #0x44]
+--- main.c -- 92 -------------------------------------------
+pinMode(reset, GPIO_INPUT);
+    2010        movs r0, #16
+    F000FA8A    bl 0x0800093C <pinMode>
+    9911        ldr r1, [sp, #0x44]
+--- main.c -- 93 -------------------------------------------
+pinMode(nextRoundButton, GPIO_INPUT);
+    2017        movs r0, #23
+    F000FA86    bl 0x0800093C <pinMode>
+--- main.c -- 94 -------------------------------------------
+init_i2c1();
+    F002FC52    bl 0x08002CD8 <init_i2c1>
+--- main.c -- 95 -------------------------------------------
+RCC->APB2ENR |= (1<<16);
+    F2410160    movw r1, #0x1060
+    F2C40102    movt r1, #0x4002
+    6808        ldr r0, [r1]
+    F4403080    orr r0, r0, #0x010000
+    6008        str r0, [r1]
+--- main.c -- 96 -------------------------------------------
+initTIM(TIM15);
+    F2440000    movw r0, #0x4000
+    F2C40001    movt r0, #0x4001
+    9017        str r0, [sp, #0x5C]
+    F7FFFE9F    bl 0x08000190 <initTIM>
+    980F        ldr r0, [sp, #0x3C]
+    9A11        ldr r2, [sp, #0x44]
+--- main.c -- 97 -------------------------------------------
+initSPI(1, 0, 0);
+    4611        mov r1, r2
+    F002FD06    bl 0x08002E68 <initSPI>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 98 -------------------------------------------
+pinMode(Lidar1, GPIO_OUTPUT);
+    200B        movs r0, #11
+    900B        str r0, [sp, #0x2C]
+    F000FA6B    bl 0x0800093C <pinMode>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 100 ------------------------------------------
+pinMode(Lidar2, GPIO_OUTPUT);
+    200C        movs r0, #12
+    900C        str r0, [sp, #0x30]
+    F000FA66    bl 0x0800093C <pinMode>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 101 ------------------------------------------
+pinMode(Lidar3, GPIO_OUTPUT);
+    2003        movs r0, #3
+    900D        str r0, [sp, #0x34]
+    F000FA61    bl 0x0800093C <pinMode>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 102 ------------------------------------------
+pinMode(Lidar4, GPIO_OUTPUT);
+    2002        movs r0, #2
+    9018        str r0, [sp, #0x60]
+    F000FA5C    bl 0x0800093C <pinMode>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 103 ------------------------------------------
+pinMode(Lidar5, GPIO_OUTPUT);
+    4608        mov r0, r1
+    F000FA58    bl 0x0800093C <pinMode>
+    990F        ldr r1, [sp, #0x3C]
+--- main.c -- 104 ------------------------------------------
+pinMode(Lidar6, GPIO_OUTPUT);
+    2007        movs r0, #7
+    9008        str r0, [sp, #32]

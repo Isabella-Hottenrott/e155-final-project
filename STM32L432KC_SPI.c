@@ -69,4 +69,4 @@ uint8_t spiSend(uint8_t send){
 // PB3 -> Pin 21 (sck)
 // PB4 -> Pin x (MISO) (so sdo non existent on fpga dont need)
 // PB5 -> Pin 19 (MOSI) (so sdo non existent on fpga dont need)
-// PB6 -> Pin 20 (CS) 
+// PB1 -> Pin 20 (CS) 
