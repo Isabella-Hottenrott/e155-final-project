@@ -12,7 +12,7 @@ module finalproj(input logic sck,
 logic done, interpretWE, screenWE, clk;
 logic [7:0] unsynchSPIbyte, synchSPIbyte;
 logic [6:0] directedBits;
-logic [5:0] screencode;
+logic [3:0] screencode;
 logic [1:0] thiscomputer, result,
 
 
