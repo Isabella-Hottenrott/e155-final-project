@@ -1,0 +1,204 @@
+---------------------------------------------------
+Report for cell finalproj
+   Instance path: finalproj
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        520        100.0
+                               LUTGATE	        462        100.0
+                                LUTCCU	         58        100.0
+                                 IOBUF	         15        100.0
+                                PFUREG	        286        100.0
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                            chooseaddr	          1         3.7
+                         interpretgame	          1         1.3
+                            lcd_driver	          1        47.1
+                                   spi	          1         1.3
+                          synchronizer	          1         0.2
+---------------------------------------------------
+Report for cell chooseaddr
+   Instance path: finalproj/chooseaddr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         19         3.7
+                               LUTGATE	         19         4.1
+                                PFUREG	          4         1.4
+---------------------------------------------------
+Report for cell interpretgame
+   Instance path: finalproj/interpretgame
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         1.3
+                               LUTGATE	          7         1.5
+                                PFUREG	          4         1.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          computermove	          1         0.6
+                           winlosedraw	          1         0.8
+---------------------------------------------------
+Report for cell winlosedraw
+   Instance path: finalproj/interpretgame/winlosedraw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.8
+                               LUTGATE	          4         0.9
+---------------------------------------------------
+Report for cell computermove
+   Instance path: finalproj/interpretgame/computermove
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.6
+                               LUTGATE	          3         0.6
+                                PFUREG	          2         0.7
+---------------------------------------------------
+Report for cell lcd_driver
+   Instance path: finalproj/lcd_d
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        245        47.1
+                               LUTGATE	        213        46.1
+                                LUTCCU	         32        55.2
+                                PFUREG	        229        80.1
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              messages	          1        23.1
+---------------------------------------------------
+Report for cell messages
+   Instance path: finalproj/lcd_d/mes
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        120        23.1
+                               LUTGATE	        120        26.0
+                                PFUREG	        160        55.9
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                             mess_writ	          1         0.0
+---------------------------------------------------
+Report for cell mess_writ
+   Instance path: finalproj/lcd_d/mes/ebr_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	        160        55.9
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+mess_writ_ipgen_lscc_ram_dp(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE="C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem",INIT_FILE_FORMAT="hex",INIT_MODE="mem_file",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1,INIT_VALUE_FF="0x0000")	          1         0.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE="C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem",INIT_FILE_FORMAT="hex",INIT_MODE="mem_file",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1,INIT_VALUE_FF="0x0000")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	        160        55.9
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+mess_writ_ipgen_lscc_ram_dp_main(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE="C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem",INIT_FILE_FORMAT="hex",INIT_MODE="mem_file",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1,INIT_VALUE_FF="0x0001")	          1         0.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_main(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE="C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem",INIT_FILE_FORMAT="hex",INIT_MODE="mem_file",BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1,INIT_VALUE_FF="0x0001")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	        160        55.9
+                                   EBR	         10        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000044205920592043204320432031205020502053205220",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x000B")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00="0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x000A")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00="0x00000000000000000000207757204C207570757075706F522079656374727465",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0009")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202021206520722072207220642078206F20202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0007")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0003")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0002")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0006")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020206E69736F6574657465746E75654E592020212020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0008")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0005")	          1         0.0
+mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0004")	          1         0.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0002")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[9].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0003")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[8].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0004")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[7].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0005")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[6].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202020202020202020202020202020202020202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0006")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[5].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020202021206520722072207220642078206F20202020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0007")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[4].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000020206E69736F6574657465746E75654E592020212020",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0008")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00="0x00000000000000000000207757204C207570757075706F522079656374727465",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x0009")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00="0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x000A")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell mess_writ_ipgen_lscc_ram_dp_core(MEM_ID="mess_writ",MEM_SIZE="160,16",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE="mem_file",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00="0x0000000000000000000044205920592043204320432031205020502053205220",INIT_VALUE_10="0x00",INIT_VALUE_11="0x00",INIT_VALUE_12="0x00",INIT_VALUE_13="0x00",INIT_VALUE_14="0x00",INIT_VALUE_15="0x00",INIT_VALUE_16="0x00",INIT_VALUE_17="0x00",INIT_VALUE_18="0x00",INIT_VALUE_19="0x00",INIT_VALUE_1A="0x00",INIT_VALUE_1B="0x00",INIT_VALUE_1C="0x00",INIT_VALUE_1D="0x00",INIT_VALUE_1E="0x00",INIT_VALUE_1F="0x00",INIT_VALUE_20="0x00",INIT_VALUE_21="0x00",INIT_VALUE_22="0x00",INIT_VALUE_23="0x00",INIT_VALUE_24="0x00",INIT_VALUE_25="0x00",INIT_VALUE_26="0x00",INIT_VALUE_27="0x00",INIT_VALUE_28="0x00",INIT_VALUE_29="0x00",INIT_VALUE_2A="0x00",INIT_VALUE_2B="0x00",INIT_VALUE_2C="0x00",INIT_VALUE_2D="0x00",INIT_VALUE_2E="0x00",INIT_VALUE_2F="0x00",INIT_VALUE_30="0x00",INIT_VALUE_FF="0x000B")
+   Instance path: finalproj/lcd_d/mes/ebr_inst/lscc_ram_dp_inst/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].mem_init.u_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         16         5.6
+                                   EBR	          1        10.0
+---------------------------------------------------
+Report for cell synchronizer
+   Instance path: finalproj/synchronizer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.2
+                               LUTGATE	          1         0.2
+                                PFUREG	         16         5.6
+---------------------------------------------------
+Report for cell spi
+   Instance path: finalproj/spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         1.3
+                               LUTGATE	          3         0.6
+                                LUTCCU	          4         6.9
+                                PFUREG	         11         3.8
