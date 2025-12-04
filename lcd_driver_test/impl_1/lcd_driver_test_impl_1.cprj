@@ -1,7 +1,7 @@
 -ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv" "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/source/impl_1/top.sv"
--path "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test"
+-sver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/fpga/messages.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/source/impl_1/top.sv"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test"
 -top top
 -isTop
 -a "iCE40UP"

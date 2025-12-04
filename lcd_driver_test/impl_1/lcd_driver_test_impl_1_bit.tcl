@@ -4,13 +4,13 @@
 set ret 0
 if {[catch {
 
-sys_set_attribute -gui on -msg {C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml}
-msg_load {C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml}
+msg_load {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml}
 des_set_project_udb -in {lcd_driver_test_impl_1.udb} -milestone bit -pm ice40tp
 # bitgen option
 bit_set_option { output_format "binary" run_drc true  no_header false initialize_ebr_quadrant_0 true initialize_ebr_quadrant_1 true initialize_ebr_quadrant_2 true initialize_ebr_quadrant_3 true oscillator_frequency_range slow spi_flash_low_power_mode false enable_warm_boot false set_nvcm_security false }
 #-- write result file
-bit_generate -w {C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/impl_1/lcd_driver_test_impl_1}
+bit_generate -w {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/impl_1/lcd_driver_test_impl_1}
 
 } out]} {
    puts $out

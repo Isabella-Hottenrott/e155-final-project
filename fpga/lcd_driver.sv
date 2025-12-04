@@ -16,8 +16,11 @@ module lcd_driver(
     output logic [7:0] DB, //data bus
     output logic rs,
     output logic rw, //read/write. high = read, low = write
-    output logic en // chip enable
+    output logic en, // chip enable
+	output logic test
     );
+	
+	
 
     // set up internal logic 
     typedef enum {
@@ -29,6 +32,8 @@ module lcd_driver(
         INIT_WAIT_2,             // wait ~100us
         INIT_FUNCTION_SET_3,     // third 0x38 command
         INIT_WAIT_3,             // wait ~100us
+		INIT_FUNCTION_SET_4,     // third 0x38 command
+        INIT_WAIT_4,             // wait ~100us
         DISPLAY_OFF,             // send 0x08
         DISPLAY_OFF_WAIT,        // wait ~100us
         DISPLAY_CLEAR,           // send 0x01
@@ -65,12 +70,14 @@ module lcd_driver(
     
 
     // state machine
-    always_ff @(posedge clk) begin
-        if (reset) begin
-            state <= START;
+    always_ff @(posedge clk, negedge reset) begin
+        if (~reset) begin
+            state <= START;	
+			//test <= 1'b1;
         end
         else begin
             state <= next_state;
+			//test <= ~test;
         end 
     end
 
@@ -110,6 +117,14 @@ module lcd_driver(
 				else next_state <= state;
             end
             INIT_WAIT_3: begin
+                if (delay_counter == 21'b0) next_state <= DISPLAY_OFF;
+				else next_state <= state;
+            end
+            INIT_FUNCTION_SET_4: begin
+                if (delay_counter == 21'b0) next_state <= INIT_WAIT_3;
+				else next_state <= state;
+            end
+            INIT_WAIT_4: begin
                 if (delay_counter == 21'b0) next_state <= DISPLAY_OFF;
 				else next_state <= state;
             end
@@ -166,12 +181,19 @@ module lcd_driver(
     
     // Output logic - set commands and control signals
 
-    always_ff @(posedge clk, posedge reset) begin 
-        if (reset) begin
+    always_ff @(posedge clk, negedge reset) begin 
+        if (~reset) begin
+			/*
             rs <= 1'b0;
             rw <= 1'b0;
             DB <= 8'h00;
-            en <= 1'b0;
+            en <= 1'b0;	
+			*/
+			rs <= 1'b1;
+            rw <= 1'b1;
+            DB <= 8'hFF;
+            en <= 1'b1;	
+			
             delay_counter <= 21'b0;
             char_counter <= 8'h00;
             prev_screen <= screen; 
@@ -183,6 +205,7 @@ module lcd_driver(
                 pending_screen_change <= 1'b1;
             end
             en <= 1'b0; // default: disable
+			test <= 1'b0; 
             case(state)
                 START: begin
                     rs <= 1'b0;
@@ -193,18 +216,28 @@ module lcd_driver(
                 end
                 POWER_ON_WAIT: begin
                     // Decrement delay counter
+					//prev_screen <= screen;
                     if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 end
             INIT_FUNCTION_SET_1, INIT_FUNCTION_SET_2, INIT_FUNCTION_SET_3: begin
                 rs <= 1'b0; // command mode
                 rw <= 1'b0; // write
+                DB <= 8'b00110000; // 0x30: 8-bit, 2-line, 5x8 font
+                en <= 1'b1;
+                delay_counter <= 21'd2; // 1 cycle for enable hold + 1 for safety = ~15ms total
+            end
+			INIT_FUNCTION_SET_4: begin
+				rs <= 1'b0; // command mode
+                rw <= 1'b0; // write
                 DB <= 8'b00111000; // 0x38: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
                 delay_counter <= 21'd2; // 1 cycle for enable hold + 1 for safety = ~15ms total
             end
+				
             INIT_WAIT_1: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
             INIT_WAIT_2: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
             INIT_WAIT_3: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
+			INIT_WAIT_4: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 DISPLAY_OFF: begin
                     rs <= 1'b0;
                     rw <= 1'b0;

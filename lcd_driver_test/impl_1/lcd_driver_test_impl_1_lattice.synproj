@@ -40,17 +40,17 @@
 
 -resolve_mixed_drivers 0
 -sdc "lcd_driver_test_impl_1_cpe.ldc"
--path "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ"
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/impl_1" "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ"
+-path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/impl_1" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test"
 -ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv"
-"C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv"
-"C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/source/impl_1/top.sv"
--ver "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v"
+-sver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv"
+"C:/Users/ihottenrott/Documents/GitHub/e155-final-project/fpga/messages.sv"
+"C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/source/impl_1/top.sv"
+-ver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/mess_writ/rtl/mess_writ.v"
 
 
--path "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test"
 -top top
 -udb "lcd_driver_test_impl_1_rtl.udb"
 -output_hdl "lcd_driver_test_impl_1.vm"

@@ -8,16 +8,16 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Wed Dec  3 15:01:48 2025
+Mapped on: Wed Dec  3 22:04:00 2025
 
 Design Information
 ------------------
 
-Command line:   map -pdc C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_
-     driver_test/lcd_test_pins.pdc -i lcd_driver_test_impl_1_syn.udb -o
+Command line:   map -pdc C:/Users/ihottenrott/Documents/GitHub/e155-final-projec
+     t/lcd_driver_test/lcd_test_pins.pdc -i lcd_driver_test_impl_1_syn.udb -o
      lcd_driver_test_impl_1_map.udb -mp lcd_driver_test_impl_1.mrp -hierrpt -gui
-     -msgset C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/
-     promote.xml
+     -msgset C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver
+     _test/promote.xml
 
 Design Summary
 --------------
@@ -213,7 +213,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 73 MB
-Checksum -- map: 62dfd00b9b56102ca2fa805319812396c6fd427d
+Checksum -- map: 227b9dabcc364de86b2830ea794f6d48beac740
 
 
 

@@ -1,6 +1,6 @@
 -w
 -gui
--msgset "C:/Users/wchan/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml"
+-msgset "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/lcd_driver_test/promote.xml"
 -n 1
 -t 1
 -s 1

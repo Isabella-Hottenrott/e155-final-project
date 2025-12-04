@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1764802938">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1764802938"/>
+        <Milestone name="Export" build_result="2" build_time="1764828271">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1764828271"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1764802908">
-            <Task name="Map" build_result="2" update_result="0" update_time="1764802908"/>
+        <Milestone name="Map" build_result="2" build_time="1764828241">
+            <Task name="Map" build_result="2" update_result="0" update_time="1764828241"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1764801180"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1764802923">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1764802923"/>
+        <Milestone name="PAR" build_result="2" build_time="1764828256">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1764828256"/>
             <Task name="PostParVM" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1764802924"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1764828257"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1764802899">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1764802899"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1764802924"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1764828232">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1764828232"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1764828257"/>
             <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1764800801"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1764800801"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1764800801"/>
@@ -30,13 +30,13 @@
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name="lcd_driver_test_impl_1.bgn" last_build_time="1764802938" last_build_size="1258"/>
-        <Report name="lcd_driver_test_impl_1.bin" last_build_time="1764802938" last_build_size="104156"/>
+        <Report name="lcd_driver_test_impl_1.bgn" last_build_time="1764828271" last_build_size="1233"/>
+        <Report name="lcd_driver_test_impl_1.bin" last_build_time="1764828271" last_build_size="104156"/>
         <Report name="lcd_driver_test_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="lcd_driver_test_impl_1.twr.html" last_build_time="1764802924" last_build_size="294574"/>
-        <Report name="lcd_driver_test_impl_1.udb" last_build_time="1764802923" last_build_size="64119"/>
-        <Report name="lcd_driver_test_impl_1_map.udb" last_build_time="1764802908" last_build_size="41879"/>
-        <Report name="lcd_driver_test_impl_1_rtl.udb" last_build_time="1764802898" last_build_size="51831"/>
-        <Report name="lcd_driver_test_impl_1_syn.udb" last_build_time="1764802899" last_build_size="26960"/>
+        <Report name="lcd_driver_test_impl_1.twr.html" last_build_time="1764828257" last_build_size="294580"/>
+        <Report name="lcd_driver_test_impl_1.udb" last_build_time="1764828256" last_build_size="64198"/>
+        <Report name="lcd_driver_test_impl_1_map.udb" last_build_time="1764828241" last_build_size="41943"/>
+        <Report name="lcd_driver_test_impl_1_rtl.udb" last_build_time="1764827652" last_build_size="51831"/>
+        <Report name="lcd_driver_test_impl_1_syn.udb" last_build_time="1764828232" last_build_size="26960"/>
     </Strategy>
 </BuildStatus>
