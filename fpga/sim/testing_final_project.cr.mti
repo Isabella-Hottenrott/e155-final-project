@@ -1,0 +1,88 @@
+C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/lcd_driver_tb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lcd_driver_tb
+
+Top level modules:
+	lcd_driver_tb
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v {1 {vlog -work work -vopt -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/LatticeProject/finalproject/message_writer/rtl/message_writer.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module message_writer
+-- Compiling module message_writer_ipgen_lscc_ram_dp
+-- Compiling module message_writer_ipgen_lscc_ram_dp_main
+-- Compiling module message_writer_ipgen_lscc_ram_dp_core
+
+Top level modules:
+	message_writer
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/finalprojtb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module finalprojtb
+
+Top level modules:
+	finalprojtb
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/chooseaddr.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module chooseaddr
+
+Top level modules:
+	chooseaddr
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/finalproj.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module finalproj
+
+Top level modules:
+	finalproj
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/computermove.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module computermove
+
+Top level modules:
+	computermove
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module synchronizer
+
+Top level modules:
+	synchronizer
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/mcuMux.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module mcuMux
+
+Top level modules:
+	mcuMux
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/spi.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module spi
+
+Top level modules:
+	spi
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/interpretgame.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module interpretgame
+
+Top level modules:
+	interpretgame
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/winlosedraw.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module winlosedraw
+
+Top level modules:
+	winlosedraw
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\wchan\Documents\GitHub\e155-final-project\fpga\messages.sv}
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module messages
+
+Top level modules:
+	messages
+
+} {} {}}
