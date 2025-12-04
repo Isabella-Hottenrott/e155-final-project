@@ -1,0 +1,4 @@
+BEGIN 1:top:fast:work
+    clk :  1:lcdtb:fast:work
+    int_osc :  1:lcdtb:fast:work
+END 

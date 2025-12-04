@@ -1,0 +1,139 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+project open C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/sim/testing_final_project
+# Loading project testing_final_project
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# 13 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# Compile of lcdtb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+vsim -gui work.lcdtb {-voptargs=+acc -L iCE40UP}
+# vsim -gui work.lcdtb -voptargs="+acc -L iCE40UP" 
+# Start time: 21:53:36 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/test_two_lcd_driver/source/impl_1/lcdtb.sv(9): Module 'top' is not defined.
+#  For instance 'dut' at path 'lcdtb'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 21:53:37 on Dec 03,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 5
+# Compile of finalprojtb.sv was successful.
+# Compile of lcd_driver_tb.sv was successful.
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# Compile of message_writer.v was successful.
+# Compile of lcdtb.sv was successful.
+# Compile of top.sv was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.lcdtb -L iCE40UP
+# vsim -gui -voptargs="+acc -L iCE40UP" work.lcdtb -L iCE40UP 
+# Start time: 21:54:20 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv(33): Module 'mess_writ' is not defined.
+#  For instance 'ebr_inst' at path 'lcdtb.dut.lcd_d.mes'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 21:54:21 on Dec 03,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 4
+# Compile of mess_writ.v was successful.
+vsim -gui {-voptargs=+acc -L iCE40UP} -L iCE40UP work.lcdtb
+# vsim -gui -voptargs="+acc -L iCE40UP" -L iCE40UP work.lcdtb 
+# Start time: 21:55:49 on Dec 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "lcd_driver(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lcdtb(fast)
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.lcd_driver(fast)
+# Loading work.messages(fast)
+# Loading work.mess_writ(fast)
+# Loading work.mess_writ_ipgen_lscc_ram_dp(fast)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_main(fast)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast)
+# Loading iCE40UP.PDP4K(fast)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__1)
+# Loading iCE40UP.PDP4K(fast__1)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__2)
+# Loading iCE40UP.PDP4K(fast__2)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__3)
+# Loading iCE40UP.PDP4K(fast__3)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__4)
+# Loading iCE40UP.PDP4K(fast__4)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__5)
+# Loading iCE40UP.PDP4K(fast__5)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__6)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__7)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__8)
+# Loading work.mess_writ_ipgen_lscc_ram_dp_core(fast__9)
+add wave -position insertpoint  \
+sim:/lcdtb/dut/clk \
+sim:/lcdtb/dut/counter \
+sim:/lcdtb/dut/cs \
+sim:/lcdtb/dut/DB \
+sim:/lcdtb/dut/en \
+sim:/lcdtb/dut/int_osc \
+sim:/lcdtb/dut/reset \
+sim:/lcdtb/dut/rs \
+sim:/lcdtb/dut/rw \
+sim:/lcdtb/dut/sc \
+sim:/lcdtb/dut/screen
+add wave -position insertpoint  \
+sim:/lcdtb/dut/lcd_d/screen
+add wave -position insertpoint  \
+sim:/lcdtb/dut/lcd_d/mes/rd_addr
+add wave -position insertpoint  \
+sim:/lcdtb/dut/lcd_d/mes/msg_index
+run -all
