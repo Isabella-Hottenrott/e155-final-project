@@ -3,11 +3,6 @@
 // Driver for the WH2002AE-1 LCD
 
 
-//////////////////////////////////
-///////   ATTEMPT 1   ////////////
-//////////////////////////////////
-
-
 module lcd_driver(
 	input logic clk,
     input logic [2:0] screen,
@@ -241,7 +236,7 @@ module lcd_driver(
                 rw <= 1'b0; // write
                 DB <= 8'b00111000; // 0x38: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
-                delay_counter <= 21'd2; // 1 cycle for enable hold + 1 for safety = ~15ms total
+                delay_counter <= 21'd75; // 1 cycle for enable hold + 1 for safety = ~15ms total
 				
 				state_count <= state_count + 6'b1;
             end
@@ -275,7 +270,7 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00000110; // 0x06: increment, no shift
                     en <= 1'b1;
-                    delay_counter <= 21'd1;
+                    delay_counter <= 21'd2;
 				
                 end
                 ENTRY_MODE_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
@@ -284,20 +279,33 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00001100; // 0x0C: display on, cursor off, no blink
                     en <= 1'b1;
-                    delay_counter <= 21'd1;
+                    delay_counter <= 21'd2;
                 end
                 DISPLAY_ON_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 WRITE_SCREEN: begin
-                    rs <= 1'b1; // data mode
-                    rw <= 1'b0; // write
-                    DB <= data; // from messages ROM
-                    delay_counter <= 21'd1; // 1 cycle pulse width
+                    delay_counter <= 21'd2; // 1 cycle pulse width
                     if (pending_screen_change) begin
                         char_counter <= 8'h00; // reset to first character
                         pending_screen_change <= 1'b0;
                         prev_screen <= screen;
-                    end else if (valid && char_counter < 8'h13) begin
-                        char_counter <= char_counter + 8'b01; // next character
+                        // Send cursor reset command
+                        rs <= 1'b0;
+                        rw <= 1'b0;
+                        DB <= 8'h80; // reset cursor to line 1 position 0
+                    end else if (char_counter == 8'h14) begin
+                        // After writing 20 chars, reset cursor to beginning
+                        rs <= 1'b0; // command mode
+                        rw <= 1'b0; // write
+                        DB <= 8'h80; // 0x80: set cursor to beginning of line 1
+                        char_counter <= 8'h00; // reset counter
+                    end else begin
+                        // Normal character write
+                        rs <= 1'b1; // data mode
+                        rw <= 1'b0; // write
+                        DB <= data; // from messages ROM
+                        if (valid) begin
+                            char_counter <= char_counter + 8'b01; // next character
+                        end
                     end
                 end
                 WRITE_PULSE_EN: begin
@@ -306,7 +314,7 @@ module lcd_driver(
                 end
                 WRITE_PULSE_LOW: begin
                     en <= 1'b0; // enable goes low
-                    delay_counter <= 21'd1; // wait a cycle before returning to WRITE_SCREEN
+                    delay_counter <= 21'd2; // wait a cycle before returning to WRITE_SCREEN
                 end
                 WRITE_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
             endcase
