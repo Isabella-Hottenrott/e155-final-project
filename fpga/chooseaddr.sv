@@ -8,6 +8,15 @@ module chooseaddr(input logic clk,
 
 logic [6:0] screencodeintermed;
 
+#define rstScreen 00000111
+#define startScreen 00001011
+#define plcMoveScreen 00001111
+#define dsplCompScreen 10010011
+#define dsplWinLoseScreen 10100011
+#define nextrndScreen 01000011
+#define tenDoneScreen 01000111
+
+
 always_comb begin
     case(directedBits) // can change all these values once addresses are agreed on
         6'b000001: screencodeintermed = directedBits; // reset

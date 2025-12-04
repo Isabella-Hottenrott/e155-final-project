@@ -10,9 +10,12 @@
 #define Lidar3 PA3
 #define Lidar4 PA2
 #define Lidar5 PA1
+#define Lidar6 PA7
+#define Lidar7 PA6
 #define CS     PB7
 #define reset  PB0 //CHANGE!
 #define nextRoundButton  PB1 //CHANGE!
+#define
 
 #define rstScreen 00000111
 #define startScreen 00001011
@@ -29,12 +32,16 @@ uint8_t scan(struct VL53L0X *TOF1,
              struct VL53L0X *TOF2,
              struct VL53L0X *TOF3,
              struct VL53L0X *TOF4,
-             struct VL53L0X *TOF5);
+             struct VL53L0X *TOF5,
+             struct VL53L0X *TOF6,
+             struct VL53L0X *TOF7);
 void play_round(struct VL53L0X *TOF1,
              struct VL53L0X *TOF2,
              struct VL53L0X *TOF3,
              struct VL53L0X *TOF4,
-             struct VL53L0X *TOF5);
+             struct VL53L0X *TOF5,
+             struct VL53L0X *TOF6,
+             struct VL53L0X *TOF7);
 
 
 int main(){
@@ -70,6 +77,18 @@ int main(){
     myTOFsensor5.io_timeout = 500;
     myTOFsensor5.did_timeout = false;
 
+    struct VL53L0X myTOFsensor6;
+    myTOFsensor6.io_2v8 = false;
+    myTOFsensor6.address = 0b0101001;
+    myTOFsensor6.io_timeout = 500;
+    myTOFsensor6.did_timeout = false;
+
+    struct VL53L0X myTOFsensor7;
+    myTOFsensor7.io_2v8 = false;
+    myTOFsensor7.address = 0b0101001;
+    myTOFsensor7.io_timeout = 500;
+    myTOFsensor7.did_timeout = false;
+
     configurePLL();
     configureFlash();
     configureHSIasClk();
@@ -87,6 +106,8 @@ int main(){
     pinMode(Lidar3, GPIO_OUTPUT);
     pinMode(Lidar4, GPIO_OUTPUT);
     pinMode(Lidar5, GPIO_OUTPUT);
+    pinMode(Lidar6, GPIO_OUTPUT);
+    pinMode(Lidar7, GPIO_OUTPUT);
     pinMode(CS, GPIO_OUTPUT);
 
     digitalWrite(Lidar1, PIO_LOW);
@@ -94,6 +115,8 @@ int main(){
     digitalWrite(Lidar3, PIO_LOW);
     digitalWrite(Lidar4, PIO_LOW);
     digitalWrite(Lidar5, PIO_LOW);
+    digitalWrite(Lidar6, PIO_LOW);
+    digitalWrite(Lidar7, PIO_LOW);
     digitalWrite(CS, PIO_LOW);
 
     
@@ -139,6 +162,22 @@ int main(){
     VL53L0X_setAddress(&myTOFsensor5, 0b0000101);
     myTOFsensor5.address = 0b0000101;
     printf("secondTOF5addr = %d\n", myTOFsensor5.address);
+
+    digitalWrite(Lidar6, PIO_HIGH);
+    delay_millis(TIM15, 1);
+    VL53L0X_init(&myTOFsensor6);
+    printf("initTOF6addr = %d\n", myTOFsensor6.address);
+    VL53L0X_setAddress(&myTOFsensor6, 0b0000111);
+    myTOFsensor6.address = 0b0000111;
+    printf("secondTOF6addr = %d\n", myTOFsensor6.address);
+
+    digitalWrite(Lidar7, PIO_HIGH);
+    delay_millis(TIM15, 1);
+    VL53L0X_init(&myTOFsensor7);
+    printf("initTOF7addr = %d\n", myTOFsensor7.address);
+    VL53L0X_setAddress(&myTOFsensor7, 0b0001000);
+    myTOFsensor7.address = 0b0001000;
+    printf("secondTOF7addr = %d\n", myTOFsensor7.address);
     
     delay_millis(TIM15, 100);
 
@@ -163,7 +202,7 @@ int main(){
 
     while(~reset){
     for (i=0; i<10; i++){
-      play_round(&myTOFsensor1, &myTOFsensor2, &myTOFsensor3, &myTOFsensor4, &myTOFsensor5);
+      play_round(&myTOFsensor1, &myTOFsensor2, &myTOFsensor3, &myTOFsensor4, &myTOFsensor5, &myTOFsensor6, &myTOFsensor7);
     }
     printf("next round \n");
     delay_millis(TIM15, 5000);
@@ -242,8 +281,10 @@ uint8_t scan(struct VL53L0X *TOF1,
              struct VL53L0X *TOF2,
              struct VL53L0X *TOF3,
              struct VL53L0X *TOF4,
-             struct VL53L0X *TOF5) {
-  float dist1, dist2, dist3, dist4, dist5;
+             struct VL53L0X *TOF5,
+             struct VL53L0X *TOF6,
+             struct VL53L0X *TOF7) {
+  float dist1, dist2, dist3, dist4, dist5, dist6, dist7;
     float dist2cont, dist3cont;
 
 
@@ -263,12 +304,18 @@ uint8_t scan(struct VL53L0X *TOF1,
       delay_millis(TIM15, 2);
       dist5 = VL53L0X_readRangeSingleMillimeters(TOF5); 
       delay_millis(TIM15, 2);
+      dist6 = VL53L0X_readRangeSingleMillimeters(TOF6); 
+      delay_millis(TIM15, 2);
+      dist7 = VL53L0X_readRangeSingleMillimeters(TOF7); 
+      delay_millis(TIM15, 2);
 
       printf("1= %f\n", dist1);
       printf("2= %f\n", dist2);
       printf("3= %f\n", dist3);
       printf("4= %f\n", dist4);
       printf("5= %f\n", dist5);
+      printf("6= %f\n", dist6);
+      printf("7= %f\n", dist7);
 
 
 
@@ -308,7 +355,9 @@ void play_round(struct VL53L0X *TOF1,
              struct VL53L0X *TOF2,
              struct VL53L0X *TOF3,
              struct VL53L0X *TOF4,
-             struct VL53L0X *TOF5){
+             struct VL53L0X *TOF5,
+             struct VL53L0X *TOF6,
+             struct VL53L0X *TOF7){
 
     digitalWrite(CS, PIO_HIGH);
     spiSend(nextrndScreen); // ask to play next round
@@ -325,7 +374,7 @@ void play_round(struct VL53L0X *TOF1,
     delay_millis(TIM15, 2000);
 
     
-    uint8_t userRPS = scan(TOF1, TOF2, TOF3, TOF4, TOF5);  // scan move
+    uint8_t userRPS = scan(TOF1, TOF2, TOF3, TOF4, TOF5, TOF6, TOF7);  // scan move
     int computerRPSint = rand() % 3; // 0, 1, or 2
     uint8_t computerRPS = (uint8_t) computerRPSint;
     uint8_t formatPlay = formatPlays(userRPS, computerRPS);
