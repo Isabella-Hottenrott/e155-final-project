@@ -30,7 +30,7 @@ module messages(
     // ---------------------------------------------------------
     logic [159:0] ram_rd_data;
 
-    message_writer ebr_inst ( //  message_writer ebr_inst (
+    message_writ ebr_inst ( //  message_writer ebr_inst (
         .wr_clk_i(clk),
         .rd_clk_i(clk),
         .rst_i(1'b0),

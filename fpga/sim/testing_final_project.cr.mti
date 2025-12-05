@@ -43,6 +43,13 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 Top level modules:
 	computermove
 
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/lcd_driver.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lcd_driver
+
+Top level modules:
+	lcd_driver
+
 } {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/synchronizer.sv
 Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 -- Compiling module synchronizer
@@ -77,5 +84,12 @@ Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
 
 Top level modules:
 	winlosedraw
+
+} {} {}} C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/wchan/Documents/GitHub/e155-final-project/fpga/messages.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module messages
+
+Top level modules:
+	messages
 
 } {} {}}

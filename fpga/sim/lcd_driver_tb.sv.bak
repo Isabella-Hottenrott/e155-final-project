@@ -8,6 +8,7 @@ module lcd_driver_tb();
     // Signals
     logic [3:0] screen;
     logic reset;
+    logic change_screen;
     logic [7:0] DB;
     logic rs;
     logic rw;
@@ -29,6 +30,7 @@ module lcd_driver_tb();
         .clk(clk),
         .screen(screen),
         .reset(reset),
+        .change_screen(change_screen),
         .DB(DB),
         .rs(rs),
         .rw(rw),
@@ -63,6 +65,7 @@ module lcd_driver_tb();
         // Initialize
         screen = 4'h0;
         reset = 1'b1;
+        change_screen = 1'b0;
         
         $display("=== LCD Driver Testbench ===");
         $display("Starting at time %0t ns", $time);
@@ -76,17 +79,16 @@ module lcd_driver_tb();
         // Initialization now includes pulse states for each command
         
         $display("\n=== Waiting for initialization sequence ===");
-        //wait(dut.state == dut.WRITE_SCREEN);
-        #100;
-        //$display("Initialization complete at %0t ns", $time);
+        wait(dut.state == dut.WRITE_SCREEN);
+        $display("Initialization complete at %0t ns", $time);
         #100;
         // Test 1: Display message 0
         $display("\n=== Test 1: Display Message 0 ===");
-
+        change_screen = 1'b1;
         #10;
         screen = 4'h0;
         #10; // Hold for at least one clock cycle
-
+        change_screen = 1'b0;
         // Wait a few cycles to see character writes
         repeat(100) begin
             #10;
@@ -95,11 +97,11 @@ module lcd_driver_tb();
         #100;
         // Test 2: Switch to message 1
         $display("\n=== Test 2: Switch to Message 1 ===");
-
+        change_screen = 1'b1;
         #10;
         screen = 4'h1;
         #10;
-
+        change_screen = 1'b0;
         wait(dut.state == dut.ENTRY_MODE);
         $display("Screen change detected, entering DISPLAY_CLEAR state");
         wait(dut.state == dut.WRITE_SCREEN);
@@ -111,11 +113,11 @@ module lcd_driver_tb();
         #100;
         // Test 3: Switch to message 3
         $display("\n=== Test 3: Switch to Message 3 ===");
-
+        change_screen = 1'b1;
         #10;
         screen = 4'h3;
         #10;
-
+        change_screen = 1'b0;
         wait(dut.state == dut.ENTRY_MODE);
         wait(dut.state == dut.WRITE_SCREEN);
         repeat(100) begin
@@ -126,11 +128,11 @@ module lcd_driver_tb();
         // Test 4: Rapid message switching
         $display("\n=== Test 4: Rapid Message Switching ===");
         for (int i = 0; i < 5; i++) begin
-   
+            change_screen = 1'b1;
             #10;
             screen = i;
             #10;
- 
+            change_screen = 1'b0;
             $display("Switching to message %d", i);
             repeat(50) #10;
         end

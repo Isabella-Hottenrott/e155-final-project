@@ -30,7 +30,7 @@ module lcd_driver_tb();
         .clk(clk),
         .screen(screen),
         .reset(reset),
-        .change_screen(change_screen),
+        //.change_screen(change_screen),
         .DB(DB),
         .rs(rs),
         .rw(rw),
