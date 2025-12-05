@@ -1,0 +1,6 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
+Fri Dec  5 11:09:15 2025
+
+WARNING <71003020> - Top module port 'screen[3]' does not connect to anything.
+(VERI-1482) Analyzing Verilog file 'C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/top.sv'
+(VERI-1482) Analyzing Verilog file 'C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/messages.sv'

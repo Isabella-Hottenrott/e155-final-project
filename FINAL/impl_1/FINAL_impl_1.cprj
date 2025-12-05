@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/top.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/messages.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/lcd_driver.sv"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL"
+-top top
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"

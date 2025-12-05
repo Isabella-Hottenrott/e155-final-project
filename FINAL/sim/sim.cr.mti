@@ -1,0 +1,71 @@
+C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module winlosedraw
+
+Top level modules:
+	winlosedraw
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module mcuMux
+
+Top level modules:
+	mcuMux
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module interpretgame
+
+Top level modules:
+	interpretgame
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module finalprojtb
+
+Top level modules:
+	finalprojtb
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module spi
+
+Top level modules:
+	spi
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module chooseaddr
+
+Top level modules:
+	chooseaddr
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module finalproj
+
+Top level modules:
+	finalproj
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module synchronizer
+
+Top level modules:
+	synchronizer
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lcd_driver
+
+Top level modules:
+	lcd_driver
+
+} {} {}} C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module computermove
+
+Top level modules:
+	computermove
+
+} {} {}}

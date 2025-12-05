@@ -1,0 +1,58 @@
+#Start recording tcl command: 12/4/2025 05:32:04
+#Project Location: C:/Users/ihottenrott/Documents/e155/FINAL; Project name: FINAL
+prj_create -name "FINAL" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv"
+prj_set_impl_opt -impl "impl_1" {top} {finalproj}
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/mess_writ.ipx"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/pinout.pdc"
+prj_enable_source "C:/Users/ihottenrott/Documents/e155/FINAL/pinout.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv"
+prj_disable_source "C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/4/2025 10:15:33

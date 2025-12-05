@@ -1,0 +1,51 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project sim
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of messages.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.finalprojtb -voptargs=+acc -L iCE40UP
+# vsim -gui work.finalprojtb -voptargs="+acc" -L iCE40UP 
+# Start time: 08:55:09 on Dec 04,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv(33): Module 'mess_writ' is not defined.
+#  For instance 'ebr_inst' at path 'finalprojtb.dut.lcd_d.mes'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 08:55:10 on Dec 04,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 6
+# Compile of chooseaddr.sv was successful.
+# Compile of computermove.sv was successful.
+# Compile of finalproj.sv was successful.
+# Compile of finalprojtb.sv was successful.
+# Compile of interpretgame.sv was successful.
+# Compile of lcd_driver.sv was successful.
+# Compile of mcuMux.sv was successful.
+# Compile of spi.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of winlosedraw.sv was successful.
+# 10 compiles, 0 failed with no errors.

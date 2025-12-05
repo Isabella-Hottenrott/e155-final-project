@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
+-ver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v"
+-sdc "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/constraints/mess_writ.ldc"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL"
+-top mess_writ
+-a "iCE40UP"
+-t "iCE40UP5K"
