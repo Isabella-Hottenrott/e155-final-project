@@ -9,12 +9,19 @@
 #define Lidar2 PA12
 #define Lidar3 PA3
 #define Lidar4 PA2
-#define Lidar5 PA1
 #define CS     PB7
+#define Reset PB0
+// fill
+#define screen0     PB7
+#define screen1     PB7
+#define screen2     PB7
+#define screen3     PB7
 
 
 //Fn Prototype
 uint8_t winlosedraw(uint8_t userRPS, uint8_t computerRPS);
+void waitForButtonPress(int pin);
+void sendScreen(int bit3, int bit2, int bit1, int bit0);
 
 int main(){
 
@@ -43,12 +50,6 @@ int main(){
     myTOFsensor4.io_timeout = 500;
     myTOFsensor4.did_timeout = false;
 
-    struct VL53L0X myTOFsensor5;
-    myTOFsensor5.io_2v8 = false;
-    myTOFsensor5.address = 0b0101001;
-    myTOFsensor5.io_timeout = 500;
-    myTOFsensor5.did_timeout = false;
-
     configurePLL();
     configureFlash();
     configureHSIasClk();
@@ -58,21 +59,23 @@ int main(){
     init_i2c1();
     RCC->APB2ENR |= (1<<16);
     initTIM(TIM15);
-    initSPI(1, 0, 0);
+    // parallel comm
+    pinMode(PB3, GPIO_OUTPUT);
+    pinMode(PB3, GPIO_OUTPUT);
+    pinMode(PB3, GPIO_OUTPUT);
+    pinMode(PB3, GPIO_OUTPUT);
 
 
     pinMode(Lidar1, GPIO_OUTPUT);
     pinMode(Lidar2, GPIO_OUTPUT);
     pinMode(Lidar3, GPIO_OUTPUT);
     pinMode(Lidar4, GPIO_OUTPUT);
-    pinMode(Lidar5, GPIO_OUTPUT);
     pinMode(CS, GPIO_OUTPUT);
 
     digitalWrite(Lidar1, PIO_LOW);
     digitalWrite(Lidar2, PIO_LOW);
     digitalWrite(Lidar3, PIO_LOW);
     digitalWrite(Lidar4, PIO_LOW);
-    digitalWrite(Lidar5, PIO_LOW);
     digitalWrite(CS, PIO_LOW);
 
     
@@ -111,14 +114,6 @@ int main(){
     myTOFsensor4.address = 0b0000100;
     printf("secondTOF4addr = %d\n", myTOFsensor4.address);
 
-    digitalWrite(Lidar5, PIO_HIGH);
-    delay_millis(TIM15, 1);
-    VL53L0X_init(&myTOFsensor5);
-    printf("initTOF5addr = %d\n", myTOFsensor5.address);
-    VL53L0X_setAddress(&myTOFsensor5, 0b0000101);
-    myTOFsensor5.address = 0b0000101;
-    printf("secondTOF5addr = %d\n", myTOFsensor5.address);
-    
     delay_millis(TIM15, 100);
 
     float dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
@@ -126,19 +121,29 @@ int main(){
     float dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
 
     float dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor4);
-    printf("dist4 = %f \n", dist4);
-  
-    float dist5 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5);
+
 
     
     printf("dist1 = %f \n", dist1);
     printf("dist2 = %f \n", dist2);
     printf("dist3 = %f \n", dist3);
-  
-    printf("dist5 = %f \n", dist5);
+    printf("dist4 = %f \n", dist4);
     printf("done!");
 
     float dist2cont, dist3cont;
+    int bit0, bit1, bit2, bit3;
+
+    //send reset//
+    waitForButtonPress(Reset);
+    //
+    sendScreen(0, 0, 0, 0); // Reset
+
+    // POINT1
+
+
+    delay_millis(TIM15, 100);
+    sendScreen(0, 0, 1, 0); // Place Move
+
 
 
     int count = 0;
@@ -146,13 +151,18 @@ int main(){
 
 
       delay_millis(TIM15, 2);
-      dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+      dist1 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor1);
+      delay_millis(TIM15, 2);
+      dist2 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor2);
       delay_millis(TIM15, 2);
       dist3 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor3);
       delay_millis(TIM15, 2);
       dist4 = VL53L0X_readRangeSingleMillimeters(&myTOFsensor5); 
       delay_millis(TIM15, 2);
 
+      if(dist1 < 500){
+        count++;
+      }
       if(dist2 < 500){
         count++;
       }
@@ -179,18 +189,18 @@ int main(){
         userRPS = 1;      // paper
         printf("you chose paper!\n");
       }
+      if(count == 4){
+        userRPS = 1;      // paper
+        printf("you chose paper!\n");
+      }
 
 
     int computerRPSint = rand() % 3; // 0, 1, or 2
     uint8_t computerRPS = (uint8_t) computerRPSint;
     uint8_t WLD = winlosedraw(userRPS, computerRPS);
 
-
-
-      digitalWrite(CS, PIO_HIGH);
-      spiSend(WLD);
-      digitalWrite(CS, PIO_LOW);
-
+  
+    /// break. Go back to POINT1
 
 
       while(1);
@@ -208,49 +218,64 @@ uint8_t winlosedraw(uint8_t userRPS, uint8_t computerRPS) {
 
     switch(computerRPS){
         case 0: // computer choses rock
+            sendScreen(0, 1, 0, 1);
             printf("computer chooses rock\n");
+            delay_millis(TIM15, 100);
             if (userRPS == 0){
                 WLD = 64;      // 8'b01000000 draw
+                sendScreen(1, 0, 1, 0);
                 printf("Draw\n");
                 break;
             } else if (userRPS == 1){
                 WLD = 32;      // 8'b00100000 win -> computer loses to user. Rock loses to paper.
+                sendScreen(1, 0, 0, 1);
                 printf("You win!\n");
                 break;
             } else if (userRPS == 2){
                 WLD = 128;      // 8'b10000000 lose -> computer wins to user. Rock wins to scissors.
+                sendScreen(1, 0, 0, 0);
                 printf("You lose!\n");
                 break;
             }
 
         case 1: // computer chooses paper
+            sendScreen(0, 1, 1, 0);
             printf("computer chooses paper\n");
+            delay_millis(TIM15, 100);
             if (userRPS == 0){
                 WLD = 128;      // 8'b10000000 lose -> computer wins to user. paper wins to rock.
+                sendScreen(1, 0, 0, 0);
                 printf("You lose!\n");
                 break;
             } else if (userRPS == 1){
                 WLD = 64;      // 8'b01000000 draw
+                sendScreen(1, 0, 1, 0);
                 printf("Draw");
                 break;
             } else if (userRPS == 2){
                 WLD = 32;      // 8'b00100000 win -> computer loses to user. paper loses to scissors.
+                sendScreen(1, 0, 0, 1);
                 printf("You win!\n");
                 break;
             }
 
         case 2: // computer chooses scissors
+            sendScreen(0, 1, 1, 1);
             printf("computer chooses scissors\n");
+            delay_millis(TIM15, 100);
             if (userRPS == 0){
                 WLD = 32;      // 8'b00100000 win -> computer loses to user. scissors loses to rock.
+                sendScreen(1, 0, 0, 1);
                 printf("You win!\n");
                 break;
             } else if (userRPS == 1){
                 WLD = 128;      // 8'b10000000 lose -> computer wins to user. scissors wins to paper.
+                sendScreen(1, 0, 0, 0);
                 printf("You lose!\n");
                 break;
             } else if (userRPS == 2){
                 WLD = 64;      // 8'b01000000 draw
+                sendScreen(1, 0, 1, 0);
                 printf("Draw");
                 break;
             }
@@ -259,3 +284,15 @@ uint8_t winlosedraw(uint8_t userRPS, uint8_t computerRPS) {
     return WLD;
 }
 
+void waitForButtonPress(int pin) {
+    while (digitalRead(pin) == LOW) {
+        // Do nothing — keep waiting
+    }
+}
+
+void sendScreen(int bit3, int bit2, int bit1, int bit0){
+    digitalWrite(screen0, bit0);
+    digitalWrite(screen1, bit1);
+    digitalWrite(screen2, bit2);
+    digitalWrite(screen3, bit3);
+}
