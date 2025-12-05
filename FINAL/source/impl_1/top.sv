@@ -3,9 +3,10 @@
 // Top level module for LCD driver for hardware
 
 module top(input logic reset,
-			input logic [2:0] screen, // serial input from MCU
+			input logic [3:0] screen, // serial input from MCU
 			output logic [7:0] DB,
-			output logic en, rw, rs);
+			output logic en, rw, rs,
+			output test);
 			//output logic [2:0] leds);
 	
 	logic int_osc;
@@ -28,13 +29,10 @@ module top(input logic reset,
 			end
 		
 	end
+	logic [3:0] ds  = 4'b0001;
 	
-	//testing flags
-	//assign leds[0] = clk;
-	//assign leds[1] = int_osc;
-	//assign leds[2] = screen[2];
 
-	
+	assign test = clk;
 	//instantiate lcd_driver
 	lcd_driver lcd_d(	.clk(clk),
 						.screen(screen),
@@ -42,7 +40,7 @@ module top(input logic reset,
 						.DB(DB),
 						.rw(rw),
 						.rs(rs),
-						.en(en) ;
+						.en(en)) ;
 	
 	//always_ff @(posedge clk) begin // TODO: should i be using an fsm to simulate the other data?
 

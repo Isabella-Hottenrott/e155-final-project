@@ -40,25 +40,18 @@
 
 -resolve_mixed_drivers 0
 -sdc "FINAL_impl_1_cpe.ldc"
--path "C:/Users/ihottenrott/FINAL/FINAL/mess_writ"
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/ihottenrott/FINAL/FINAL/impl_1" "C:/Users/ihottenrott/FINAL/FINAL"
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ"
+-path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL"
 -ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/finalproj.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/chooseaddr.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/computermove.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/interpretgame.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/mcuMux.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/spi.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/synchronizer.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/winlosedraw.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/messages.sv"
-"C:/Users/ihottenrott/FINAL/FINAL/source/impl_1/lcd_driver.sv"
--ver "C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v"
+-sver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/top.sv"
+"C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/messages.sv"
+"C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/lcd_driver.sv"
+-ver "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v"
 
 
--path "C:/Users/ihottenrott/FINAL/FINAL"
--top finalproj
+-path "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL"
+-top top
 -udb "FINAL_impl_1_rtl.udb"
 -output_hdl "FINAL_impl_1.vm"
 

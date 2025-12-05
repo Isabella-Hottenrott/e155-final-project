@@ -1,12 +1,12 @@
 
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "FINAL_impl_1.twr" "FINAL_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt FINAL_impl_1.twr FINAL_impl_1.udb -gui -msgset C:/Users/ihottenrott/FINAL/FINAL/promote.xml
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt FINAL_impl_1.twr FINAL_impl_1.udb -gui -msgset C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/promote.xml
 Starting design reading...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.2/ispfpga.
 Package Status:                     Preliminary    Version 1.5.
 Performance Hardware Data Status:   Advanced       Version 1.0.
 Loading udb::Database ...
-Design:  finalproj
+Design:  top
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
@@ -14,7 +14,7 @@ Performance Grade:   High-Performance_1.2V
 
 
 
-Successfully loading udb, 0.05 seconds
+Successfully loading udb, 0.03 seconds
 
 Initializing timer
 Starting design annotation....
@@ -22,13 +22,13 @@ High-Performance_1.2V
 
 Starting full timing analysis...
 Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  163  counted  1776  covered  153
+Connections ignored  140  counted  1431  covered  124
 Changing speed to m;   changing temperature to -40
 
 STA Runtime and Peak Memory Usage :
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 110 MB
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 108 MB
 
- 1.126533s wall, 1.000000s user + 0.109375s system = 1.109375s CPU (98.5%)
+ 1.003662s wall, 0.906250s user + 0.062500s system = 0.968750s CPU (96.5%)
 

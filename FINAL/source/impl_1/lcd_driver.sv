@@ -7,10 +7,12 @@ module lcd_driver(
 	input logic clk,
     input logic [3:0] screen,
     input logic reset,
+    //input logic change_screen,
     output logic [7:0] DB, //data bus
     output logic rs,
     output logic rw, //read/write. high = read, low = write
-    output logic en // chip enable
+    output logic en, // chip enable
+	output logic test
     );
 	
 	
@@ -188,12 +190,11 @@ module lcd_driver(
 			*/
 			rs <= 1'b1;
             rw <= 1'b1;
-            DB <= 8'hFF;
+            DB <= 8'h52;
             en <= 1'b1;	
 			
             delay_counter <= 21'b0;
             char_counter <= 8'h00;
-            prev_screen <= screen; 
             pending_screen_change <= 1'b0;
 			
 			state_count <= 0;
@@ -204,13 +205,14 @@ module lcd_driver(
                 pending_screen_change <= 1'b1;
             end
             en <= 1'b0; // default: disable
+			prev_screen <= screen; // always load old into new
 			//test <= 1'b0; 
             case(state)
                 START: begin
                     rs <= 1'b0;
                     rw <= 1'b0;
                     DB <= 8'h00;
-                    delay_counter <= 21'd1500; // 16ms delay, ~200 cycles
+                    delay_counter <= 21'd200; // 16ms delay, ~200 cycles
 					char_counter <= 8'h00; //REDUNDANT?
 					
 					state_count <= state_count + 6'b1;
@@ -225,7 +227,7 @@ module lcd_driver(
                 rw <= 1'b0; // write
                 DB <= 8'b00110000; // 0x30: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
-                delay_counter <= 21'd650; // 1 cycle for enable hold + 1 for safety = ~15ms total
+                delay_counter <= 21'd75; // 1 cycle for enable hold + 1 for safety = ~15ms total
 				
 				state_count <= state_count + 6'b1;
             end
@@ -234,7 +236,7 @@ module lcd_driver(
                 rw <= 1'b0; // write
                 DB <= 8'b00111000; // 0x38: 8-bit, 2-line, 5x8 font
                 en <= 1'b1;
-                delay_counter <= 21'd650; // 1 cycle for enable hold + 1 for safety = ~15ms total
+                delay_counter <= 21'd75; // 1 cycle for enable hold + 1 for safety = ~15ms total
 				
 				state_count <= state_count + 6'b1;
             end
@@ -248,25 +250,18 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00001000; // 0x08: display off
                     en <= 1'b1;
-                    delay_counter <= 21'd20;
+                    delay_counter <= 21'd2;
 					
 					state_count <= state_count + 6'b1;
                 end
                 DISPLAY_OFF_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 DISPLAY_CLEAR: begin
-					
-                    rs <= 1'b0; //TODO: do i need an extra state here?
+                    rs <= 1'b0;
                     rw <= 1'b0;
                     DB <= 8'b00000001; // 0x01: clear display
                     en <= 1'b1;
+                    delay_counter <= 21'd75; // ~1.6ms for clear
 					
-                    delay_counter <= 21'd650; // ~1.6ms for clear
-					/*
-					rs <= 1'b1;
-					rw <= 1'b1;
-					DB <= 8'h000000001;
-					en <= 1'b1;	
-					*/
 					state_count <= state_count + 6'b1;
                 end
                 DISPLAY_CLEAR_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
@@ -275,7 +270,7 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00000110; // 0x06: increment, no shift
                     en <= 1'b1;
-                    delay_counter <= 21'd20;
+                    delay_counter <= 21'd2;
 				
                 end
                 ENTRY_MODE_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
@@ -284,20 +279,20 @@ module lcd_driver(
                     rw <= 1'b0;
                     DB <= 8'b00001100; // 0x0C: display on, cursor off, no blink
                     en <= 1'b1;
-                    delay_counter <= 21'd20;
+                    delay_counter <= 21'd2;
                 end
                 DISPLAY_ON_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 WRITE_SCREEN: begin
-                    delay_counter <= 21'd20; // 1 cycle pulse width
+                    delay_counter <= 21'd2; // 1 cycle pulse width
                     if (pending_screen_change) begin
                         char_counter <= 8'h00; // reset to first character
                         pending_screen_change <= 1'b0;
-                        prev_screen <= screen;
+                        //prev_screen <= screen; ////////////CHANGED THIS!!!
                         // Send cursor reset command
                         rs <= 1'b0;
                         rw <= 1'b0;
                         DB <= 8'h80; // reset cursor to line 1 position 0
-                    end else if (char_counter == 8'h14) begin
+                    end else if (char_counter >= 8'h14) begin
                         // After writing 20 chars, reset cursor to beginning
                         rs <= 1'b0; // command mode
                         rw <= 1'b0; // write
@@ -319,12 +314,10 @@ module lcd_driver(
                 end
                 WRITE_PULSE_LOW: begin
                     en <= 1'b0; // enable goes low
-                    delay_counter <= 21'd20; // wait a cycle before returning to WRITE_SCREEN
+                    delay_counter <= 21'd2; // wait a cycle before returning to WRITE_SCREEN
                 end
                 WRITE_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
             endcase
         end
     end
 endmodule
- 
-

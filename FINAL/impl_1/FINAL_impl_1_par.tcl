@@ -4,13 +4,13 @@
 set ret 0
 if {[catch {
 
-if {![file exists {C:/Users/ihottenrott/FINAL/FINAL/impl_1}]} {
-  file mkdir {C:/Users/ihottenrott/FINAL/FINAL/impl_1}
+if {![file exists {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1}]} {
+  file mkdir {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1}
 }
-cd {C:/Users/ihottenrott/FINAL/FINAL/impl_1}
+cd {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1}
 
-sys_set_attribute -gui on -msg {C:/Users/ihottenrott/FINAL/FINAL/promote.xml}
-msg_load {C:/Users/ihottenrott/FINAL/FINAL/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/promote.xml}
+msg_load {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/promote.xml}
 des_set_project_udb -in {FINAL_impl_1_map.udb} -out {FINAL_impl_1.udb} -milestone par -pm ice40tp
 des_set_reference_udb -clean
 # par option
@@ -18,13 +18,13 @@ par_set_option { disable_timing_driven false placement_iterations 1 placement_it
 # run place & route
 par_run
 # backup netlist & constraint file
-if {[file exists {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1_syn.udb}] && [file exists {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1_map.udb}] && [file exists {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1.udb}]} {
-  file delete -force {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/FINAL_impl_1_syn.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/FINAL_impl_1_map.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/FINAL_impl_1.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/lastrun.pdc}
-  file copy -force -- {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1_syn.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/postsyn.udb}
-  file copy -force -- {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1_map.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/postmap.udb}
-  file copy -force -- {C:/Users/ihottenrott/FINAL/FINAL/impl_1/FINAL_impl_1.udb} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/postpar.udb}
-  if [file exists {C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc}] {
-    file copy -force -- {C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc} {C:/Users/ihottenrott/FINAL/FINAL/impl_1/incr/lastrun.pdc}
+if {[file exists {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1_syn.udb}] && [file exists {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1_map.udb}] && [file exists {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1.udb}]} {
+  file delete -force {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/FINAL_impl_1_syn.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/FINAL_impl_1_map.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/FINAL_impl_1.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/lastrun.pdc}
+  file copy -force -- {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1_syn.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/postsyn.udb}
+  file copy -force -- {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1_map.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/postmap.udb}
+  file copy -force -- {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/FINAL_impl_1.udb} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/postpar.udb}
+  if [file exists {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/pinout.pdc}] {
+    file copy -force -- {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/pinout.pdc} {C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1/incr/lastrun.pdc}
   }
 }
 

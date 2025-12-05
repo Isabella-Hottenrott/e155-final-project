@@ -1,5 +1,5 @@
 POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2024.2.0.3.0
-Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o FINAL_impl_1_syn.udb -ldc FINAL_impl_1.ldc -gui -msgset C:/Users/ihottenrott/FINAL/FINAL/promote.xml FINAL_impl_1.vm 
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o FINAL_impl_1_syn.udb -ldc FINAL_impl_1.ldc -gui -msgset C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/promote.xml FINAL_impl_1.vm 
    Architecture:     iCE40UP
    Device:           iCE40UP5K
    Package:          SG48
@@ -17,5 +17,5 @@ Writing output file 'FINAL_impl_1_syn.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 47 MB
-Checksum -- postsyn: b258ed023ee828b79d50f7c93a6f7612887c7448
+Peak Memory Usage: 46 MB
+Checksum -- postsyn: b9867589d771c9457ae005c7bda57938cbdfff8

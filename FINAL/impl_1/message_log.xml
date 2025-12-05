@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Map">
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Dynamic>
-            <Dynamic>20</Dynamic>
-            <Dynamic>No port matched 'testclk'.</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Navigation>
-            <Navigation>20</Navigation>
-        </Message>
-        <Message>
-            <ID>1027013</ID>
-            <Severity>16</Severity>
-            <Dynamic>port</Dynamic>
-            <Dynamic>testclk</Dynamic>
-        </Message>
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Dynamic>
-            <Dynamic>20</Dynamic>
-            <Dynamic>Can't resolve object 'testclk' in constraint 'ldc_set_location -site {32} [get_ports testclk]'.</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Navigation>
-            <Navigation>20</Navigation>
-        </Message>
-        <Message>
-            <ID>1011001</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {32} [get_ports testclk]</Dynamic>
-        </Message>
-    </Task>
     <Task name="Export">
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Dynamic>
-            <Dynamic>20</Dynamic>
-            <Dynamic>No port matched 'testclk'.</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/pinout.pdc</Navigation>
-            <Navigation>20</Navigation>
-        </Message>
         <Message>
             <ID>1081100</ID>
             <Severity>1</Severity>
@@ -106,159 +66,167 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(11): </Dynamic>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(11): </Dynamic>
             <Dynamic>mess_writ</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>11</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(252): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(252): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;m   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>252</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(657): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;mem_file&quot;,BYTE_EN   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(657): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MO   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>657</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000044205920592043204320432031205020502053205220&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000006F596F59635361506F526F5972446557&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000044205920592043204320432031205020502053205220&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000006F596F59635361506F526F5972446557&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020752075736965706B6372757761636C&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020752075736965706B6372757761636C&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000207757204C207570757075706F522079656374727465&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000069576F4C6F73207220204D203A206D6F&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000207757204C207570757075706F522079656374727465&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000069576F4C6F73207220204D203A206D6F&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020206E69736F6574657465746E75654E592020212020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000216E6573737220202020766F202F2165&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020206E69736F6574657465746E75654E592020212020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000216E6573737220202020766F202F2165&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202021206520722072207220642078206F20202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202E2E2020202020203A6520202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020202021206520722072207220642078206F20202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202E2E2020202020203A6520202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000002020202E202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000002020202E202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>693</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>C:/Users/ihottenrott/FINAL/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35831038</ID>
             <Severity>1</Severity>
-            <Dynamic>finalproj</Dynamic>
+            <Dynamic>top</Dynamic>
         </Message>
         <Message>
             <ID>35831026</ID>
@@ -322,10 +290,10 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv(1): </Dynamic>
-            <Dynamic>finalproj</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv</Navigation>
-            <Navigation>1</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv(5): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -338,73 +306,17 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/spi.sv(1): </Dynamic>
-            <Dynamic>spi</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/spi.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/synchronizer.sv(1): </Dynamic>
-            <Dynamic>synchronizer</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/synchronizer.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/mcumux.sv(1): </Dynamic>
-            <Dynamic>mcuMux</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/mcumux.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/interpretgame.sv(1): </Dynamic>
-            <Dynamic>interpretgame</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/interpretgame.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/computermove.sv(1): </Dynamic>
-            <Dynamic>computermove</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/computermove.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/winlosedraw.sv(1): </Dynamic>
-            <Dynamic>winlosedraw</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/winlosedraw.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/chooseaddr.sv(1): </Dynamic>
-            <Dynamic>chooseaddr</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/chooseaddr.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv(6): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv(6): </Dynamic>
             <Dynamic>lcd_driver</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/messages.sv(5): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/messages.sv(5): </Dynamic>
             <Dynamic>messages</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/messages.sv</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/messages.sv</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
@@ -752,15 +664,15 @@
             <ID>35921504</ID>
             <Severity>1</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Users/ihottenrott/FINAL/FINAL/impl_1</Dynamic>
+            <Dynamic>C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/impl_1</Dynamic>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv(1): </Dynamic>
-            <Dynamic>finalproj</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv</Navigation>
-            <Navigation>1</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv(5): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -773,243 +685,186 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv(41): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv(28): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>21</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/finalproj.sv</Navigation>
-            <Navigation>41</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/top.sv</Navigation>
+            <Navigation>28</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/spi.sv(1): </Dynamic>
-            <Dynamic>spi</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/spi.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/spi.sv(24): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>6</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/spi.sv</Navigation>
-            <Navigation>24</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/synchronizer.sv(1): </Dynamic>
-            <Dynamic>synchronizer</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/synchronizer.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/mcumux.sv(1): </Dynamic>
-            <Dynamic>mcuMux</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/mcumux.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/interpretgame.sv(1): </Dynamic>
-            <Dynamic>interpretgame</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/interpretgame.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/computermove.sv(1): </Dynamic>
-            <Dynamic>computermove</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/computermove.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/winlosedraw.sv(1): </Dynamic>
-            <Dynamic>winlosedraw</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/winlosedraw.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/chooseaddr.sv(1): </Dynamic>
-            <Dynamic>chooseaddr</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/chooseaddr.sv</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv(6): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv(6): </Dynamic>
             <Dynamic>lcd_driver</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/messages.sv(5): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/messages.sv(5): </Dynamic>
             <Dynamic>messages</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/messages.sv</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/messages.sv</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(11): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(11): </Dynamic>
             <Dynamic>mess_writ</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>11</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(252): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(252): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;m   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>252</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(657): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/e155/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MODE=&quot;mem_file&quot;,BYTE_EN   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(657): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_main(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=160,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=160,INIT_FILE=&quot;C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/mess_writ/misc/messages_mess_writ_copy.mem&quot;,INIT_FILE_FORMAT=&quot;hex&quot;,INIT_MO   ....   00000000000000000000000000000000x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>657</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000044205920592043204320432031205020502053205220&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000006F596F59635361506F526F5972446557&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,INIT_   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000044205920592043204320432031205020502053205220&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000006F596F59635361506F526F5972446557&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020752075736965706B6372757761636C&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;,   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000006172756F756F6D6F6D6F6D6F2030616C616C61747365&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020752075736965706B6372757761636C&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000207757204C207570757075706F522079656374727465&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000069576F4C6F73207220204D203A206D6F&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000207757204C207570757075706F522079656374727465&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000069576F4C6F73207220204D203A206D6F&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020206E69736F6574657465746E75654E592020212020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b0110000,POSy=32'b0,INIT_VALUE_00=&quot;0x00000000000000000000000000000000216E6573737220202020766F202F2165&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00&quot;   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020206E69736F6574657465746E75654E592020212020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x00000000000000000000000000000000216E6573737220202020766F202F2165&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202021206520722072207220642078206F20202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202E2E2020202020203A6520202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020202021206520722072207220642078206F20202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202E2E2020202020203A6520202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01010000,POSy=32'b0,INIT_VALUE_00=&quot;0x000000000000000000000000000000002020202E202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
-            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x000000000000000000000000000000002020202E202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
             <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>693</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01100000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): </Dynamic>
+            <Dynamic>PDP4K(INITVAL_0=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,DATA_WIDTH_W=&quot;16&quot;,DATA_WIDTH_R=&quot;16&quot;)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>693</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b01110000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x00   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010000000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
-            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000020202020202020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/mess_writ/rtl/mess_writ.v</Navigation>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v(3996): </Dynamic>
+            <Dynamic>mess_writ_ipgen_lscc_ram_dp_core(MEM_ID=&quot;mess_writ&quot;,MEM_SIZE=&quot;160,16&quot;,FAMILY=&quot;iCE40UP&quot;,DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,INIT_MODE=&quot;mem_file&quot;,BYTE_ENABLE=1'b0,POSx=32'b010010000,POSy=32'b0,INIT_VALUE_00=&quot;0x0000000000000000000000000000000020202020202020202020202020202020&quot;,INIT_VALUE_10=&quot;0x00&quot;,INIT_VALUE_11=&quot;0x0   ....   T_VALUE_78=&quot;0x00&quot;,INIT_VALUE_79=&quot;0x00&quot;,INIT_VALUE_7A=&quot;0x00&quot;,INIT_VALUE_7B=&quot;0x00&quot;,INIT_VALUE_7C=&quot;0x00&quot;,INIT_VALUE_7D=&quot;0x00&quot;,INIT_VALUE_7E=&quot;0x00&quot;,INIT_VALUE_7F=&quot;0x00&quot;)</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/mess_writ/rtl/mess_writ.v</Navigation>
             <Navigation>3996</Navigation>
         </Message>
         <Message>
@@ -1021,66 +876,17 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv(197): </Dynamic>
+            <Dynamic>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv(208): </Dynamic>
             <Dynamic>4</Dynamic>
             <Dynamic>3</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv</Navigation>
-            <Navigation>197</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv(296): </Dynamic>
-            <Dynamic>4</Dynamic>
-            <Dynamic>3</Dynamic>
-            <Navigation>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv</Navigation>
-            <Navigation>296</Navigation>
-        </Message>
-        <Message>
-            <ID>35002064</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv</Dynamic>
-            <Dynamic>183</Dynamic>
-            <Dynamic>prev_screen[2:0]</Dynamic>
+            <Navigation>c:/users/ihottenrott/documents/github/e155-final-project/final/source/impl_1/lcd_driver.sv</Navigation>
+            <Navigation>208</Navigation>
         </Message>
         <Message>
             <ID>35001774</ID>
             <Severity>1</Severity>
             <Dynamic>\lcd_d/state</Dynamic>
             <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002032</ID>
-            <Severity>16</Severity>
-            <Dynamic>\lcd_d/prev_screen_i0_i0</Dynamic>
-            <Dynamic>(c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv 183[9] 327[12])</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002032</ID>
-            <Severity>16</Severity>
-            <Dynamic>\lcd_d/prev_screen_i0_i2</Dynamic>
-            <Dynamic>(c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv 183[9] 327[12])</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002032</ID>
-            <Severity>16</Severity>
-            <Dynamic>\lcd_d/prev_screen_i0_i1</Dynamic>
-            <Dynamic>(c:/users/ihottenrott/final/final/source/impl_1/lcd_driver.sv 183[9] 327[12])</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>i1713</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>i1717</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001783</ID>
-            <Severity>256</Severity>
-            <Dynamic>i1709</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

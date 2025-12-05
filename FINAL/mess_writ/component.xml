@@ -198,7 +198,7 @@
         </lsccip:deviceInfo>
         <lsccip:generationInfo>
             <lsccip:fileVersion>20180929</lsccip:fileVersion>
-            <lsccip:createdTimestamp>2025 12 04 05:42:38</lsccip:createdTimestamp>
+            <lsccip:createdTimestamp>2025 12 05 12:54:14</lsccip:createdTimestamp>
             <lsccip:radiantBuild>&quot;Lattice Radiant Software&quot; (64-bit) 2024.2.0.3.0</lsccip:radiantBuild>
         </lsccip:generationInfo>
     </ipxact:vendorExtensions>
