@@ -10,8 +10,7 @@ module lcd_driver(
     output logic [7:0] DB, //data bus
     output logic rs,
     output logic rw, //read/write. high = read, low = write
-    output logic en, // chip enable
-	output logic test
+    output logic en // chip enable
     );
 	
 	
@@ -255,12 +254,12 @@ module lcd_driver(
                 end
                 DISPLAY_OFF_WAIT: if (delay_counter != 21'b0) delay_counter <= delay_counter - 1'b1;
                 DISPLAY_CLEAR: begin
-					/*
+					
                     rs <= 1'b0; //TODO: do i need an extra state here?
                     rw <= 1'b0;
                     DB <= 8'b00000001; // 0x01: clear display
                     en <= 1'b1;
-					*/
+					
                     delay_counter <= 21'd650; // ~1.6ms for clear
 					/*
 					rs <= 1'b1;
