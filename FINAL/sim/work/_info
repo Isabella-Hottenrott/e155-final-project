@@ -1,0 +1,287 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ihottenrott/Documents/e155/FINAL
+vchooseaddr
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z1 !s110 1764867346
+!i10b 1
+!s100 b669K79mJk2ZTFUHW=mA<0
+I4R=coKi_b>zRD5B13`caA2
+S1
+Z2 dC:/Users/ihottenrott/Documents/e155/FINAL/sim
+Z3 w1764862061
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv
+!i122 11
+Z4 L0 1 45
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z7 !s108 1764867346.000000
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/chooseaddr.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0
+vcomputermove
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv
+R0
+R1
+!i10b 1
+!s100 WQB<KoiKV7gY]U]YlAi6o2
+Ibm<nmO?C0lfoa=@`hQ`lh1
+S1
+R2
+R3
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv
+!i122 12
+R4
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/computermove.sv|
+!i113 0
+R8
+R9
+vfinalproj
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv
+R0
+R1
+!i10b 1
+!s100 l1>b9H:AmIh8Y8M^kPXeh0
+I1d<Fj]QbQ<>_GUZgonlS81
+S1
+R2
+w1764866873
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv
+!i122 13
+L0 1 54
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalproj.sv|
+!i113 0
+R8
+R9
+vfinalprojtb
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv
+R0
+R1
+!i10b 1
+!s100 Z8`]FWNW=4lZ^DFZQLfnP1
+IX;RVI61c;LGNFVlVbmJWM3
+S1
+R2
+w1764867126
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv
+!i122 14
+L0 1 227
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/finalprojtb.sv|
+!i113 0
+R8
+R9
+vinterpretgame
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv
+R0
+R1
+!i10b 1
+!s100 0]TC3:AghzDO:NSnX>nBk3
+IRXbA@;85jM_4Piz[78nH42
+S1
+R2
+w1764862056
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv
+!i122 15
+L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/interpretgame.sv|
+!i113 0
+R8
+R9
+vlcd_driver
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv
+R0
+R1
+!i10b 1
+!s100 W=f2;^PK`ga3K[]m6>l_?2
+I2OXVkE_UGeM`82h1U3FQo1
+S1
+R2
+w1764865343
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv
+!i122 16
+L0 6 324
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/lcd_driver.sv|
+!i113 0
+R8
+R9
+vmcuMux
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv
+R0
+R1
+!i10b 1
+!s100 ZgGMKaeXIP=?lkXd<lJZL3
+I<G7`838>kJYbR8hSOPmOD3
+S1
+R2
+w1764855351
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv
+!i122 17
+L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/mcuMux.sv|
+!i113 0
+R8
+R9
+nmcu@mux
+vmessages
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv
+R0
+!s110 1764867281
+!i10b 1
+!s100 kF^1NN3nLnm8`QkJP<YL`3
+IWddNXnY_gGOO<z]lFQS@:0
+S1
+R2
+w1764855775
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv
+!i122 7
+L0 5 90
+R5
+R6
+r1
+!s85 0
+31
+!s108 1764867281.000000
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/messages.sv|
+!i113 0
+R8
+R9
+vspi
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv
+R0
+R1
+!i10b 1
+!s100 SP>>RBfZ_nA3B]QCSLO_@0
+I4ZcVgd5jAfZbfR9;?KFOE3
+S1
+R2
+w1764862721
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv
+!i122 18
+L0 1 36
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/spi.sv|
+!i113 0
+R8
+R9
+vsynchronizer
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv
+R0
+R1
+!i10b 1
+!s100 Zc6FTI1DNGnic;@GTBMMS1
+IeXnI9OQ2lKK3S9o4oJK4B2
+S1
+R2
+R3
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv
+!i122 19
+L0 1 17
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/synchronizer.sv|
+!i113 0
+R8
+R9
+vwinlosedraw
+2C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv
+R0
+R1
+!i10b 1
+!s100 0P5Kh=<3b9fO=lDF^QnOA3
+I5^9D0f<dM3E2Q04?G3g5:2
+S1
+R2
+w1764855867
+8C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv
+FC:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv
+!i122 20
+L0 1 23
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ihottenrott/Documents/e155/FINAL/source/impl_1/winlosedraw.sv|
+!i113 0
+R8
+R9
