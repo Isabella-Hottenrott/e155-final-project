@@ -1,0 +1,50 @@
+#Start recording tcl command: 12/5/2025 10:10:17
+#Project Location: C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL; Project name: FINAL
+prj_open "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/FINAL.rdf"
+prj_disable_source "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/finalproj.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/chooseaddr.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/computermove.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/interpretgame.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/mcuMux.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/spi.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/synchronizer.sv" "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/winlosedraw.sv"
+prj_add_source "C:/Users/ihottenrott/Documents/GitHub/e155-final-project/FINAL/source/impl_1/top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {top.sv}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {hdl_sort} {off}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/5/2025 13:39:01
